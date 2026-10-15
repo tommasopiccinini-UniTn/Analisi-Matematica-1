@@ -8,7 +8,7 @@ Le due colonne affiancano gli stessi concetti, **quando il parallelismo è corre
 
 | Limiti di successioni — lezione 07/10 | Limiti di funzioni — lezione 12/10, pagina 15 |
 | :--- | :--- |
-| Consideriamo $a_n=\frac{(-1)^n}{n}$. | Consideriamo $f(x)=x\sin\left(\frac{1}{x}\right)$, con $x\neq 0$. |
+| Consideriamo $a_n=\frac{(-1)^n}{n}$. | Consideriamo $f(x)=x\sin(\frac{1}{x})$, con $x\neq 0$. |
 | La parte oscillante soddisfa $-1\leq(-1)^n\leq 1$. | La parte oscillante soddisfa $-1\leq\sin(1/x)\leq 1$. |
 | Quindi $-\frac{1}{n}\leq a_n\leq\frac{1}{n}$, per $n\geq1$. | Quindi $-\lvert x\rvert\leq f(x)\leq\lvert x\rvert$. |
 | Poiché $\frac{1}{n}\to0$ e $-\frac{1}{n}\to0$, per confronto **$a_n\to0$**. | Poiché $\lvert x\rvert\to0$ e $-\lvert x\rvert\to0$ per $x\to0$, per confronto **$\lim_{x\to0}f(x)=0$**. |
@@ -58,7 +58,7 @@ La slide introduce i **punti di accumulazione di un insieme** $D\subseteq\mathbb
 **Definizione della slide:**
 
 $$
-\boxed{\forall\delta>0\ \exists x\in D:\ 0<|x-x_0|<\delta.}
+\forall\delta>0\ \exists x\in D:\ 0<|x-x_0|<\delta.
 $$
 
 **Collegamento tramite successioni (conseguenza della definizione):** $x_0$ è di accumulazione per $D$ se e solo se esiste **una successione** $(x_n)$ di elementi di $D\setminus\{x_0\}$ tale che $x_n\to x_0$. Non è necessario che *ogni* successione di punti di $D$ converga a $x_0$.
