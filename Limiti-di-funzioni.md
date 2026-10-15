@@ -126,5 +126,104 @@ Possiamo scegliere un intorno sufficientemente piccolo di $1/m$ che non raggiung
 
 ---
 
-*Prossimo argomento della lezione: definizione formale di limite finito di una funzione (pagina 24 del PDF).*
+## 6. Punto di accumulazione e limite — pagina 23
+
+Consideriamo nuovamente la funzione della pagina 15:
+
+$$
+f(x)=x\sin(1/x),\qquad D=\mathbb{R}\setminus\{0\}.
+$$
+
+Il punto $x_0=0$ **non appartiene al dominio**, ma è un **punto di accumulazione di $D$**: possiamo avvicinarci a $0$ con punti di $D$ diversi da $0$.
+
+| Limiti di successioni | Limiti di funzioni — pagina 23 |
+| :--- | :--- |
+| Per $a_n=1/n$ cerchiamo una soglia $N$ oltre la quale $\lvert a_n\rvert<\varepsilon$. | Per $f(x)=x\sin(1/x)$ cerchiamo un raggio $\delta$ tale che $\lvert f(x)\rvert<\varepsilon$ se $x$ è vicino a $0$. |
+| Basta scegliere $N\geq1/\varepsilon$: per tutti gli $n>N$ vale $1/n<\varepsilon$. | Basta scegliere **$\delta=\varepsilon$**: se $0<\lvert x\rvert<\delta$, allora $\lvert f(x)\rvert\leq\lvert x\rvert<\varepsilon$. |
+| Quindi $\lim_{n\to+\infty}1/n=0$. | Quindi $\lim_{x\to0}x\sin(1/x)=0$. |
+
+**Verifica:**
+
+$$
+\lvert\sin(1/x)\rvert\leq1
+\quad\Longrightarrow\quad
+\lvert f(x)\rvert\leq\lvert x\rvert.
+$$
+
+Fissato $\varepsilon>0$, scegliamo $\delta=\varepsilon$. Per ogni $x\in D$ con $0<\lvert x\rvert<\delta$:
+
+$$
+\lvert f(x)-0\rvert\leq\lvert x\rvert<\delta=\varepsilon.
+$$
+
+**Nota:** $f(0)$ non è definita, ma questo non impedisce l'esistenza del limite.
+
+## 7. Definizione di limite finito — pagina 24
+
+Siano $D\subseteq\mathbb{R}$, $f:D\to\mathbb{R}$ e $x_0$ un **punto di accumulazione di $D$**. Il numero $\ell$ è il limite di $f(x)$ per $x\to x_0$ quando:
+
+$$
+\forall\varepsilon>0\quad\exists\delta>0
+$$
+
+tale che, **per ogni $x\in D$**,
+
+$$
+0<\lvert x-x_0\rvert<\delta
+\quad\Longrightarrow\quad
+\lvert f(x)-\ell\rvert<\varepsilon.
+$$
+
+Si scrive:
+
+$$
+\lim_{x\to x_0}f(x)=\ell.
+$$
+
+### Parallelismo con la definizione delle successioni
+
+| Successioni — lezione 30/09 | Funzioni — lezione 12/10 |
+| :--- | :--- |
+| $\lim_{n\to+\infty}a_n=\ell$. | $\lim_{x\to x_0}f(x)=\ell$. |
+| Si fissa **$\varepsilon>0$**. | Si fissa **$\varepsilon>0$**. |
+| Si trova una **soglia $N$**. | Si trova un **raggio $\delta>0$**. |
+| Per ogni $n>N$: $\lvert a_n-\ell\rvert<\varepsilon$. | Per ogni $x\in D$ con $0<\lvert x-x_0\rvert<\delta$: $\lvert f(x)-\ell\rvert<\varepsilon$. |
+
+**Differenza:** nella successione consideriamo tutti gli indici oltre $N$; nella funzione tutti i punti del dominio sufficientemente vicini a $x_0$, **escluso $x_0$**.
+
+**Osservazione della slide:** il valore $f(x_0)$ è irrilevante. Può essere non definito oppure diverso da $\ell$.
+
+## 8. Interpretazione grafica — pagina 25
+
+La condizione
+
+$$
+\lvert f(x)-\ell\rvert<\varepsilon
+$$
+
+è equivalente a:
+
+$$
+\ell-\varepsilon<f(x)<\ell+\varepsilon.
+$$
+
+**$\varepsilon$** determina una **striscia orizzontale** attorno al valore del limite $\ell$; **$\delta$** delimita sull'asse delle $x$ un intorno di $x_0$. In quell'intorno (escluso $x_0$), i valori della funzione devono rimanere nella striscia.
+
+### Grafici a due colonne
+
+| Limiti di successioni | Limiti di funzioni |
+| :--- | :--- |
+| <img src="grafici/limite-successione.svg" alt="Punti della successione 1/n e soglia N=4; per n>4 sono nella striscia epsilon" width="420"> | <img src="grafici/limite-funzione.svg" alt="Retta f(x)=x, striscia epsilon e intorno delta attorno a zero" width="420"> |
+| **Esempio:** $a_n=1/n$, $\ell=0$, $\varepsilon=1/4$, $N=4$. | **Esempio illustrativo:** $f(x)=x$, $x_0=\ell=0$, $\delta=\varepsilon=1/4$. |
+| Per **tutti** gli interi $n>4$, i punti restano nella striscia. | Per **tutti** gli $x$ con $0<\lvert x\rvert<1/4$, il grafico resta nella striscia. |
+| Grafico formato da **punti discreti**; troviamo una soglia **$N$**. | Grafico di una funzione sui reali; troviamo un intorno **$(x_0-\delta,x_0+\delta)$**. |
+
+**Concetto comune:** fissiamo la tolleranza $\varepsilon$ attorno al limite; poi troviamo la condizione necessaria perché **tutti i valori richiesti** vi restino: $n>N$ oppure $0<\lvert x-x_0\rvert<\delta$.
+
+*Il grafico delle funzioni usa $f(x)=x$ per illustrare la definizione; la funzione $x\sin(1/x)$ è invece l'esempio specifico di pagina 23.*
+
+---
+
+*Prossima slide: esempi di limiti di funzioni (pagina 26 del PDF).*
+
 
