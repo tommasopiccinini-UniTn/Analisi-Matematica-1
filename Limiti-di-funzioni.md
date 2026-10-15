@@ -57,9 +57,9 @@ La slide introduce i **punti di accumulazione di un insieme** $D\subseteq\mathbb
 
 **Definizione della slide:**
 
-$
+$$
 \boxed{\forall\delta>0\ \exists x\in D:\ 0<|x-x_0|<\delta.}
-$
+$$
 
 **Collegamento tramite successioni (conseguenza della definizione):** $x_0$ è di accumulazione per $D$ se e solo se esiste **una successione** $(x_n)$ di elementi di $D\setminus\{x_0\}$ tale che $x_n\to x_0$. Non è necessario che *ogni* successione di punti di $D$ converga a $x_0$.
 
@@ -67,10 +67,10 @@ $
 
 ### Esempio A: intervallo e punto isolato
 
-$
+$$
 A=(1,4]\cup\{6\},
 \qquad \boxed{\operatorname{Acc}(A)=[1,4].}
-$
+$$
 
 | Successioni — parallelismo | Punti di accumulazione — spiegazione |
 | :--- | :--- |
@@ -81,9 +81,9 @@ $
 
 ### Esempio B: i reciproci dei naturali
 
-$
+$$
 B=\left\{\frac1n:n=1,2,3,\ldots\right\}.
-$
+$$
 
 | Successioni — parallelismo | Punti di accumulazione — spiegazione |
 | :--- | :--- |
@@ -104,23 +104,23 @@ La pagina dimostra che $0$ è di accumulazione per $B$ scegliendo un elemento $1
 
 Passaggi:
 
-$
+$$
 0<\frac1n<\delta
 \quad\Longleftrightarrow\quad
 n>\frac1\delta.
-$
+$$
 
 Per la proprietà di Archimede esiste sempre un naturale che supera $1/\delta$. Quindi
 
-$
+$$
 \boxed{0\in\operatorname{Acc}(B).}
-$
+$$
 
 **Perché gli altri punti sono isolati?** Per $m\ge2$ i due termini adiacenti a $1/m$ sono ordinati così:
 
-$
+$$
 \frac{1}{m+1}<\frac1m<\frac{1}{m-1}.
-$
+$$
 
 Possiamo scegliere un intorno sufficientemente piccolo di $1/m$ che non raggiunga i termini vicini (e quindi nessun altro punto di $B$). Anche $1$ è isolato.
 
