@@ -69,7 +69,7 @@ $$
 
 $$
 A=(1,4]\cup\{6\},
-\qquad \boxed{\operatorname{Acc}(A)=[1,4].}
+\qquad \mathrm{Acc}(A)=[1,4]
 $$
 
 | Successioni — parallelismo | Punti di accumulazione — spiegazione |
@@ -82,14 +82,14 @@ $$
 ### Esempio B: i reciproci dei naturali
 
 $$
-B=\left\{\frac1n:n=1,2,3,\ldots\right\}.
+B=\{\,\frac1n:n=1,2,3,\ldots\,\}.
 $$
 
 | Successioni — parallelismo | Punti di accumulazione — spiegazione |
 | :--- | :--- |
 | $b_n=\frac1n\to0$. | **$0$ è di accumulazione**: esistono elementi di $B$ arbitrariamente vicini a $0$, anche se $0\notin B$. |
 | Per ogni termine fissato $b_m=\frac1m$ ci sono un precedente e un successivo distinti, salvo il primo. | Ogni $\frac1m$ è un **punto isolato** di $B$: esiste un suo intorno abbastanza piccolo senza altri elementi di $B$. |
-| Il limite della successione è $0$. | Il **solo** punto di accumulazione di $B$ è $0$: $\boxed{\operatorname{Acc}(B)=\{0\}}$. |
+| Il limite della successione è $0$. | Il **solo** punto di accumulazione di $B$ è $0$: $\mathrm{Acc}(B)=\{0\}$. |
 
 **Attenzione:** il fatto che la successione $1/n$ converga a $0$ non rende ogni suo termine un punto di accumulazione dell'insieme dei suoi valori.
 
@@ -113,7 +113,7 @@ $$
 Per la proprietà di Archimede esiste sempre un naturale che supera $1/\delta$. Quindi
 
 $$
-\boxed{0\in\operatorname{Acc}(B).}
+0\in\mathrm{Acc}(B)
 $$
 
 **Perché gli altri punti sono isolati?** Per $m\ge2$ i due termini adiacenti a $1/m$ sono ordinati così:
