@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="290" viewBox="0 0 540 290" role="img" aria-labelledby="t d">
+<title id="t">Successione a_n = 1/n, con N = 4 ed epsilon = 1/4</title>
+<desc id="d">Punti isolati che, dopo l'indice 4, rimangono nella striscia orizzontale fra meno epsilon e più epsilon attorno al limite zero.</desc>
+<rect width="540" height="290" fill="#fff"/>
+<rect x="53" y="175" width="460" height="66" fill="#def4e8"/>
+<path d="M53 175H513 M53 241H513" stroke="#16844e" stroke-dasharray="5 5" stroke-width="1.5"/>
+<path d="M53 16V254 M53 208H513" stroke="#334155" stroke-width="1.7"/>
+<path d="M53 16l-5 9m5-9 5 9M513 208l-9-5m9 5-9 5" stroke="#334155" fill="none" stroke-width="1.7"/>
+<path d="M186 20V251" stroke="#2563eb" stroke-width="2" stroke-dasharray="6 4"/>
+<circle cx="93" cy="76.00" r="5" fill="#ea783b"/><text x="93" y="230" text-anchor="middle" font-size="11">1</text>
+<circle cx="124" cy="142.00" r="5" fill="#ea783b"/><text x="124" y="230" text-anchor="middle" font-size="11">2</text>
+<circle cx="155" cy="164.00" r="5" fill="#ea783b"/><text x="155" y="230" text-anchor="middle" font-size="11">3</text>
+<circle cx="186" cy="175.00" r="5" fill="#ea783b"/><text x="186" y="230" text-anchor="middle" font-size="11">4</text>
+<circle cx="217" cy="181.60" r="5" fill="#ea783b"/><text x="217" y="230" text-anchor="middle" font-size="11">5</text>
+<circle cx="248" cy="186.00" r="5" fill="#ea783b"/><text x="248" y="230" text-anchor="middle" font-size="11">6</text>
+<circle cx="279" cy="189.14" r="5" fill="#ea783b"/><text x="279" y="230" text-anchor="middle" font-size="11">7</text>
+<circle cx="310" cy="191.50" r="5" fill="#ea783b"/><text x="310" y="230" text-anchor="middle" font-size="11">8</text>
+<circle cx="341" cy="193.33" r="5" fill="#ea783b"/><text x="341" y="230" text-anchor="middle" font-size="11">9</text>
+<circle cx="372" cy="194.80" r="5" fill="#ea783b"/><text x="372" y="230" text-anchor="middle" font-size="11">10</text>
+<circle cx="403" cy="196.00" r="5" fill="#ea783b"/><text x="403" y="230" text-anchor="middle" font-size="11">11</text>
+<circle cx="434" cy="197.00" r="5" fill="#ea783b"/><text x="434" y="230" text-anchor="middle" font-size="11">12</text>
+<g fill="#334155" font-family="Arial,sans-serif" font-size="15">
+<text x="19" y="22">aₙ</text><text x="518" y="213">n</text>
+<text x="10" y="180">+ε</text><text x="15" y="211">0</text><text x="12" y="246">−ε</text>
+<text x="176" y="270" fill="#2563eb">N=4</text><text x="313" y="163" fill="#16844e">striscia ±ε</text>
+<text x="58" y="18" font-size="13">ε = 1/4</text>
+</g>
+</svg>
