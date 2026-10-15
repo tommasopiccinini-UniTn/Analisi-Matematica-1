@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="290" viewBox="0 0 540 290" role="img" aria-labelledby="t d">
+<title id="t">Limite della funzione f(x) = x per x che tende a zero</title>
+<desc id="d">Una striscia orizzontale fra meno epsilon e più epsilon e un intorno verticale fra meno delta e più delta. La retta f(x)=x resta nella striscia per ogni x nell'intorno. Epsilon e delta valgono 1/4.</desc>
+<rect width="540" height="290" fill="#fff"/>
+<rect x="44" y="157" width="469" height="90" fill="#def4e8"/>
+<rect x="225" y="24" width="90" height="231" fill="#dceaff" fill-opacity="0.66"/>
+<path d="M44 157H513 M44 247H513" stroke="#16844e" stroke-dasharray="5 5" stroke-width="1.5"/>
+<path d="M225 24V255 M315 24V255" stroke="#2563eb" stroke-dasharray="5 5" stroke-width="1.8"/>
+<path d="M44 15V255 M44 202H513" stroke="#334155" stroke-width="1.7" fill="none"/>
+<path d="M44 15l-5 9m5-9 5 9M513 202l-9-5m9 5-9 5" stroke="#334155" fill="none" stroke-width="1.7"/>
+<path d="M131 289L395 25" stroke="#ea783b" stroke-width="3" fill="none" stroke-linecap="round"/>
+<circle cx="270" cy="150" r="0" fill="none"/>
+<g fill="#334155" font-family="Arial,sans-serif" font-size="15">
+<text x="12" y="20">f(x)</text><text x="517" y="207">x</text>
+<text x="12" y="161">+ε</text><text x="23" y="206">ℓ=0</text><text x="15" y="251">−ε</text>
+<text x="225" y="271" text-anchor="middle">−δ</text><text x="315" y="271" text-anchor="middle">+δ</text>
+<text x="273" y="220" text-anchor="middle">x₀=0</text>
+<text x="400" y="38" fill="#ea783b">f(x)=x</text>
+<text x="61" y="21" font-size="13">ε = δ = 1/4</text>
+</g>
+</svg>
