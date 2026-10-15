@@ -1,81 +1,46 @@
 # Limiti di funzioni
 
-Appunti di **Analisi matematica 1** basati sulla lezione del **12 ottobre 2026** (`Lezione_20261012.pdf`).
+Appunti della **lezione del 12/10/2026**, confrontati con i **limiti di successioni** delle lezioni precedenti.
 
-## 1. Esempio introduttivo (pagina 15 del PDF)
+Le due colonne affiancano gli stessi concetti, **quando il parallelismo è corretto**. Le formule sono mantenute brevi per facilitare la lettura su GitHub.
 
-Consideriamo la funzione
+## 1. Esempio introduttivo: teorema del confronto
 
-$$
-f(x)=x\sin\left(\frac{1}{x}\right), \qquad D=\mathbb{R}\setminus\{0\}.
-$$
+| Limiti di successioni — lezione 07/10 | Limiti di funzioni — lezione 12/10, pagina 15 |
+| :--- | :--- |
+| Consideriamo $a_n=\frac{(-1)^n}{n}$. | Consideriamo $f(x)=x\sin\left(\frac{1}{x}\right)$, con $x\neq 0$. |
+| La parte oscillante soddisfa $-1\leq(-1)^n\leq 1$. | La parte oscillante soddisfa $-1\leq\sin(1/x)\leq 1$. |
+| Quindi $-\frac{1}{n}\leq a_n\leq\frac{1}{n}$, per $n\geq1$. | Quindi $-\lvert x\rvert\leq f(x)\leq\lvert x\rvert$. |
+| Poiché $\frac{1}{n}\to0$ e $-\frac{1}{n}\to0$, per confronto **$a_n\to0$**. | Poiché $\lvert x\rvert\to0$ e $-\lvert x\rvert\to0$ per $x\to0$, per confronto **$\lim_{x\to0}f(x)=0$**. |
 
-Vogliamo studiare il comportamento di $f(x)$ quando $x\to 0$.
+**Idea comune:** il termine oscillante non ha bisogno di convergere: il fattore che tende a zero lo comprime tra due quantità che tendono a zero.
 
-Poiché il seno assume sempre valori compresi tra $-1$ e $1$, abbiamo
+**Differenza:** nella successione l'indice $n$ cresce senza limite; nella funzione l'argomento $x$ si avvicina a $0$ da entrambi i lati. Inoltre, $f(0)$ **non è definita**, ma il limite esiste comunque.
 
-$$
-\left|\sin\left(\frac{1}{x}\right)\right|\leq 1.
-$$
+## 2. Intorni (lezione 12/10, pagina 18)
 
-Moltiplicando entrambi i membri per $|x|$, otteniamo
+Un **intorno** descrive matematicamente quali punti sono vicini a un punto fissato. Il collegamento con le successioni è la nozione di **soglia**.
 
-$$
-\left|x\sin\left(\frac{1}{x}\right)\right|\leq |x|,
-$$
+| Limiti di successioni — lezione 30/09 | Limiti di funzioni — lezione 12/10, pagina 18 |
+| :--- | :--- |
+| Per $n\to+\infty$ consideriamo tutti gli indici oltre una soglia: **$n>N$**. | Per $x\to x_0$ consideriamo un **intorno di $x_0$** di raggio $r>0$: **$I_r(x_0)=(x_0-r,\ x_0+r)$**. |
+| Gli indici considerati appartengono alla semiretta $(N,+\infty)$ (e sono naturali). | I punti dell'intorno verificano **$\lvert x-x_0\rvert<r$**; gli estremi sono esclusi. |
+| Per un limite finito $\ell$, da un certo indice in poi vale $\lvert a_n-\ell\rvert<\varepsilon$. | Per un limite finito $\ell$, richiederemo $\lvert f(x)-\ell\rvert<\varepsilon$ quando $x$ è sufficientemente vicino a $x_0$ (definizione formale a pagina 24). |
 
-ossia
-
-$$
--|x|\leq x\sin\left(\frac{1}{x}\right)\leq |x|.
-$$
-
-Dato che
+**Esempio di intorno di un punto reale:** per $x_0=3$ e $r=0{,}5$,
 
 $$
-\lim_{x\to 0}(-|x|)=\lim_{x\to 0}|x|=0,
-$$
-
-**per il teorema del confronto** concludiamo che
-
-$$
-\boxed{\lim_{x\to 0}x\sin\left(\frac{1}{x}\right)=0}.
-$$
-
-**Osservazione:** una funzione può ammettere limite in un punto anche quando non è definita in quel punto. Qui $f(0)$ non esiste, ma il limite per $x\to 0$ esiste ed è uguale a zero.
-
-## 2. Intorni (pagina 18 del PDF)
-
-Per definire il limite di una funzione dobbiamo precisare matematicamente cosa significa che $x$ è **vicino** a un punto fissato $x_0$.
-
-### Intorno di un punto reale
-
-Dato $x_0\in\mathbb{R}$ e un raggio $r>0$, l'**intorno di $x_0$ di raggio $r$** è l'intervallo aperto
-
-$$
-I_r(x_0)=(x_0-r,\ x_0+r).
-$$
-
-Equivalentemente, in notazione insiemistica,
-
-$$
-I_r(x_0)=\left\{x\in\mathbb{R}\ \middle|\ |x-x_0|<r\right\}.
-$$
-
-In altre parole, contiene i punti che distano da $x_0$ meno di $r$, **esclusi gli estremi** dell'intervallo.
-
-**Esempio:** se $x_0=3$ e $r=0{,}5$, l'intorno è
-
-$$
-(3-0{,}5,\ 3+0{,}5)=(2{,}5,\ 3{,}5).
+I_{0{,}5}(3)=(3-0{,}5,\ 3+0{,}5)=(2{,}5,\ 3{,}5).
 $$
 
 ### Intorni di infinito
 
-- Un **intorno di $+\infty$** è un qualunque intervallo della forma $(a,+\infty)$, con $a\in\mathbb{R}$.
-- Un **intorno di $-\infty$** è un qualunque intervallo della forma $(-\infty,a)$, con $a\in\mathbb{R}$.
+| Successioni | Funzioni |
+| :--- | :--- |
+| La condizione $n>N$ significa che l'indice è in un intorno di $+\infty$, limitandosi agli interi naturali. | Un intorno di $+\infty$ è $(a,+\infty)$, con $a\in\mathbb{R}$. |
+| Le successioni studiate qui hanno indice $n\to+\infty$. | Per le funzioni si considera anche $x\to-\infty$: un suo intorno è $(-\infty,a)$. |
 
-**Da ricordare:** per gli intorni di un punto reale il raggio $r$ può essere piccolo quanto si vuole, purché $r>0$. Per $\pm\infty$, invece, gli intorni sono semirette.
+**Attenzione:** $r$ (o $\delta$ nelle definizioni successive) controlla la vicinanza **dell'argomento** a $x_0$; $\varepsilon$ controlla la vicinanza **dei valori** della funzione al limite $\ell$. Non sono intercambiabili.
 
 ---
 
