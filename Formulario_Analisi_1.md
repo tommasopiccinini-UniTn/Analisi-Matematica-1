@@ -143,7 +143,7 @@ $$
 $$
 
 $$
-1-\cos u\sim\frac{u^2}{2}
+1-\cos u\sim\frac{u^2}{2}\qquad\cos u-1\sim-\frac{u^2}{2}
 $$
 
 $$
