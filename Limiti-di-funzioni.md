@@ -224,6 +224,93 @@ $$
 
 ---
 
-*Prossima slide: esempi di limiti di funzioni (pagina 26 del PDF).*
+## 9. Tre esempi di limite in un punto — pagina 26
+
+La slide mostra tre funzioni con $x\to0$ per chiarire un punto essenziale: **il limite descrive i valori vicino a $0$, non necessariamente il valore in $0$**.
+
+### Esempi e parallelismo con le successioni
+
+| Limiti di successioni — analogie | Limiti di funzioni — pagina 26 |
+| :--- | :--- |
+| **Costante:** $a_n=4$ per ogni $n$. Quindi $\lim_{n\to+\infty}a_n=4$. | **Costante:** $f(x)=4$ per ogni $x\in\mathbb{R}$. Quindi $\lim_{x\to0}f(x)=4$. |
+| **Un termine diverso:** $a_1=7$ e $a_n=4$ per $n\ge2$. Quindi $\lim_{n\to+\infty}a_n=4$. | **Valore nel punto diverso:** $f(0)=7$ e $f(x)=4$ per $x\neq0$. Quindi $\lim_{x\to0}f(x)=4$. |
+| **Quadrati:** $a_n=1/n^2$ e $a_n\to0$ quando $n\to+\infty$. | **Funzione quadratica:** $f(x)=x^2$ e $\lim_{x\to0}x^2=0$. |
+
+### 9.1. Funzione costante
+
+Per $f(x)=4$, vogliamo dimostrare che il limite è $\ell=4$:
+
+$$
+\lvert f(x)-4\rvert=\lvert4-4\rvert=0<\varepsilon.
+$$
+
+La condizione vale per **qualsiasi $\delta>0$**.
+
+### 9.2. Funzione con un valore diverso in $x=0$
+
+Poniamo $f(x)=4$ se $x\neq0$, ma $f(0)=7$.
+
+Per ogni $x$ con $0<\lvert x\rvert<\delta$ abbiamo $x\neq0$, dunque:
+
+$$
+\lvert f(x)-4\rvert=0<\varepsilon.
+$$
+
+Quindi il limite è **$4$ e non $7$**: nella definizione di limite il punto $x=0$ è escluso. Analogamente, **modificare un numero finito di termini non cambia il limite di una successione**.
+
+### 9.3. Funzione quadratica e scelta di delta
+
+Per $f(x)=x^2$ vogliamo verificare:
+
+$$
+\lim_{x\to0}x^2=0.
+$$
+
+Fissiamo **$\varepsilon>0$**: è la tolleranza richiesta per i **valori della funzione**.
+
+$$
+\lvert f(x)-0\rvert=\lvert x^2\rvert=x^2<\varepsilon.
+$$
+
+Risolviamo questa disuguaglianza rispetto a $x$:
+
+$$
+x^2<\varepsilon
+\quad\Longleftrightarrow\quad
+\lvert x\rvert<\sqrt{\varepsilon}.
+$$
+
+La definizione di limite richiede invece una condizione sulla distanza di **$x$ da $0$**:
+
+$$
+0<\lvert x\rvert<\delta.
+$$
+
+Perciò possiamo **scegliere**:
+
+$$
+\delta=\sqrt{\varepsilon}.
+$$
+
+Allora, per ogni $x$ con $0<\lvert x\rvert<\delta$,
+
+$$
+\lvert f(x)-0\rvert=x^2<\delta^2=\varepsilon.
+$$
+
+### Perché compaiono sia epsilon sia delta?
+
+| Successioni | Funzioni |
+| :--- | :--- |
+| **$\varepsilon$** è la tolleranza sui valori $a_n$; si ricava una soglia **$N$** sull'indice. | **$\varepsilon$** è la tolleranza sui valori $f(x)$; si ricava un raggio **$\delta$** per la distanza di $x$ da $x_0$. |
+| Per $a_n=1/n^2$ basta $n>1/\sqrt{\varepsilon}$. | Per $f(x)=x^2$ basta $0<\lvert x\rvert<\sqrt{\varepsilon}$. |
+| La scelta della soglia **dipende da $\varepsilon$**. | La scelta di **$\delta$ dipende da $\varepsilon$ e dalla funzione**. |
+
+**Non stiamo scambiando $\varepsilon$ e $\delta$.** Prima scegliamo $\varepsilon$, poi troviamo un $\delta$ che garantisca quella tolleranza. Per $f(x)=x^2$ funziona $\delta=\sqrt{\varepsilon}$; per altre funzioni la scelta può essere diversa.
+
+---
+
+*Prossime slide: proseguimento della lezione sui limiti di funzioni.*
+
 
 
