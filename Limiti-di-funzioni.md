@@ -1215,7 +1215,180 @@ La definizione è verificata.
 
 ---
 
-*Prossima slide: esempi di limiti all'infinito (lezione 14/10, pagina 24, slide 23/80).*
+## 25. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
+
+La slide propone tre limiti:
+
+$$
+\lim_{x\to+\infty}x^3=+\infty,
+\qquad
+\lim_{x\to+\infty}e^x=+\infty,
+\qquad
+\lim_{x\to+\infty}\log x=+\infty.
+$$
+
+**Nelle pagine 25–26 il professore verifica il primo limite con la definizione**. La verifica degli altri due è qui aggiunta per esercizio.
+
+### 25.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
+
+La definizione di limite $+\infty$ per $x\to+\infty$ chiede:
+
+$$
+\forall M>0\quad\exists K>0:
+\quad x>K\Longrightarrow x^3>M.
+$$
+
+**Passaggio 1.** Fissiamo un qualsiasi **$M>0$** e imponiamo:
+
+$$
+x^3>M.
+$$
+
+**Passaggio 2.** Poiché la funzione cubica è crescente, estraiamo la radice cubica senza cambiare il verso:
+
+$$
+x>\sqrt[3]{M}.
+$$
+
+**Passaggio 3.** Scegliamo quindi:
+
+$$
+K=\sqrt[3]{M}.
+$$
+
+**Passaggio 4 — Verifica.** Partendo dall'ipotesi $x>K$, otteniamo:
+
+$$
+x>K=\sqrt[3]{M}
+\quad\Longrightarrow\quad
+x^3>M.
+$$
+
+Questa è esattamente la condizione richiesta, **per ogni $M>0$**. Quindi il limite è verificato.
+
+### 25.2. Esempi aggiuntivi: esponenziale e logaritmo
+
+**Esponenziale $e^x$.** Imponiamo:
+
+$$
+e^x>M
+\quad\Longleftrightarrow\quad
+x>\ln M
+\qquad(M>0).
+$$
+
+Poiché la definizione richiede **$K>0$**, basta scegliere:
+
+$$
+K=\max\{1,\ln M\}.
+$$
+
+Se $x>K$, allora $x>\ln M$ e dunque $e^x>M$.
+
+**Logaritmo.** Interpretando $\log x$ della slide come logaritmo naturale **$\ln x$** (dominio $x>0$), imponiamo:
+
+$$
+\ln x>M
+\quad\Longleftrightarrow\quad
+x>e^M.
+$$
+
+Basta scegliere:
+
+$$
+K=e^M>0.
+$$
+
+Se $x>K$, allora $\ln x>M$: anche questo limite è verificato.
+
+| Limiti di successioni: analogia | Limiti di funzioni: esercizi della slide |
+| :--- | :--- |
+| Per $a_n=n^3\to+\infty$, basta $n>\sqrt[3]{M}$ per ottenere $a_n>M$. | Per $f(x)=x^3\to+\infty$, basta $x>K=\sqrt[3]{M}$. |
+| Per $a_n=e^n\to+\infty$, si trova una soglia sull'indice $n$. | Per $f(x)=e^x\to+\infty$, possiamo usare $K=\max\{1,\ln M\}$. |
+| Per $a_n=\ln n\to+\infty$, basta $n>e^M$. | Per $f(x)=\ln x\to+\infty$, basta $K=e^M$. |
+
+**Schema per le verifiche:** fissare $M>0$, risolvere **$f(x)>M$** per ottenere una condizione $x>K$, scegliere $K$ e infine dimostrare l'implicazione partendo da $x>K$.
+
+## 26. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
+
+La definizione è **falsa** per un limite proposto quando non esiste una soglia $K$ che funzioni per **ogni $M>0$**.
+
+### Controesempio: il limite proposto è sbagliato
+
+Supponiamo, erroneamente, di voler verificare:
+
+$$
+\lim_{x\to+\infty}\frac1x=+\infty.
+$$
+
+La definizione richiederebbe:
+
+$$
+\forall M>0\quad\exists K>0:
+\quad x>K\Longrightarrow\frac1x>M.
+$$
+
+**1. Per smentirla basta trovare un solo valore $M>0$ per cui nessun $K$ funziona.** Scegliamo:
+
+$$
+M=1.
+$$
+
+**2. La condizione richiesta diventerebbe:**
+
+$$
+x>K\quad\Longrightarrow\quad\frac1x>1.
+$$
+
+Ma, per $x>0$, risolvendo la disuguaglianza:
+
+$$
+\frac1x>1
+\quad\Longleftrightarrow\quad
+0<x<1.
+$$
+
+**3. Contraddizione:** la definizione pretende che **tutti** gli $x>K$ soddisfino $0<x<1$, anche se tra essi ci sono valori arbitrariamente grandi.
+
+In maniera esplicita: **qualsiasi $K>0$ scegliamo**, prendiamo:
+
+$$
+x=\max\{K+1,2\}.
+$$
+
+Questo $x$ soddisfa $x>K$ ma:
+
+$$
+\frac1x\leq\frac12<1=M.
+$$
+
+Quindi la condizione è violata **per qualunque $K$**. Abbiamo dimostrato che:
+
+$$
+\lim_{x\to+\infty}\frac1x\neq+\infty.
+$$
+
+Il limite corretto, già verificato nella sezione 21, è:
+
+$$
+\lim_{x\to+\infty}\frac1x=0.
+$$
+
+### Distinzione fondamentale
+
+| Definizione verificata | Definizione smentita |
+| :--- | :--- |
+| **Per ogni $M>0$** si riesce a trovare una soglia $K$ che funziona per **tutti gli $x>K$**. | Esiste **almeno un $M>0$** per cui, **qualunque $K$ si scelga**, è possibile trovare $x>K$ che viola la disuguaglianza. |
+| Per $f(x)=x^3$, funziona $K=\sqrt[3]{M}$. | Per $f(x)=1/x$ e il limite proposto $+\infty$, scegliendo $M=1$ **nessun $K$ funziona**. |
+
+**Attenzione:** se una particolare scelta di $K$ non funziona, questo **non basta** per smentire la definizione: potrebbe esistere un'altra scelta corretta. Inoltre, dimostrare che un limite **non è $+\infty$** non significa che il limite non esista: può avere un altro valore, come $0$ nel controesempio.
+
+**Ripasso pratico:** prima **calcolo** il limite usando le proprietà e le semplificazioni; poi, se richiesto, **verifico con la definizione** il valore ottenuto.
+
+---
+
+*La pagina 27 della lezione (slide 24/80) chiede le definizioni per $x\to-\infty$: sono già svolte nella sezione 23. Prossimo argomento nuovo: legame con i limiti delle successioni (pagina 29, slide 26/80).*
+
 
 
 
