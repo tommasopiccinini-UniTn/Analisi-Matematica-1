@@ -433,7 +433,210 @@ Il valore $\delta=1$ è una **scelta comoda, non obbligatoria**: basta scegliere
 
 ---
 
-*Prossima slide: limiti destro e sinistro (lezione 14/10, pagina 4, slide 11/80).*
+## 12. Limite destro e limite sinistro — lezione 14/10, pagine 4–5 (slide 11/80 e appunti)
+
+La funzione può comportarsi diversamente quando ci avviciniamo a $x_0$ **da destra** oppure **da sinistra**.
+
+### Limite destro
+
+La scrittura
+
+$$
+\lim_{x\to x_0^+}f(x)=\ell
+$$
+
+significa che consideriamo **solo $x>x_0$**, sempre più vicini a $x_0$. Per esempio, verso $x_0=1$: $1{,}1;\ 1{,}01;\ 1{,}001;\ldots$
+
+**Definizione formale** (se $x_0$ è punto di accumulazione di $D\cap(x_0,+\infty)$):
+
+$$
+\forall\varepsilon>0\quad\exists\delta>0
+$$
+
+tale che per ogni $x\in D\cap(x_0,x_0+\delta)$:
+
+$$
+\lvert f(x)-\ell\rvert<\varepsilon.
+$$
+
+### Limite sinistro
+
+La scrittura
+
+$$
+\lim_{x\to x_0^-}f(x)=\ell
+$$
+
+significa che consideriamo **solo $x<x_0$**, sempre più vicini a $x_0$. Per esempio, verso $x_0=1$: $0{,}9;\ 0{,}99;\ 0{,}999;\ldots$
+
+**Definizione formale** (se $x_0$ è punto di accumulazione di $D\cap(-\infty,x_0)$):
+
+$$
+\forall\varepsilon>0\quad\exists\delta>0
+$$
+
+tale che per ogni $x\in D\cap(x_0-\delta,x_0)$:
+
+$$
+\lvert f(x)-\ell\rvert<\varepsilon.
+$$
+
+### I tre intorni da distinguere
+
+| Successioni — interpretazione | Funzioni — intorno considerato |
+| :--- | :--- |
+| Possiamo prendere punti $x_n>x_0$ con $x_n\to x_0$ per studiare l'avvicinamento da destra. | **Destro:** $D\cap(x_0,x_0+\delta)$, indicato con $x\to x_0^+$. |
+| Possiamo prendere punti $y_n<x_0$ con $y_n\to x_0$ per studiare l'avvicinamento da sinistra. | **Sinistro:** $D\cap(x_0-\delta,x_0)$, indicato con $x\to x_0^-$. |
+| Se il dominio ammette avvicinamenti da entrambi i lati, devono portare allo stesso valore perché esista un limite completo. | **Completo:** $D\cap(x_0-\delta,x_0+\delta)$, escludendo $x_0$. |
+
+**Osservazione degli appunti (pagina 5).** Se il dominio permette l'avvicinamento da entrambi i lati, allora:
+
+$$
+\lim_{x\to x_0}f(x)=\ell
+\quad\Longleftrightarrow\quad
+\lim_{x\to x_0^-}f(x)=
+\lim_{x\to x_0^+}f(x)=\ell.
+$$
+
+Se i due limiti laterali sono **diversi**, il limite completo **non esiste**. Il simbolo $+$ o $-$ in $x_0^+$ e $x_0^-$ indica **da quale lato ci avviciniamo**, non il segno del limite.
+
+## 13. Esempio di limite laterale per funzione a tratti — lezione 14/10, pagina 6 (slide 12/80)
+
+La funzione della slide è:
+
+$$
+f(x)=
+\begin{cases}
+x+4 & \text{se }x\leq1,\\
+-3x+2 & \text{se }x>1.
+\end{cases}
+$$
+
+Vogliamo calcolare il limite per $x\to1$.
+
+### Passaggio 1: da sinistra ($x<1$)
+
+Usiamo **il primo ramo**:
+
+$$
+\lim_{x\to1^-}f(x)
+=\lim_{x\to1^-}(x+4)
+=1+4=5.
+$$
+
+### Passaggio 2: da destra ($x>1$)
+
+Usiamo **il secondo ramo**:
+
+$$
+\lim_{x\to1^+}f(x)
+=\lim_{x\to1^+}(-3x+2)
+=-3+2=-1.
+$$
+
+### Passaggio 3: confrontiamo
+
+$$
+5\neq-1
+\quad\Longrightarrow\quad
+\nexists\lim_{x\to1}f(x).
+$$
+
+Il **limite completo non esiste**, perché i due limiti laterali non coincidono.
+
+**Attenzione:** il valore effettivo della funzione nel punto esiste ed è:
+
+$$
+f(1)=1+4=5,
+$$
+
+poiché il primo ramo comprende anche $x=1$. Conoscere $f(1)$ **non basta** per stabilire che esista il limite completo.
+
+| Dato | Risultato |
+| :--- | :--- |
+| Valore della funzione $f(1)$ | $5$ |
+| Limite da sinistra | $5$ |
+| Limite da destra | $-1$ |
+| Limite completo per $x\to1$ | **Non esiste** |
+
+## 14. Continuità da destra e da sinistra — lezione 14/10, pagine 7–8 (slide 13/80 e appunti)
+
+Per parlare di continuità in $x_0$ occorre sempre che **$x_0\in D$**.
+
+**Continuità da destra:** se $x_0$ è di accumulazione per il dominio alla sua destra, allora:
+
+$$
+f\text{ continua da destra in }x_0
+\quad\Longleftrightarrow\quad
+\lim_{x\to x_0^+}f(x)=f(x_0).
+$$
+
+**Continuità da sinistra:** se $x_0$ è di accumulazione per il dominio alla sua sinistra, allora:
+
+$$
+f\text{ continua da sinistra in }x_0
+\quad\Longleftrightarrow\quad
+\lim_{x\to x_0^-}f(x)=f(x_0).
+$$
+
+### Applichiamolo all'esempio precedente
+
+Per la funzione a tratti della pagina 6:
+
+$$
+f(1)=5,\qquad
+\lim_{x\to1^-}f(x)=5,\qquad
+\lim_{x\to1^+}f(x)=-1.
+$$
+
+| Continuità da sinistra | Continuità da destra |
+| :--- | :--- |
+| Limite sinistro: $5$. | Limite destro: $-1$. |
+| Valore nel punto: $f(1)=5$. | Valore nel punto: $f(1)=5$. |
+| **$5=5$: continua da sinistra.** | **$-1\neq5$: non continua da destra.** |
+
+La funzione **non è continua in $1$**, perché i comportamenti laterali non coincidono.
+
+Quando il dominio presenta punti arbitrariamente vicini a $x_0$ **da entrambe le parti**, la continuità completa equivale alla continuità da entrambi i lati:
+
+$$
+f\text{ continua in }x_0
+\quad\Longleftrightarrow\quad
+\lim_{x\to x_0^-}f(x)
+=\lim_{x\to x_0^+}f(x)
+=f(x_0).
+$$
+
+### Attenzione al dominio — appunti della pagina 8
+
+La possibilità di studiare i due lati **non è sempre garantita**: il punto deve essere di accumulazione dei punti del dominio presenti sul lato considerato.
+
+**Esempio aggiuntivo:** $D=[0,+\infty)$ e $x_0=0$.
+
+- Possiamo studiare $x\to0^+$: nel dominio ci sono punti positivi arbitrariamente vicini a $0$.
+- **Non possiamo** studiare $x\to0^-$: il dominio non contiene valori negativi.
+
+Una funzione definita su $[0,+\infty)$ può comunque essere **continua in $0$**, se il limite da destra coincide con $f(0)$:
+
+$$
+\lim_{x\to0^+}f(x)=f(0).
+$$
+
+### Un intervallo di reali non è una successione
+
+| Successioni | Funzioni su un intervallo |
+| :--- | :--- |
+| Il dominio di una successione è $\mathbb N$: i possibili indici $n$ sono **discreti**. | Il dominio $[0,+\infty)$ contiene **tutti i reali non negativi**, anche frazionari. |
+| Esempi di indici: $n=0,1,2,3,\ldots$ (se si parte da $0$). | Esempi di argomenti: $x=0;\ 0{,}1;\ 0{,}25;\ 0{,}5;\ 1;\ldots$ |
+| Normalmente si studia $\lim_{n\to+\infty}a_n$. | All'estremo del dominio possiamo studiare $\lim_{x\to0^+}f(x)$. |
+| Una successione $x_n=1/n$ con $n\geq1$ converge a $0$. | Possiamo usare $x_n=1/n$ come **uno dei modi** di avvicinarci a $0$ da destra; il limite della funzione deve essere valido per **tutti i punti del dominio** sufficientemente vicini a $0$. |
+
+**Conclusione:** una successione è una funzione con dominio $\mathbb N$, ma una funzione definita su $[0,+\infty)$ **non è una successione**.
+
+---
+
+*Prossima slide: limite infinito in un punto (lezione 14/10, pagina 10, slide 15/80).*
+
 
 
 
