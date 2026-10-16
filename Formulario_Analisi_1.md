@@ -163,7 +163,7 @@ $$
 $$
 
 $$
-\sqrt{1+u}-1\sim\frac u2
+\sqrt{1+u}-1\sim\frac u2\qquad\sqrt{1-u}-1\sim-\frac u2
 $$
 
 **Definizione:**
