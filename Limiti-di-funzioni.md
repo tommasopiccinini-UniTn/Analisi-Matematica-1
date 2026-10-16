@@ -635,7 +635,117 @@ $$
 
 ---
 
-*Prossima slide: limite infinito in un punto (lezione 14/10, pagina 10, slide 15/80).*
+## 15. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
+
+Finora abbiamo studiato funzioni che, quando $x\to x_0$, si avvicinano a un numero reale $\ell$. Un'altra possibilità è che i valori di $f(x)$ diventino **arbitrariamente grandi**.
+
+### Definizione di limite +infinito
+
+Scriviamo:
+
+$$
+\lim_{x\to x_0}f(x)=+\infty
+$$
+
+se, fissata **qualunque soglia $M>0$**, tutti i valori della funzione sufficientemente vicini a $x_0$ (escluso $x_0$) superano $M$.
+
+**Definizione formale:** sia $x_0$ un punto di accumulazione di $D$.
+
+$$
+\forall M>0\quad\exists\delta>0
+$$
+
+tale che, per **ogni $x\in D$**,
+
+$$
+0<\lvert x-x_0\rvert<\delta
+\quad\Longrightarrow\quad
+f(x)>M.
+$$
+
+### Confronto con il limite finito e con le successioni
+
+| Successioni | Funzioni |
+| :--- | :--- |
+| **Limite finito:** $a_n\to\ell$ significa che, per ogni $\varepsilon>0$, dopo una soglia $N$ vale $\lvert a_n-\ell\rvert<\varepsilon$. | **Limite finito:** $\lim_{x\to x_0}f(x)=\ell$ significa che, per ogni $\varepsilon>0$, vicino a $x_0$ vale $\lvert f(x)-\ell\rvert<\varepsilon$. |
+| **Limite +infinito:** $a_n\to+\infty$ significa che, per ogni $M>0$, esiste $N$ tale che **$n>N\Rightarrow a_n>M$**. | **Limite +infinito:** $\lim_{x\to x_0}f(x)=+\infty$ significa che, per ogni $M>0$, esiste $\delta$ tale che **$0<\lvert x-x_0\rvert<\delta\Rightarrow f(x)>M$**. |
+| La soglia $N$ riguarda **l'indice della successione**. | Il raggio $\delta$ riguarda **la distanza di $x$ da $x_0$**. |
+
+**Perché $M$ e non $\varepsilon$?** Per un limite finito chiediamo ai valori di stare *vicino a* $\ell$; per $+\infty$ chiediamo di stare *sopra qualsiasi soglia* $M$. Non stiamo cercando una distanza da $+\infty$, che non è un numero reale.
+
+### Interpretazione grafica — pagina 11 (appunti)
+
+- Nel caso di **limite finito**, il grafico deve entrare nella striscia orizzontale tra $\ell-\varepsilon$ e $\ell+\varepsilon$ quando $x$ è vicino a $x_0$.
+- Nel caso di **limite $+\infty$**, per **ogni** retta orizzontale $y=M$, il grafico deve stare **interamente sopra** quella retta per tutti gli $x$ del dominio abbastanza vicini a $x_0$, diversi da $x_0$.
+
+**Attenzione:** non basta che *alcuni* valori di $f(x)$ superino $M$: devono farlo **tutti** nell'intorno scelto, escluso il punto $x_0$.
+
+### Esempio pratico e verifica passo per passo — anticipa la slide 17/80 (pagina 13)
+
+Vogliamo verificare:
+
+$$
+\lim_{x\to0}\frac{1}{x^2}=+\infty.
+$$
+
+**1. Fissiamo $M>0$.** La definizione ci chiede di rendere vera questa disuguaglianza:
+
+$$
+\frac{1}{x^2}>M.
+$$
+
+**2. Troviamo quanto vicino a $0$ deve stare $x$.** Poiché $x^2>0$ per $x\neq0$ e $M>0$, possiamo passare ai reciproci, **invertendo il verso**:
+
+$$
+\frac{1}{x^2}>M
+\quad\Longleftrightarrow\quad
+x^2<\frac1M
+\quad\Longleftrightarrow\quad
+\lvert x\rvert<\frac1{\sqrt M}.
+$$
+
+Dunque una scelta possibile è:
+
+$$
+\delta=\frac1{\sqrt M}.
+$$
+
+**3. Verifichiamo che la scelta funzioni, ripartendo dalla definizione.**
+
+Se:
+
+$$
+0<\lvert x\rvert<\delta=\frac1{\sqrt M},
+$$
+
+elevando al quadrato otteniamo:
+
+$$
+0<x^2<\frac1M.
+$$
+
+**4. Passiamo ai reciproci:** dato che i termini sono positivi, il verso della disuguaglianza **si inverte**:
+
+$$
+\frac1{x^2}>M.
+$$
+
+È **esattamente la condizione richiesta dalla definizione**. Quindi il limite è verificato.
+
+**Schema utile:** fissare $M$ $\rightarrow$ risolvere $f(x)>M$ rispetto alla distanza di $x$ da $x_0$ $\rightarrow$ scegliere $\delta$ $\rightarrow$ partire da $0<\lvert x-x_0\rvert<\delta$ e dimostrare $f(x)>M$.
+
+### Collegamento utile con una successione
+
+| Successione $a_n=n^2$ | Funzione $f(x)=1/x^2$ |
+| :--- | :--- |
+| Per avere $a_n>M$ basta scegliere **$n>\sqrt M$**. | Per avere $f(x)>M$ basta scegliere **$0<\lvert x\rvert<1/\sqrt M$**. |
+| Infatti $n>\sqrt M\Rightarrow n^2>M$. | Infatti $0<x^2<1/M\Rightarrow1/x^2>M$. |
+| $\lim_{n\to+\infty}n^2=+\infty$. | $\lim_{x\to0}1/x^2=+\infty$. |
+
+---
+
+*Prossima slide: significato grafico e asintoto verticale (lezione 14/10, pagina 12, slide 16/80).*
+
 
 
 
