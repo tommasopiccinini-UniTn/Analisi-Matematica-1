@@ -147,7 +147,11 @@ $$
 $$
 
 $$
-\ln(1+u)\sim u;\qquad e^u-1\sim u
+\ln(1+u)\sim u;\qquad\ln(1-u)\sim -u
+$$
+
+$$
+e^u-1\sim u
 $$
 
 $$
