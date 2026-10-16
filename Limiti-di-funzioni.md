@@ -744,7 +744,253 @@ $$
 
 ---
 
-*Prossima slide: significato grafico e asintoto verticale (lezione 14/10, pagina 12, slide 16/80).*
+## 16. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
+
+Quando:
+
+$$
+\lim_{x\to x_0}f(x)=+\infty,
+$$
+
+la retta **$x=x_0$** è un **asintoto verticale**.
+
+**Significato grafico della slide:** per ogni $M>0$, anche molto grande, possiamo trovare un intorno abbastanza piccolo di $x_0$ nel quale **tutti** i punti del grafico (con $x\in D$ e $x\neq x_0$) stanno sopra la retta orizzontale **$y=M$**:
+
+$$
+0<\lvert x-x_0\rvert<\delta
+\quad\Longrightarrow\quad
+f(x)>M.
+$$
+
+La retta **$y=M$ serve a verificare la definizione**; l'asintoto verticale vero e proprio è **$x=x_0$**.
+
+**Esempio:**
+
+$$
+f(x)=\frac1{x^2},\qquad
+\lim_{x\to0}\frac1{x^2}=+\infty.
+$$
+
+Quindi l'asintoto verticale è **$x=0$**.
+
+| Limiti di successioni — analogia | Limiti di funzioni e grafico |
+| :--- | :--- |
+| Per $a_n=n^2\to+\infty$, dopo una certa soglia tutti i termini superano $M$. | Per $f(x)=1/x^2$, tutti i valori sufficientemente vicini a $0$ superano $M$. |
+| La successione non ha una retta verticale da chiamare asintoto: il suo indice tende a $+\infty$. | La funzione presenta un **asintoto verticale $x=0$**, perché $x$ tende a un punto finito e $f(x)$ diverge. |
+
+**Regola più generale:** la retta $x=x_0$ è un asintoto verticale anche se la funzione tende a $+\infty$ o $-\infty$ **soltanto da un lato**.
+
+## 17. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
+
+Il PDF verifica:
+
+$$
+\lim_{x\to0}\frac1{x^2}=+\infty.
+$$
+
+Il **procedimento completo in quattro passaggi** è già nella sezione 15. Riassumiamo qui il risultato della dimostrazione.
+
+**Dominio:** $D=\mathbb R\setminus\{0\}$; il punto $0$ è un punto di accumulazione del dominio anche se non vi appartiene.
+
+Fissiamo $M>0$ e imponiamo:
+
+$$
+\frac1{x^2}>M
+\quad\Longleftrightarrow\quad
+0<\lvert x\rvert<\frac1{\sqrt M}.
+$$
+
+Scegliamo:
+
+$$
+\delta=\frac1{\sqrt M}.
+$$
+
+**Verifica, dall'ipotesi alla tesi:**
+
+$$
+0<\lvert x\rvert<\delta
+\quad\Longrightarrow\quad
+0<x^2<\frac1M
+\quad\Longrightarrow\quad
+\frac1{x^2}>M.
+$$
+
+L'ultimo passaggio è corretto perché **passare ai reciproci di numeri positivi inverte la disuguaglianza**.
+
+## 18. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
+
+Scriviamo:
+
+$$
+\lim_{x\to x_0}f(x)=-\infty
+$$
+
+quando i valori della funzione, avvicinandosi a $x_0$, diventano **più piccoli di qualsiasi soglia negativa $-M$**.
+
+**Definizione formale** (con $x_0$ punto di accumulazione di $D$):
+
+$$
+\forall M>0\quad\exists\delta>0
+$$
+
+tale che per ogni $x\in D$:
+
+$$
+0<\lvert x-x_0\rvert<\delta
+\quad\Longrightarrow\quad
+f(x)<-M.
+$$
+
+| Limite +infinito | Limite -infinito |
+| :--- | :--- |
+| $\lim_{x\to x_0}f(x)=+\infty$ | $\lim_{x\to x_0}f(x)=-\infty$ |
+| Si deve ottenere **$f(x)>M$**. | Si deve ottenere **$f(x)<-M$**. |
+| Il grafico è sopra la retta $y=M$. | Il grafico è sotto la retta $y=-M$. |
+| La retta $x=x_0$ è un asintoto verticale. | Anche qui $x=x_0$ è un asintoto verticale. |
+
+### Esempio pratico aggiuntivo
+
+Studiamo:
+
+$$
+\lim_{x\to0}-\frac1{x^2}=-\infty.
+$$
+
+Fissato $M>0$, dobbiamo rendere vera:
+
+$$
+-\frac1{x^2}<-M.
+$$
+
+Moltiplicando per $-1$, **il verso si inverte**:
+
+$$
+\frac1{x^2}>M
+\quad\Longleftrightarrow\quad
+0<\lvert x\rvert<\frac1{\sqrt M}.
+$$
+
+Scegliamo quindi:
+
+$$
+\delta=\frac1{\sqrt M}.
+$$
+
+Se $0<\lvert x\rvert<\delta$, allora:
+
+$$
+0<x^2<\frac1M
+\quad\Longrightarrow\quad
+\frac1{x^2}>M
+\quad\Longrightarrow\quad
+-\frac1{x^2}<-M.
+$$
+
+La definizione di limite $-\infty$ è soddisfatta.
+
+## 19. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
+
+Le definizioni dei limiti infiniti possono essere applicate **separatamente a destra e a sinistra** di $x_0$, purché il dominio presenti punti arbitrariamente vicini dal lato considerato.
+
+### Esempio della slide: f(x)=1/x
+
+La funzione ha dominio $D=\mathbb R\setminus\{0\}$.
+
+**Da destra:** per $x>0$, il reciproco è positivo e cresce quando $x$ si avvicina a $0$:
+
+$$
+\lim_{x\to0^+}\frac1x=+\infty.
+$$
+
+Per definizione dobbiamo mostrare che, fissato $M>0$, esiste $\delta>0$ tale che:
+
+$$
+0<x<\delta
+\quad\Longrightarrow\quad
+\frac1x>M.
+$$
+
+Risolvendo la condizione per $x>0$:
+
+$$
+\frac1x>M
+\quad\Longleftrightarrow\quad
+x<\frac1M.
+$$
+
+Quindi scegliamo **$\delta=1/M$**. Se $0<x<1/M$, prendendo i reciproci positivi otteniamo **$1/x>M$**.
+
+**Da sinistra:** per $x<0$, il reciproco diventa sempre più negativo:
+
+$$
+\lim_{x\to0^-}\frac1x=-\infty.
+$$
+
+La condizione richiesta è:
+
+$$
+-\delta<x<0
+\quad\Longrightarrow\quad
+\frac1x<-M.
+$$
+
+Fissato $M>0$, scegliamo ancora **$\delta=1/M$**. Se:
+
+$$
+-\frac1M<x<0,
+$$
+
+per esempio moltiplicando la disuguaglianza $\frac1x<-M$ per il numero negativo $x$ (e invertendo il verso) si verifica la condizione equivalente:
+
+$$
+1>-Mx
+\quad\Longleftrightarrow\quad
+x>-\frac1M.
+$$
+
+Quindi per ogni $x$ nell'intervallo scelto vale **$1/x<-M$**.
+
+### Conclusione: il limite completo esiste?
+
+| Da sinistra | Da destra |
+| :--- | :--- |
+| $\lim_{x\to0^-}1/x=-\infty$ | $\lim_{x\to0^+}1/x=+\infty$ |
+| I valori sono **negativi** e scendono senza limite. | I valori sono **positivi** e crescono senza limite. |
+
+I limiti laterali **non coincidono**, quindi:
+
+$$
+\nexists\lim_{x\to0}\frac1x.
+$$
+
+Ciononostante, la retta **$x=0$ è un asintoto verticale**: per stabilirlo è sufficiente un limite laterale infinito.
+
+### Regola pratica: attenzione al segno del denominatore
+
+**Esempio aggiuntivo:**
+
+$$
+\lim_{x\to2}\frac1{x-2}.
+$$
+
+- Quando $x\to2^-$, il denominatore $x-2$ è **negativo** e tende a $0$: il rapporto tende a $-\infty$.
+- Quando $x\to2^+$, il denominatore $x-2$ è **positivo** e tende a $0$: il rapporto tende a $+\infty$.
+
+$$
+\lim_{x\to2^-}\frac1{x-2}=-\infty,
+\qquad
+\lim_{x\to2^+}\frac1{x-2}=+\infty.
+$$
+
+Il limite completo **non esiste**, ma la retta **$x=2$ è un asintoto verticale**.
+
+**Da ricordare:** quando il denominatore tende a $0$, non assegnare automaticamente $+\infty$ o $-\infty$: **controlla il segno dell'intera frazione da ciascun lato**. Questa regola vale quando il numeratore tende a un valore non nullo; in caso di forma $0/0$ occorre prima studiare la funzione.
+
+---
+
+*Prossima slide: limite all'infinito (lezione 14/10, pagina 20, slide 20/80).*
+
 
 
 
