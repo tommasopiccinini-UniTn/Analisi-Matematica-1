@@ -192,7 +192,7 @@ $$
 1+\tan^2x=\frac1{\cos^2x};\qquad1+\cot^2x=\frac1{\sin^2x}
 $$
 
-**Addizione e sottrazione:**
+**Addizione e sottrazione:** caso particolare $\sin(x+\pi)=-\sin x$.
 
 $$
 \sin(x\pm y)=\sin x\cos y\pm\cos x\sin y
