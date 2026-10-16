@@ -1387,7 +1387,303 @@ $$
 
 ---
 
-*La pagina 27 della lezione (slide 24/80) chiede le definizioni per $x\to-\infty$: sono già svolte nella sezione 23. Prossimo argomento nuovo: legame con i limiti delle successioni (pagina 29, slide 26/80).*
+*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 23. La pagina 28 introduce i teoremi sui limiti di funzioni.*
+
+## 27. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
+
+Una successione reale $(a_n)$ si può interpretare come una **funzione con dominio $\mathbb N$**:
+
+$$
+f:\mathbb N\to\mathbb R,\qquad f(n)=a_n.
+$$
+
+Poiché $\mathbb N$ è illimitato superiormente, ha senso il limite per $x\to+\infty$ e vale:
+
+$$
+\lim_{x\to+\infty}f(x)=\lim_{n\to+\infty}a_n.
+$$
+
+**Nel limite di sinistra, $x$ appartiene a $\mathbb N$:** non assume tutti i valori reali.
+
+| Successioni | Funzioni su $\mathbb N$ |
+| :--- | :--- |
+| $\lim_{n\to+\infty}a_n=\ell$. | $\lim_{x\to+\infty}f(x)=\ell$, con $f(n)=a_n$. |
+| Per ogni $\varepsilon>0$ esiste $N$ tale che $n>N$ implica $\lvert a_n-\ell\rvert<\varepsilon$. | Per ogni $\varepsilon>0$ esiste $K>0$ tale che $x\in\mathbb N$, $x>K$ implicano $\lvert f(x)-\ell\rvert<\varepsilon$. |
+| L'indice è naturale. | Anche l'argomento è naturale: le definizioni coincidono. |
+
+**Esempio aggiuntivo:** per $a_n=1/n$, $n\geq1$, la funzione $f(n)=1/n$ su $\mathbb N_{\geq1}$ soddisfa:
+
+$$
+\lim_{n\to+\infty}a_n
+=\lim_{\substack{x\to+\infty\\x\in\mathbb N_{\geq1}}}f(x)
+=0.
+$$
+
+## 28. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
+
+Sia $f:D\to\mathbb R$ e $x_0$ un punto di accumulazione del dominio. Il teorema vale per $x_0$ e $\ell$ finiti o infiniti, con la rispettiva nozione di avvicinamento.
+
+**Enunciato:**
+
+$$
+\lim_{x\to x_0}f(x)=\ell
+$$
+
+**se e solo se per ogni successione** $(x_n)$ con:
+
+$$
+x_n\in D,\qquad x_n\neq x_0,\qquad x_n\to x_0,
+$$
+
+si ha:
+
+$$
+\lim_{n\to+\infty}f(x_n)=\ell.
+$$
+
+Se $x_0$ è infinito, la condizione $x_n\neq x_0$ è automaticamente vera.
+
+| Successioni | Funzioni |
+| :--- | :--- |
+| Possiamo scegliere qualunque successione $x_n\to x_0$ di punti del dominio, distinti da $x_0$. | Se $\lim_{x\to x_0}f(x)=\ell$, tutte queste successioni devono soddisfare $f(x_n)\to\ell$. |
+| Scegliere una sola successione non esplora tutti i modi di avvicinarsi a $x_0$. | **Una sola successione con risultato $\ell$ non basta a provare il limite.** |
+
+### Esempio aggiuntivo: limite della funzione x²
+
+Per verificare:
+
+$$
+\lim_{x\to0}x^2=0,
+$$
+
+prendiamo una **qualsiasi** successione ammissibile $x_n\to0$. Allora:
+
+$$
+\lim_{n\to+\infty}f(x_n)
+=\lim_{n\to+\infty}x_n^2
+=\bigl(\lim_{n\to+\infty}x_n\bigr)^2
+=0.
+$$
+
+Il ragionamento vale per **ogni** successione ammissibile, quindi il limite della funzione è $0$.
+
+### Appunti delle pagine 31–34: come smentire un limite proposto
+
+Per smentire l'affermazione:
+
+$$
+\lim_{x\to x_0}f(x)=\ell,
+$$
+
+è sufficiente trovare **una** successione ammissibile $x_n\to x_0$ per cui **non vale**:
+
+$$
+\lim_{n\to+\infty}f(x_n)=\ell.
+$$
+
+Per esempio, $f(x_n)$ può tendere a un altro valore $\ell'\neq\ell$, oppure non avere limite.
+
+**Precisazione:** questo dimostra soltanto che il limite **non è il valore proposto $\ell$**. Per dimostrare che il limite **non esiste**, possiamo usare due successioni con risultati diversi.
+
+## 29. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
+
+Se esistono due successioni **ammissibili** $x_n\to x_0$ e $y_n\to x_0$ tali che:
+
+$$
+\lim_{n\to+\infty}f(x_n)
+\neq
+\lim_{n\to+\infty}f(y_n),
+$$
+
+allora **il limite della funzione non esiste**.
+
+| Dimostrare un limite $\ell$ | Dimostrare che un limite non esiste |
+| :--- | :--- |
+| Bisogna considerare **ogni successione ammissibile**. | **Bastano due successioni ammissibili con risultati diversi**. |
+| Una sola successione favorevole non basta. | Due risultati diversi sono incompatibili con il criterio sequenziale. |
+
+## 30. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
+
+Studiamo:
+
+$$
+\lim_{x\to+\infty}\sin x.
+$$
+
+**Prima successione:** scegliamo:
+
+$$
+x_n=n\pi,\qquad n\geq1.
+$$
+
+Abbiamo $x_n\to+\infty$, ma:
+
+$$
+\sin(x_n)=\sin(n\pi)=0,
+\qquad
+\lim_{n\to+\infty}\sin(x_n)=0.
+$$
+
+**Perché si usa $n\pi$?** Perché il seno di ogni multiplo intero di $\pi$ è zero:
+
+$$
+\sin(\pi)=\sin(2\pi)=\sin(3\pi)=0.
+$$
+
+È una scelta **strategica**, non una regola universale.
+
+**Seconda successione:** scegliamo:
+
+$$
+y_n=\frac\pi2+2n\pi,\qquad n\geq1.
+$$
+
+Anche $y_n\to+\infty$, ma:
+
+$$
+\sin(y_n)=\sin\bigl(\frac\pi2+2n\pi\bigr)=1,
+\qquad
+\lim_{n\to+\infty}\sin(y_n)=1.
+$$
+
+| Prima successione | Seconda successione |
+| :--- | :--- |
+| $x_n=n\pi\to+\infty$. | $y_n=\pi/2+2n\pi\to+\infty$. |
+| $\sin(x_n)=0$. | $\sin(y_n)=1$. |
+| $\lim\sin(x_n)=0$. | $\lim\sin(y_n)=1$. |
+
+Poiché $0\neq1$, concludiamo:
+
+$$
+\nexists\lim_{x\to+\infty}\sin x.
+$$
+
+**Altro esempio possibile (aggiuntivo):** $z_n=3\pi/2+2n\pi$ dà $\sin(z_n)=-1$, ma bastano le prime due successioni.
+
+## 31. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
+
+Studiamo:
+
+$$
+\lim_{x\to0^+}\sin\bigl(\frac1x\bigr).
+$$
+
+Cerchiamo due successioni **positive** che tendano a $0$ e diano valori diversi del seno.
+
+**Prima successione: vogliamo ottenere zero.** Imponiamo:
+
+$$
+\frac1{x_n}=n\pi
+\quad\Longrightarrow\quad
+x_n=\frac1{n\pi},\qquad n\geq1.
+$$
+
+Allora:
+
+$$
+x_n\to0^+,
+\qquad
+\sin\bigl(\frac1{x_n}\bigr)=\sin(n\pi)=0.
+$$
+
+**Seconda successione: vogliamo ottenere uno.** Imponiamo:
+
+$$
+\frac1{y_n}=\frac\pi2+2n\pi
+\quad\Longrightarrow\quad
+y_n=\frac1{\frac\pi2+2n\pi},\qquad n\geq1.
+$$
+
+Allora:
+
+$$
+y_n\to0^+,
+\qquad
+\sin\bigl(\frac1{y_n}\bigr)=\sin\bigl(\frac\pi2+2n\pi\bigr)=1.
+$$
+
+| Prima successione | Seconda successione |
+| :--- | :--- |
+| $x_n=1/(n\pi)\to0^+$. | $y_n=1/(\pi/2+2n\pi)\to0^+$. |
+| $\sin(1/x_n)=0$. | $\sin(1/y_n)=1$. |
+| Il limite dei valori è $0$. | Il limite dei valori è $1$. |
+
+Poiché $0\neq1$:
+
+$$
+\nexists\lim_{x\to0^+}\sin\bigl(\frac1x\bigr).
+$$
+
+**Trucco da ricordare:** scegliamo **prima** i valori noti del seno ($0$ e $1$), poi imponiamo l'argomento $1/x_n$ corrispondente e **ricaviamo le successioni**. Usiamo i reciproci per fare in modo che $x_n$ e $y_n$ tendano a $0^+$.
+
+## 32. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
+
+**Enunciato:** se una funzione ha un limite per un dato avvicinamento, esso è **unico**.
+
+$$
+\lim_{x\to x_0}f(x)=\ell_1
+\quad\text{e}\quad
+\lim_{x\to x_0}f(x)=\ell_2
+\quad\Longrightarrow\quad
+\ell_1=\ell_2.
+$$
+
+Il risultato vale anche per limiti finiti o infiniti e quando $x_0=+\infty$ o $x_0=-\infty$.
+
+### Dimostrazione con il criterio sequenziale — pagine 41–42
+
+**Prima ipotesi:**
+
+$$
+\lim_{x\to x_0}f(x)=\ell_1.
+$$
+
+Per ogni successione ammissibile $x_n\to x_0$, il criterio sequenziale impone:
+
+$$
+\lim_{n\to+\infty}f(x_n)=\ell_1.
+$$
+
+**Seconda ipotesi:**
+
+$$
+\lim_{x\to x_0}f(x)=\ell_2.
+$$
+
+Per la **stessa successione** deve valere:
+
+$$
+\lim_{n\to+\infty}f(x_n)=\ell_2.
+$$
+
+Ma **il limite di una successione è unico**: i due valori devono coincidere.
+
+$$
+\ell_1=\ell_2.
+$$
+
+**Non è una contraddizione avere limiti laterali diversi:**
+
+$$
+\lim_{x\to0^-}\frac1x=-\infty,
+\qquad
+\lim_{x\to0^+}\frac1x=+\infty.
+$$
+
+Infatti sono **due avvicinamenti distinti**.
+
+### Riepilogo dei teoremi
+
+| Teoremi sulle successioni | Limiti delle funzioni |
+| :--- | :--- |
+| Ogni successione può avere al massimo un limite. | **Unicità:** un limite di funzione, se esiste, è unico. |
+| Possiamo studiare la successione composta $f(x_n)$. | **Criterio sequenziale:** il limite è $\ell$ se e solo se $f(x_n)\to\ell$ per ogni successione ammissibile. |
+| Due successioni possono portare a risultati diversi. | **Non esistenza:** due successioni ammissibili con limiti diversi bastano a escludere il limite della funzione. |
+
+---
+
+*Fine del PDF della lezione del 14/10: pagina 42, dimostrazione dell'unicità del limite.*
+
 
 
 
