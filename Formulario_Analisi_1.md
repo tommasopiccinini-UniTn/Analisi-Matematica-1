@@ -464,18 +464,9 @@ $$
 (1+u)^{1/u}\to e,\qquad u\to0
 $$
 
-**Trucco per riconoscere un limite notevole quando $x\to a$:**
+**Trucco per i limiti con $x\to a$:**
 
 Se compare $x-a$, poni $u=x-a$. Allora $x=a+u$ e $u\to0$.
-
-**Esempio:**
-
-$$
-\lim_{x\to\pi}\frac{\sin x}{x-\pi}
-=\lim_{u\to0}\frac{\sin(\pi+u)}u
-=-\lim_{u\to0}\frac{\sin u}u
-=-1
-$$
 
 ## 13 · Gerarchia di crescita — n → +∞
 
