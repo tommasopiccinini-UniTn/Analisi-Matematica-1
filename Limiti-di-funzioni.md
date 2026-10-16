@@ -220,7 +220,7 @@ $$
 
 **Concetto comune:** fissiamo la tolleranza $\varepsilon$ attorno al limite; poi troviamo la condizione necessaria perché **tutti i valori richiesti** vi restino: $n>N$ oppure $0<\lvert x-x_0\rvert<\delta$.
 
-*Il grafico delle funzioni usa $f(x)=x$ per illustrare la definizione; la funzione $x\sin(1/x)$ è invece l'esempio specifico di pagina 23.*
+**Nota sul grafico:** la pagina 25 usa la funzione **f(x) = x** per illustrare la definizione. L'esempio specifico della pagina 23 è invece **f(x) = x sin(1/x)**.
 
 ---
 
