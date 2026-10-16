@@ -310,7 +310,131 @@ $$
 
 ---
 
-*Prossime slide: proseguimento della lezione sui limiti di funzioni.*
+## 10. Funzioni continue — lezione 14/10, pagina 1 (slide 10/80)
+
+Il **limite** descrive cosa succede ai valori $f(x)$ quando $x\to x_0$. La **continuità** collega il limite al valore **effettivo** della funzione nel punto $x_0$.
+
+### Definizione
+
+Sia $f:D\to\mathbb R$ e sia $x_0\in D$. La funzione è **continua in $x_0$** quando:
+
+$$
+\forall\varepsilon>0\quad\exists\delta>0
+$$
+
+tale che, per ogni $x\in D$,
+
+$$
+\lvert x-x_0\rvert<\delta
+\quad\Longrightarrow\quad
+\lvert f(x)-f(x_0)\rvert<\varepsilon.
+$$
+
+Quando **$x_0$ è punto di accumulazione di $D$**, questa definizione equivale a:
+
+$$
+\lim_{x\to x_0}f(x)=f(x_0).
+$$
+
+| Limiti di successioni — collegamento | Limiti di funzioni e continuità |
+| :--- | :--- |
+| Per $a_n\to\ell$, i termini si avvicinano al limite $\ell$ quando $n$ cresce. | Per $\lim_{x\to x_0}f(x)=\ell$, i valori si avvicinano a $\ell$ quando $x$ si avvicina a $x_0$. |
+| Il limite di successione non deve coincidere con un termine della successione. | Per la **continuità** il valore $f(x_0)$ deve esistere e, se $x_0$ è di accumulazione, deve essere uguale a $\ell$. |
+| Nella definizione di limite consideriamo $n>N$. | Nella definizione di continuità consideriamo $\lvert x-x_0\rvert<\delta$, **includendo il punto $x_0$**. |
+
+### Esempi aggiuntivi
+
+**Continuità di $f(x)=x^2$ in $x_0=2$:**
+
+$$
+f(2)=4,\qquad\lim_{x\to2}x^2=4.
+$$
+
+Il limite coincide con $f(2)$: la funzione è **continua in $2$**.
+
+**Non continuità:** $f(0)=7$, mentre $f(x)=4$ per ogni $x\neq0$.
+
+$$
+\lim_{x\to0}f(x)=4\neq7=f(0).
+$$
+
+Il limite esiste, ma la funzione **non è continua in $0$**.
+
+**Metodo negli esercizi (per un punto di accumulazione):** verifica che $f(x_0)$ sia definito; calcola il limite in $x_0$; confronta i due valori.
+
+## 11. Continuità nei punti isolati — lezione 14/10, pagina 2 (appunti)
+
+Gli appunti manoscritti illustrano un caso particolare: **ogni funzione è continua in un punto isolato del suo dominio**.
+
+### Punto isolato
+
+Un punto $x_0\in D$ è **isolato** se esiste un raggio $\delta>0$ per cui:
+
+$$
+(x_0-\delta,\ x_0+\delta)\cap D=\{x_0\}.
+$$
+
+Nell'intorno scelto, quindi, **non ci sono punti del dominio diversi da $x_0$**.
+
+### Perché la continuità è automatica?
+
+La continuità richiede che per tutti gli $x$ del dominio vicini a $x_0$ si abbia:
+
+$$
+\lvert f(x)-f(x_0)\rvert<\varepsilon.
+$$
+
+Ma se nell'intorno l'unico punto del dominio è $x_0$, l'unico caso da verificare è:
+
+$$
+\lvert f(x_0)-f(x_0)\rvert=0<\varepsilon.
+$$
+
+La disuguaglianza è vera **qualunque sia il valore $f(x_0)$**.
+
+### Esempio aggiuntivo: perché da [2,3] compare (-1,1)?
+
+Consideriamo il dominio:
+
+$$
+D=\{0\}\cup[2,3].
+$$
+
+Vogliamo verificare se **$x_0=0$ è un punto isolato**.
+
+1. **Il dominio resta sempre $D=\{0\}\cup[2,3]$.**
+2. Per costruire un **intorno di $x_0=0$**, scegliamo ad esempio **$\delta=1$**:
+
+$$
+(x_0-\delta,\ x_0+\delta)=(-1,1).
+$$
+
+3. Calcoliamo **l'intersezione tra intorno e dominio**:
+
+$$
+(-1,1)\cap(\{0\}\cup[2,3])=\{0\}.
+$$
+
+**Non abbiamo sostituito $[2,3]$ con $(-1,1)$.** L'intervallo $[2,3]$ fa parte del **dominio**; $(-1,1)$ è il **nuovo intorno di zero** scelto per la verifica. I due intervalli non hanno punti in comune, e il solo elemento del dominio dentro l'intorno è $0$.
+
+Conclusione: **$0$ è isolato**; dunque ogni funzione $f:D\to\mathbb R$ è continua in $0$.
+
+Il valore $\delta=1$ è una **scelta comoda, non obbligatoria**: basta scegliere un intorno abbastanza piccolo da non contenere il punto $2$.
+
+### Parallelismo con le successioni
+
+| Successioni | Funzioni |
+| :--- | :--- |
+| Una successione è una funzione $a:\mathbb N\to\mathbb R$ con $a(n)=a_n$. | Una funzione $f:D\to\mathbb R$ è continua automaticamente nei **punti isolati di $D$**. |
+| Ogni $n\in\mathbb N$ è isolato: $(n-1/2,n+1/2)\cap\mathbb N=\{n\}$. | Quindi **ogni successione, vista come funzione su $\mathbb N$, è continua in ogni indice**, anche se non converge per $n\to+\infty$. |
+| Il limite della successione riguarda il comportamento degli indici **all'infinito**. | In un punto isolato la continuità **non richiede di calcolare un limite nel punto**: quel limite non è definito secondo la definizione del corso. |
+
+**Da ricordare:** un **punto di accumulazione** consente di avvicinarsi con altri punti del dominio; un **punto isolato** ha un intorno che non contiene altri punti del dominio.
+
+---
+
+*Prossima slide: limiti destro e sinistro (lezione 14/10, pagina 4, slide 11/80).*
+
 
 
 
