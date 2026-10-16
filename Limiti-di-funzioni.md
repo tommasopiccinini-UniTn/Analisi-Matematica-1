@@ -392,7 +392,7 @@ $$
 
 La disuguaglianza è vera **qualunque sia il valore $f(x_0)$**.
 
-### Esempio aggiuntivo: perché da [2,3] compare (-1,1)?
+### Esempio aggiuntivo:
 
 Consideriamo il dominio:
 
@@ -415,7 +415,7 @@ $$
 (-1,1)\cap(\{0\}\cup[2,3])=\{0\}.
 $$
 
-**Non abbiamo sostituito $[2,3]$ con $(-1,1)$.** L'intervallo $[2,3]$ fa parte del **dominio**; $(-1,1)$ è il **nuovo intorno di zero** scelto per la verifica. I due intervalli non hanno punti in comune, e il solo elemento del dominio dentro l'intorno è $0$.
+L'intervallo $[2,3]$ fa parte del **dominio**; $(-1,1)$ è il **nuovo intorno di zero** scelto per la verifica. I due intervalli non hanno punti in comune, e il solo elemento del dominio dentro l'intorno è $0$.
 
 Conclusione: **$0$ è isolato**; dunque ogni funzione $f:D\to\mathbb R$ è continua in $0$.
 
