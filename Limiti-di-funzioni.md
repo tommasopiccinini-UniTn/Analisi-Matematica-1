@@ -989,7 +989,234 @@ Il limite completo **non esiste**, ma la retta **$x=2$ è un asintoto verticale*
 
 ---
 
-*Prossima slide: limite all'infinito (lezione 14/10, pagina 20, slide 20/80).*
+## 20. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
+
+Studiamo il comportamento di una funzione quando **$x\to+\infty$** oppure **$x\to-\infty$**. Perché il limite abbia senso, il dominio $D$ deve contenere punti arbitrariamente grandi nel verso considerato.
+
+**Dominio illimitato superiormente:**
+
+$$
+\forall K>0\quad\exists x\in D:\ x>K.
+$$
+
+**Dominio illimitato inferiormente:**
+
+$$
+\forall K>0\quad\exists x\in D:\ x<-K.
+$$
+
+| Limiti delle successioni | Limiti delle funzioni |
+| :--- | :--- |
+| $\mathbb N$ è illimitato superiormente, quindi si considera $n\to+\infty$. | Si studia $x\to+\infty$ solo se $D$ è illimitato superiormente, $x\to-\infty$ solo se è illimitato inferiormente. |
+| L'indice $n$ assume valori naturali. | Il dominio può essere $\mathbb R$, un intervallo o un altro sottoinsieme di $\mathbb R$. |
+
+**Esempi:** $D=\mathbb R$ permette entrambe le direzioni; $D=[0,+\infty)$ solo $x\to+\infty$; $D=(-\infty,3]$ solo $x\to-\infty$; $D=[0,5]$ nessuna.
+
+**Non confondere $x\to+\infty$ con $f(x)\to+\infty$.** Per esempio:
+
+$$
+\lim_{x\to+\infty}\frac1x=0.
+$$
+
+## 21. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
+
+Per $f:D\to\mathbb R$ con $D$ illimitato superiormente:
+
+$$
+\lim_{x\to+\infty}f(x)=\ell
+$$
+
+significa:
+
+$$
+\forall\varepsilon>0\quad\exists K>0
+$$
+
+tale che, per ogni $x\in D$,
+
+$$
+x>K\quad\Longrightarrow\quad
+\lvert f(x)-\ell\rvert<\varepsilon.
+$$
+
+**Interpretazione:** scelta la tolleranza $\varepsilon$, troviamo una soglia $K$ oltre la quale **tutti i valori della funzione** distano da $\ell$ meno di $\varepsilon$.
+
+| Successioni | Funzioni |
+| :--- | :--- |
+| $\lim_{n\to+\infty}a_n=\ell$. | $\lim_{x\to+\infty}f(x)=\ell$. |
+| Per ogni $\varepsilon>0$ troviamo $N$ tale che, se $n>N$, allora $\lvert a_n-\ell\rvert<\varepsilon$. | Per ogni $\varepsilon>0$ troviamo $K>0$ tale che, se $x>K$, allora $\lvert f(x)-\ell\rvert<\varepsilon$. |
+
+### Esempio aggiuntivo: verificare il limite di 1/x
+
+Per verificare $\lim_{x\to+\infty}1/x=0$, fissiamo $\varepsilon>0$ e imponiamo:
+
+$$
+\frac1x<\varepsilon
+\quad\Longleftrightarrow\quad
+x>\frac1\varepsilon
+\qquad(x>0).
+$$
+
+Scegliamo:
+
+$$
+K=\frac1\varepsilon.
+$$
+
+Se $x>K$, la disuguaglianza $1/x<\varepsilon$ è verificata.
+
+**Asintoto orizzontale:** se il limite finito è $\ell$, la retta **$y=\ell$** è un asintoto orizzontale per $x\to+\infty$. Per $f(x)=1/x$ è **$y=0$**.
+
+**Distinzione:** asintoto verticale **$x=x_0$** per un limite infinito vicino a un punto; asintoto orizzontale **$y=\ell$** per un limite finito all'infinito.
+
+## 22. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
+
+Il grafico degli appunti mostra una funzione che può oscillare anche molto prima di $K$; per $x>K$ resta dentro la **striscia orizzontale** intorno a $\ell$.
+
+<img src="grafici/limite-a-infinito-epsilon-K.svg" width="780" alt="Grafico del limite finito per x tendente a più infinito con epsilon e soglia K">
+
+La striscia è:
+
+$$
+\ell-\varepsilon<f(x)<\ell+\varepsilon
+\quad\Longleftrightarrow\quad
+\lvert f(x)-\ell\rvert<\varepsilon.
+$$
+
+**Importante:** la funzione può continuare a oscillare. Deve però restare nella fascia per **tutti gli $x\in D$ con $x>K$**, per ogni $\varepsilon>0$.
+
+## 23. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
+
+Quando $D$ è illimitato superiormente, la slide introduce:
+
+**Limite $+\infty$:**
+
+$$
+\lim_{x\to+\infty}f(x)=+\infty
+$$
+
+$$
+\forall M>0\quad\exists K>0:
+\quad x\in D,\ x>K
+\quad\Longrightarrow\quad f(x)>M.
+$$
+
+**Limite $-\infty$:**
+
+$$
+\lim_{x\to+\infty}f(x)=-\infty
+$$
+
+$$
+\forall M>0\quad\exists K>0:
+\quad x\in D,\ x>K
+\quad\Longrightarrow\quad f(x)<-M.
+$$
+
+| Limite finito | Limite infinito |
+| :--- | :--- |
+| Si fissa **$\varepsilon>0$**, tolleranza attorno a $\ell$. | Si fissa **$M>0$**, soglia positiva o negativa in valore assoluto. |
+| Si cerca $K$ tale che $\lvert f(x)-\ell\rvert<\varepsilon$. | Si cerca $K$ tale che $f(x)>M$ oppure $f(x)<-M$. |
+
+### Esercizio della slide: definizioni per x che tende a -infinito
+
+**Svolgimento aggiuntivo:** supponiamo $D$ illimitato inferiormente. Rispetto a $x\to+\infty$ cambia la condizione in **$x<-K$**.
+
+**Limite finito:**
+
+$$
+\lim_{x\to-\infty}f(x)=\ell
+$$
+
+$$
+\forall\varepsilon>0\quad\exists K>0:
+\quad x\in D,\ x<-K
+\quad\Longrightarrow\quad
+\lvert f(x)-\ell\rvert<\varepsilon.
+$$
+
+**Limite $+\infty$:**
+
+$$
+\lim_{x\to-\infty}f(x)=+\infty
+$$
+
+$$
+\forall M>0\quad\exists K>0:
+\quad x\in D,\ x<-K
+\quad\Longrightarrow\quad f(x)>M.
+$$
+
+**Limite $-\infty$:**
+
+$$
+\lim_{x\to-\infty}f(x)=-\infty
+$$
+
+$$
+\forall M>0\quad\exists K>0:
+\quad x\in D,\ x<-K
+\quad\Longrightarrow\quad f(x)<-M.
+$$
+
+**Attenzione:** il dominio non è necessariamente $(-\infty,0)$: può essere anche $\mathbb R$. L'importante è che sia illimitato inferiormente.
+
+## 24. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
+
+**Le tecniche di calcolo servono a trovare $\ell$. La definizione formale serve a dimostrare che il valore trovato è corretto.**
+
+### 1. Calcolo
+
+$$
+\lim_{x\to-\infty}\frac{2x+1}{x}
+=\lim_{x\to-\infty}\left(2+\frac1x\right)=2.
+$$
+
+Abbiamo individuato **$\ell=2$**.
+
+### 2. Verifica con la definizione
+
+Fissato $\varepsilon>0$, dobbiamo dimostrare:
+
+$$
+\lvert f(x)-2\rvert<\varepsilon.
+$$
+
+Sostituiamo e semplifichiamo:
+
+$$
+\lvert (2x+1)/x-2\rvert
+=\frac1{\lvert x\rvert}<\varepsilon.
+$$
+
+Poiché $x<0$, questa condizione equivale a:
+
+$$
+\lvert x\rvert>\frac1\varepsilon
+\quad\Longleftrightarrow\quad
+x<-\frac1\varepsilon.
+$$
+
+Scegliamo **$K=1/\varepsilon$**. Se $x<-K$, allora $\lvert x\rvert>1/\varepsilon$ e pertanto:
+
+$$
+\lvert f(x)-2\rvert
+=\frac1{\lvert x\rvert}<\varepsilon.
+$$
+
+La definizione è verificata.
+
+| Calcolare | Verificare con la definizione |
+| :--- | :--- |
+| **Obiettivo:** trovare $\ell$ mediante semplificazioni, proprietà dei limiti, limiti notevoli o equivalenze. | **Obiettivo:** dimostrare che $\ell$ soddisfa la definizione con una scelta adeguata di $K$, $N$ o $\delta$. |
+| Nell'esempio troviamo $\ell=2$. | Nell'esempio scegliamo $K=1/\varepsilon$ e verifichiamo la disuguaglianza. |
+
+**Regola per gli esercizi:** «calcola» e «verifica con la definizione» richiedono due procedimenti diversi.
+
+---
+
+*Prossima slide: esempi di limiti all'infinito (lezione 14/10, pagina 24, slide 23/80).*
+
 
 
 
