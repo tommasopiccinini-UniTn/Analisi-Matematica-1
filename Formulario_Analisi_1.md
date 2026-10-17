@@ -375,9 +375,9 @@ Angoli in senso antiorario.
 | $1$ | $\pi/4$ |
 | $\sqrt3$ | $\pi/3$ |
 
-$
+$$
 \arctan t\in(-\pi/2,\pi/2),\qquad\lim_{x\to\pm\infty}\arctan x=\pm\frac\pi2
-$
+$$
 
 Per l'angolo del punto $P(x,y)$, con $x\neq0$:
 
