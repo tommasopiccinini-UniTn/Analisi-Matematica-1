@@ -28,18 +28,6 @@ $$
 \sqrt{x^2}=\lvert x\rvert
 $$
 
-## 3A · De Moivre
-
-$$
-z=r(\cos\theta+i\sin\theta)
-$$
-
-$$
-z^n=r^n[\cos(n\theta)+i\sin(n\theta)],\qquad n\in\mathbb Z
-$$
-
-Per $n<0$ occorre $z\neq0$.
-
 ## 4 · Funzioni
 
 - **Iniettiva:** $\forall x_1,x_2\in A,\ x_1\neq x_2\Rightarrow f(x_1)\neq f(x_2)$.
@@ -174,6 +162,18 @@ $$
 
 Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. Nelle **somme e differenze** controllare le cancellazioni; se il primo termine si cancella, usare più termini dello sviluppo.
 
+**Altri limiti notevoli:**
+
+$
+\lim_{u\to0}(1+u)^{1/u}=e
+$
+
+$
+\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e
+$
+
+**Per $x\to a$:** se compare $x-a$, si può porre $u=x-a$; allora $x=a+u$ e $u\to0$.
+
 ## 6 · Trigonometria
 
 - $\sin:\mathbb R\to[-1,1]$ è dispari; $\cos:\mathbb R\to[-1,1]$ è pari.
@@ -192,7 +192,7 @@ $$
 1+\tan^2x=\frac1{\cos^2x};\qquad1+\cot^2x=\frac1{\sin^2x}
 $$
 
-**Addizione e sottrazione:** caso particolare $\sin(x+\pi)=-\sin x$.
+**Addizione e sottrazione:**
 
 $$
 \sin(x\pm y)=\sin x\cos y\pm\cos x\sin y
@@ -235,10 +235,6 @@ $$
 
 $$
 \arccos:[-1,1]\to[0,\pi]
-$$
-
-$$
-\arctan:\mathbb R\to(-\pi/2,\pi/2)
 $$
 
 $$
@@ -300,11 +296,13 @@ $$
 \frac{z_1}{z_2}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)},\qquad z_2\neq0
 $$
 
-**Potenza (z noto):**
+**Potenze e formula di De Moivre (z noto):**
 
-$$
-z^n=r^ne^{in\theta}
-$$
+$
+z^n=r^ne^{in\theta}=r^n[\cos(n\theta)+i\sin(n\theta)],\qquad n\in\mathbb Z
+$
+
+Per $n<0$ occorre $z\neq0$.
 
 **Radici di $z^n=w$**, con $w=\rho e^{i\varphi}$, $\rho=\lvert w\rvert>0$, $n\in\mathbb N$, $n\ge1$:
 
@@ -429,44 +427,6 @@ f^g=e^{g\ln f};\qquad L=\lim(g\ln f)\Rightarrow\lim f^g=e^L
 $$
 
 **3. Controlla il dominio, il segno e i limiti laterali.**
-
-## 10 · Limiti notevoli — u → 0
-
-$$
-\frac{\sin u}u\to1,\qquad\frac{\tan u}u\to1
-$$
-
-$$
-\frac{1-\cos u}{u^2}\to\frac12
-$$
-
-$$
-\frac{\ln(1+u)}u\to1
-$$
-
-$$
-\frac{e^u-1}u\to1
-$$
-
-$$
-\frac{(1+u)^\alpha-1}u\to\alpha
-$$
-
-$$
-\frac{a^u-1}u\to\ln a,\qquad a>0
-$$
-
-$$
-(1+1/n)^n\to e,\qquad n\to+\infty
-$$
-
-$$
-(1+u)^{1/u}\to e,\qquad u\to0
-$$
-
-**Trucco per i limiti con $x\to a$:**
-
-Se compare $x-a$, poni $u=x-a$. Allora $x=a+u$ e $u\to0$.
 
 ## 13 · Gerarchia di crescita — n → +∞
 
