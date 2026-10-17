@@ -82,6 +82,12 @@ $$
 \log_a(x^r)=r\log_a x
 $$
 
+**Limite del logaritmo naturale:**
+
+$
+\lim_{x\to0^+}\ln x=-\infty
+$
+
 **Cambio di base:**
 
 $$
