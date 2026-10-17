@@ -112,13 +112,13 @@ $$
 \sin u=u-\frac{u^3}{6}+o(u^3)
 $$
 
-$
+$$
 \cos u=1-\frac{u^2}{2}+o(u^2)
-$
+$$
 
-$
+$$
 \tan u=u+\frac{u^3}{3}+o(u^3)
-$
+$$
 
 $$
 (1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)
@@ -140,17 +140,17 @@ $$
 1-\cos u\sim\frac{u^2}{2}\qquad\cos u-1\sim-\frac{u^2}{2}
 $$
 
-$
+$$
 \ln(1+u)\sim u;\qquad\ln(1-u)\sim -u
-$
+$$
 
-$
+$$
 \ln(\cos u)\sim -\frac{u^2}{2}
-$
+$$
 
-$
+$$
 \arccos u-\frac{\pi}{2}\sim -u
-$
+$$
 
 $$
 e^u-1\sim u
@@ -170,9 +170,9 @@ $$
 
 **Limite notevole della radice:**
 
-$
+$$
 \lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12
-$
+$$
 
 **Definizione:**
 
@@ -184,13 +184,13 @@ Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. N
 
 **Altri limiti notevoli:**
 
-$
+$$
 \lim_{u\to0}(1+u)^{1/u}=e
-$
+$$
 
-$
+$$
 \lim_{n\to+\infty}\left(1+\frac1n\right)^n=e
-$
+$$
 
 **Per $x\to a$:** se compare $x-a$, si può porre $u=x-a$; allora $x=a+u$ e $u\to0$.
 
@@ -318,9 +318,9 @@ $$
 
 **Potenze e formula di De Moivre (z noto):**
 
-$
+$$
 z^n=r^ne^{in\theta}=r^n[\cos(n\theta)+i\sin(n\theta)],\qquad n\in\mathbb Z
-$
+$$
 
 Per $n<0$ occorre $z\neq0$.
 
@@ -456,13 +456,13 @@ $$
 
 $$
 \ln n\ll n^\alpha\ll a^n\ll n!\ll n^n,\qquad\alpha>0,\ a>1
-$
+$$
 
 **Per $x\to0^+$:**
 
-$
+$$
 \lim_{x\to0^+}x^\alpha\ln x=0,\qquad\alpha>0
-$
+$$
 
 ---
 
