@@ -168,6 +168,12 @@ $$
 \sqrt{1+u}-1\sim\frac u2\qquad\sqrt{1-u}-1\sim-\frac u2
 $$
 
+**Limite notevole della radice:**
+
+$
+\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12
+$
+
 **Definizione:**
 
 $$
