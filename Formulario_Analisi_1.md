@@ -408,6 +408,8 @@ $$
 | $\infty-\infty$ | Raccogli il termine dominante, usa il denominatore comune oppure il coniugato delle radici. |
 | $1^\infty,\ 0^0,\ \infty^0$ | Con base positiva, passa al logaritmo e studia il prodotto. |
 
+**Raccoglimento nei polinomi:** se $x\to\infty$, raccogli la potenza di $x$ **maggiore**; se $x\to0$, raccogli la potenza di $x$ **minore** (tra quelle presenti).
+
 **Prodotto trasformato in quoziente:**
 
 $$
