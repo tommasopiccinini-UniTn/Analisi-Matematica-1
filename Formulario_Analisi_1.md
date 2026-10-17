@@ -44,6 +44,8 @@ $$
 
 Con le disuguaglianze strette si ottiene la **stretta monotonia**, che implica l'iniettività.
 
+**Continuità a tratti:** nel punto di raccordo $a$ deve valere $\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=f(a)$.
+
 **Teorema degli zeri:**
 
 $$
@@ -110,9 +112,13 @@ $$
 \sin u=u-\frac{u^3}{6}+o(u^3)
 $$
 
-$$
+$
 \cos u=1-\frac{u^2}{2}+o(u^2)
-$$
+$
+
+$
+\tan u=u+\frac{u^3}{3}+o(u^3)
+$
 
 $$
 (1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)
@@ -134,9 +140,17 @@ $$
 1-\cos u\sim\frac{u^2}{2}\qquad\cos u-1\sim-\frac{u^2}{2}
 $$
 
-$$
+$
 \ln(1+u)\sim u;\qquad\ln(1-u)\sim -u
-$$
+$
+
+$
+\ln(\cos u)\sim -\frac{u^2}{2}
+$
+
+$
+\arccos u-\frac{\pi}{2}\sim -u
+$
 
 $$
 e^u-1\sim u
@@ -355,9 +369,9 @@ Angoli in senso antiorario.
 | $1$ | $\pi/4$ |
 | $\sqrt3$ | $\pi/3$ |
 
-$$
-\arctan t\in(-\pi/2,\pi/2)
-$$
+$
+\arctan t\in(-\pi/2,\pi/2),\qquad\lim_{x\to\pm\infty}\arctan x=\pm\frac\pi2
+$
 
 Per l'angolo del punto $P(x,y)$, con $x\neq0$:
 
@@ -391,6 +405,8 @@ $$
 $$
 \lim[f(x)]^\alpha=(\lim f)^\alpha\quad\text{(se definita)}
 $$
+
+**Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
 
 ## 9 · Forme indeterminate e procedura
 
@@ -434,7 +450,13 @@ $$
 
 $$
 \ln n\ll n^\alpha\ll a^n\ll n!\ll n^n,\qquad\alpha>0,\ a>1
-$$
+$
+
+**Per $x\to0^+$:**
+
+$
+\lim_{x\to0^+}x^\alpha\ln x=0,\qquad\alpha>0
+$
 
 ---
 
