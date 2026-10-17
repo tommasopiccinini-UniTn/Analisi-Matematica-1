@@ -116,13 +116,13 @@ $$
 \cos u=1-\frac{u^2}{2}+o(u^2)
 $$
 
-$
+$$
 \tan u=u+\frac{u^3}{3}+o(u^3)
-$
+$$
 
-$
+$$
 \arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)
-$
+$$
 
 $$
 (1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)
