@@ -598,13 +598,7 @@ $$
 
 **Perché funziona:** $t^\alpha$ cresce più velocemente di $\log t$. La sostituzione non è obbligatoria: usala quando semplifica il limite.
 
-**Potenze a esponente variabile (slide 50):** per le forme indeterminate $1^\infty$, $0^0$, $\infty^0$, con $f(x)>0$, passa all'esponenziale:
-
-$$
-f(x)^{g(x)}=e^{g(x)\ln f(x)}
-$$
-
-**Esempio:** $x^x$ per $x\to0^+$ è una forma $0^0$. Dato che $x\ln x\to0$:
+**Esempio della slide 50:** per $x\to0^+$, usa la trasformazione delle potenze indeterminate già riportata nella **sezione 9**. Poiché $x\ln x\to0$:
 
 $$
 \lim_{x\to0^+}x^x
