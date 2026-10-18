@@ -110,9 +110,15 @@ $$
 e^u=1+u+\frac{u^2}{2}+o(u^2)
 $$
 
-$$
+$
+a^u=1+u\ln a+o(u),\qquad a>0
+$
+
+**Caso particolare:** $2^u=1+u\ln2+o(u)$.
+
+$
 \ln(1+u)=u-\frac{u^2}{2}+o(u^2)
-$$
+$
 
 $$
 \sin u=u-\frac{u^3}{6}+o(u^3)
