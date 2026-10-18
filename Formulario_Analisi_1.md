@@ -84,9 +84,9 @@ $$
 
 **Limite del logaritmo naturale:**
 
-$
+$$
 \lim_{x\to0^+}\ln x=-\infty
-$
+$$
 
 **Cambio di base:**
 
@@ -466,20 +466,20 @@ $$
 
 **Funzioni elementari (slide 35–38):** sono continue nei punti del loro dominio; quindi, se $x_0$ appartiene al dominio,
 
-$
+$$
 \lim_{x\to x_0}f(x)=f(x_0).
-$
+$$
 
 **Potenze intere positive ($n\in\mathbb N$, slide 35):**
 
-$
+$$
 \lim_{x\to+\infty}x^n=+\infty,\qquad
 \lim_{x\to-\infty}x^n=
 \begin{cases}
 +\infty & n\text{ pari},\\
 -\infty & n\text{ dispari}.
 \end{cases}
-$
+$$
 
 **Potenze reali ($x>0$, slide 36):**
 
@@ -497,57 +497,57 @@ $
 
 **Trigonometria (slide 38):** seno e coseno sono continui; la tangente è continua dove $\cos x\neq0$. Ai bordi:
 
-$
+$$
 \lim_{x\to(\pi/2)^-}\tan x=+\infty,\qquad
 \lim_{x\to(-\pi/2)^+}\tan x=-\infty.
-$
+$$
 
 **Polinomi (slide 39):** per $x\to x_0$ finito, sostituisci $x_0$; per $x\to\pm\infty$, domina il termine di grado più alto:
 
-$
+$$
 P(x)=a_nx^n+\cdots+a_0\sim a_nx^n.
-$
+$$
 
 **Rapporti di polinomi (slide 40):** se $P$ ha grado $m$ e $Q$ grado $n$, con coefficienti principali $a_m,b_n\neq0$,
 
-$
+$$
 \frac{P(x)}{Q(x)}\sim\frac{a_m}{b_n}x^{m-n}
 \qquad(x\to\pm\infty).
-$
+$$
 
 - $m<n$: limite $0$; $m=n$: limite $a_m/b_n$; $m>n$: limite infinito, con segno da valutare.
 
 **Forma $1/0$ (slide 41):** **non è indeterminata**. Se il numeratore tende a un valore non nullo, studia il segno del denominatore e gli eventuali limiti laterali:
 
-$
+$$
 \lim_{x\to3}\frac1{(x-3)^4}=+\infty,\qquad
 \lim_{x\to3^-}\frac1{(x-3)^3}=-\infty,\qquad
 \lim_{x\to3^+}\frac1{(x-3)^3}=+\infty.
-$
+$$
 
 **Funzioni limitate (slide 42):** se $|g(x)|\le M$ e $f(x)\to0$, allora $f(x)g(x)\to0$. Per esempio,
 
-$
+$$
 \lim_{x\to0}x\sin\left(\frac1x\right)=0.
-$
+$$
 
 **Gerarchia degli infiniti (slide 43; esempi slide 44):** per $x\to+\infty$, esponenziali $\gg$ potenze positive $\gg$ potenze positive di logaritmi:
 
-$
+$$
 \lim_{x\to+\infty}\frac{a^x}{x^\alpha}=+\infty
 \quad(a>1,\ \alpha>0),
 \qquad
 \lim_{x\to+\infty}\frac{x^\alpha}{(\log_b x)^\beta}=+\infty
 \quad(\alpha,\beta>0,\ b>1).
-$
+$$
 
 Esempi:
 
-$
+$$
 \lim_{x\to+\infty}\frac{2^x}{x^3}=+\infty,\qquad
 \lim_{x\to+\infty}\frac{x^3}{2^x}=0,\qquad
 \lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
-$
+$$
 
 ## 13 · Gerarchia di crescita — n → +∞
 
