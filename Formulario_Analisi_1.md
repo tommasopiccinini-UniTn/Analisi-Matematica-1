@@ -549,7 +549,7 @@ $$
 \lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
 $$
 
-## 11 · Cambio di variabile nei limiti — slide 45–49
+## 11 · Cambio di variabile nei limiti — slide 45–50
 
 **Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
 
@@ -576,14 +576,18 @@ $$
 \lim_{x\to+\infty}\log\left(\sin\frac1x\right)=-\infty.
 $$
 
-**Sostituzione $t=1/x$ (slide 49):** utile per trasformare un limite vicino a zero in uno all'infinito e applicare la gerarchia di crescita.
+**Trucco: $t=1/x$ (slide 49).** Trasforma i limiti per $x\to0$ in limiti all'infinito, utili per confrontare potenze, logaritmi ed esponenziali.
 
-$$
-t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t.
-$$
+$
+t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t
+$
 
-- $x\to0^+$: $t\to+\infty$; $x\to0^-$: $t\to-\infty$.
-- $x\to+\infty$: $t\to0^+$; $x\to-\infty$: $t\to0^-$.
+$
+x\to0^+\ \Longrightarrow\ t\to+\infty,\qquad
+x\to0^-\ \Longrightarrow\ t\to-\infty
+$
+
+Viceversa: $x\to+\infty\Rightarrow t\to0^+$ e $x\to-\infty\Rightarrow t\to0^-$.
 
 Per $\alpha>0$ e $x\to0^+$:
 
@@ -593,6 +597,19 @@ x^\alpha\log x=\frac1{t^\alpha}\log\left(\frac1t\right)
 $$
 
 **Perché funziona:** $t^\alpha$ cresce più velocemente di $\log t$. La sostituzione non è obbligatoria: usala quando semplifica il limite.
+
+**Potenze a esponente variabile (slide 50):** per le forme indeterminate $1^\infty$, $0^0$, $\infty^0$, con $f(x)>0$, passa all'esponenziale:
+
+$
+f(x)^{g(x)}=e^{g(x)\ln f(x)}
+$
+
+**Esempio:** $x^x$ per $x\to0^+$ è una forma $0^0$. Dato che $x\ln x\to0$:
+
+$
+\lim_{x\to0^+}x^x
+=\lim_{x\to0^+}e^{x\ln x}=e^0=1.
+$
 
 ## 13 · Gerarchia di crescita — n → +∞
 
