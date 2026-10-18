@@ -578,14 +578,14 @@ $$
 
 **Trucco: $t=1/x$ (slide 49).** Trasforma i limiti per $x\to0$ in limiti all'infinito, utili per confrontare potenze, logaritmi ed esponenziali.
 
-$
+$$
 t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t
-$
+$$
 
-$
+$$
 x\to0^+\ \Longrightarrow\ t\to+\infty,\qquad
 x\to0^-\ \Longrightarrow\ t\to-\infty
-$
+$$
 
 Viceversa: $x\to+\infty\Rightarrow t\to0^+$ e $x\to-\infty\Rightarrow t\to0^-$.
 
@@ -600,16 +600,16 @@ $$
 
 **Potenze a esponente variabile (slide 50):** per le forme indeterminate $1^\infty$, $0^0$, $\infty^0$, con $f(x)>0$, passa all'esponenziale:
 
-$
+$$
 f(x)^{g(x)}=e^{g(x)\ln f(x)}
-$
+$$
 
 **Esempio:** $x^x$ per $x\to0^+$ è una forma $0^0$. Dato che $x\ln x\to0$:
 
-$
+$$
 \lim_{x\to0^+}x^x
 =\lim_{x\to0^+}e^{x\ln x}=e^0=1.
-$
+$$
 
 ## 13 · Gerarchia di crescita — n → +∞
 
