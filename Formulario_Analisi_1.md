@@ -178,6 +178,12 @@ $$
 \sqrt{1+u}-1\sim\frac u2\qquad\sqrt{1-u}-1\sim-\frac u2
 $$
 
+**Limite notevole del seno (slide 52, angoli in radianti):**
+
+$
+\lim_{u\to0}\frac{\sin u}{u}=1
+$
+
 **Limite notevole della radice:**
 
 $$
