@@ -553,19 +553,19 @@ $$
 
 **Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
 
-$
+$$
 \lim_{x\to x_0}g(f(x))=\lim_{y\to y_0}g(y).
-$
+$$
 
 **Procedura:** poni $y=f(x)$, determina $y\to y_0$ e calcola il limite della funzione esterna $g(y)$.
 
 **Esempi con $y=1/x$ (slide 47):**
 
-$
+$$
 \lim_{x\to0^+}e^{1/x}=+\infty,\qquad
 \lim_{x\to0^-}e^{1/x}=0,\qquad
 \lim_{x\to+\infty}e^{1/x}=1.
-$
+$$
 
 **Attenzione:** per $x\to0^+$, $1/x\to+\infty$; per $x\to0^-$, $1/x\to-\infty$.
 
