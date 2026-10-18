@@ -549,7 +549,7 @@ $$
 \lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
 $$
 
-## 11 · Cambio di variabile nei limiti — slide 45–47
+## 11 · Cambio di variabile nei limiti — slide 45–49
 
 **Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
 
@@ -568,6 +568,31 @@ $$
 $$
 
 **Attenzione:** per $x\to0^+$, $1/x\to+\infty$; per $x\to0^-$, $1/x\to-\infty$.
+
+**Altri esempi di composizione (slide 48):**
+
+$$
+\lim_{x\to1^+}\arctan\left(\frac1{x-1}\right)=\frac\pi2,\qquad
+\lim_{x\to+\infty}\log\left(\sin\frac1x\right)=-\infty.
+$$
+
+**Sostituzione $t=1/x$ (slide 49):** utile per trasformare un limite vicino a zero in uno all'infinito e applicare la gerarchia di crescita.
+
+$$
+t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t.
+$$
+
+- $x\to0^+$: $t\to+\infty$; $x\to0^-$: $t\to-\infty$.
+- $x\to+\infty$: $t\to0^+$; $x\to-\infty$: $t\to0^-$.
+
+Per $\alpha>0$ e $x\to0^+$:
+
+$$
+x^\alpha\log x=\frac1{t^\alpha}\log\left(\frac1t\right)
+=-\frac{\log t}{t^\alpha}\longrightarrow0\qquad(t\to+\infty).
+$$
+
+**Perché funziona:** $t^\alpha$ cresce più velocemente di $\log t$. La sostituzione non è obbligatoria: usala quando semplifica il limite.
 
 ## 13 · Gerarchia di crescita — n → +∞
 
