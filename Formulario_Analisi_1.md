@@ -220,14 +220,15 @@ $$
 
 **Identità:**
 
-$
+$$
 \sin^2x+\cos^2x=1
-$
+$$
+
 **Identità utile per i limiti:**
 
-$
+$$
 1-\cos x=\frac{\sin^2x}{1+\cos x}=2\sin^2\left(\frac x2\right)
-$
+$$
 
 La forma con il denominatore $1+\cos x$ vale quando $\cos x\neq-1$.
 
