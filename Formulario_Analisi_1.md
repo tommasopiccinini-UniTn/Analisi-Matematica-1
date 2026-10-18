@@ -478,6 +478,8 @@ $$
 f^g=e^{g\ln f};\qquad L=\lim(g\ln f)\Rightarrow\lim f^g=e^L
 $$
 
+**Promemoria per $1^\infty$:** porta la base nella forma $1+u$ con $u\to0$; dopo la trasformazione esponenziale usa $\ln(1+u)\sim u$.
+
 **3. Controlla il dominio, il segno e i limiti laterali.**
 
 ## 10 · Calcolo dei limiti di funzioni — slide 34–44
