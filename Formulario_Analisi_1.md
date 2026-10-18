@@ -180,9 +180,9 @@ $$
 
 **Limite notevole del seno (slide 52, angoli in radianti):**
 
-$
+$$
 \lim_{u\to0}\frac{\sin u}{u}=1
-$
+$$
 
 **Limite notevole della radice:**
 
