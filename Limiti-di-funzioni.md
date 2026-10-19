@@ -794,7 +794,28 @@ $$
 | Discontinuità essenziale per oscillazione. | Discontinuità essenziale con limiti laterali infiniti. |
 
 **Da ricordare:** assegnare $f(0)=0$ oppure $g(0)=0$ non risolve la discontinuità, perché in entrambi i casi manca un limite **finito** in $0$.
-## 18. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
+## 18. Algebra delle funzioni continue — slide 67/80
+
+### Continuità delle funzioni elementari
+
+Le **funzioni elementari** sono continue in tutti i punti del proprio **dominio**. Per esempio, $x^2$, $\sin x$ ed $e^x$ sono continue su $\mathbb R$, mentre $\ln x$ è continua per $x>0$.
+
+### Operazioni tra funzioni continue
+
+Se $f$ e $g$ sono continue in $x_0$, allora sono continue in $x_0$ anche:
+
+- **Somma e differenza:** $f\pm g$.
+- **Prodotto:** $f\cdot g$.
+- **Quoziente:** $\dfrac{f}{g}$, purché $g(x_0)\neq0$.
+
+### Conseguenze
+
+- Tutti i **polinomi** sono continui su $\mathbb R$.
+- Le **funzioni razionali** $f(x)=\dfrac{P(x)}{Q(x)}$ sono continue dove $Q(x)\neq0$.
+
+**Da ricordare:** per queste funzioni non occorre dimostrare ogni volta la continuità tramite la definizione: basta controllare che il punto appartenga al dominio.
+
+## 19. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
 
 Finora abbiamo studiato funzioni che, quando $x\to x_0$, si avvicinano a un numero reale $\ell$. Un'altra possibilità è che i valori di $f(x)$ diventino **arbitrariamente grandi**.
 
@@ -903,7 +924,7 @@ $$
 
 ---
 
-## 19. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
+## 20. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
 
 Quando:
 
@@ -939,7 +960,7 @@ Quindi l'asintoto verticale è **$x=0$**.
 
 **Regola più generale:** la retta $x=x_0$ è un asintoto verticale anche se la funzione tende a $+\infty$ o $-\infty$ **soltanto da un lato**.
 
-## 20. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
+## 21. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
 
 Il PDF verifica:
 
@@ -947,7 +968,7 @@ $$
 \lim_{x\to0}\frac1{x^2}=+\infty.
 $$
 
-Il **procedimento completo in quattro passaggi** è già nella sezione 18. Riassumiamo qui il risultato della dimostrazione.
+Il **procedimento completo in quattro passaggi** è già nella sezione 19. Riassumiamo qui il risultato della dimostrazione.
 
 **Dominio:** $D=\mathbb R\setminus\{0\}$; il punto $0$ è un punto di accumulazione del dominio anche se non vi appartiene.
 
@@ -977,7 +998,7 @@ $$
 
 L'ultimo passaggio è corretto perché **passare ai reciproci di numeri positivi inverte la disuguaglianza**.
 
-## 21. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
+## 22. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
 
 Scriviamo:
 
@@ -1048,7 +1069,7 @@ $$
 
 La definizione di limite $-\infty$ è soddisfatta.
 
-## 22. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
+## 23. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
 
 Le definizioni dei limiti infiniti possono essere applicate **separatamente a destra e a sinistra** di $x_0$, purché il dominio presenti punti arbitrariamente vicini dal lato considerato.
 
@@ -1148,7 +1169,7 @@ Il limite completo **non esiste**, ma la retta **$x=2$ è un asintoto verticale*
 
 ---
 
-## 23. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
+## 24. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
 
 Studiamo il comportamento di una funzione quando **$x\to+\infty$** oppure **$x\to-\infty$**. Perché il limite abbia senso, il dominio $D$ deve contenere punti arbitrariamente grandi nel verso considerato.
 
@@ -1177,7 +1198,7 @@ $$
 \lim_{x\to+\infty}\frac1x=0.
 $$
 
-## 24. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
+## 25. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
 
 Per $f:D\to\mathbb R$ con $D$ illimitato superiormente:
 
@@ -1228,7 +1249,7 @@ Se $x>K$, la disuguaglianza $1/x<\varepsilon$ è verificata.
 
 **Distinzione:** asintoto verticale **$x=x_0$** per un limite infinito vicino a un punto; asintoto orizzontale **$y=\ell$** per un limite finito all'infinito.
 
-## 25. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
+## 26. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
 
 Il grafico degli appunti mostra una funzione che può oscillare anche molto prima di $K$; per $x>K$ resta dentro la **striscia orizzontale** intorno a $\ell$.
 
@@ -1244,7 +1265,7 @@ $$
 
 **Importante:** la funzione può continuare a oscillare. Deve però restare nella fascia per **tutti gli $x\in D$ con $x>K$**, per ogni $\varepsilon>0$.
 
-## 26. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
+## 27. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
 
 Quando $D$ è illimitato superiormente, la slide introduce:
 
@@ -1320,7 +1341,7 @@ $$
 
 **Attenzione:** il dominio non è necessariamente $(-\infty,0)$: può essere anche $\mathbb R$. L'importante è che sia illimitato inferiormente.
 
-## 27. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
+## 28. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
 
 **Le tecniche di calcolo servono a trovare $\ell$. La definizione formale serve a dimostrare che il valore trovato è corretto.**
 
@@ -1374,7 +1395,7 @@ La definizione è verificata.
 
 ---
 
-## 28. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
+## 29. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
 
 La slide propone tre limiti:
 
@@ -1388,7 +1409,7 @@ $$
 
 **Nelle pagine 25–26 il professore verifica il primo limite con la definizione**. La verifica degli altri due è qui aggiunta per esercizio.
 
-### 28.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
+### 29.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
 
 La definizione di limite $+\infty$ per $x\to+\infty$ chiede:
 
@@ -1425,7 +1446,7 @@ $$
 
 Questa è esattamente la condizione richiesta, **per ogni $M>0$**. Quindi il limite è verificato.
 
-### 28.2. Esempi aggiuntivi: esponenziale e logaritmo
+### 29.2. Esempi aggiuntivi: esponenziale e logaritmo
 
 **Esponenziale $e^x$.** Imponiamo:
 
@@ -1468,7 +1489,7 @@ Se $x>K$, allora $\ln x>M$: anche questo limite è verificato.
 
 **Schema per le verifiche:** fissare $M>0$, risolvere **$f(x)>M$** per ottenere una condizione $x>K$, scegliere $K$ e infine dimostrare l'implicazione partendo da $x>K$.
 
-## 29. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
+## 30. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
 
 La definizione è **falsa** per un limite proposto quando non esiste una soglia $K$ che funzioni per **ogni $M>0$**.
 
@@ -1527,7 +1548,7 @@ $$
 \lim_{x\to+\infty}\frac1x\neq+\infty.
 $$
 
-Il limite corretto, già verificato nella sezione 24, è:
+Il limite corretto, già verificato nella sezione 25, è:
 
 $$
 \lim_{x\to+\infty}\frac1x=0.
@@ -1546,9 +1567,9 @@ $$
 
 ---
 
-*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 26. La pagina 28 introduce i teoremi sui limiti di funzioni.*
+*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 27. La pagina 28 introduce i teoremi sui limiti di funzioni.*
 
-## 30. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
+## 31. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
 
 Una successione reale $(a_n)$ si può interpretare come una **funzione con dominio $\mathbb N$**:
 
@@ -1578,7 +1599,7 @@ $$
 =0.
 $$
 
-## 31. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
+## 32. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
 
 Sia $f:D\to\mathbb R$ e $x_0$ un punto di accumulazione del dominio. Il teorema vale per $x_0$ e $\ell$ finiti o infiniti, con la rispettiva nozione di avvicinamento.
 
@@ -1644,7 +1665,7 @@ Per esempio, $f(x_n)$ può tendere a un altro valore $\ell'\neq\ell$, oppure non
 
 **Precisazione:** questo dimostra soltanto che il limite **non è il valore proposto $\ell$**. Per dimostrare che il limite **non esiste**, possiamo usare due successioni con risultati diversi.
 
-## 32. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
+## 33. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
 
 Se esistono due successioni **ammissibili** $x_n\to x_0$ e $y_n\to x_0$ tali che:
 
@@ -1661,7 +1682,7 @@ allora **il limite della funzione non esiste**.
 | Bisogna considerare **ogni successione ammissibile**. | **Bastano due successioni ammissibili con risultati diversi**. |
 | Una sola successione favorevole non basta. | Due risultati diversi sono incompatibili con il criterio sequenziale. |
 
-## 33. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
+## 34. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
 
 Studiamo:
 
@@ -1719,7 +1740,7 @@ $$
 
 **Altro esempio possibile (aggiuntivo):** $z_n=3\pi/2+2n\pi$ dà $\sin(z_n)=-1$, ma bastano le prime due successioni.
 
-## 34. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
+## 35. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
 
 Studiamo:
 
@@ -1775,7 +1796,7 @@ $$
 
 **Trucco da ricordare:** scegliamo **prima** i valori noti del seno ($0$ e $1$), poi imponiamo l'argomento $1/x_n$ corrispondente e **ricaviamo le successioni**. Usiamo i reciproci per fare in modo che $x_n$ e $y_n$ tendano a $0^+$.
 
-## 35. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
+## 36. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
 
 **Enunciato:** se una funzione ha un limite per un dato avvicinamento, esso è **unico**.
 
