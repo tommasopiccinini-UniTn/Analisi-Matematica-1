@@ -338,6 +338,8 @@ $$
 
 **Da ricordare (slide 62/80): il limite della funzione deve coincidere con il suo valore nel punto.**
 
+**Notazione (slide 63/80):** se $A\subseteq D$ e $f$ è continua in ogni punto $x_0\in A$, si scrive **$f\in C^0(A)$**.
+
 | Limiti di successioni — collegamento | Limiti di funzioni e continuità |
 | :--- | :--- |
 | Per $a_n\to\ell$, i termini si avvicinano al limite $\ell$ quando $n$ cresce. | Per $\lim_{x\to x_0}f(x)=\ell$, i valori si avvicinano a $\ell$ quando $x$ si avvicina a $x_0$. |
