@@ -1688,12 +1688,160 @@ Infatti sono **due avvicinamenti distinti**.
 
 *Fine del PDF della lezione del 14/10: pagina 42, dimostrazione dell'unicità del limite.*
 
+---
 
+## 33. Tipi di discontinuità — slide 64/80
 
+Studiamo il comportamento di $f$ in un punto $x_0$ del dominio in cui non è continua (considerato punto di accumulazione).
 
+### Discontinuità eliminabile
 
+Il limite esiste ed è **finito**, ma il valore nel punto è diverso dal limite (oppure $f(x_0)$ non è definita):
 
+$$
+\lim_{x\to x_0}f(x)=L\in\mathbb R,\qquad f(x_0)\neq L.
+$$
 
+Si elimina definendo (o ridefinendo) $f(x_0)=L$.
 
+### Discontinuità a salto
 
+I limiti laterali esistono, sono **finiti**, ma **diversi**:
 
+$$
+\lim_{x\to x_0^-}f(x)=L_-,\qquad
+\lim_{x\to x_0^+}f(x)=L_+,\qquad L_-\neq L_+.
+$$
+
+Cambiare soltanto $f(x_0)$ non può rendere continua la funzione.
+
+### Discontinuità essenziale
+
+Quando la discontinuità non è né eliminabile né a salto: per esempio, un limite laterale è infinito oppure la funzione oscilla senza tendere a un limite.
+
+**Metodo:** calcola prima i limiti laterali; se coincidono in un valore finito, confrontalo con $f(x_0)$.
+
+## 34. Esempi di discontinuità — slide 65/80
+
+### 34.1. Esempio di discontinuità eliminabile
+
+$$
+f(x)=
+\begin{cases}
+\dfrac{\sin x}{x} & x\neq0,\\
+0 & x=0.
+\end{cases}
+$$
+
+Per il limite notevole:
+
+$$
+\lim_{x\to0}\frac{\sin x}{x}=1,\qquad f(0)=0.
+$$
+
+Poiché $1\neq0$, la funzione non è continua in $0$. La discontinuità è **eliminabile**, perché basterebbe porre $f(0)=1$.
+
+### 34.2. Esempio di discontinuità a salto
+
+$$
+f(x)=
+\begin{cases}
+-1 & x<0,\\
+0 & x=0,\\
+1 & x>0.
+\end{cases}
+$$
+
+$$
+\lim_{x\to0^-}f(x)=-1,\qquad
+\lim_{x\to0^+}f(x)=1.
+$$
+
+I due limiti laterali sono finiti ma diversi: è una **discontinuità a salto**. Non si elimina cambiando il valore $f(0)$.
+
+### 34.3. Osservazione importante: funzioni monotone
+
+**Una funzione monotona su un intervallo aperto può avere, nei suoi punti interni, soltanto discontinuità a salto.**
+
+Per una funzione crescente:
+
+$$
+x_1<x_2 \implies f(x_1)\le f(x_2).
+$$
+
+La monotonia impedisce oscillazioni; inoltre, in ogni punto interno $x_0$ esistono limiti laterali finiti e vale:
+
+$$
+\lim_{x\to x_0^-}f(x)\le f(x_0)\le
+\lim_{x\to x_0^+}f(x).
+$$
+
+Se i due limiti laterali sono uguali a $L$, allora:
+
+$$
+L\le f(x_0)\le L
+\implies f(x_0)=L,
+$$
+
+quindi la funzione è **continua**: una discontinuità eliminabile è impossibile. Se invece i limiti laterali sono diversi, si ha un **salto**. Per una funzione decrescente valgono disuguaglianze invertite, con la stessa conclusione.
+
+**Esempio di funzione monotona crescente con salto:**
+
+$$
+H(x)=
+\begin{cases}
+0 & x<0,\\
+1 & x\ge0.
+\end{cases}
+$$
+
+$$
+\lim_{x\to0^-}H(x)=0,\qquad
+\lim_{x\to0^+}H(x)=1=H(0).
+$$
+
+È continua da destra, ma **discontinua in $0$ per salto**.
+
+## 35. Esempi di discontinuità essenziale — slide 66/80
+
+### 35.1. Oscillazione
+
+$$
+f(x)=
+\begin{cases}
+\sin\left(\frac1x\right) & x\neq0,\\
+0 & x=0.
+\end{cases}
+$$
+
+Per $x\to0$, l'argomento $1/x$ assume valori sempre più grandi in valore assoluto, mentre il seno continua a oscillare tra $-1$ e $1$:
+
+$$
+\nexists\lim_{x\to0}\sin\left(\frac1x\right).
+$$
+
+È una **discontinuità essenziale per oscillazione**: la funzione è limitata, ma non ammette limite in $0$.
+
+### 35.2. Limiti laterali infiniti
+
+$$
+g(x)=
+\begin{cases}
+\dfrac1x & x\neq0,\\
+0 & x=0.
+\end{cases}
+$$
+
+$$
+\lim_{x\to0^-}\frac1x=-\infty,\qquad
+\lim_{x\to0^+}\frac1x=+\infty.
+$$
+
+È una **discontinuità essenziale con limiti laterali infiniti**: la funzione è illimitata vicino a $0$.
+
+| Oscillazione: $\sin(1/x)$ | Limiti infiniti: $1/x$ |
+| :--- | :--- |
+| Rimane tra $-1$ e $1$, ma non tende a un valore. | Assume valori arbitrariamente grandi in valore assoluto. |
+| Discontinuità essenziale per oscillazione. | Discontinuità essenziale con limiti laterali infiniti. |
+
+**Da ricordare:** assegnare $f(0)=0$ oppure $g(0)=0$ non risolve la discontinuità, perché in entrambi i casi manca un limite **finito** in $0$.
