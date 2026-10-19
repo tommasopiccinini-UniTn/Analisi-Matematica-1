@@ -639,7 +639,162 @@ $$
 
 ---
 
-## 15. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
+## 15. Tipi di discontinuità — slide 64/80
+
+Studiamo il comportamento di $f$ in un punto $x_0$ del dominio in cui non è continua (considerato punto di accumulazione).
+
+### Discontinuità eliminabile
+
+Il limite esiste ed è **finito**, ma il valore nel punto è diverso dal limite (oppure $f(x_0)$ non è definita):
+
+$$
+\lim_{x\to x_0}f(x)=L\in\mathbb R,\qquad f(x_0)\neq L.
+$$
+
+Si elimina definendo (o ridefinendo) $f(x_0)=L$.
+
+### Discontinuità a salto
+
+I limiti laterali esistono, sono **finiti**, ma **diversi**:
+
+$$
+\lim_{x\to x_0^-}f(x)=L_-,\qquad
+\lim_{x\to x_0^+}f(x)=L_+,\qquad L_-\neq L_+.
+$$
+
+Cambiare soltanto $f(x_0)$ non può rendere continua la funzione.
+
+### Discontinuità essenziale
+
+Quando la discontinuità non è né eliminabile né a salto: per esempio, un limite laterale è infinito oppure la funzione oscilla senza tendere a un limite.
+
+**Metodo:** calcola prima i limiti laterali; se coincidono in un valore finito, confrontalo con $f(x_0)$.
+
+## 16. Esempi di discontinuità — slide 65/80
+
+### 16.1. Esempio di discontinuità eliminabile
+
+$$
+f(x)=
+\begin{cases}
+\dfrac{\sin x}{x} & x\neq0,\\
+0 & x=0.
+\end{cases}
+$$
+
+Per il limite notevole:
+
+$$
+\lim_{x\to0}\frac{\sin x}{x}=1,\qquad f(0)=0.
+$$
+
+Poiché $1\neq0$, la funzione non è continua in $0$. La discontinuità è **eliminabile**, perché basterebbe porre $f(0)=1$.
+
+### 16.2. Esempio di discontinuità a salto
+
+$$
+f(x)=
+\begin{cases}
+-1 & x<0,\\
+0 & x=0,\\
+1 & x>0.
+\end{cases}
+$$
+
+$$
+\lim_{x\to0^-}f(x)=-1,\qquad
+\lim_{x\to0^+}f(x)=1.
+$$
+
+I due limiti laterali sono finiti ma diversi: è una **discontinuità a salto**. Non si elimina cambiando il valore $f(0)$.
+
+### 16.3. Osservazione importante: funzioni monotone
+
+**Una funzione monotona su un intervallo aperto può avere, nei suoi punti interni, soltanto discontinuità a salto.**
+
+Per una funzione crescente:
+
+$$
+x_1<x_2 \implies f(x_1)\le f(x_2).
+$$
+
+La monotonia impedisce oscillazioni; inoltre, in ogni punto interno $x_0$ esistono limiti laterali finiti e vale:
+
+$$
+\lim_{x\to x_0^-}f(x)\le f(x_0)\le
+\lim_{x\to x_0^+}f(x).
+$$
+
+Se i due limiti laterali sono uguali a $L$, allora:
+
+$$
+L\le f(x_0)\le L
+\implies f(x_0)=L,
+$$
+
+quindi la funzione è **continua**: una discontinuità eliminabile è impossibile. Se invece i limiti laterali sono diversi, si ha un **salto**. Per una funzione decrescente valgono disuguaglianze invertite, con la stessa conclusione.
+
+**Esempio di funzione monotona crescente con salto:**
+
+$$
+H(x)=
+\begin{cases}
+0 & x<0,\\
+1 & x\ge0.
+\end{cases}
+$$
+
+$$
+\lim_{x\to0^-}H(x)=0,\qquad
+\lim_{x\to0^+}H(x)=1=H(0).
+$$
+
+È continua da destra, ma **discontinua in $0$ per salto**.
+
+## 17. Esempi di discontinuità essenziale — slide 66/80
+
+### 17.1. Oscillazione
+
+$$
+f(x)=
+\begin{cases}
+\sin\left(\frac1x\right) & x\neq0,\\
+0 & x=0.
+\end{cases}
+$$
+
+Per $x\to0$, l'argomento $1/x$ assume valori sempre più grandi in valore assoluto, mentre il seno continua a oscillare tra $-1$ e $1$:
+
+$$
+\nexists\lim_{x\to0}\sin\left(\frac1x\right).
+$$
+
+È una **discontinuità essenziale per oscillazione**: la funzione è limitata, ma non ammette limite in $0$.
+
+### 17.2. Limiti laterali infiniti
+
+$$
+g(x)=
+\begin{cases}
+\dfrac1x & x\neq0,\\
+0 & x=0.
+\end{cases}
+$$
+
+$$
+\lim_{x\to0^-}\frac1x=-\infty,\qquad
+\lim_{x\to0^+}\frac1x=+\infty.
+$$
+
+È una **discontinuità essenziale con limiti laterali infiniti**: la funzione è illimitata vicino a $0$.
+
+| Oscillazione: $\sin(1/x)$ | Limiti infiniti: $1/x$ |
+| :--- | :--- |
+| Rimane tra $-1$ e $1$, ma non tende a un valore. | Assume valori arbitrariamente grandi in valore assoluto. |
+| Discontinuità essenziale per oscillazione. | Discontinuità essenziale con limiti laterali infiniti. |
+
+**Da ricordare:** assegnare $f(0)=0$ oppure $g(0)=0$ non risolve la discontinuità, perché in entrambi i casi manca un limite **finito** in $0$.
+## 18. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
 
 Finora abbiamo studiato funzioni che, quando $x\to x_0$, si avvicinano a un numero reale $\ell$. Un'altra possibilità è che i valori di $f(x)$ diventino **arbitrariamente grandi**.
 
@@ -748,7 +903,7 @@ $$
 
 ---
 
-## 16. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
+## 19. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
 
 Quando:
 
@@ -784,7 +939,7 @@ Quindi l'asintoto verticale è **$x=0$**.
 
 **Regola più generale:** la retta $x=x_0$ è un asintoto verticale anche se la funzione tende a $+\infty$ o $-\infty$ **soltanto da un lato**.
 
-## 17. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
+## 20. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
 
 Il PDF verifica:
 
@@ -792,7 +947,7 @@ $$
 \lim_{x\to0}\frac1{x^2}=+\infty.
 $$
 
-Il **procedimento completo in quattro passaggi** è già nella sezione 15. Riassumiamo qui il risultato della dimostrazione.
+Il **procedimento completo in quattro passaggi** è già nella sezione 18. Riassumiamo qui il risultato della dimostrazione.
 
 **Dominio:** $D=\mathbb R\setminus\{0\}$; il punto $0$ è un punto di accumulazione del dominio anche se non vi appartiene.
 
@@ -822,7 +977,7 @@ $$
 
 L'ultimo passaggio è corretto perché **passare ai reciproci di numeri positivi inverte la disuguaglianza**.
 
-## 18. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
+## 21. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
 
 Scriviamo:
 
@@ -893,7 +1048,7 @@ $$
 
 La definizione di limite $-\infty$ è soddisfatta.
 
-## 19. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
+## 22. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
 
 Le definizioni dei limiti infiniti possono essere applicate **separatamente a destra e a sinistra** di $x_0$, purché il dominio presenti punti arbitrariamente vicini dal lato considerato.
 
@@ -993,7 +1148,7 @@ Il limite completo **non esiste**, ma la retta **$x=2$ è un asintoto verticale*
 
 ---
 
-## 20. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
+## 23. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
 
 Studiamo il comportamento di una funzione quando **$x\to+\infty$** oppure **$x\to-\infty$**. Perché il limite abbia senso, il dominio $D$ deve contenere punti arbitrariamente grandi nel verso considerato.
 
@@ -1022,7 +1177,7 @@ $$
 \lim_{x\to+\infty}\frac1x=0.
 $$
 
-## 21. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
+## 24. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
 
 Per $f:D\to\mathbb R$ con $D$ illimitato superiormente:
 
@@ -1073,7 +1228,7 @@ Se $x>K$, la disuguaglianza $1/x<\varepsilon$ è verificata.
 
 **Distinzione:** asintoto verticale **$x=x_0$** per un limite infinito vicino a un punto; asintoto orizzontale **$y=\ell$** per un limite finito all'infinito.
 
-## 22. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
+## 25. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
 
 Il grafico degli appunti mostra una funzione che può oscillare anche molto prima di $K$; per $x>K$ resta dentro la **striscia orizzontale** intorno a $\ell$.
 
@@ -1089,7 +1244,7 @@ $$
 
 **Importante:** la funzione può continuare a oscillare. Deve però restare nella fascia per **tutti gli $x\in D$ con $x>K$**, per ogni $\varepsilon>0$.
 
-## 23. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
+## 26. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
 
 Quando $D$ è illimitato superiormente, la slide introduce:
 
@@ -1165,7 +1320,7 @@ $$
 
 **Attenzione:** il dominio non è necessariamente $(-\infty,0)$: può essere anche $\mathbb R$. L'importante è che sia illimitato inferiormente.
 
-## 24. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
+## 27. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
 
 **Le tecniche di calcolo servono a trovare $\ell$. La definizione formale serve a dimostrare che il valore trovato è corretto.**
 
@@ -1219,7 +1374,7 @@ La definizione è verificata.
 
 ---
 
-## 25. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
+## 28. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
 
 La slide propone tre limiti:
 
@@ -1233,7 +1388,7 @@ $$
 
 **Nelle pagine 25–26 il professore verifica il primo limite con la definizione**. La verifica degli altri due è qui aggiunta per esercizio.
 
-### 25.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
+### 28.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
 
 La definizione di limite $+\infty$ per $x\to+\infty$ chiede:
 
@@ -1270,7 +1425,7 @@ $$
 
 Questa è esattamente la condizione richiesta, **per ogni $M>0$**. Quindi il limite è verificato.
 
-### 25.2. Esempi aggiuntivi: esponenziale e logaritmo
+### 28.2. Esempi aggiuntivi: esponenziale e logaritmo
 
 **Esponenziale $e^x$.** Imponiamo:
 
@@ -1313,7 +1468,7 @@ Se $x>K$, allora $\ln x>M$: anche questo limite è verificato.
 
 **Schema per le verifiche:** fissare $M>0$, risolvere **$f(x)>M$** per ottenere una condizione $x>K$, scegliere $K$ e infine dimostrare l'implicazione partendo da $x>K$.
 
-## 26. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
+## 29. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
 
 La definizione è **falsa** per un limite proposto quando non esiste una soglia $K$ che funzioni per **ogni $M>0$**.
 
@@ -1372,7 +1527,7 @@ $$
 \lim_{x\to+\infty}\frac1x\neq+\infty.
 $$
 
-Il limite corretto, già verificato nella sezione 21, è:
+Il limite corretto, già verificato nella sezione 24, è:
 
 $$
 \lim_{x\to+\infty}\frac1x=0.
@@ -1391,9 +1546,9 @@ $$
 
 ---
 
-*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 23. La pagina 28 introduce i teoremi sui limiti di funzioni.*
+*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 26. La pagina 28 introduce i teoremi sui limiti di funzioni.*
 
-## 27. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
+## 30. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
 
 Una successione reale $(a_n)$ si può interpretare come una **funzione con dominio $\mathbb N$**:
 
@@ -1423,7 +1578,7 @@ $$
 =0.
 $$
 
-## 28. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
+## 31. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
 
 Sia $f:D\to\mathbb R$ e $x_0$ un punto di accumulazione del dominio. Il teorema vale per $x_0$ e $\ell$ finiti o infiniti, con la rispettiva nozione di avvicinamento.
 
@@ -1489,7 +1644,7 @@ Per esempio, $f(x_n)$ può tendere a un altro valore $\ell'\neq\ell$, oppure non
 
 **Precisazione:** questo dimostra soltanto che il limite **non è il valore proposto $\ell$**. Per dimostrare che il limite **non esiste**, possiamo usare due successioni con risultati diversi.
 
-## 29. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
+## 32. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
 
 Se esistono due successioni **ammissibili** $x_n\to x_0$ e $y_n\to x_0$ tali che:
 
@@ -1506,7 +1661,7 @@ allora **il limite della funzione non esiste**.
 | Bisogna considerare **ogni successione ammissibile**. | **Bastano due successioni ammissibili con risultati diversi**. |
 | Una sola successione favorevole non basta. | Due risultati diversi sono incompatibili con il criterio sequenziale. |
 
-## 30. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
+## 33. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
 
 Studiamo:
 
@@ -1564,7 +1719,7 @@ $$
 
 **Altro esempio possibile (aggiuntivo):** $z_n=3\pi/2+2n\pi$ dà $\sin(z_n)=-1$, ma bastano le prime due successioni.
 
-## 31. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
+## 34. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
 
 Studiamo:
 
@@ -1620,7 +1775,7 @@ $$
 
 **Trucco da ricordare:** scegliamo **prima** i valori noti del seno ($0$ e $1$), poi imponiamo l'argomento $1/x_n$ corrispondente e **ricaviamo le successioni**. Usiamo i reciproci per fare in modo che $x_n$ e $y_n$ tendano a $0^+$.
 
-## 32. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
+## 35. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
 
 **Enunciato:** se una funzione ha un limite per un dato avvicinamento, esso è **unico**.
 
@@ -1690,158 +1845,3 @@ Infatti sono **due avvicinamenti distinti**.
 
 ---
 
-## 33. Tipi di discontinuità — slide 64/80
-
-Studiamo il comportamento di $f$ in un punto $x_0$ del dominio in cui non è continua (considerato punto di accumulazione).
-
-### Discontinuità eliminabile
-
-Il limite esiste ed è **finito**, ma il valore nel punto è diverso dal limite (oppure $f(x_0)$ non è definita):
-
-$$
-\lim_{x\to x_0}f(x)=L\in\mathbb R,\qquad f(x_0)\neq L.
-$$
-
-Si elimina definendo (o ridefinendo) $f(x_0)=L$.
-
-### Discontinuità a salto
-
-I limiti laterali esistono, sono **finiti**, ma **diversi**:
-
-$$
-\lim_{x\to x_0^-}f(x)=L_-,\qquad
-\lim_{x\to x_0^+}f(x)=L_+,\qquad L_-\neq L_+.
-$$
-
-Cambiare soltanto $f(x_0)$ non può rendere continua la funzione.
-
-### Discontinuità essenziale
-
-Quando la discontinuità non è né eliminabile né a salto: per esempio, un limite laterale è infinito oppure la funzione oscilla senza tendere a un limite.
-
-**Metodo:** calcola prima i limiti laterali; se coincidono in un valore finito, confrontalo con $f(x_0)$.
-
-## 34. Esempi di discontinuità — slide 65/80
-
-### 34.1. Esempio di discontinuità eliminabile
-
-$$
-f(x)=
-\begin{cases}
-\dfrac{\sin x}{x} & x\neq0,\\
-0 & x=0.
-\end{cases}
-$$
-
-Per il limite notevole:
-
-$$
-\lim_{x\to0}\frac{\sin x}{x}=1,\qquad f(0)=0.
-$$
-
-Poiché $1\neq0$, la funzione non è continua in $0$. La discontinuità è **eliminabile**, perché basterebbe porre $f(0)=1$.
-
-### 34.2. Esempio di discontinuità a salto
-
-$$
-f(x)=
-\begin{cases}
--1 & x<0,\\
-0 & x=0,\\
-1 & x>0.
-\end{cases}
-$$
-
-$$
-\lim_{x\to0^-}f(x)=-1,\qquad
-\lim_{x\to0^+}f(x)=1.
-$$
-
-I due limiti laterali sono finiti ma diversi: è una **discontinuità a salto**. Non si elimina cambiando il valore $f(0)$.
-
-### 34.3. Osservazione importante: funzioni monotone
-
-**Una funzione monotona su un intervallo aperto può avere, nei suoi punti interni, soltanto discontinuità a salto.**
-
-Per una funzione crescente:
-
-$$
-x_1<x_2 \implies f(x_1)\le f(x_2).
-$$
-
-La monotonia impedisce oscillazioni; inoltre, in ogni punto interno $x_0$ esistono limiti laterali finiti e vale:
-
-$$
-\lim_{x\to x_0^-}f(x)\le f(x_0)\le
-\lim_{x\to x_0^+}f(x).
-$$
-
-Se i due limiti laterali sono uguali a $L$, allora:
-
-$$
-L\le f(x_0)\le L
-\implies f(x_0)=L,
-$$
-
-quindi la funzione è **continua**: una discontinuità eliminabile è impossibile. Se invece i limiti laterali sono diversi, si ha un **salto**. Per una funzione decrescente valgono disuguaglianze invertite, con la stessa conclusione.
-
-**Esempio di funzione monotona crescente con salto:**
-
-$$
-H(x)=
-\begin{cases}
-0 & x<0,\\
-1 & x\ge0.
-\end{cases}
-$$
-
-$$
-\lim_{x\to0^-}H(x)=0,\qquad
-\lim_{x\to0^+}H(x)=1=H(0).
-$$
-
-È continua da destra, ma **discontinua in $0$ per salto**.
-
-## 35. Esempi di discontinuità essenziale — slide 66/80
-
-### 35.1. Oscillazione
-
-$$
-f(x)=
-\begin{cases}
-\sin\left(\frac1x\right) & x\neq0,\\
-0 & x=0.
-\end{cases}
-$$
-
-Per $x\to0$, l'argomento $1/x$ assume valori sempre più grandi in valore assoluto, mentre il seno continua a oscillare tra $-1$ e $1$:
-
-$$
-\nexists\lim_{x\to0}\sin\left(\frac1x\right).
-$$
-
-È una **discontinuità essenziale per oscillazione**: la funzione è limitata, ma non ammette limite in $0$.
-
-### 35.2. Limiti laterali infiniti
-
-$$
-g(x)=
-\begin{cases}
-\dfrac1x & x\neq0,\\
-0 & x=0.
-\end{cases}
-$$
-
-$$
-\lim_{x\to0^-}\frac1x=-\infty,\qquad
-\lim_{x\to0^+}\frac1x=+\infty.
-$$
-
-È una **discontinuità essenziale con limiti laterali infiniti**: la funzione è illimitata vicino a $0$.
-
-| Oscillazione: $\sin(1/x)$ | Limiti infiniti: $1/x$ |
-| :--- | :--- |
-| Rimane tra $-1$ e $1$, ma non tende a un valore. | Assume valori arbitrariamente grandi in valore assoluto. |
-| Discontinuità essenziale per oscillazione. | Discontinuità essenziale con limiti laterali infiniti. |
-
-**Da ricordare:** assegnare $f(0)=0$ oppure $g(0)=0$ non risolve la discontinuità, perché in entrambi i casi manca un limite **finito** in $0$.
