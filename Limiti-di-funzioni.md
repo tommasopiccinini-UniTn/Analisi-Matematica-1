@@ -332,9 +332,9 @@ $$
 
 Quando **$x_0$ è punto di accumulazione di $D$**, questa definizione equivale a:
 
-$
+$$
 \lim_{x\to x_0}f(x)=f(x_0).
-$
+$$
 
 **Da ricordare (slide 62/80): il limite della funzione deve coincidere con il suo valore nel punto.**
 
