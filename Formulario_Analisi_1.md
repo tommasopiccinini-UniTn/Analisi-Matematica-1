@@ -46,15 +46,16 @@ Con le disuguaglianze strette si ottiene la **stretta monotonia**, che implica l
 
 **Continuità in un punto (slide 62):** per $x_0$ nel dominio di $f$ e punto di accumulazione,
 
-$
+$$
 \lim_{x\to x_0}f(x)=f(x_0).
-$
+$$
 
 **Da ricordare: il limite della funzione deve coincidere con il suo valore nel punto.**
 
 Il **limite** considera i valori vicino a $x_0$ (indipendentemente da $f(x_0)$); la **continuità** richiede anche l'uguaglianza con $f(x_0)$.
 
 **Esempio:** se $f(x)=x+1$ per $x\neq2$ e $f(2)=5$, allora $\lim_{x\to2}f(x)=3\neq f(2)$: la funzione non è continua in $2$.
+
 **Continuità a tratti:** nel punto di raccordo $a$ deve valere $\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=f(a)$.
 
 **Teorema degli zeri:**
