@@ -904,7 +904,172 @@ $$
 
 **Da ricordare:** non si pongono le due espressioni direttamente uguali a $f(0)$: si calcolano i **limiti laterali** e si impone che entrambi coincidano con il valore nel punto. Nelle differenze di termini che tendono allo stesso numero conviene usare sviluppi di Taylor, evitando sostituzioni grossolane come $1-1=0$.
 
-## 20. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
+## 20. Teorema degli zeri e metodo di bisezione — slide 70–73/80
+
+La slide 70 introduce le **proprietà globali** delle funzioni continue: riguardano la continuità su un intervallo, non solo in un punto.
+
+### 20.1. Teorema degli zeri — slide 71
+
+Se $f:[a,b]\to\mathbb R$ è **continua** e i valori agli estremi sono di **segno opposto**, allora esiste almeno uno zero nell'intervallo aperto:
+
+$$
+f\in C^0([a,b]),\qquad f(a)f(b)<0
+\quad\Longrightarrow\quad
+\exists x_0\in(a,b):f(x_0)=0.
+$$
+
+**Esempio aggiuntivo:** $f(x)=x^2-2$ su $[1,2]$. Poiché $f(1)=-1<0$ e $f(2)=2>0$, esiste uno zero in $(1,2)$: precisamente $x_0=\sqrt2$.
+
+**Da ricordare:** il teorema garantisce **l'esistenza** di almeno uno zero, ma non quanti siano né come trovarli esattamente.
+
+### 20.2. Metodo di bisezione — slide 72
+
+La dimostrazione del teorema usa il **metodo di bisezione**: si divide ripetutamente l'intervallo a metà, conservando la metà i cui estremi hanno valori di segno opposto. Se il valore nel punto medio è $0$, lo zero è già trovato.
+
+**Esempio aggiuntivo (continuazione di $f(x)=x^2-2$):**
+
+1. Da $[1,2]$, il punto medio è $1{,}5$. Poiché $f(1{,}5)=0{,}25>0$, scegliamo $[1;1{,}5]$.
+2. Il nuovo punto medio è $1{,}25$. Poiché $f(1{,}25)=-0{,}4375<0$, scegliamo $[1{,}25;1{,}5]$.
+
+A ogni passaggio la lunghezza si dimezza:
+
+$$
+b_n-a_n=\frac{b-a}{2^n}\longrightarrow0.
+$$
+
+Gli intervalli chiusi e annidati individuano un punto $x_0$; mantenendo segni opposti agli estremi e usando la **continuità**, si ottiene $f(x_0)=0$.
+
+**La slide 73 non contiene ulteriori enunciati.**
+
+## 21. Incontro tra due funzioni continue — slide 74/80
+
+Se $f,g:[a,b]\to\mathbb R$ sono continue e
+
+$$
+f(a)>g(a),\qquad f(b)<g(b),
+$$
+
+allora **si incontrano almeno una volta**:
+
+$$
+\exists x_0\in(a,b):f(x_0)=g(x_0).
+$$
+
+**Dimostrazione:** definiamo $h(x)=f(x)-g(x)$. Essendo una differenza di funzioni continue, $h$ è continua; inoltre:
+
+$$
+h(a)=f(a)-g(a)>0,\qquad h(b)=f(b)-g(b)<0.
+$$
+
+Per il teorema degli zeri $h(x_0)=0$, cioè $f(x_0)=g(x_0)$.
+
+### 21.1. Esempio aggiuntivo: studio della differenza
+
+Siano $f(x)=x^2$ e $g(x)=2-x$, su $[0,2]$. Studiamo:
+
+$$
+h(x)=f(x)-g(x)=x^2+x-2.
+$$
+
+$$
+h(0)=-2<0,\qquad h(2)=4>0.
+$$
+
+Il teorema garantisce almeno un'intersezione in $(0,2)$. Per trovarla esattamente risolviamo:
+
+$$
+h(x)=0\iff(x+2)(x-1)=0.
+$$
+
+Nell'intervallo richiesto la soluzione è $x_0=1$ e $f(1)=g(1)=1$: **il punto di incontro è $(1,1)$**.
+
+**Da ricordare:** per dimostrare che due funzioni continue si incontrano, studia **$f-g$** e applica il teorema degli zeri. Risolvere $f-g=0$ serve solo se si vuole conoscere l'intersezione esatta.
+
+## 22. Teorema dei valori intermedi — slide 75/80
+
+Sia $f:[a,b]\to\mathbb R$ continua. **La funzione assume tutti i valori compresi tra il proprio estremo inferiore e superiore**:
+
+$$
+\forall z\in\left(\inf_{x\in[a,b]}f(x),\ \sup_{x\in[a,b]}f(x)\right)
+\quad\exists x\in[a,b]:f(x)=z.
+$$
+
+Per esempio, se $f$ assume i valori $2$ e $8$ su un intervallo e vi è continua, assume anche ogni valore $z$ con $2<z<8$.
+
+È una generalizzazione del teorema degli zeri: invece di cercare $f(x)=0$, si cerca un qualsiasi valore intermedio $f(x)=z$ (applicando il teorema degli zeri a $f(x)-z$).
+
+**Da ricordare:** una funzione continua su un intervallo **non salta alcun valore intermedio**.
+
+## 23. Massimo e minimo assoluti — slide 76–77/80
+
+Sia $f:D\to\mathbb R$.
+
+**Massimo assoluto:** un valore $M$ tale che
+
+$$
+f(x)\le M\quad\forall x\in D,\qquad
+\exists x_0\in D:f(x_0)=M.
+$$
+
+Il punto $x_0$ è un **punto di massimo** e si scrive $M=\max_D f$.
+
+**Minimo assoluto:** un valore $m$ tale che
+
+$$
+f(x)\ge m\quad\forall x\in D,\qquad
+\exists x_1\in D:f(x_1)=m.
+$$
+
+Il punto $x_1$ è un **punto di minimo** e si scrive $m=\min_D f$.
+
+**Attenzione alla distinzione:** il massimo e il minimo sono **valori** della funzione; i punti di massimo e minimo sono gli **argomenti** in cui vengono raggiunti. Massimo e minimo, se esistono, sono valori unici, ma possono essere raggiunti in più punti. Estremo superiore e inferiore esistono sempre in senso esteso, mentre massimo e minimo **possono non esistere**.
+
+## 24. Teorema di Weierstrass — slide 78–79/80
+
+Se una funzione è **continua su un intervallo chiuso e limitato** $[a,b]$, raggiunge sia il massimo sia il minimo assoluto:
+
+$$
+f\in C^0([a,b])
+\quad\Longrightarrow\quad
+\exists\,m=\min_{x\in[a,b]}f(x),\quad
+\exists\,M=\max_{x\in[a,b]}f(x).
+$$
+
+Inoltre, insieme al teorema dei valori intermedi, segue che:
+
+$$
+\boxed{f([a,b])=[m,M].}
+$$
+
+**Esempio aggiuntivo:** $f(x)=x^2$ su $[-2,3]$ raggiunge il minimo $m=0$ in $x=0$ e il massimo $M=9$ in $x=3$.
+
+### 24.1. Perché tutte le ipotesi servono — controesempi della slide 78
+
+- **Intervallo non chiuso:** $f(x)=x$ su $(0,1)$ è continua ma non raggiunge né minimo né massimo.
+- **Intervallo non limitato:** $f(x)=\arctan x$ su $\mathbb R$ è continua ma non raggiunge né $-\pi/2$ né $\pi/2$.
+- **Funzione non continua:** su $[0,1]$ definiamo $f(0)=f(1)=\frac12$ e $f(x)=1/x$ per $0<x<1$. È illimitata superiormente e non ha massimo.
+
+### 24.2. Richiamo per la dimostrazione — slide 79
+
+La dimostrazione usa il **teorema di Bolzano-Weierstrass**:
+
+$$
+(a_n)\text{ limitata}
+\quad\Longrightarrow\quad
+\exists\text{ una sottosuccessione }(a_{n_k})\text{ convergente}.
+$$
+
+### Collegamento tra i teoremi
+
+| Teorema | Cosa garantisce |
+| :--- | :--- |
+| **Degli zeri** | Almeno uno zero se $f(a)$ e $f(b)$ hanno segni opposti. |
+| **Dei valori intermedi** | Tutti i valori compresi tra infimo e supremo. |
+| **Di Weierstrass** | Esistenza di massimo e minimo su $[a,b]$, se $f$ è continua. |
+
+**Da ricordare:** una funzione continua su $[a,b]$ **raggiunge il minimo, il massimo e tutti i valori tra essi**.
+
+## 25. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
 
 Finora abbiamo studiato funzioni che, quando $x\to x_0$, si avvicinano a un numero reale $\ell$. Un'altra possibilità è che i valori di $f(x)$ diventino **arbitrariamente grandi**.
 
@@ -1013,7 +1178,7 @@ $$
 
 ---
 
-## 21. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
+## 26. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
 
 Quando:
 
@@ -1049,7 +1214,7 @@ Quindi l'asintoto verticale è **$x=0$**.
 
 **Regola più generale:** la retta $x=x_0$ è un asintoto verticale anche se la funzione tende a $+\infty$ o $-\infty$ **soltanto da un lato**.
 
-## 22. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
+## 27. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
 
 Il PDF verifica:
 
@@ -1057,7 +1222,7 @@ $$
 \lim_{x\to0}\frac1{x^2}=+\infty.
 $$
 
-Il **procedimento completo in quattro passaggi** è già nella sezione 20. Riassumiamo qui il risultato della dimostrazione.
+Il **procedimento completo in quattro passaggi** è già nella sezione 25. Riassumiamo qui il risultato della dimostrazione.
 
 **Dominio:** $D=\mathbb R\setminus\{0\}$; il punto $0$ è un punto di accumulazione del dominio anche se non vi appartiene.
 
@@ -1087,7 +1252,7 @@ $$
 
 L'ultimo passaggio è corretto perché **passare ai reciproci di numeri positivi inverte la disuguaglianza**.
 
-## 23. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
+## 28. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
 
 Scriviamo:
 
@@ -1158,7 +1323,7 @@ $$
 
 La definizione di limite $-\infty$ è soddisfatta.
 
-## 24. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
+## 29. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
 
 Le definizioni dei limiti infiniti possono essere applicate **separatamente a destra e a sinistra** di $x_0$, purché il dominio presenti punti arbitrariamente vicini dal lato considerato.
 
@@ -1258,7 +1423,7 @@ Il limite completo **non esiste**, ma la retta **$x=2$ è un asintoto verticale*
 
 ---
 
-## 25. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
+## 30. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
 
 Studiamo il comportamento di una funzione quando **$x\to+\infty$** oppure **$x\to-\infty$**. Perché il limite abbia senso, il dominio $D$ deve contenere punti arbitrariamente grandi nel verso considerato.
 
@@ -1287,7 +1452,7 @@ $$
 \lim_{x\to+\infty}\frac1x=0.
 $$
 
-## 26. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
+## 31. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
 
 Per $f:D\to\mathbb R$ con $D$ illimitato superiormente:
 
@@ -1338,7 +1503,7 @@ Se $x>K$, la disuguaglianza $1/x<\varepsilon$ è verificata.
 
 **Distinzione:** asintoto verticale **$x=x_0$** per un limite infinito vicino a un punto; asintoto orizzontale **$y=\ell$** per un limite finito all'infinito.
 
-## 27. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
+## 32. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
 
 Il grafico degli appunti mostra una funzione che può oscillare anche molto prima di $K$; per $x>K$ resta dentro la **striscia orizzontale** intorno a $\ell$.
 
@@ -1354,7 +1519,7 @@ $$
 
 **Importante:** la funzione può continuare a oscillare. Deve però restare nella fascia per **tutti gli $x\in D$ con $x>K$**, per ogni $\varepsilon>0$.
 
-## 28. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
+## 33. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
 
 Quando $D$ è illimitato superiormente, la slide introduce:
 
@@ -1430,7 +1595,7 @@ $$
 
 **Attenzione:** il dominio non è necessariamente $(-\infty,0)$: può essere anche $\mathbb R$. L'importante è che sia illimitato inferiormente.
 
-## 29. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
+## 34. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
 
 **Le tecniche di calcolo servono a trovare $\ell$. La definizione formale serve a dimostrare che il valore trovato è corretto.**
 
@@ -1484,7 +1649,7 @@ La definizione è verificata.
 
 ---
 
-## 30. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
+## 35. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
 
 La slide propone tre limiti:
 
@@ -1498,7 +1663,7 @@ $$
 
 **Nelle pagine 25–26 il professore verifica il primo limite con la definizione**. La verifica degli altri due è qui aggiunta per esercizio.
 
-### 30.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
+### 35.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
 
 La definizione di limite $+\infty$ per $x\to+\infty$ chiede:
 
@@ -1535,7 +1700,7 @@ $$
 
 Questa è esattamente la condizione richiesta, **per ogni $M>0$**. Quindi il limite è verificato.
 
-### 30.2. Esempi aggiuntivi: esponenziale e logaritmo
+### 35.2. Esempi aggiuntivi: esponenziale e logaritmo
 
 **Esponenziale $e^x$.** Imponiamo:
 
@@ -1578,7 +1743,7 @@ Se $x>K$, allora $\ln x>M$: anche questo limite è verificato.
 
 **Schema per le verifiche:** fissare $M>0$, risolvere **$f(x)>M$** per ottenere una condizione $x>K$, scegliere $K$ e infine dimostrare l'implicazione partendo da $x>K$.
 
-## 31. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
+## 36. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
 
 La definizione è **falsa** per un limite proposto quando non esiste una soglia $K$ che funzioni per **ogni $M>0$**.
 
@@ -1637,7 +1802,7 @@ $$
 \lim_{x\to+\infty}\frac1x\neq+\infty.
 $$
 
-Il limite corretto, già verificato nella sezione 26, è:
+Il limite corretto, già verificato nella sezione 31, è:
 
 $$
 \lim_{x\to+\infty}\frac1x=0.
@@ -1656,9 +1821,9 @@ $$
 
 ---
 
-*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 28. La pagina 28 introduce i teoremi sui limiti di funzioni.*
+*La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 33. La pagina 28 introduce i teoremi sui limiti di funzioni.*
 
-## 32. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
+## 37. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
 
 Una successione reale $(a_n)$ si può interpretare come una **funzione con dominio $\mathbb N$**:
 
@@ -1688,7 +1853,7 @@ $$
 =0.
 $$
 
-## 33. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
+## 38. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
 
 Sia $f:D\to\mathbb R$ e $x_0$ un punto di accumulazione del dominio. Il teorema vale per $x_0$ e $\ell$ finiti o infiniti, con la rispettiva nozione di avvicinamento.
 
@@ -1754,7 +1919,7 @@ Per esempio, $f(x_n)$ può tendere a un altro valore $\ell'\neq\ell$, oppure non
 
 **Precisazione:** questo dimostra soltanto che il limite **non è il valore proposto $\ell$**. Per dimostrare che il limite **non esiste**, possiamo usare due successioni con risultati diversi.
 
-## 34. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
+## 39. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
 
 Se esistono due successioni **ammissibili** $x_n\to x_0$ e $y_n\to x_0$ tali che:
 
@@ -1771,7 +1936,7 @@ allora **il limite della funzione non esiste**.
 | Bisogna considerare **ogni successione ammissibile**. | **Bastano due successioni ammissibili con risultati diversi**. |
 | Una sola successione favorevole non basta. | Due risultati diversi sono incompatibili con il criterio sequenziale. |
 
-## 35. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
+## 40. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
 
 Studiamo:
 
@@ -1829,7 +1994,7 @@ $$
 
 **Altro esempio possibile (aggiuntivo):** $z_n=3\pi/2+2n\pi$ dà $\sin(z_n)=-1$, ma bastano le prime due successioni.
 
-## 36. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
+## 41. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
 
 Studiamo:
 
@@ -1885,7 +2050,7 @@ $$
 
 **Trucco da ricordare:** scegliamo **prima** i valori noti del seno ($0$ e $1$), poi imponiamo l'argomento $1/x_n$ corrispondente e **ricaviamo le successioni**. Usiamo i reciproci per fare in modo che $x_n$ e $y_n$ tendano a $0^+$.
 
-## 37. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
+## 42. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
 
 **Enunciato:** se una funzione ha un limite per un dato avvicinamento, esso è **unico**.
 
