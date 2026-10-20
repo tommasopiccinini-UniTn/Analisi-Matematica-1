@@ -922,6 +922,17 @@ $$
 
 **Da ricordare:** il teorema garantisce **l'esistenza** di almeno uno zero, ma non quanti siano né come trovarli esattamente.
 
+**Attenzione — il cambio di segno NON basta:** per applicare il teorema degli zeri, la funzione deve essere **continua in ogni punto dell'intero intervallo chiuso** $[a,b]$, oltre ad avere valori di segno opposto agli estremi.
+
+**Controesempio (slide 80, esercizio b):** sappiamo che $f$ è continua su $[2,4]$, con $f(2)=-1$ e $f(4)=-3$. Consideriamo l'equazione $f(x)=-\frac{x}{x-3}$ e poniamo $g(x)=f(x)+\frac{x}{x-3}$.
+
+Agli estremi: $g(2)=-1+\frac{2}{-1}=-3<0$ e $g(4)=-3+\frac{4}{1}=1>0$. **Ma $g$ non è definita in $x=3\in[2,4]$**, perché il denominatore si annulla. Perciò non è continua su tutto $[2,4]$ e il teorema degli zeri **non garantisce una soluzione**.
+
+Un esempio che mostra perché è essenziale controllare la continuità è $h(x)=\frac1{x-3}$: $h(2)=-1<0$ e $h(4)=1>0$, ma $h(x)\neq0$ per ogni $x$ del suo dominio. Il segno cambia passando attraverso un'asintoto verticale, senza che la funzione debba assumere il valore $0$.
+
+**Come individuare i possibili punti di discontinuità senza provare tutti gli $x$:** controlla i denominatori nulli, i domini di logaritmi e radici di indice pari e i raccordi delle funzioni a tratti. Le funzioni elementari e le loro operazioni sono continue dove sono definite (con le condizioni già viste). Un denominatore che si annulla segnala un punto da esaminare, non necessariamente un salto.
+
+
 ### 20.2. Metodo di bisezione — slide 72
 
 La dimostrazione del teorema usa il **metodo di bisezione**: si divide ripetutamente l'intervallo a metà, conservando la metà i cui estremi hanno valori di segno opposto. Se il valore nel punto medio è $0$, lo zero è già trovato.
