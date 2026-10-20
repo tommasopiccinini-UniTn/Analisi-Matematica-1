@@ -928,7 +928,7 @@ $$
 
 Agli estremi: $g(2)=-1+\frac{2}{-1}=-3<0$ e $g(4)=-3+\frac{4}{1}=1>0$. **Ma $g$ non è definita in $x=3\in[2,4]$**, perché il denominatore si annulla. Perciò non è continua su tutto $[2,4]$ e il teorema degli zeri **non garantisce una soluzione**.
 
-Un esempio che mostra perché è essenziale controllare la continuità è $h(x)=\frac1{x-3}$: $h(2)=-1<0$ e $h(4)=1>0$, ma $h(x)\neq0$ per ogni $x$ del suo dominio. Il segno cambia passando attraverso un'asintoto verticale, senza che la funzione debba assumere il valore $0$.
+Un esempio che mostra perché è essenziale controllare la continuità è $h(x)=\frac1{x-3}$: $h(2)=-1<0$ e $h(4)=1>0$, ma $h(x)\neq0$ per ogni $x$ del suo dominio. Il segno cambia passando attraverso un asintoto verticale, senza che la funzione debba assumere il valore $0$.
 
 **Come individuare i possibili punti di discontinuità senza provare tutti gli $x$:** controlla i denominatori nulli, i domini di logaritmi e radici di indice pari e i raccordi delle funzioni a tratti. Le funzioni elementari e le loro operazioni sono continue dove sono definite (con le condizioni già viste). Un denominatore che si annulla segnala un punto da esaminare, non necessariamente un salto.
 
