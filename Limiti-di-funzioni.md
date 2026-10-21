@@ -2131,3 +2131,49 @@ Infatti sono **due avvicinamenti distinti**.
 
 ---
 
+
+## 43. Teorema della permanenza del segno — lezione 20/10 (slide 30/80)
+
+Sia $f:D\to\mathbb R$, e sia $x_0$ un punto di accumulazione del dominio (sono ammessi anche $x_0=+\infty$ e $x_0=-\infty$).
+
+### Primo verso: il segno del limite determina il segno della funzione
+
+Se
+
+$$
+\lim_{x\to x_0}f(x)=\ell>0,
+$$
+
+allora esiste un intorno $U$ di $x_0$ tale che **$f(x)>0$ per ogni $x\in(U\cap D)\setminus\{x_0\}$**.
+
+L'affermazione vale anche per $\ell=+\infty$; analogamente, se $\ell<0$ (anche $-\infty$), la funzione è negativa vicino a $x_0$.
+
+**Motivo, nel caso $\ell\in\mathbb R$ e $\ell>0$:** scegliendo $\varepsilon=\ell/2$ nella definizione di limite,
+
+$$
+\lvert f(x)-\ell\rvert<\frac{\ell}{2}
+\quad\Longrightarrow\quad
+f(x)>\frac{\ell}{2}>0.
+$$
+
+### Secondo verso: il segno della funzione limita il segno del limite
+
+Se $f(x)\ge0$ in un intorno bucato di $x_0$ e il limite $\ell$ esiste, allora
+
+$$
+\boxed{\ell\ge0.}
+$$
+
+Anche se $f(x)>0$, **non è garantito** che $\ell>0$: il limite può essere $0$. Analogamente, da $f(x)\le0$ segue $\ell\le0$.
+
+### Confronto con le successioni
+
+| Limiti di successioni | Limiti di funzioni |
+| :--- | :--- |
+| Se $a_n\to\ell>0$, allora $a_n>0$ definitivamente. | Se $f(x)\to\ell>0$, allora $f(x)>0$ per $x$ abbastanza vicino a $x_0$ (nel dominio, escluso il punto). |
+| Se $a_n\ge0$ definitivamente e $a_n\to\ell$, allora $\ell\ge0$. | Se $f(x)\ge0$ vicino a $x_0$ e il limite esiste, allora $\ell\ge0$. |
+| $a_n=1/n^2>0$ ma $a_n\to0$. | $f(x)=x^2>0$ per $x\neq0$, ma $f(x)\to0$ per $x\to0$. |
+
+**Da ricordare:** il limite **strettamente positivo** impone positività locale della funzione; la positività locale impone soltanto un limite **non negativo**.
+
+---
