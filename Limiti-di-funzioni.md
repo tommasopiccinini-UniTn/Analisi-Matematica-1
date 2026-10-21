@@ -2177,3 +2177,67 @@ Anche se $f(x)>0$, **non è garantito** che $\ell>0$: il limite può essere $0$.
 **Da ricordare:** il limite **strettamente positivo** impone positività locale della funzione; la positività locale impone soltanto un limite **non negativo**.
 
 ---
+
+
+## 44. Teoremi di confronto — lezione 20/10 (slide 31/80)
+
+Questi teoremi erano **già stati applicati** nell'esempio della sezione 1. La slide 31 ne esplicita gli enunciati per le funzioni.
+
+### Teorema del confronto
+
+Se $f(x)\ge g(x)$ per tutti gli $x$ sufficientemente vicini a $x_0$ (nel dominio, con $x\neq x_0$), e i limiti esistono, allora
+
+$$
+\lim_{x\to x_0} f(x)=\ell_1,\quad
+\lim_{x\to x_0}g(x)=\ell_2
+\quad\Longrightarrow\quad \ell_1\ge\ell_2.
+$$
+
+**Attenzione:** anche se $f(x)>g(x)$, si conclude solo $\ell_1\ge\ell_2$, non necessariamente $\ell_1>\ell_2$.
+
+### Teorema dei due carabinieri
+
+Se per $x$ sufficientemente vicino a $x_0$ vale
+
+$$
+f(x)\le g(x)\le h(x),
+$$
+
+e le funzioni esterne hanno lo stesso limite,
+
+$$
+\lim_{x\to x_0}f(x)=\lim_{x\to x_0}h(x)=\ell,
+$$
+
+allora
+
+$$
+\lim_{x\to x_0}g(x)=\ell.
+$$
+
+### Esempio della lezione
+
+Per ogni $x>0$:
+
+$$
+-1\le\sin x\le1
+\quad\Longrightarrow\quad
+-\frac1{x^2}\le\frac{\sin x}{x^2}\le\frac1{x^2}.
+$$
+
+Poiché gli estremi tendono entrambi a $0$ quando $x\to+\infty$,
+
+$$
+\lim_{x\to+\infty}\frac{\sin x}{x^2}=0.
+$$
+
+### Parallelismo con le successioni
+
+| Limiti di successioni | Limiti di funzioni |
+| :--- | :--- |
+| $a_n\le b_n\le c_n$ definitivamente e $a_n,c_n\to\ell$ implicano $b_n\to\ell$. | $f(x)\le g(x)\le h(x)$ vicino a $x_0$ e $f(x),h(x)\to\ell$ implicano $g(x)\to\ell$. |
+| Esempio: $-1/n\le(-1)^n/n\le1/n$, quindi $(-1)^n/n\to0$. | Esempio: $-1/x^2\le\sin x/x^2\le1/x^2$, quindi $\sin x/x^2\to0$ per $x\to+\infty$. |
+
+**Differenza tra i teoremi:** il confronto conserva le disuguaglianze tra i limiti; i due carabinieri permettono di trovare il limite della funzione intermedia.
+
+---
