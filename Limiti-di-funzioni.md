@@ -1075,7 +1075,7 @@ $$
 | Teorema | Cosa garantisce |
 | :--- | :--- |
 | **Degli zeri** | Almeno uno zero se $f(a)$ e $f(b)$ hanno segni opposti. |
-| **Dei valori intermedi** | Tutti i valori compresi tra infimo e supremo. |
+| **Dei valori intermedi** | Tutti i valori compresi tra estremo inferiore ed estremo superiore. |
 | **Di Weierstrass** | Esistenza di massimo e minimo su $[a,b]$, se $f$ è continua. |
 
 **Da ricordare:** una funzione continua su $[a,b]$ **raggiunge il minimo, il massimo e tutti i valori tra essi**.
