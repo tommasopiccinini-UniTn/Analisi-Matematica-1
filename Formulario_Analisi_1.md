@@ -575,6 +575,14 @@ $$
 \lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
 $$
 
+**Equivalente utile per i logaritmi (slide 44, $x\to+\infty$, $a>1$):**
+
+$$
+\log(1+a^x)\sim x\log a.
+$$
+
+Infatti $\log(1+a^x)=x\log a+\log(1+a^{-x})$ e $\log(1+a^{-x})\to0$. **Non applicare** $\log(1+u)\sim u$, perché qui $a^x\to+\infty$.
+
 ## 11 · Cambio di variabile nei limiti — slide 45–50
 
 **Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
