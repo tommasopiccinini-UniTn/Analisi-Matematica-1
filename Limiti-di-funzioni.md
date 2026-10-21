@@ -1411,6 +1411,15 @@ $$
 
 Ciononostante, la retta **$x=0$ è un asintoto verticale**: per stabilirlo è sufficiente un limite laterale infinito.
 
+**Richiamo sulle funzioni trigonometriche (slide 38/80).** Poiché $\tan x=\sin x/\cos x$, quando $\cos x\to0$ si deve controllare il **lato di avvicinamento** e il segno del coseno:
+
+$$
+\lim_{x\to(\pi/2)^-}\tan x=+\infty,\qquad
+\lim_{x\to(\pi/2)^+}\tan x=-\infty.
+$$
+
+Per i rapporti del tipo **numero non nullo diviso per $0$**, il segno dell'infinito è determinato dal segno dell'intera frazione; per $0/0$ il procedimento è diverso.
+
 ### Regola pratica: attenzione al segno del denominatore
 
 **Esempio aggiuntivo:**
@@ -1674,6 +1683,16 @@ $$
 
 **Nelle pagine 25–26 il professore verifica il primo limite con la definizione**. La verifica degli altri due è qui aggiunta per esercizio.
 
+**Attenzione alle potenze quando $x\to\pm\infty$ (slide 35–36/80):** per $\alpha>0$ la funzione $x^\alpha\to+\infty$ quando $x\to+\infty$; per $\alpha<0$ tende invece a $0$. Quando $x\to0^+$ accade il contrario: $x^\alpha\to0$ per $\alpha>0$ e $x^\alpha\to+\infty$ per $\alpha<0$.
+
+**Attenzione ai polinomi per $x\to-\infty$ (slide 39/80):** domina il termine di **grado maggiore**, ma bisogna considerare sia il segno del coefficiente sia la parità dell'esponente. Per esempio,
+
+$$
+\lim_{x\to-\infty}(-2x^3+x+120)=+\infty,
+$$
+
+perché $x^3\to-\infty$ e quindi $-2x^3\to+\infty$.
+
 ### 35.1. Verifica della definizione: f(x)=x³ (svolta negli appunti)
 
 La definizione di limite $+\infty$ per $x\to+\infty$ chiede:
@@ -1710,6 +1729,13 @@ x^3>M.
 $$
 
 Questa è esattamente la condizione richiesta, **per ogni $M>0$**. Quindi il limite è verificato.
+
+**Attenzione alla base di esponenziali e logaritmi (slide 37/80):** il comportamento cambia tra $a>1$ e $0<a<1$, con $a>0$, $a\neq1$.
+
+| $a>1$ | $0<a<1$ |
+| :--- | :--- |
+| $a^x\to+\infty$ per $x\to+\infty$; $a^x\to0$ per $x\to-\infty$. | $a^x\to0$ per $x\to+\infty$; $a^x\to+\infty$ per $x\to-\infty$. |
+| $\log_a x\to+\infty$ per $x\to+\infty$; $\log_a x\to-\infty$ per $x\to0^+$. | $\log_a x\to-\infty$ per $x\to+\infty$; $\log_a x\to+\infty$ per $x\to0^+$. |
 
 ### 35.2. Esempi aggiuntivi: esponenziale e logaritmo
 
@@ -2239,5 +2265,25 @@ $$
 | Esempio: $-1/n\le(-1)^n/n\le1/n$, quindi $(-1)^n/n\to0$. | Esempio: $-1/x^2\le\sin x/x^2\le1/x^2$, quindi $\sin x/x^2\to0$ per $x\to+\infty$. |
 
 **Differenza tra i teoremi:** il confronto conserva le disuguaglianze tra i limiti; i due carabinieri permettono di trovare il limite della funzione intermedia.
+
+---
+
+
+## 45. Attenzioni pratiche per il calcolo dei limiti — riepilogo delle slide 35–41/80
+
+Le seguenti sono le **regole pratiche già richiamate nei punti pertinenti** (sezioni 29 e 35).
+
+| Situazione | Attenzione | Esempio / regola |
+| :--- | :--- | :--- |
+| Potenze $x^\alpha$, $x\to+\infty$ | Il segno di $\alpha$ cambia il risultato. | $\alpha>0:\ +\infty$; $\alpha<0:\ 0$. |
+| Potenze $x^\alpha$, $x\to0^+$ | Con esponente negativo il limite è infinito. | $\alpha>0:\ 0$; $\alpha<0:\ +\infty$. |
+| Esponenziali $a^x$ | Distingui $a>1$ da $0<a<1$. | Per $x\to+\infty$: rispettivamente $+\infty$ e $0$. |
+| Logaritmi $\log_a x$ | Per $0<a<1$ il comportamento è invertito rispetto ad $a>1$. | Per $x\to0^+$: rispettivamente $-\infty$ e $+\infty$. |
+| Tangente $\tan x=\sin x/\cos x$ | Se $\cos x\to0$, studia il segno nei limiti laterali. | $\tan x\to+\infty$ per $x\to(\pi/2)^-$; $\tan x\to-\infty$ per $x\to(\pi/2)^+$. |
+| Polinomi per $x\to-\infty$ | Il grado maggiore domina, ma controlla il **segno del coefficiente** e se la potenza è **pari o dispari**. | $-2x^3\to+\infty$ quando $x\to-\infty$. |
+| Quoziente con denominatore $\to0$ | Con numeratore $\to c\neq0$, controlla il segno della frazione **da ogni lato**. | $1/(x-3)$ tende a $-\infty$ da sinistra, $+\infty$ da destra. |
+| Forma $0/0$ | È **indeterminata**: non trattarla come il reciproco di un numero che tende a zero. | Prima fattorizza, semplifica, razionalizza o applica limiti notevoli. |
+
+**Regola unica:** prima identifica la forma del limite, poi controlla **dominio, lato di avvicinamento e segno**. Non associare automaticamente $+\infty$ a una frazione con denominatore piccolo.
 
 ---
