@@ -376,27 +376,6 @@ Angoli in senso antiorario.
 
 ![Circonferenza goniometrica con angoli notevoli](grafici/circonferenza-formulario.svg)
 
-**Angoli notevoli:**
-
-| Radianti | Gradi | Coordinate $(\cos\theta,\sin\theta)$ |
-| :---: | :---: | :---: |
-| $0,\ 2\pi$ | $0^\circ,\ 360^\circ$ | $(1,0)$ |
-| $\pi/6$ | $30^\circ$ | $(\sqrt3/2,\ 1/2)$ |
-| $\pi/4$ | $45^\circ$ | $(\sqrt2/2,\ \sqrt2/2)$ |
-| $\pi/3$ | $60^\circ$ | $(1/2,\ \sqrt3/2)$ |
-| $\pi/2$ | $90^\circ$ | $(0,1)$ |
-| $2\pi/3$ | $120^\circ$ | $(-1/2,\ \sqrt3/2)$ |
-| $3\pi/4$ | $135^\circ$ | $(-\sqrt2/2,\ \sqrt2/2)$ |
-| $5\pi/6$ | $150^\circ$ | $(-\sqrt3/2,\ 1/2)$ |
-| $\pi$ | $180^\circ$ | $(-1,0)$ |
-| $7\pi/6$ | $210^\circ$ | $(-\sqrt3/2,\ -1/2)$ |
-| $5\pi/4$ | $225^\circ$ | $(-\sqrt2/2,\ -\sqrt2/2)$ |
-| $4\pi/3$ | $240^\circ$ | $(-1/2,\ -\sqrt3/2)$ |
-| $3\pi/2$ | $270^\circ$ | $(0,-1)$ |
-| $5\pi/3$ | $300^\circ$ | $(1/2,\ -\sqrt3/2)$ |
-| $7\pi/4$ | $315^\circ$ | $(\sqrt2/2,\ -\sqrt2/2)$ |
-| $11\pi/6$ | $330^\circ$ | $(\sqrt3/2,\ -1/2)$ |
-
 **Arctan notevoli:**
 
 | $t$ | $\arctan t$ |
