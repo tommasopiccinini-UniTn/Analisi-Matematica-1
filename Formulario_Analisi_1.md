@@ -104,107 +104,48 @@ $$
 \cosh^2x-\sinh^2x=1
 $$
 
-## 5A · Sviluppi notevoli — u → 0
+## 5A · Forme indeterminate dei limiti
 
-$$
-e^u=1+u+\frac{u^2}{2}+o(u^2)
-$$
+| | | | |
+| :---: | :---: | :---: | :---: |
+| $\frac00$ | $\frac{\infty}{\infty}$ | $0\cdot\infty$ | $\infty-\infty$ |
+| $1^\infty$ | $0^0$ | $\infty^0$ | |
 
-$$
-a^u=1+u\ln a+o(u),\qquad a>0
-$$
+Per i metodi di risoluzione, vedi la **sezione 9**.
 
-**Caso particolare:** $2^u=1+u\ln2+o(u)$.
+## 5B · Sviluppi notevoli — u → 0
 
-$$
-\ln(1+u)=u-\frac{u^2}{2}+o(u^2)
-$$
-
-$$
-\sin u=u-\frac{u^3}{6}+o(u^3)
-$$
-
-$$
-\sinh u=u+\frac{u^3}{6}+o(u^3)
-$$
-
-$$
-\cos u=1-\frac{u^2}{2}+o(u^2)
-$$
-
-$$
-\tan u=u+\frac{u^3}{3}+o(u^3)
-$$
-
-$$
-\arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)
-$$
-
-$$
-(1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)
-$$
-
-$$
-\sqrt{1+u}=1+\frac u2+o(u)
-$$
+| | |
+| :--- | :--- |
+| $e^u=1+u+\frac{u^2}{2}+o(u^2)$ | $a^u=1+u\ln a+o(u)$, $a>0$ |
+| $2^u=1+u\ln2+o(u)$ | $\ln(1+u)=u-\frac{u^2}{2}+o(u^2)$ |
+| $\sin u=u-\frac{u^3}{6}+o(u^3)$ | $\sinh u=u+\frac{u^3}{6}+o(u^3)$ |
+| $\cos u=1-\frac{u^2}{2}+o(u^2)$ | $\tan u=u+\frac{u^3}{3}+o(u^3)$ |
+| $\arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)$ | $(1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)$ |
+| $\sqrt{1+u}=1+\frac u2+o(u)$ | |
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
 
-## 5B · Equivalenze asintotiche — u → 0
+## 5C · Equivalenze asintotiche — u → 0
 
-$$
-\sin u\sim u;\qquad\sinh u\sim u;\qquad\tan u\sim u;\qquad\arctan u\sim u
-$$
+| | |
+| :--- | :--- |
+| $\sin u\sim u$ | $\sinh u\sim u$ |
+| $\tan u\sim u$ | $\arctan u\sim u$ |
+| $1-\cos u\sim\frac{u^2}{2}$ | $\cos u-1\sim-\frac{u^2}{2}$ |
+| $\ln(1+u)\sim u$ | $\ln(1-u)\sim-u$ |
+| $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ |
+| $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
+| $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ |
+| $\sqrt{1-u}-1\sim-\frac u2$ | |
 
-$$
-1-\cos u\sim\frac{u^2}{2}\qquad\cos u-1\sim-\frac{u^2}{2}
-$$
+**Limiti notevoli** (angoli in radianti):
 
-$$
-\ln(1+u)\sim u;\qquad\ln(1-u)\sim -u
-$$
-
-$$
-\ln(\cos u)\sim -\frac{u^2}{2}
-$$
-
-$$
-\arccos u-\frac{\pi}{2}\sim -u
-$$
-
-$$
-e^u-1\sim u
-$$
-
-$$
-a^u-1\sim u\ln a,\qquad a>0,\ a\neq1
-$$
-
-$$
-(1+u)^\alpha-1\sim\alpha u,\qquad\alpha\neq0
-$$
-
-$$
-\sqrt{1+u}-1\sim\frac u2\qquad\sqrt{1-u}-1\sim-\frac u2
-$$
-
-**Limite notevole del seno (slide 52, angoli in radianti):**
-
-$$
-\lim_{u\to0}\frac{\sin u}{u}=1
-$$
-
-**Limite notevole del seno iperbolico:**
-
-$$
-\lim_{u\to0}\frac{\sinh u}{u}=1
-$$
-
-**Limite notevole della radice:**
-
-$$
-\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12
-$$
+| | |
+| :--- | :--- |
+| $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ |
+| $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ | $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ |
+| $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | |
 
 **Definizione:**
 
@@ -214,19 +155,10 @@ $$
 
 Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. Nelle **somme e differenze** controllare le cancellazioni; se il primo termine si cancella, usare più termini dello sviluppo.
 
-**Altri limiti notevoli:**
-
-$$
-\lim_{u\to0}(1+u)^{1/u}=e
-$$
-
-$$
-\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e
-$$
-
 **Appunto — argomento dei limiti notevoli:** per applicare il limite notevole, l'argomento $u(x)\to0$ deve comparire anche al denominatore (per esempio $\sin u/u$ oppure $(e^u-1)/u$). Se manca, ricavalo moltiplicando e dividendo per il fattore opportuno.
 
 **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ per $x\to0$.
+
 **Per $x\to a$:** se compare $x-a$, si può porre $u=x-a$; allora $x=a+u$ e $u\to0$.
 
 ## 6 · Trigonometria
@@ -437,9 +369,7 @@ $$
 
 **Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
 
-## 9 · Forme indeterminate e procedura
-
-**Forme:** $0/0$, $\infty/\infty$, $0\cdot\infty$, $\infty-\infty$, $1^\infty$, $0^0$, $\infty^0$.
+## 9 · Procedure per risolvere le forme indeterminate
 
 **1. Sostituzione diretta.** Se la forma non è indeterminata, concludi.
 
