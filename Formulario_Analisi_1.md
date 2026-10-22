@@ -156,87 +156,30 @@ Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. N
 
 ## 6 · Trigonometria
 
-- $\sin:\mathbb R\to[-1,1]$ è dispari; $\cos:\mathbb R\to[-1,1]$ è pari.
-- Periodo di seno e coseno: $2\pi$.
-- $\tan x=\sin x/\cos x$; dominio $\mathbb R\setminus\{\pi/2+k\pi:k\in\mathbb Z\}$.
-- $\cot x=\cos x/\sin x$; dominio $\mathbb R\setminus\{k\pi:k\in\mathbb Z\}$.
-- Periodo di tangente e cotangente: $\pi$.
+**Proprietà e domini**
 
-**Identità:**
+| Seno e coseno | Tangente | Cotangente |
+| :--- | :--- | :--- |
+| $\sin:\mathbb R\to[-1,1]$ dispari; $\cos:\mathbb R\to[-1,1]$ pari | $\tan x=\frac{\sin x}{\cos x}$ | $\cot x=\frac{\cos x}{\sin x}$ |
+| Periodo $2\pi$ | Dominio $\mathbb R\setminus\{\pi/2+k\pi:k\in\mathbb Z\}$; periodo $\pi$ | Dominio $\mathbb R\setminus\{k\pi:k\in\mathbb Z\}$; periodo $\pi$ |
 
-$$
-\sin^2x+\cos^2x=1
-$$
+**Identità e formule**
 
-**Identità utile per i limiti:**
+| | | |
+| :--- | :--- | :--- |
+| $\sin^2x+\cos^2x=1$ | $1+\tan^2x=\frac1{\cos^2x}$ | $1+\cot^2x=\frac1{\sin^2x}$ |
+| $1-\cos x=\frac{\sin^2x}{1+\cos x}=2\sin^2\left(\frac x2\right)$ | $\sin(x\pm y)=\sin x\cos y\pm\cos x\sin y$ | $\cos(x\pm y)=\cos x\cos y\mp\sin x\sin y$ |
+| $\tan(x\pm y)=\frac{\tan x\pm\tan y}{1\mp\tan x\tan y}$ | $\sin2x=2\sin x\cos x$ | $\cos2x=\cos^2x-\sin^2x=2\cos^2x-1=1-2\sin^2x$ |
+| $\tan2x=\frac{2\tan x}{1-\tan^2x}$ | $\sin^2(x/2)=\frac{1-\cos x}{2}$ | $\cos^2(x/2)=\frac{1+\cos x}{2}$ |
 
-$$
-1-\cos x=\frac{\sin^2x}{1+\cos x}=2\sin^2\left(\frac x2\right)
-$$
+La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
 
-La forma con il denominatore $1+\cos x$ vale quando $\cos x\neq-1$.
+**Funzioni trigonometriche inverse**
 
-
-$$
-1+\tan^2x=\frac1{\cos^2x};\qquad1+\cot^2x=\frac1{\sin^2x}
-$$
-
-**Addizione e sottrazione:**
-
-$$
-\sin(x\pm y)=\sin x\cos y\pm\cos x\sin y
-$$
-
-$$
-\cos(x\pm y)=\cos x\cos y\mp\sin x\sin y
-$$
-
-$$
-\tan(x\pm y)=\frac{\tan x\pm\tan y}{1\mp\tan x\tan y}
-$$
-
-**Angolo doppio:**
-
-$$
-\sin2x=2\sin x\cos x
-$$
-
-$$
-\cos2x=\cos^2x-\sin^2x=2\cos^2x-1=1-2\sin^2x
-$$
-
-$$
-\tan2x=\frac{2\tan x}{1-\tan^2x}
-$$
-
-**Angolo metà:**
-
-$$
-\sin^2(x/2)=\frac{1-\cos x}2;\qquad
-\cos^2(x/2)=\frac{1+\cos x}2
-$$
-
-**Funzioni trigonometriche inverse:**
-
-$$
-\arcsin:[-1,1]\to[-\pi/2,\pi/2]
-$$
-
-$$
-\arccos:[-1,1]\to[0,\pi]
-$$
-
-$$
-\arcsin(\sin x)=x\quad\text{per }x\in[-\pi/2,\pi/2]
-$$
-
-$$
-\arccos(\cos x)=x\quad\text{per }x\in[0,\pi]
-$$
-
-$$
-\arctan(\tan x)=x\quad\text{per }x\in(-\pi/2,\pi/2)
-$$
+| Arcoseno | Arcocoseno | Arcotangente |
+| :--- | :--- | :--- |
+| $\arcsin:[-1,1]\to[-\pi/2,\pi/2]$ | $\arccos:[-1,1]\to[0,\pi]$ | $\arctan(\tan x)=x$ per $x\in(-\pi/2,\pi/2)$ |
+| $\arcsin(\sin x)=x$ per $x\in[-\pi/2,\pi/2]$ | $\arccos(\cos x)=x$ per $x\in[0,\pi]$ | |
 
 ## 6A · Numeri complessi — formule
 
