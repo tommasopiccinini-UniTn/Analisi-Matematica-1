@@ -125,6 +125,10 @@ $$
 $$
 
 $$
+\sinh u=u+\frac{u^3}{6}+o(u^3)
+$$
+
+$$
 \cos u=1-\frac{u^2}{2}+o(u^2)
 $$
 
@@ -146,10 +150,10 @@ $$
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
 
-## 5B · Equivalenti notevoli — u → 0
+## 5B · Equivalenze asintotiche — u → 0
 
 $$
-\sin u\sim u;\qquad\tan u\sim u;\qquad\arctan u\sim u
+\sin u\sim u;\qquad\sinh u\sim u;\qquad\tan u\sim u;\qquad\arctan u\sim u
 $$
 
 $$
@@ -188,6 +192,12 @@ $$
 
 $$
 \lim_{u\to0}\frac{\sin u}{u}=1
+$$
+
+**Limite notevole del seno iperbolico:**
+
+$$
+\lim_{u\to0}\frac{\sinh u}{u}=1
 $$
 
 **Limite notevole della radice:**
