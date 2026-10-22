@@ -104,14 +104,43 @@ $$
 \cosh^2x-\sinh^2x=1
 $$
 
-## 5A · Forme indeterminate dei limiti
+## 5A · Forme indeterminate e procedure
 
-| | | | |
-| :---: | :---: | :---: | :---: |
-| $\frac00$ | $\frac{\infty}{\infty}$ | $0\cdot\infty$ | $\infty-\infty$ |
-| $1^\infty$ | $0^0$ | $\infty^0$ | |
+**1. Sostituzione diretta.** Se la forma non è indeterminata, concludi.
 
-Per i metodi di risoluzione, vedi la **sezione 9**.
+**2. Se è indeterminata, scegli la trasformazione:**
+
+| Forma | Procedura |
+| :--- | :--- |
+| $0/0$ | Fattorizza e semplifica i fattori comuni; usa limiti notevoli, equivalenti o sviluppi. Con le radici, razionalizza. |
+| $\infty/\infty$ | Confronta gli ordini di crescita. Nei polinomi, dividi numeratore e denominatore per la potenza più alta presente. |
+| $0\cdot\infty$ | Trasforma il prodotto in un quoziente. |
+| $\infty-\infty$ | Raccogli il termine dominante, usa il denominatore comune oppure il coniugato delle radici. |
+| $1^\infty,\ 0^0,\ \infty^0$ | Con base positiva, passa al logaritmo e studia il prodotto. |
+
+**Raccoglimento nei polinomi:** se $x\to\infty$, raccogli la potenza di $x$ **maggiore**; se $x\to0$, raccogli la potenza di $x$ **minore** (tra quelle presenti).
+
+**Prodotto trasformato in quoziente:**
+
+$$
+fg=\frac{f}{1/g}=\frac{g}{1/f}
+$$
+
+**Razionalizzazione:**
+
+$$
+\sqrt A-\sqrt B=\frac{A-B}{\sqrt A+\sqrt B}
+$$
+
+**Potenze indeterminate, base positiva:**
+
+$$
+f^g=e^{g\ln f};\qquad L=\lim(g\ln f)\Rightarrow\lim f^g=e^L
+$$
+
+**Promemoria per $1^\infty$:** porta la base nella forma $1+u$ con $u\to0$; dopo la trasformazione esponenziale usa $\ln(1+u)\sim u$.
+
+**3. Controlla il dominio, il segno e i limiti laterali.**
 
 ## 5B · Sviluppi notevoli — u → 0
 
@@ -153,6 +182,178 @@ Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. N
 **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ per $x\to0$.
 
 **Per $x\to a$:** se compare $x-a$, si può porre $u=x-a$; allora $x=a+u$ e $u\to0$.
+
+## 5D · Regole dei limiti
+
+| | |
+| :--- | :--- |
+| $\lim(f\pm g)=\lim f\pm\lim g$ | $\lim(fg)=(\lim f)(\lim g)$ |
+| $\displaystyle\lim(f/g)=\frac{\lim f}{\lim g}$, $\lim g\neq0$ | $\lim[f(x)]^\alpha=(\lim f)^\alpha$ (se definita) |
+
+**Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
+
+## 5E · Calcolo dei limiti di funzioni — slide 34–44
+
+**Funzioni elementari (slide 35–38):** sono continue nei punti del loro dominio; quindi, se $x_0$ appartiene al dominio,
+
+$$
+\lim_{x\to x_0}f(x)=f(x_0).
+$$
+
+**Potenze intere positive ($n\in\mathbb N$, slide 35):**
+
+$$
+\lim_{x\to+\infty}x^n=+\infty,\qquad
+\lim_{x\to-\infty}x^n=
+\begin{cases}
++\infty & n\text{ pari},\\
+-\infty & n\text{ dispari}.
+\end{cases}
+$$
+
+**Potenze reali ($x>0$, slide 36):**
+
+| Esponente | $x\to0^+$ | $x\to+\infty$ |
+| :--- | :---: | :---: |
+| $\alpha>0$ | $x^\alpha\to0$ | $x^\alpha\to+\infty$ |
+| $\alpha<0$ | $x^\alpha\to+\infty$ | $x^\alpha\to0$ |
+
+**Esponenziali e logaritmi (slide 37):**
+
+| Base | $a^x$, $x\to+\infty$ | $a^x$, $x\to-\infty$ | $\log_a x$, $x\to0^+$ | $\log_a x$, $x\to+\infty$ |
+| :--- | :---: | :---: | :---: | :---: |
+| $a>1$ | $+\infty$ | $0$ | $-\infty$ | $+\infty$ |
+| $0<a<1$ | $0$ | $+\infty$ | $+\infty$ | $-\infty$ |
+
+**Trigonometria (slide 38):** seno e coseno sono continui; la tangente è continua dove $\cos x\neq0$. Ai bordi:
+
+$$
+\lim_{x\to(\pi/2)^-}\tan x=+\infty,\qquad
+\lim_{x\to(-\pi/2)^+}\tan x=-\infty.
+$$
+
+**Polinomi (slide 39):** per $x\to x_0$ finito, sostituisci $x_0$; per $x\to\pm\infty$, domina il termine di grado più alto:
+
+$$
+P(x)=a_nx^n+\cdots+a_0\sim a_nx^n.
+$$
+
+**Rapporti di polinomi (slide 40):** se $P$ ha grado $m$ e $Q$ grado $n$, con coefficienti principali $a_m,b_n\neq0$,
+
+$$
+\frac{P(x)}{Q(x)}\sim\frac{a_m}{b_n}x^{m-n}
+\qquad(x\to\pm\infty).
+$$
+
+- $m<n$: limite $0$; $m=n$: limite $a_m/b_n$; $m>n$: limite infinito, con segno da valutare.
+
+**Forma $1/0$ (slide 41):** **non è indeterminata**. Se il numeratore tende a un valore non nullo, studia il segno del denominatore e gli eventuali limiti laterali:
+
+$$
+\lim_{x\to3}\frac1{(x-3)^4}=+\infty,\qquad
+\lim_{x\to3^-}\frac1{(x-3)^3}=-\infty,\qquad
+\lim_{x\to3^+}\frac1{(x-3)^3}=+\infty.
+$$
+
+**Funzioni limitate (slide 42):** se $|g(x)|\le M$ e $f(x)\to0$, allora $f(x)g(x)\to0$. Per esempio,
+
+$$
+\lim_{x\to0}x\sin\left(\frac1x\right)=0.
+$$
+
+**Gerarchia degli infiniti (slide 43; esempi slide 44):** per $x\to+\infty$, esponenziali $\gg$ potenze positive $\gg$ potenze positive di logaritmi:
+
+$$
+\lim_{x\to+\infty}\frac{a^x}{x^\alpha}=+\infty
+\quad(a>1,\ \alpha>0),
+\qquad
+\lim_{x\to+\infty}\frac{x^\alpha}{(\log_b x)^\beta}=+\infty
+\quad(\alpha,\beta>0,\ b>1).
+$$
+
+Esempi:
+
+$$
+\lim_{x\to+\infty}\frac{2^x}{x^3}=+\infty,\qquad
+\lim_{x\to+\infty}\frac{x^3}{2^x}=0,\qquad
+\lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
+$$
+
+**Equivalente utile per i logaritmi (slide 44, $x\to+\infty$, $a>1$):**
+
+$$
+\log(1+a^x)\sim x\log a.
+$$
+
+Infatti $\log(1+a^x)=x\log a+\log(1+a^{-x})$ e $\log(1+a^{-x})\to0$. **Non applicare** $\log(1+u)\sim u$, perché qui $a^x\to+\infty$.
+
+## 5F · Cambio di variabile nei limiti — slide 45–50
+
+**Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
+
+$$
+\lim_{x\to x_0}g(f(x))=\lim_{y\to y_0}g(y).
+$$
+
+**Procedura:** poni $y=f(x)$, determina $y\to y_0$ e calcola il limite della funzione esterna $g(y)$.
+
+**Esempi con $y=1/x$ (slide 47):**
+
+$$
+\lim_{x\to0^+}e^{1/x}=+\infty,\qquad
+\lim_{x\to0^-}e^{1/x}=0,\qquad
+\lim_{x\to+\infty}e^{1/x}=1.
+$$
+
+**Attenzione:** per $x\to0^+$, $1/x\to+\infty$; per $x\to0^-$, $1/x\to-\infty$.
+
+**Altri esempi di composizione (slide 48):**
+
+$$
+\lim_{x\to1^+}\arctan\left(\frac1{x-1}\right)=\frac\pi2,\qquad
+\lim_{x\to+\infty}\log\left(\sin\frac1x\right)=-\infty.
+$$
+
+**Trucco: $t=1/x$ (slide 49).** Trasforma i limiti per $x\to0$ in limiti all'infinito, utili per confrontare potenze, logaritmi ed esponenziali.
+
+$$
+t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t
+$$
+
+$$
+x\to0^+\ \Longrightarrow\ t\to+\infty,\qquad
+x\to0^-\ \Longrightarrow\ t\to-\infty
+$$
+
+Viceversa: $x\to+\infty\Rightarrow t\to0^+$ e $x\to-\infty\Rightarrow t\to0^-$.
+
+Per $\alpha>0$ e $x\to0^+$:
+
+$$
+x^\alpha\log x=\frac1{t^\alpha}\log\left(\frac1t\right)
+=-\frac{\log t}{t^\alpha}\longrightarrow0\qquad(t\to+\infty).
+$$
+
+**Perché funziona:** $t^\alpha$ cresce più velocemente di $\log t$. La sostituzione non è obbligatoria: usala quando semplifica il limite.
+
+**Esempio della slide 50:** per $x\to0^+$, usa la trasformazione delle potenze indeterminate già riportata nella **sezione 5A**. Poiché $x\ln x\to0$:
+
+$$
+\lim_{x\to0^+}x^x
+=\lim_{x\to0^+}e^{x\ln x}=e^0=1.
+$$
+
+## 5G · Gerarchia di crescita — n → +∞
+
+$$
+\ln n\ll n^\alpha\ll a^n\ll n!\ll n^n,\qquad\alpha>0,\ a>1
+$$
+
+**Per $x\to0^+$:**
+
+$$
+\lim_{x\to0^+}x^\alpha\ln x=0,\qquad\alpha>0
+$$
 
 ## 6 · Trigonometria
 
@@ -285,227 +486,7 @@ $$
 
 Sugli assi usare gli angoli della circonferenza.
 
-## 8 · Regole dei limiti
-
-$$
-\lim(f\pm g)=\lim f\pm\lim g
-$$
-
-$$
-\lim(fg)=(\lim f)(\lim g)
-$$
-
-$$
-\lim(f/g)=\frac{\lim f}{\lim g},\qquad\lim g\neq0
-$$
-
-$$
-\lim[f(x)]^\alpha=(\lim f)^\alpha\quad\text{(se definita)}
-$$
-
-**Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
-
-## 9 · Procedure per risolvere le forme indeterminate
-
-**1. Sostituzione diretta.** Se la forma non è indeterminata, concludi.
-
-**2. Se è indeterminata, scegli la trasformazione:**
-
-| Forma | Procedura |
-| :--- | :--- |
-| $0/0$ | Fattorizza e semplifica i fattori comuni; usa limiti notevoli, equivalenti o sviluppi. Con le radici, razionalizza. |
-| $\infty/\infty$ | Confronta gli ordini di crescita. Nei polinomi, dividi numeratore e denominatore per la potenza più alta presente. |
-| $0\cdot\infty$ | Trasforma il prodotto in un quoziente. |
-| $\infty-\infty$ | Raccogli il termine dominante, usa il denominatore comune oppure il coniugato delle radici. |
-| $1^\infty,\ 0^0,\ \infty^0$ | Con base positiva, passa al logaritmo e studia il prodotto. |
-
-**Raccoglimento nei polinomi:** se $x\to\infty$, raccogli la potenza di $x$ **maggiore**; se $x\to0$, raccogli la potenza di $x$ **minore** (tra quelle presenti).
-
-**Prodotto trasformato in quoziente:**
-
-$$
-fg=\frac{f}{1/g}=\frac{g}{1/f}
-$$
-
-**Razionalizzazione:**
-
-$$
-\sqrt A-\sqrt B=\frac{A-B}{\sqrt A+\sqrt B}
-$$
-
-**Potenze indeterminate, base positiva:**
-
-$$
-f^g=e^{g\ln f};\qquad L=\lim(g\ln f)\Rightarrow\lim f^g=e^L
-$$
-
-**Promemoria per $1^\infty$:** porta la base nella forma $1+u$ con $u\to0$; dopo la trasformazione esponenziale usa $\ln(1+u)\sim u$.
-
-**3. Controlla il dominio, il segno e i limiti laterali.**
-
-## 10 · Calcolo dei limiti di funzioni — slide 34–44
-
-**Funzioni elementari (slide 35–38):** sono continue nei punti del loro dominio; quindi, se $x_0$ appartiene al dominio,
-
-$$
-\lim_{x\to x_0}f(x)=f(x_0).
-$$
-
-**Potenze intere positive ($n\in\mathbb N$, slide 35):**
-
-$$
-\lim_{x\to+\infty}x^n=+\infty,\qquad
-\lim_{x\to-\infty}x^n=
-\begin{cases}
-+\infty & n\text{ pari},\\
--\infty & n\text{ dispari}.
-\end{cases}
-$$
-
-**Potenze reali ($x>0$, slide 36):**
-
-| Esponente | $x\to0^+$ | $x\to+\infty$ |
-| :--- | :---: | :---: |
-| $\alpha>0$ | $x^\alpha\to0$ | $x^\alpha\to+\infty$ |
-| $\alpha<0$ | $x^\alpha\to+\infty$ | $x^\alpha\to0$ |
-
-**Esponenziali e logaritmi (slide 37):**
-
-| Base | $a^x$, $x\to+\infty$ | $a^x$, $x\to-\infty$ | $\log_a x$, $x\to0^+$ | $\log_a x$, $x\to+\infty$ |
-| :--- | :---: | :---: | :---: | :---: |
-| $a>1$ | $+\infty$ | $0$ | $-\infty$ | $+\infty$ |
-| $0<a<1$ | $0$ | $+\infty$ | $+\infty$ | $-\infty$ |
-
-**Trigonometria (slide 38):** seno e coseno sono continui; la tangente è continua dove $\cos x\neq0$. Ai bordi:
-
-$$
-\lim_{x\to(\pi/2)^-}\tan x=+\infty,\qquad
-\lim_{x\to(-\pi/2)^+}\tan x=-\infty.
-$$
-
-**Polinomi (slide 39):** per $x\to x_0$ finito, sostituisci $x_0$; per $x\to\pm\infty$, domina il termine di grado più alto:
-
-$$
-P(x)=a_nx^n+\cdots+a_0\sim a_nx^n.
-$$
-
-**Rapporti di polinomi (slide 40):** se $P$ ha grado $m$ e $Q$ grado $n$, con coefficienti principali $a_m,b_n\neq0$,
-
-$$
-\frac{P(x)}{Q(x)}\sim\frac{a_m}{b_n}x^{m-n}
-\qquad(x\to\pm\infty).
-$$
-
-- $m<n$: limite $0$; $m=n$: limite $a_m/b_n$; $m>n$: limite infinito, con segno da valutare.
-
-**Forma $1/0$ (slide 41):** **non è indeterminata**. Se il numeratore tende a un valore non nullo, studia il segno del denominatore e gli eventuali limiti laterali:
-
-$$
-\lim_{x\to3}\frac1{(x-3)^4}=+\infty,\qquad
-\lim_{x\to3^-}\frac1{(x-3)^3}=-\infty,\qquad
-\lim_{x\to3^+}\frac1{(x-3)^3}=+\infty.
-$$
-
-**Funzioni limitate (slide 42):** se $|g(x)|\le M$ e $f(x)\to0$, allora $f(x)g(x)\to0$. Per esempio,
-
-$$
-\lim_{x\to0}x\sin\left(\frac1x\right)=0.
-$$
-
-**Gerarchia degli infiniti (slide 43; esempi slide 44):** per $x\to+\infty$, esponenziali $\gg$ potenze positive $\gg$ potenze positive di logaritmi:
-
-$$
-\lim_{x\to+\infty}\frac{a^x}{x^\alpha}=+\infty
-\quad(a>1,\ \alpha>0),
-\qquad
-\lim_{x\to+\infty}\frac{x^\alpha}{(\log_b x)^\beta}=+\infty
-\quad(\alpha,\beta>0,\ b>1).
-$$
-
-Esempi:
-
-$$
-\lim_{x\to+\infty}\frac{2^x}{x^3}=+\infty,\qquad
-\lim_{x\to+\infty}\frac{x^3}{2^x}=0,\qquad
-\lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
-$$
-
-**Equivalente utile per i logaritmi (slide 44, $x\to+\infty$, $a>1$):**
-
-$$
-\log(1+a^x)\sim x\log a.
-$$
-
-Infatti $\log(1+a^x)=x\log a+\log(1+a^{-x})$ e $\log(1+a^{-x})\to0$. **Non applicare** $\log(1+u)\sim u$, perché qui $a^x\to+\infty$.
-
-## 11 · Cambio di variabile nei limiti — slide 45–50
-
-**Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
-
-$$
-\lim_{x\to x_0}g(f(x))=\lim_{y\to y_0}g(y).
-$$
-
-**Procedura:** poni $y=f(x)$, determina $y\to y_0$ e calcola il limite della funzione esterna $g(y)$.
-
-**Esempi con $y=1/x$ (slide 47):**
-
-$$
-\lim_{x\to0^+}e^{1/x}=+\infty,\qquad
-\lim_{x\to0^-}e^{1/x}=0,\qquad
-\lim_{x\to+\infty}e^{1/x}=1.
-$$
-
-**Attenzione:** per $x\to0^+$, $1/x\to+\infty$; per $x\to0^-$, $1/x\to-\infty$.
-
-**Altri esempi di composizione (slide 48):**
-
-$$
-\lim_{x\to1^+}\arctan\left(\frac1{x-1}\right)=\frac\pi2,\qquad
-\lim_{x\to+\infty}\log\left(\sin\frac1x\right)=-\infty.
-$$
-
-**Trucco: $t=1/x$ (slide 49).** Trasforma i limiti per $x\to0$ in limiti all'infinito, utili per confrontare potenze, logaritmi ed esponenziali.
-
-$$
-t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t
-$$
-
-$$
-x\to0^+\ \Longrightarrow\ t\to+\infty,\qquad
-x\to0^-\ \Longrightarrow\ t\to-\infty
-$$
-
-Viceversa: $x\to+\infty\Rightarrow t\to0^+$ e $x\to-\infty\Rightarrow t\to0^-$.
-
-Per $\alpha>0$ e $x\to0^+$:
-
-$$
-x^\alpha\log x=\frac1{t^\alpha}\log\left(\frac1t\right)
-=-\frac{\log t}{t^\alpha}\longrightarrow0\qquad(t\to+\infty).
-$$
-
-**Perché funziona:** $t^\alpha$ cresce più velocemente di $\log t$. La sostituzione non è obbligatoria: usala quando semplifica il limite.
-
-**Esempio della slide 50:** per $x\to0^+$, usa la trasformazione delle potenze indeterminate già riportata nella **sezione 9**. Poiché $x\ln x\to0$:
-
-$$
-\lim_{x\to0^+}x^x
-=\lim_{x\to0^+}e^{x\ln x}=e^0=1.
-$$
-
-## 13 · Gerarchia di crescita — n → +∞
-
-$$
-\ln n\ll n^\alpha\ll a^n\ll n!\ll n^n,\qquad\alpha>0,\ a>1
-$$
-
-**Per $x\to0^+$:**
-
-$$
-\lim_{x\to0^+}x^\alpha\ln x=0,\qquad\alpha>0
-$$
 
 ---
 
-*Fonte: Formulario_Analisi_1.pdf, pagine 1–2. Circonferenza goniometrica riprodotta in SVG e coordinate trascritte anche in tabella.*
+*Fonte: Formulario_Analisi_1.pdf, pagine 1–2. Circonferenza goniometrica riprodotta in SVG e coordinate indicate nella figura.*
