@@ -115,37 +115,30 @@ Per i metodi di risoluzione, vedi la **sezione 9**.
 
 ## 5B · Sviluppi notevoli — u → 0
 
-| | |
-| :--- | :--- |
-| $e^u=1+u+\frac{u^2}{2}+o(u^2)$ | $a^u=1+u\ln a+o(u)$, $a>0$ |
-| $2^u=1+u\ln2+o(u)$ | $\ln(1+u)=u-\frac{u^2}{2}+o(u^2)$ |
-| $\sin u=u-\frac{u^3}{6}+o(u^3)$ | $\sinh u=u+\frac{u^3}{6}+o(u^3)$ |
-| $\cos u=1-\frac{u^2}{2}+o(u^2)$ | $\tan u=u+\frac{u^3}{3}+o(u^3)$ |
-| $\arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)$ | $(1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)$ |
-| $\sqrt{1+u}=1+\frac u2+o(u)$ | |
+| | | |
+| :--- | :--- | :--- |
+| $e^u=1+u+\frac{u^2}{2}+o(u^2)$ | $a^u=1+u\ln a+o(u)$, $a>0$ | $2^u=1+u\ln2+o(u)$ |
+| $\ln(1+u)=u-\frac{u^2}{2}+o(u^2)$ | $\sin u=u-\frac{u^3}{6}+o(u^3)$ | $\sinh u=u+\frac{u^3}{6}+o(u^3)$ |
+| $\cos u=1-\frac{u^2}{2}+o(u^2)$ | $\tan u=u+\frac{u^3}{3}+o(u^3)$ | $\sqrt{1+u}=1+\frac u2+o(u)$ |
+| $\arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)$ | $(1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)$ | |
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
 
 ## 5C · Equivalenze asintotiche — u → 0
 
-| | |
-| :--- | :--- |
-| $\sin u\sim u$ | $\sinh u\sim u$ |
-| $\tan u\sim u$ | $\arctan u\sim u$ |
-| $1-\cos u\sim\frac{u^2}{2}$ | $\cos u-1\sim-\frac{u^2}{2}$ |
-| $\ln(1+u)\sim u$ | $\ln(1-u)\sim-u$ |
-| $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ |
-| $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
-| $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ |
-| $\sqrt{1-u}-1\sim-\frac u2$ | |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| $\sin u\sim u$ | $\sinh u\sim u$ | $\tan u\sim u$ | $\arctan u\sim u$ |
+| $1-\cos u\sim\frac{u^2}{2}$ | $\cos u-1\sim-\frac{u^2}{2}$ | $\ln(1+u)\sim u$ | $\ln(1-u)\sim-u$ |
+| $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ | $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
+| $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ | |
 
 **Limiti notevoli** (angoli in radianti):
 
-| | |
-| :--- | :--- |
-| $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ |
-| $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ | $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ |
-| $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | |
+| | | |
+| :--- | :--- | :--- |
+| $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ |
+| $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | |
 
 **Definizione:**
 
