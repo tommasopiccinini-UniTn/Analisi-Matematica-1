@@ -101,167 +101,79 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 
 ## 5E · Calcolo dei limiti di funzioni — slide 34–44
 
-**Funzioni elementari (slide 35–38):** sono continue nei punti del loro dominio; quindi, se $x_0$ appartiene al dominio,
+**Continuità e potenze (slide 35–36)**
 
-$$
-\lim_{x\to x_0}f(x)=f(x_0).
-$$
+| Funzioni elementari | Potenze intere, $n\in\mathbb N$ | $x\to-\infty$ |
+| :--- | :--- | :--- |
+| Continue nei punti del dominio: $\lim_{x\to x_0}f(x)=f(x_0)$ | $\displaystyle\lim_{x\to+\infty}x^n=+\infty$ | $\lim x^n=+\infty$ se $n$ pari; $-\infty$ se $n$ dispari |
 
-**Potenze intere positive ($n\in\mathbb N$, slide 35):**
-
-$$
-\lim_{x\to+\infty}x^n=+\infty,\qquad
-\lim_{x\to-\infty}x^n=
-\begin{cases}
-+\infty & n\text{ pari},\\
--\infty & n\text{ dispari}.
-\end{cases}
-$$
-
-**Potenze reali ($x>0$, slide 36):**
-
-| Esponente | $x\to0^+$ | $x\to+\infty$ |
-| :--- | :---: | :---: |
+| $x>0$ | $x\to0^+$ | $x\to+\infty$ |
+| :--- | :--- | :--- |
 | $\alpha>0$ | $x^\alpha\to0$ | $x^\alpha\to+\infty$ |
 | $\alpha<0$ | $x^\alpha\to+\infty$ | $x^\alpha\to0$ |
 
-**Esponenziali e logaritmi (slide 37):**
+**Esponenziali e logaritmi (slide 37)**
 
 | Base | $a^x$, $x\to+\infty$ | $a^x$, $x\to-\infty$ | $\log_a x$, $x\to0^+$ | $\log_a x$, $x\to+\infty$ |
 | :--- | :---: | :---: | :---: | :---: |
 | $a>1$ | $+\infty$ | $0$ | $-\infty$ | $+\infty$ |
 | $0<a<1$ | $0$ | $+\infty$ | $+\infty$ | $-\infty$ |
 
-**Trigonometria (slide 38):** seno e coseno sono continui; la tangente è continua dove $\cos x\neq0$. Ai bordi:
+**Trigonometria, polinomi e rapporti (slide 38–40)**
 
-$$
-\lim_{x\to(\pi/2)^-}\tan x=+\infty,\qquad
-\lim_{x\to(-\pi/2)^+}\tan x=-\infty.
-$$
+| Trigonometria | Polinomi | Rapporti $P/Q$ |
+| :--- | :--- | :--- |
+| $\sin,\cos$ continue; $\tan$ continua se $\cos x\neq0$ | $x\to x_0$: sostituisci; $x\to\pm\infty$: $P(x)=a_nx^n+\cdots+a_0\sim a_nx^n$ | $\frac{P(x)}{Q(x)}\sim\frac{a_m}{b_n}x^{m-n}$, $x\to\pm\infty$; $m,n$ gradi, $a_m,b_n\neq0$ |
+| $\displaystyle\lim_{x\to(\pi/2)^-}\tan x=+\infty$; $\displaystyle\lim_{x\to(-\pi/2)^+}\tan x=-\infty$ | | $m<n\Rightarrow0$; $m=n\Rightarrow a_m/b_n$; $m>n\Rightarrow$ infinito (controlla il segno) |
 
-**Polinomi (slide 39):** per $x\to x_0$ finito, sostituisci $x_0$; per $x\to\pm\infty$, domina il termine di grado più alto:
+**Forma $1/0$ (slide 41):** **non indeterminata**; con numeratore non nullo studia il segno del denominatore e i limiti laterali.
 
-$$
-P(x)=a_nx^n+\cdots+a_0\sim a_nx^n.
-$$
+| | | |
+| :--- | :--- | :--- |
+| $\displaystyle\lim_{x\to3}\frac1{(x-3)^4}=+\infty$ | $\displaystyle\lim_{x\to3^-}\frac1{(x-3)^3}=-\infty$ | $\displaystyle\lim_{x\to3^+}\frac1{(x-3)^3}=+\infty$ |
 
-**Rapporti di polinomi (slide 40):** se $P$ ha grado $m$ e $Q$ grado $n$, con coefficienti principali $a_m,b_n\neq0$,
+**Funzioni limitate (slide 42):** se $\lvert g(x)\rvert\le M$ e $f(x)\to0$, allora $f(x)g(x)\to0$; esempio $\displaystyle\lim_{x\to0}x\sin\frac1x=0$.
 
-$$
-\frac{P(x)}{Q(x)}\sim\frac{a_m}{b_n}x^{m-n}
-\qquad(x\to\pm\infty).
-$$
+**Gerarchia degli infiniti (slide 43–44, $x\to+\infty$):** esponenziali $\gg$ potenze positive $\gg$ potenze positive di logaritmi.
 
-- $m<n$: limite $0$; $m=n$: limite $a_m/b_n$; $m>n$: limite infinito, con segno da valutare.
+| | |
+| :--- | :--- |
+| $\displaystyle\lim_{x\to+\infty}\frac{a^x}{x^\alpha}=+\infty$, $a>1,\ \alpha>0$ | $\displaystyle\lim_{x\to+\infty}\frac{x^\alpha}{(\log_b x)^\beta}=+\infty$, $\alpha,\beta>0,\ b>1$ |
 
-**Forma $1/0$ (slide 41):** **non è indeterminata**. Se il numeratore tende a un valore non nullo, studia il segno del denominatore e gli eventuali limiti laterali:
+| Esempio | Esempio | Esempio |
+| :--- | :--- | :--- |
+| $\displaystyle\lim_{x\to+\infty}\frac{2^x}{x^3}=+\infty$ | $\displaystyle\lim_{x\to+\infty}\frac{x^3}{2^x}=0$ | $\displaystyle\lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0$ |
 
-$$
-\lim_{x\to3}\frac1{(x-3)^4}=+\infty,\qquad
-\lim_{x\to3^-}\frac1{(x-3)^3}=-\infty,\qquad
-\lim_{x\to3^+}\frac1{(x-3)^3}=+\infty.
-$$
-
-**Funzioni limitate (slide 42):** se $|g(x)|\le M$ e $f(x)\to0$, allora $f(x)g(x)\to0$. Per esempio,
-
-$$
-\lim_{x\to0}x\sin\left(\frac1x\right)=0.
-$$
-
-**Gerarchia degli infiniti (slide 43; esempi slide 44):** per $x\to+\infty$, esponenziali $\gg$ potenze positive $\gg$ potenze positive di logaritmi:
-
-$$
-\lim_{x\to+\infty}\frac{a^x}{x^\alpha}=+\infty
-\quad(a>1,\ \alpha>0),
-\qquad
-\lim_{x\to+\infty}\frac{x^\alpha}{(\log_b x)^\beta}=+\infty
-\quad(\alpha,\beta>0,\ b>1).
-$$
-
-Esempi:
-
-$$
-\lim_{x\to+\infty}\frac{2^x}{x^3}=+\infty,\qquad
-\lim_{x\to+\infty}\frac{x^3}{2^x}=0,\qquad
-\lim_{x\to+\infty}\frac{(\log x)^2}{\sqrt{x}}=0.
-$$
-
-**Equivalente utile per i logaritmi (slide 44, $x\to+\infty$, $a>1$):**
-
-$$
-\log(1+a^x)\sim x\log a.
-$$
-
-Infatti $\log(1+a^x)=x\log a+\log(1+a^{-x})$ e $\log(1+a^{-x})\to0$. **Non applicare** $\log(1+u)\sim u$, perché qui $a^x\to+\infty$.
-
+**Logaritmi ($x\to+\infty,\ a>1$):** $\boxed{\log(1+a^x)\sim x\log a}$ perché $\log(1+a^x)=x\log a+\log(1+a^{-x})$ e $\log(1+a^{-x})\to0$; **non** usare $\log(1+u)\sim u$ se $u=a^x\to+\infty$.
 ## 5F · Cambio di variabile nei limiti — slide 45–50
 
-**Teorema (slide 46):** se $f(x)\to y_0$ per $x\to x_0$ e $g$ è continua in $y_0$ (quando $y_0$ è finito), oppure ammette limite per $y\to y_0$ (quando $y_0=\pm\infty$), allora:
+**Composizione (slide 46):** se $f(x)\to y_0$ e $g$ è continua in $y_0$ (finito), oppure $g$ ammette limite per $y\to y_0$ ($y_0=\pm\infty$), allora $\displaystyle\lim_{x\to x_0}g(f(x))=\lim_{y\to y_0}g(y)$.
 
-$$
-\lim_{x\to x_0}g(f(x))=\lim_{y\to y_0}g(y).
-$$
+**Procedura:** poni $y=f(x)$, determina $y\to y_0$ e calcola il limite di $g(y)$.
 
-**Procedura:** poni $y=f(x)$, determina $y\to y_0$ e calcola il limite della funzione esterna $g(y)$.
+**Esempi (slide 47–48)**
 
-**Esempi con $y=1/x$ (slide 47):**
+| | | |
+| :--- | :--- | :--- |
+| $\displaystyle\lim_{x\to0^+}e^{1/x}=+\infty$ | $\displaystyle\lim_{x\to0^-}e^{1/x}=0$ | $\displaystyle\lim_{x\to+\infty}e^{1/x}=1$ |
+| $\displaystyle\lim_{x\to1^+}\arctan\frac1{x-1}=\frac\pi2$ | $\displaystyle\lim_{x\to+\infty}\log\left(\sin\frac1x\right)=-\infty$ | |
 
-$$
-\lim_{x\to0^+}e^{1/x}=+\infty,\qquad
-\lim_{x\to0^-}e^{1/x}=0,\qquad
-\lim_{x\to+\infty}e^{1/x}=1.
-$$
+**Trucco $t=1/x$ (slide 49):** $t=\frac1x\Leftrightarrow x=\frac1t$. Utile per trasformare i limiti vicino a $0$ in limiti all'infinito (e viceversa).
 
-**Attenzione:** per $x\to0^+$, $1/x\to+\infty$; per $x\to0^-$, $1/x\to-\infty$.
+| $x\to0^+$ | $x\to0^-$ | $x\to+\infty$ | $x\to-\infty$ |
+| :--- | :--- | :--- | :--- |
+| $t\to+\infty$ | $t\to-\infty$ | $t\to0^+$ | $t\to0^-$ |
 
-**Altri esempi di composizione (slide 48):**
+| Confronto delle crescite ($x\to0^+$, $\alpha>0$) | Potenza indeterminata (slide 50, $x\to0^+$) |
+| :--- | :--- |
+| $x^\alpha\log x=-\frac{\log t}{t^\alpha}\to0$ per $t=1/x\to+\infty$ | $\displaystyle\lim_{x\to0^+}x^x=\lim_{x\to0^+}e^{x\ln x}=e^0=1$ |
 
-$$
-\lim_{x\to1^+}\arctan\left(\frac1{x-1}\right)=\frac\pi2,\qquad
-\lim_{x\to+\infty}\log\left(\sin\frac1x\right)=-\infty.
-$$
-
-**Trucco: $t=1/x$ (slide 49).** Trasforma i limiti per $x\to0$ in limiti all'infinito, utili per confrontare potenze, logaritmi ed esponenziali.
-
-$$
-t=\frac1x\quad\Longleftrightarrow\quad x=\frac1t
-$$
-
-$$
-x\to0^+\ \Longrightarrow\ t\to+\infty,\qquad
-x\to0^-\ \Longrightarrow\ t\to-\infty
-$$
-
-Viceversa: $x\to+\infty\Rightarrow t\to0^+$ e $x\to-\infty\Rightarrow t\to0^-$.
-
-Per $\alpha>0$ e $x\to0^+$:
-
-$$
-x^\alpha\log x=\frac1{t^\alpha}\log\left(\frac1t\right)
-=-\frac{\log t}{t^\alpha}\longrightarrow0\qquad(t\to+\infty).
-$$
-
-**Perché funziona:** $t^\alpha$ cresce più velocemente di $\log t$. La sostituzione non è obbligatoria: usala quando semplifica il limite.
-
-**Esempio della slide 50:** per $x\to0^+$, usa la trasformazione delle potenze indeterminate già riportata nella **sezione 5A**. Poiché $x\ln x\to0$:
-
-$$
-\lim_{x\to0^+}x^x
-=\lim_{x\to0^+}e^{x\ln x}=e^0=1.
-$$
-
+**Perché funziona:** $t^\alpha$ cresce più rapidamente di $\log t$. Usa la sostituzione quando semplifica; per $x^x$ vedi la trasformazione della sezione 5A.
 ## 5G · Gerarchia di crescita — n → +∞
 
-$$
-\ln n\ll n^\alpha\ll a^n\ll n!\ll n^n,\qquad\alpha>0,\ a>1
-$$
-
-**Per $x\to0^+$:**
-
-$$
-\lim_{x\to0^+}x^\alpha\ln x=0,\qquad\alpha>0
-$$
-
+| $n\to+\infty$ | $x\to0^+$ |
+| :--- | :--- |
+| $\ln n\ll n^\alpha\ll a^n\ll n!\ll n^n$, $\alpha>0,\ a>1$ | $\displaystyle\lim_{x\to0^+}x^\alpha\ln x=0$, $\alpha>0$ |
 ## 6 · Trigonometria
 
 **Conversioni:** radianti $\to$ gradi: $\theta_{^\circ}=\theta_{\mathrm{rad}}\frac{180}{\pi}$; gradi $\to$ radianti: $\theta_{\mathrm{rad}}=\theta_{^\circ}\frac{\pi}{180}$.
@@ -306,45 +218,26 @@ La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
 
 ## 7 · Circonferenza goniometrica e arctan
 
-$$
-P(\theta)=(\cos\theta,\sin\theta),\qquad r=1
-$$
-
-Angoli in senso antiorario.
+**Circonferenza unitaria:** $P(\theta)=(\cos\theta,\sin\theta)$, $r=1$; angoli in senso antiorario.
 
 ![Circonferenza goniometrica con angoli notevoli](grafici/circonferenza-formulario.svg)
 
-**Arctan notevoli:**
+**Arctan notevoli** ($t\mapsto\arctan t$):
 
-| $t$ | $\arctan t$ |
-| :---: | :---: |
-| $-\sqrt3$ | $-\pi/3$ |
-| $-1$ | $-\pi/4$ |
-| $-\sqrt3/3$ | $-\pi/6$ |
-| $0$ | $0$ |
-| $\sqrt3/3$ | $\pi/6$ |
-| $1$ | $\pi/4$ |
-| $\sqrt3$ | $\pi/3$ |
+| | | | |
+| :--- | :--- | :--- | :--- |
+| $-\sqrt3\mapsto-\pi/3$ | $-1\mapsto-\pi/4$ | $-\sqrt3/3\mapsto-\pi/6$ | $0\mapsto0$ |
+| $\sqrt3/3\mapsto\pi/6$ | $1\mapsto\pi/4$ | $\sqrt3\mapsto\pi/3$ | |
 
-$$
-\arctan t\in(-\pi/2,\pi/2),\qquad\lim_{x\to\pm\infty}\arctan x=\pm\frac\pi2
-$$
+**Arco tangente:** $\arctan t\in(-\pi/2,\pi/2)$; $\displaystyle\lim_{x\to\pm\infty}\arctan x=\pm\frac\pi2$.
 
-Per l'angolo del punto $P(x,y)$, con $x\neq0$:
+**Angolo di $P(x,y)$:** per $x\neq0$ poni $\alpha=\arctan(\lvert y/x\rvert)$ e scegli il quadrante:
 
-$$
-\alpha=\arctan(\lvert y/x\rvert)
-$$
+| I | II | III | IV |
+| :--- | :--- | :--- | :--- |
+| $\theta=\alpha$ | $\theta=\pi-\alpha$ | $\theta=\pi+\alpha$ | $\theta=2\pi-\alpha$ |
 
-| Quadrante | Angolo |
-| :--- | :--- |
-| I | $\theta=\alpha$ |
-| II | $\theta=\pi-\alpha$ |
-| III | $\theta=\pi+\alpha$ |
-| IV | $\theta=2\pi-\alpha$ |
-
-Sugli assi usare gli angoli della circonferenza.
-
+**Sugli assi:** usa gli angoli indicati nella circonferenza.
 
 ---
 
