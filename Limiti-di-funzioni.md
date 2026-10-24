@@ -908,9 +908,9 @@ Determinare $\alpha\in\mathbb R$ affinché la funzione sia continua in $x=0$:
 $$
 f(x)=
 \begin{cases}
-\dfrac{\cos(x^2)-\sqrt[3]{1+3\alpha x^2}}{\sin(x^2)} & x>0,\\[6pt]
-\dfrac{e^{\alpha x}-1}{x} & x<0,\\[6pt]
-5 & x=0.
+\dfrac{\cos(x^2)-\sqrt[3]{1+3\alpha x^2}}{\sin(x^2)}, & \text{se }x>0\\
+\dfrac{e^{\alpha x}-1}{x}, & \text{se }x<0\\
+5, & \text{se }x=0
 \end{cases}
 $$
 
