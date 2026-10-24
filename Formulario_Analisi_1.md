@@ -6,142 +6,56 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 
 ## 1 · Logica
 
-- **Contronominale:** $(P\Rightarrow Q)\Leftrightarrow(\neg Q\Rightarrow\neg P)$.
-- **Negazione dell'implicazione:** $\neg(P\Rightarrow Q)\Leftrightarrow P\land\neg Q$.
-- **De Morgan:** $\neg(P\land Q)\Leftrightarrow\neg P\lor\neg Q$.
-- **De Morgan:** $\neg(P\lor Q)\Leftrightarrow\neg P\land\neg Q$.
-- **Negazione dei quantificatori:** $\neg(\forall x\,P(x))\Leftrightarrow\exists x\,\neg P(x)$; $\neg(\exists x\,P(x))\Leftrightarrow\forall x\,\neg P(x)$.
-
+| | |
+| :--- | :--- |
+| **Contronominale:** $(P\Rightarrow Q)\Leftrightarrow(\neg Q\Rightarrow\neg P)$ | **Negazione implicazione:** $\neg(P\Rightarrow Q)\Leftrightarrow P\land\neg Q$ |
+| **De Morgan:** $\neg(P\land Q)\Leftrightarrow\neg P\lor\neg Q$ | **De Morgan:** $\neg(P\lor Q)\Leftrightarrow\neg P\land\neg Q$ |
+| **Quantificatori:** $\neg(\forall x\,P(x))\Leftrightarrow\exists x\,\neg P(x)$ | $\neg(\exists x\,P(x))\Leftrightarrow\forall x\,\neg P(x)$ |
 ## 2 · Estremi e proprietà di R
 
-- **Estremo superiore:** $\sup A=\min\{M\in\mathbb R:M\text{ maggiorante di }A\}$.
-- **Estremo inferiore:** $\inf A=\max\{m\in\mathbb R:m\text{ minorante di }A\}$.
-- **Archimede:** $\forall x\in\mathbb R\ \exists n\in\mathbb N:n>x$.
-- **Conseguenza:** $\forall\varepsilon>0\ \exists n\in\mathbb N:1/n<\varepsilon$.
-- **Densità di Q in R:** $a,b\in\mathbb R,\ a<b\Rightarrow\exists q\in\mathbb Q:a<q<b$.
-
+| | |
+| :--- | :--- |
+| **Estremo superiore:** $\sup A=\min\{M\in\mathbb R:M\text{ maggiorante di }A\}$ | **Estremo inferiore:** $\inf A=\max\{m\in\mathbb R:m\text{ minorante di }A\}$ |
+| **Archimede:** $\forall x\in\mathbb R\ \exists n\in\mathbb N:n>x$ | **Conseguenza:** $\forall\varepsilon>0\ \exists n\in\mathbb N:1/n<\varepsilon$ |
+| **Densità di $\mathbb Q$ in $\mathbb R$:** $a,b\in\mathbb R,\ a<b\Rightarrow\exists q\in\mathbb Q:a<q<b$ | |
 ## 3 · Valore assoluto
 
-**Attenzione:**
-
-$$
-\sqrt{x^2}=\lvert x\rvert
-$$
-
+**Attenzione:** $\sqrt{x^2}=\lvert x\rvert$.
 ## 4 · Funzioni
 
-- **Iniettiva:** $\forall x_1,x_2\in A,\ x_1\neq x_2\Rightarrow f(x_1)\neq f(x_2)$.
-- **Suriettiva:** $\forall y\in B\ \exists x\in A:f(x)=y$.
-- **Composizione:** $(g\circ f)(x)=g(f(x))$.
-- **Dominio della composizione:** $\mathrm{Dom}(g\circ f)=\{x\in\mathrm{Dom}\,f:f(x)\in\mathrm{Dom}\,g\}$.
-- **Invertibile:** $f$ invertibile $\Leftrightarrow f$ biiettiva.
-- **Inversa:** $f^{-1}(f(x))=x$; $f(f^{-1}(y))=y$.
-- **Grafico dell'inversa:** riflesso del grafico di $f$ rispetto alla retta $y=x$.
-- **Limitata:** $\exists M>0:\lvert f(x)\rvert\le M$ per ogni $x\in\mathrm{Dom}\,f$.
-- **Pari:** $f(-x)=f(x)$; **dispari:** $f(-x)=-f(x)$.
-- **Crescente:** $x_1<x_2\Rightarrow f(x_1)\le f(x_2)$.
-- **Decrescente:** $x_1<x_2\Rightarrow f(x_1)\ge f(x_2)$.
-
-Con le disuguaglianze strette si ottiene la **stretta monotonia**, che implica l'iniettività.
-
-**Continuità a tratti:** nel punto di raccordo $a$ deve valere $\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=f(a)$.
-
-**Teorema degli zeri:**
-
-$$
-f\in C([a,b]),\quad f(a)f(b)<0\ \Rightarrow\ \exists c\in(a,b):f(c)=0
-$$
-
+| | |
+| :--- | :--- |
+| **Iniettiva:** $\forall x_1,x_2\in A,\ x_1\neq x_2\Rightarrow f(x_1)\neq f(x_2)$ | **Suriettiva:** $\forall y\in B\ \exists x\in A:f(x)=y$ |
+| **Composizione:** $(g\circ f)(x)=g(f(x))$ | **Dominio:** $\mathrm{Dom}(g\circ f)=\{x\in\mathrm{Dom}\,f:f(x)\in\mathrm{Dom}\,g\}$ |
+| **Invertibile:** $f$ invertibile $\Leftrightarrow f$ biiettiva | **Inversa:** $f^{-1}(f(x))=x;\ f(f^{-1}(y))=y$ |
+| **Grafico dell'inversa:** riflesso rispetto a $y=x$ | **Limitata:** $\exists M>0:\lvert f(x)\rvert\le M$ per ogni $x\in\mathrm{Dom}\,f$ |
+| **Pari / dispari:** $f(-x)=f(x)$ / $f(-x)=-f(x)$ | **Crescente / decrescente:** $x_1<x_2\Rightarrow f(x_1)\le f(x_2)$ / $f(x_1)\ge f(x_2)$ |
+| **Stretta monotonia:** disuguaglianze strette $\Rightarrow$ iniettività | **Continuità a tratti:** $\lim_{x\to a^-}f(x)=\lim_{x\to a^+}f(x)=f(a)$ |
+| **Teorema degli zeri:** $f\in C([a,b]),\ f(a)f(b)<0\Rightarrow\exists c\in(a,b):f(c)=0$ | |
 ## 5 · Funzioni elementari
 
-**Retta** passante per $(x_0,y_0)$ con coefficiente angolare $m$:
-
-$$
-y-y_0=m(x-x_0)
-$$
-
-**Esponenziale:** $f(x)=a^x$, $a>0$, $a\neq1$.
-
-- Dominio: $\mathbb R$; immagine: $(0,+\infty)$; $a^0=1$.
-- $a>1$: crescente; $0<a<1$: decrescente.
-
-**Logaritmo:** $\log_a x$, inversa di $a^x$.
-
-- Dominio: $(0,+\infty)$; immagine: $\mathbb R$.
-- $\log_a1=0$; $\log_a a=1$.
-
-$$
-\log_a(xy)=\log_a x+\log_a y
-$$
-
-$$
-\log_a(x/y)=\log_a x-\log_a y
-$$
-
-$$
-\log_a(x^r)=r\log_a x
-$$
-
-**Limite del logaritmo naturale:**
-
-$$
-\lim_{x\to0^+}\ln x=-\infty
-$$
-
-**Cambio di base:**
-
-$$
-\log_a x=\frac{\log_b x}{\log_b a}=\frac{\ln x}{\ln a}
-$$
-
-**Funzioni iperboliche:**
-
-$$
-\sinh x=\frac{e^x-e^{-x}}2,\qquad\cosh x=\frac{e^x+e^{-x}}2
-$$
-
-$$
-\cosh^2x-\sinh^2x=1
-$$
-
+| | | |
+| :--- | :--- | :--- |
+| **Retta:** $y-y_0=m(x-x_0)$ | **Esponenziale:** $a^x$, $a>0,\ a\neq1$ | **Logaritmo:** $\log_a x$, inversa di $a^x$ |
+| **Esponenziale:** dominio $\mathbb R$, immagine $(0,+\infty)$, $a^0=1$ | $a>1$: crescente; $0<a<1$: decrescente | **Logaritmo:** dominio $(0,+\infty)$, immagine $\mathbb R$, $\log_a1=0$, $\log_a a=1$ |
+| $\log_a(xy)=\log_a x+\log_a y$ | $\log_a(x/y)=\log_a x-\log_a y$ | $\log_a(x^r)=r\log_a x$ |
+| **Cambio di base:** $\log_a x=\frac{\log_b x}{\log_b a}=\frac{\ln x}{\ln a}$ | $\displaystyle\lim_{x\to0^+}\ln x=-\infty$ | |
+| **Iperboliche:** $\sinh x=\frac{e^x-e^{-x}}2$ | $\cosh x=\frac{e^x+e^{-x}}2$ | $\cosh^2x-\sinh^2x=1$ |
 ## 5A · Forme indeterminate e procedure
 
-**1. Sostituzione diretta.** Se la forma non è indeterminata, concludi.
+**1.** Sostituzione diretta; **2.** se indeterminata, scegli il metodo; **3.** controlla dominio, segni e limiti laterali.
 
-**2. Se è indeterminata, scegli la trasformazione:**
+| Forma | Procedura | Forma | Procedura |
+| :--- | :--- | :--- | :--- |
+| $0/0$ | Fattorizza, semplifica, razionalizza o usa equivalenti/sviluppi | $\infty/\infty$ | Confronta crescite; dividi per il termine dominante |
+| $0\cdot\infty$ | Trasforma in un quoziente | $\infty-\infty$ | Raccogli, denominatore comune o coniugato |
+| $1^\infty$ | Base positiva: usa $e^{g\ln f}$ | $0^0,\ \infty^0$ | Base positiva: usa $e^{g\ln f}$ |
 
-| Forma | Procedura |
-| :--- | :--- |
-| $0/0$ | Fattorizza e semplifica i fattori comuni; usa limiti notevoli, equivalenti o sviluppi. Con le radici, razionalizza. |
-| $\infty/\infty$ | Confronta gli ordini di crescita. Nei polinomi, dividi numeratore e denominatore per la potenza più alta presente. |
-| $0\cdot\infty$ | Trasforma il prodotto in un quoziente. |
-| $\infty-\infty$ | Raccogli il termine dominante, usa il denominatore comune oppure il coniugato delle radici. |
-| $1^\infty,\ 0^0,\ \infty^0$ | Con base positiva, passa al logaritmo e studia il prodotto. |
+| **Polinomi** | **Prodotto / quoziente** | **Razionalizzazione** | **Potenze indeterminate** |
+| :--- | :--- | :--- | :--- |
+| $x\to\infty$: potenza maggiore; $x\to0$: potenza minore | $fg=\frac{f}{1/g}=\frac{g}{1/f}$ | $\sqrt A-\sqrt B=\frac{A-B}{\sqrt A+\sqrt B}$ | $f^g=e^{g\ln f}$; se $L=\lim(g\ln f)$, allora $\lim f^g=e^L$ |
 
-**Raccoglimento nei polinomi:** se $x\to\infty$, raccogli la potenza di $x$ **maggiore**; se $x\to0$, raccogli la potenza di $x$ **minore** (tra quelle presenti).
-
-**Prodotto trasformato in quoziente:**
-
-$$
-fg=\frac{f}{1/g}=\frac{g}{1/f}
-$$
-
-**Razionalizzazione:**
-
-$$
-\sqrt A-\sqrt B=\frac{A-B}{\sqrt A+\sqrt B}
-$$
-
-**Potenze indeterminate, base positiva:**
-
-$$
-f^g=e^{g\ln f};\qquad L=\lim(g\ln f)\Rightarrow\lim f^g=e^L
-$$
-
-**Promemoria per $1^\infty$:** porta la base nella forma $1+u$ con $u\to0$; dopo la trasformazione esponenziale usa $\ln(1+u)\sim u$.
-
-**3. Controlla il dominio, il segno e i limiti laterali.**
-
+**Promemoria $1^\infty$:** scrivi la base come $1+u$ ($u\to0$); poi $\ln(1+u)\sim u$. **Quozienti per $x\to\pm\infty$:** conviene dividere sopra e sotto per il termine dominante del denominatore; verifica prima le cancellazioni.
 ## 5B · Sviluppi notevoli — u → 0
 
 | | | |
@@ -162,25 +76,20 @@ $$
 | $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ | $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
 | $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ | |
 
-**Per $x\to1$:** $\boxed{\ln x\sim x-1}$ (poiché $\ln(1+u)\sim u$ con $u=x-1$).
+**Equivalenze vicino a $\pm1$:**
 
-| $x\to1$ | $x\to-1$ |
-| :--- | :--- |
-| $\ln(x^2)\sim2(x-1)$ | $\ln(x^2)\sim-2(x+1)$ |
+| $x\to1$ | $x\to1$ | $x\to-1$ |
+| :--- | :--- | :--- |
+| $\ln x\sim x-1$ | $\ln(x^2)\sim2(x-1)$ | $\ln(x^2)\sim-2(x+1)$ |
 
 **Limiti notevoli** (angoli in radianti):
 
 | | | |
 | :--- | :--- | :--- |
 | $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ |
-| $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ per $x\to0$ |
+| $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ ($x\to0$) |
 
-**Definizione:** $f\sim g\ \Leftrightarrow\ \frac fg\to1$.
-
-Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. Nelle **somme e differenze** controllare le cancellazioni; se il primo termine si cancella, usare più termini dello sviluppo.
-
-**Per $x\to a$:** poni $u=x-a\to0$, quindi $x=a+u$.
-
+**Definizione:** $f\sim g\iff f/g\to1$. **Regola:** sostituzione sicura in **prodotti/quozienti**; in **somme/differenze** attenzione alle cancellazioni (usa più termini dello sviluppo). **Cambio:** per $x\to a$, poni $u=x-a\to0$, quindi $x=a+u$.
 ## 5D · Regole dei limiti
 
 | | |
