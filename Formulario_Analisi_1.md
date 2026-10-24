@@ -162,6 +162,8 @@ $$
 | $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ | $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
 | $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ | |
 
+**Per $x\to1$:** $\boxed{\ln x\sim x-1}$ (poiché $\ln(1+u)\sim u$ con $u=x-1$).
+
 **Limiti notevoli** (angoli in radianti):
 
 | | | |
