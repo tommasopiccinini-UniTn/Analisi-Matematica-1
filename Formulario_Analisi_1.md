@@ -363,6 +363,8 @@ $$
 
 ## 6 · Trigonometria
 
+**Conversioni:** radianti $\to$ gradi: $\theta_{^\circ}=\theta_{\mathrm{rad}}\frac{180}{\pi}$; gradi $\to$ radianti: $\theta_{\mathrm{rad}}=\theta_{^\circ}\frac{\pi}{180}$.
+
 **Proprietà e domini**
 
 | Seno e coseno | Tangente | Cotangente |
