@@ -173,21 +173,13 @@ $$
 | | | |
 | :--- | :--- | :--- |
 | $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ |
-| $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | |
+| $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ per $x\to0$ |
 
-**Definizione:**
-
-$$
-f\sim g\ \Leftrightarrow\ \frac fg\to1
-$$
+**Definizione:** $f\sim g\ \Leftrightarrow\ \frac fg\to1$.
 
 Le equivalenze asintotiche si possono sostituire nei **prodotti e quozienti**. Nelle **somme e differenze** controllare le cancellazioni; se il primo termine si cancella, usare più termini dello sviluppo.
 
-**Appunto — argomento dei limiti notevoli:** per applicare il limite notevole, l'argomento $u(x)\to0$ deve comparire anche al denominatore (per esempio $\sin u/u$ oppure $(e^u-1)/u$). Se manca, ricavalo moltiplicando e dividendo per il fattore opportuno.
-
-**Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ per $x\to0$.
-
-**Per $x\to a$:** se compare $x-a$, si può porre $u=x-a$; allora $x=a+u$ e $u\to0$.
+**Per $x\to a$:** poni $u=x-a\to0$, quindi $x=a+u$.
 
 ## 5D · Regole dei limiti
 
