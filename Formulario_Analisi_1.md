@@ -232,6 +232,20 @@ La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
 
 ![Circonferenza goniometrica con angoli notevoli](grafici/circonferenza-formulario.svg)
 
+**Seno e coseno degli angoli notevoli** (radianti, da $0$ a $2\pi$):
+
+| $\theta$ | $\sin\theta$ | $\cos\theta$ | $\theta$ | $\sin\theta$ | $\cos\theta$ |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| $0$ | $0$ | $1$ | $\pi$ | $0$ | $-1$ |
+| $\frac{\pi}{6}$ | $\frac12$ | $\frac{\sqrt3}{2}$ | $\frac{7\pi}{6}$ | $-\frac12$ | $-\frac{\sqrt3}{2}$ |
+| $\frac{\pi}{4}$ | $\frac{\sqrt2}{2}$ | $\frac{\sqrt2}{2}$ | $\frac{5\pi}{4}$ | $-\frac{\sqrt2}{2}$ | $-\frac{\sqrt2}{2}$ |
+| $\frac{\pi}{3}$ | $\frac{\sqrt3}{2}$ | $\frac12$ | $\frac{4\pi}{3}$ | $-\frac{\sqrt3}{2}$ | $-\frac12$ |
+| $\frac{\pi}{2}$ | $1$ | $0$ | $\frac{3\pi}{2}$ | $-1$ | $0$ |
+| $\frac{2\pi}{3}$ | $\frac{\sqrt3}{2}$ | $-\frac12$ | $\frac{5\pi}{3}$ | $-\frac{\sqrt3}{2}$ | $\frac12$ |
+| $\frac{3\pi}{4}$ | $\frac{\sqrt2}{2}$ | $-\frac{\sqrt2}{2}$ | $\frac{7\pi}{4}$ | $-\frac{\sqrt2}{2}$ | $\frac{\sqrt2}{2}$ |
+| $\frac{5\pi}{6}$ | $\frac12$ | $-\frac{\sqrt3}{2}$ | $\frac{11\pi}{6}$ | $-\frac12$ | $\frac{\sqrt3}{2}$ |
+| $\pi$ | $0$ | $-1$ | $2\pi$ | $0$ | $1$ |
+
 **Arctan notevoli** ($t\mapsto\arctan t$):
 
 | | | | |
