@@ -4,6 +4,56 @@ Appunti della **lezione del 12/10/2026**, confrontati con i **limiti di successi
 
 Le due colonne affiancano gli stessi concetti, **quando il parallelismo è corretto**. Le formule sono mantenute brevi per facilitare la lettura su GitHub.
 
+## Indice
+
+- [1. Esempio introduttivo: teorema del confronto](#lf-01)
+- [2. Intorni (lezione 12/10, pagina 18)](#lf-02)
+- [3. Punti di accumulazione (pagina 19 del PDF)](#lf-03)
+- [4. Esempi di punti di accumulazione (pagina 21 del PDF)](#lf-04)
+- [5. Verifica con la definizione (pagina 22 del PDF)](#lf-05)
+- [6. Punto di accumulazione e limite — pagina 23](#lf-06)
+- [7. Definizione di limite finito — pagina 24](#lf-07)
+- [8. Interpretazione grafica — pagina 25](#lf-08)
+- [9. Tre esempi di limite in un punto — pagina 26](#lf-09)
+- [10. Funzioni continue — lezione 14/10, pagina 1 (slide 10/80)](#lf-10)
+- [11. Continuità nei punti isolati — lezione 14/10, pagina 2 (appunti)](#lf-11)
+- [12. Limite destro e limite sinistro — lezione 14/10, pagine 4–5 (slide 11/80 e appunti)](#lf-12)
+- [13. Esempio di limite laterale per funzione a tratti — lezione 14/10, pagina 6 (slide 12/80)](#lf-13)
+- [14. Continuità da destra e da sinistra — lezione 14/10, pagine 7–8 (slide 13/80 e appunti)](#lf-14)
+- [15. Tipi di discontinuità — slide 64/80](#lf-15)
+- [16. Esempi di discontinuità — slide 65/80](#lf-16)
+- [17. Esempi di discontinuità essenziale — slide 66/80](#lf-17)
+- [18. Algebra delle funzioni continue — slide 67/80](#lf-18)
+- [19. Esercizio sulla continuità nel punto di raccordo — slide 69/80](#lf-19)
+- [20. Teorema degli zeri e metodo di bisezione — slide 70–73/80](#lf-20)
+- [21. Incontro tra due funzioni continue — slide 74/80](#lf-21)
+- [22. Teorema dei valori intermedi — slide 75/80](#lf-22)
+- [23. Massimo e minimo assoluti — slide 76–77/80](#lf-23)
+- [24. Teorema di Weierstrass — slide 78–79/80](#lf-24)
+- [25. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)](#lf-25)
+- [26. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)](#lf-26)
+- [27. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)](#lf-27)
+- [28. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)](#lf-28)
+- [29. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)](#lf-29)
+- [30. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)](#lf-30)
+- [31. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)](#lf-31)
+- [32. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)](#lf-32)
+- [33. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)](#lf-33)
+- [34. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo](#lf-34)
+- [35. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)](#lf-35)
+- [36. Quando la definizione NON verifica un limite? — controesempio aggiuntivo](#lf-36)
+- [37. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)](#lf-37)
+- [38. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)](#lf-38)
+- [39. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)](#lf-39)
+- [40. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37](#lf-40)
+- [41. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39](#lf-41)
+- [42. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)](#lf-42)
+- [43. Teorema della permanenza del segno — lezione 20/10 (slide 30/80)](#lf-43)
+- [44. Teoremi di confronto — lezione 20/10 (slide 31/80)](#lf-44)
+- [45. Attenzioni pratiche per il calcolo dei limiti — riepilogo delle slide 35–41/80](#lf-45)
+
+<a name="lf-01"></a>
+
 ## 1. Esempio introduttivo: teorema del confronto
 
 | Limiti di successioni — lezione 07/10 | Limiti di funzioni — lezione 12/10, pagina 15 |
@@ -16,6 +66,8 @@ Le due colonne affiancano gli stessi concetti, **quando il parallelismo è corre
 **Idea comune:** il termine oscillante non ha bisogno di convergere: il fattore che tende a zero lo comprime tra due quantità che tendono a zero.
 
 **Differenza:** nella successione l'indice $n$ cresce senza limite; nella funzione l'argomento $x$ si avvicina a $0$ da entrambi i lati. Inoltre, $f(0)$ **non è definita**, ma il limite esiste comunque.
+
+<a name="lf-02"></a>
 
 ## 2. Intorni (lezione 12/10, pagina 18)
 
@@ -44,6 +96,8 @@ $$
 
 ---
 
+<a name="lf-03"></a>
+
 ## 3. Punti di accumulazione (pagina 19 del PDF)
 
 La slide introduce i **punti di accumulazione di un insieme** $D\subseteq\mathbb{R}$: non è ancora una definizione di limite di funzione.
@@ -62,6 +116,8 @@ $$
 $$
 
 **Collegamento tramite successioni (conseguenza della definizione):** $x_0$ è di accumulazione per $D$ se e solo se esiste **una successione** $(x_n)$ di elementi di $D\setminus\{x_0\}$ tale che $x_n\to x_0$. Non è necessario che *ogni* successione di punti di $D$ converga a $x_0$.
+
+<a name="lf-04"></a>
 
 ## 4. Esempi di punti di accumulazione (pagina 21 del PDF)
 
@@ -92,6 +148,8 @@ $$
 | Il limite della successione è $0$. | Il **solo** punto di accumulazione di $B$ è $0$: $\mathrm{Acc}(B)=\{0\}$. |
 
 **Attenzione:** il fatto che la successione $1/n$ converga a $0$ non rende ogni suo termine un punto di accumulazione dell'insieme dei suoi valori.
+
+<a name="lf-05"></a>
 
 ## 5. Verifica con la definizione (pagina 22 del PDF)
 
@@ -126,6 +184,8 @@ Possiamo scegliere un intorno sufficientemente piccolo di $1/m$ che non raggiung
 
 ---
 
+<a name="lf-06"></a>
+
 ## 6. Punto di accumulazione e limite — pagina 23
 
 Consideriamo nuovamente la funzione della pagina 15:
@@ -157,6 +217,8 @@ $$
 $$
 
 **Nota:** $f(0)$ non è definita, ma questo non impedisce l'esistenza del limite.
+
+<a name="lf-07"></a>
 
 ## 7. Definizione di limite finito — pagina 24
 
@@ -193,6 +255,8 @@ $$
 
 **Osservazione della slide:** il valore $f(x_0)$ è irrilevante. Può essere non definito oppure diverso da $\ell$.
 
+<a name="lf-08"></a>
+
 ## 8. Interpretazione grafica — pagina 25
 
 La condizione
@@ -223,6 +287,8 @@ $$
 **Nota sul grafico:** la pagina 25 usa la funzione **f(x) = x** per illustrare la definizione. L'esempio specifico della pagina 23 è invece **f(x) = x sin(1/x)**.
 
 ---
+
+<a name="lf-09"></a>
 
 ## 9. Tre esempi di limite in un punto — pagina 26
 
@@ -310,6 +376,8 @@ $$
 
 ---
 
+<a name="lf-10"></a>
+
 ## 10. Funzioni continue — lezione 14/10, pagina 1 (slide 10/80)
 
 Il **limite** descrive cosa succede ai valori $f(x)$ quando $x\to x_0$. La **continuità** collega il limite al valore **effettivo** della funzione nel punto $x_0$.
@@ -365,6 +433,8 @@ $$
 Il limite esiste, ma la funzione **non è continua in $0$**.
 
 **Metodo negli esercizi (per un punto di accumulazione):** verifica che $f(x_0)$ sia definito; calcola il limite in $x_0$; confronta i due valori.
+
+<a name="lf-11"></a>
 
 ## 11. Continuità nei punti isolati — lezione 14/10, pagina 2 (appunti)
 
@@ -437,6 +507,8 @@ Il valore $\delta=1$ è una **scelta comoda, non obbligatoria**: basta scegliere
 
 ---
 
+<a name="lf-12"></a>
+
 ## 12. Limite destro e limite sinistro — lezione 14/10, pagine 4–5 (slide 11/80 e appunti)
 
 La funzione può comportarsi diversamente quando ci avviciniamo a $x_0$ **da destra** oppure **da sinistra**.
@@ -504,6 +576,8 @@ $$
 
 Se i due limiti laterali sono **diversi**, il limite completo **non esiste**. Il simbolo $+$ o $-$ in $x_0^+$ e $x_0^-$ indica **da quale lato ci avviciniamo**, non il segno del limite.
 
+<a name="lf-13"></a>
+
 ## 13. Esempio di limite laterale per funzione a tratti — lezione 14/10, pagina 6 (slide 12/80)
 
 La funzione della slide è:
@@ -562,6 +636,8 @@ poiché il primo ramo comprende anche $x=1$. Conoscere $f(1)$ **non basta** per 
 | Limite da sinistra | $5$ |
 | Limite da destra | $-1$ |
 | Limite completo per $x\to1$ | **Non esiste** |
+
+<a name="lf-14"></a>
 
 ## 14. Continuità da destra e da sinistra — lezione 14/10, pagine 7–8 (slide 13/80 e appunti)
 
@@ -639,6 +715,8 @@ $$
 
 ---
 
+<a name="lf-15"></a>
+
 ## 15. Tipi di discontinuità — slide 64/80
 
 Studiamo il comportamento di $f$ in un punto $x_0$ del dominio in cui non è continua (considerato punto di accumulazione).
@@ -669,6 +747,8 @@ Cambiare soltanto $f(x_0)$ non può rendere continua la funzione.
 Quando la discontinuità non è né eliminabile né a salto: per esempio, un limite laterale è infinito oppure la funzione oscilla senza tendere a un limite.
 
 **Metodo:** calcola prima i limiti laterali; se coincidono in un valore finito, confrontalo con $f(x_0)$.
+
+<a name="lf-16"></a>
 
 ## 16. Esempi di discontinuità — slide 65/80
 
@@ -751,6 +831,8 @@ $$
 
 È continua da destra, ma **discontinua in $0$ per salto**.
 
+<a name="lf-17"></a>
+
 ## 17. Esempi di discontinuità essenziale — slide 66/80
 
 ### 17.1. Oscillazione
@@ -794,6 +876,8 @@ $$
 | Discontinuità essenziale per oscillazione. | Discontinuità essenziale con limiti laterali infiniti. |
 
 **Da ricordare:** assegnare $f(0)=0$ oppure $g(0)=0$ non risolve la discontinuità, perché in entrambi i casi manca un limite **finito** in $0$.
+<a name="lf-18"></a>
+
 ## 18. Algebra delle funzioni continue — slide 67/80
 
 ### Continuità delle funzioni elementari
@@ -814,6 +898,8 @@ Se $f$ e $g$ sono continue in $x_0$, allora sono continue in $x_0$ anche:
 - Le **funzioni razionali** $f(x)=\dfrac{P(x)}{Q(x)}$ sono continue dove $Q(x)\neq0$.
 
 **Da ricordare:** per queste funzioni non occorre dimostrare ogni volta la continuità tramite la definizione: basta controllare che il punto appartenga al dominio.
+
+<a name="lf-19"></a>
 
 ## 19. Esercizio sulla continuità nel punto di raccordo — slide 69/80
 
@@ -904,6 +990,8 @@ $$
 
 **Da ricordare:** non si pongono le due espressioni direttamente uguali a $f(0)$: si calcolano i **limiti laterali** e si impone che entrambi coincidano con il valore nel punto. Nelle differenze di termini che tendono allo stesso numero conviene usare sviluppi di Taylor, evitando sostituzioni grossolane come $1-1=0$.
 
+<a name="lf-20"></a>
+
 ## 20. Teorema degli zeri e metodo di bisezione — slide 70–73/80
 
 La slide 70 introduce le **proprietà globali** delle funzioni continue: riguardano la continuità su un intervallo, non solo in un punto.
@@ -952,6 +1040,8 @@ Gli intervalli chiusi e annidati individuano un punto $x_0$; mantenendo segni op
 
 **La slide 73 non contiene ulteriori enunciati.**
 
+<a name="lf-21"></a>
+
 ## 21. Incontro tra due funzioni continue — slide 74/80
 
 Se $f,g:[a,b]\to\mathbb R$ sono continue e
@@ -996,6 +1086,8 @@ Nell'intervallo richiesto la soluzione è $x_0=1$ e $f(1)=g(1)=1$: **il punto di
 
 **Da ricordare:** per dimostrare che due funzioni continue si incontrano, studia **$f-g$** e applica il teorema degli zeri. Risolvere $f-g=0$ serve solo se si vuole conoscere l'intersezione esatta.
 
+<a name="lf-22"></a>
+
 ## 22. Teorema dei valori intermedi — slide 75/80
 
 Sia $f:[a,b]\to\mathbb R$ continua. **La funzione assume tutti i valori compresi tra il proprio estremo inferiore e superiore**:
@@ -1010,6 +1102,8 @@ Per esempio, se $f$ assume i valori $2$ e $8$ su un intervallo e vi è continua,
 È una generalizzazione del teorema degli zeri: invece di cercare $f(x)=0$, si cerca un qualsiasi valore intermedio $f(x)=z$ (applicando il teorema degli zeri a $f(x)-z$).
 
 **Da ricordare:** una funzione continua su un intervallo **non salta alcun valore intermedio**.
+
+<a name="lf-23"></a>
 
 ## 23. Massimo e minimo assoluti — slide 76–77/80
 
@@ -1034,6 +1128,8 @@ $$
 Il punto $x_1$ è un **punto di minimo** e si scrive $m=\min_D f$.
 
 **Attenzione alla distinzione:** il massimo e il minimo sono **valori** della funzione; i punti di massimo e minimo sono gli **argomenti** in cui vengono raggiunti. Massimo e minimo, se esistono, sono valori unici, ma possono essere raggiunti in più punti. Estremo superiore e inferiore esistono sempre in senso esteso, mentre massimo e minimo **possono non esistere**.
+
+<a name="lf-24"></a>
 
 ## 24. Teorema di Weierstrass — slide 78–79/80
 
@@ -1079,6 +1175,8 @@ $$
 | **Di Weierstrass** | Esistenza di massimo e minimo su $[a,b]$, se $f$ è continua. |
 
 **Da ricordare:** una funzione continua su $[a,b]$ **raggiunge il minimo, il massimo e tutti i valori tra essi**.
+
+<a name="lf-25"></a>
 
 ## 25. Limite infinito in un punto — lezione 14/10, pagine 10–11 (slide 15/80 e appunti)
 
@@ -1189,6 +1287,8 @@ $$
 
 ---
 
+<a name="lf-26"></a>
+
 ## 26. Asintoto verticale — lezione 14/10, pagina 12 (slide 16/80)
 
 Quando:
@@ -1224,6 +1324,8 @@ Quindi l'asintoto verticale è **$x=0$**.
 | La successione non ha una retta verticale da chiamare asintoto: il suo indice tende a $+\infty$. | La funzione presenta un **asintoto verticale $x=0$**, perché $x$ tende a un punto finito e $f(x)$ diverge. |
 
 **Regola più generale:** la retta $x=x_0$ è un asintoto verticale anche se la funzione tende a $+\infty$ o $-\infty$ **soltanto da un lato**.
+
+<a name="lf-27"></a>
 
 ## 27. Esempio della slide: limite di 1/x² — lezione 14/10, pagine 13–15 (slide 17/80 e appunti)
 
@@ -1262,6 +1364,8 @@ $$
 $$
 
 L'ultimo passaggio è corretto perché **passare ai reciproci di numeri positivi inverte la disuguaglianza**.
+
+<a name="lf-28"></a>
 
 ## 28. Limite uguale a meno infinito — lezione 14/10, pagina 16 (slide 18/80)
 
@@ -1333,6 +1437,8 @@ $$
 $$
 
 La definizione di limite $-\infty$ è soddisfatta.
+
+<a name="lf-29"></a>
 
 ## 29. Limiti infiniti destro e sinistro — lezione 14/10, pagine 17–19 (slide 19/80 e appunti)
 
@@ -1443,6 +1549,8 @@ Il limite completo **non esiste**, ma la retta **$x=2$ è un asintoto verticale*
 
 ---
 
+<a name="lf-30"></a>
+
 ## 30. Limite all'infinito — lezione 14/10, pagina 20 (slide 20/80)
 
 Studiamo il comportamento di una funzione quando **$x\to+\infty$** oppure **$x\to-\infty$**. Perché il limite abbia senso, il dominio $D$ deve contenere punti arbitrariamente grandi nel verso considerato.
@@ -1471,6 +1579,8 @@ $$
 $$
 \lim_{x\to+\infty}\frac1x=0.
 $$
+
+<a name="lf-31"></a>
 
 ## 31. Limite finito per x che tende a +infinito — lezione 14/10, pagina 21 (slide 21/80)
 
@@ -1523,6 +1633,8 @@ Se $x>K$, la disuguaglianza $1/x<\varepsilon$ è verificata.
 
 **Distinzione:** asintoto verticale **$x=x_0$** per un limite infinito vicino a un punto; asintoto orizzontale **$y=\ell$** per un limite finito all'infinito.
 
+<a name="lf-32"></a>
+
 ## 32. Interpretazione grafica — lezione 14/10, pagina 22 (appunti)
 
 Il grafico degli appunti mostra una funzione che può oscillare anche molto prima di $K$; per $x>K$ resta dentro la **striscia orizzontale** intorno a $\ell$.
@@ -1538,6 +1650,8 @@ $$
 $$
 
 **Importante:** la funzione può continuare a oscillare. Deve però restare nella fascia per **tutti gli $x\in D$ con $x>K$**, per ogni $\varepsilon>0$.
+
+<a name="lf-33"></a>
 
 ## 33. Limiti infiniti all'infinito — lezione 14/10, pagina 23 (slide 22/80)
 
@@ -1615,6 +1729,8 @@ $$
 
 **Attenzione:** il dominio non è necessariamente $(-\infty,0)$: può essere anche $\mathbb R$. L'importante è che sia illimitato inferiormente.
 
+<a name="lf-34"></a>
+
 ## 34. Calcolare il limite o verificarlo con la definizione? — chiarimento aggiuntivo
 
 **Le tecniche di calcolo servono a trovare $\ell$. La definizione formale serve a dimostrare che il valore trovato è corretto.**
@@ -1668,6 +1784,8 @@ La definizione è verificata.
 **Regola per gli esercizi:** «calcola» e «verifica con la definizione» richiedono due procedimenti diversi.
 
 ---
+
+<a name="lf-35"></a>
 
 ## 35. Esempi di limite +infinito all'infinito — lezione 14/10, pagine 24–26 (slide 23/80 e appunti)
 
@@ -1780,6 +1898,8 @@ Se $x>K$, allora $\ln x>M$: anche questo limite è verificato.
 
 **Schema per le verifiche:** fissare $M>0$, risolvere **$f(x)>M$** per ottenere una condizione $x>K$, scegliere $K$ e infine dimostrare l'implicazione partendo da $x>K$.
 
+<a name="lf-36"></a>
+
 ## 36. Quando la definizione NON verifica un limite? — controesempio aggiuntivo
 
 La definizione è **falsa** per un limite proposto quando non esiste una soglia $K$ che funzioni per **ogni $M>0$**.
@@ -1860,6 +1980,8 @@ $$
 
 *La pagina 27 contiene l'esercizio sulle definizioni per $x\to-\infty$, già svolto nella sezione 33. La pagina 28 introduce i teoremi sui limiti di funzioni.*
 
+<a name="lf-37"></a>
+
 ## 37. Successioni come funzioni — lezione 14/10, pagina 29 (slide 26/80)
 
 Una successione reale $(a_n)$ si può interpretare come una **funzione con dominio $\mathbb N$**:
@@ -1889,6 +2011,8 @@ $$
 =\lim_{\substack{x\to+\infty\\x\in\mathbb N_{\geq1}}}f(x)
 =0.
 $$
+
+<a name="lf-38"></a>
 
 ## 38. Il criterio sequenziale del limite — lezione 14/10, pagine 30–34 (slide 27/80 e appunti)
 
@@ -1956,6 +2080,8 @@ Per esempio, $f(x_n)$ può tendere a un altro valore $\ell'\neq\ell$, oppure non
 
 **Precisazione:** questo dimostra soltanto che il limite **non è il valore proposto $\ell$**. Per dimostrare che il limite **non esiste**, possiamo usare due successioni con risultati diversi.
 
+<a name="lf-39"></a>
+
 ## 39. Criterio di non esistenza del limite — lezione 14/10, pagina 35 (slide 28/80)
 
 Se esistono due successioni **ammissibili** $x_n\to x_0$ e $y_n\to x_0$ tali che:
@@ -1972,6 +2098,8 @@ allora **il limite della funzione non esiste**.
 | :--- | :--- |
 | Bisogna considerare **ogni successione ammissibile**. | **Bastano due successioni ammissibili con risultati diversi**. |
 | Una sola successione favorevole non basta. | Due risultati diversi sono incompatibili con il criterio sequenziale. |
+
+<a name="lf-40"></a>
 
 ## 40. Primo esempio: sin x per x che tende a +infinito — lezione 14/10, pagine 35–37
 
@@ -2031,6 +2159,8 @@ $$
 
 **Altro esempio possibile (aggiuntivo):** $z_n=3\pi/2+2n\pi$ dà $\sin(z_n)=-1$, ma bastano le prime due successioni.
 
+<a name="lf-41"></a>
+
 ## 41. Secondo esempio: sin(1/x) per x che tende a zero da destra — lezione 14/10, pagine 38–39
 
 Studiamo:
@@ -2086,6 +2216,8 @@ $$
 $$
 
 **Trucco da ricordare:** scegliamo **prima** i valori noti del seno ($0$ e $1$), poi imponiamo l'argomento $1/x_n$ corrispondente e **ricaviamo le successioni**. Usiamo i reciproci per fare in modo che $x_n$ e $y_n$ tendano a $0^+$.
+
+<a name="lf-42"></a>
 
 ## 42. Teorema di unicità del limite — lezione 14/10, pagine 40–42 (slide 29/80 e appunti)
 
@@ -2158,6 +2290,8 @@ Infatti sono **due avvicinamenti distinti**.
 ---
 
 
+<a name="lf-43"></a>
+
 ## 43. Teorema della permanenza del segno — lezione 20/10 (slide 30/80)
 
 Sia $f:D\to\mathbb R$, e sia $x_0$ un punto di accumulazione del dominio (sono ammessi anche $x_0=+\infty$ e $x_0=-\infty$).
@@ -2204,6 +2338,8 @@ Anche se $f(x)>0$, **non è garantito** che $\ell>0$: il limite può essere $0$.
 
 ---
 
+
+<a name="lf-44"></a>
 
 ## 44. Teoremi di confronto — lezione 20/10 (slide 31/80)
 
@@ -2268,6 +2404,8 @@ $$
 
 ---
 
+
+<a name="lf-45"></a>
 
 ## 45. Attenzioni pratiche per il calcolo dei limiti — riepilogo delle slide 35–41/80
 
