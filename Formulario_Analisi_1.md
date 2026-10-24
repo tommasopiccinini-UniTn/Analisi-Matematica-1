@@ -384,66 +384,16 @@ La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
 
 ## 6A · Numeri complessi — formule
 
-**Forma algebrica:**
+| | | | |
+| :--- | :--- | :--- | :--- |
+| **Forma algebrica** | $z=x+iy,\ i^2=-1$ | $\mathrm{Re}\,z=x$ | $\mathrm{Im}\,z=y$ |
+| **Coniugato e modulo** | $\bar z=x-iy,\ \lvert z\rvert=\sqrt{x^2+y^2}$ | $z\bar z=\lvert z\rvert^2$ | $\frac1z=\frac{\bar z}{\lvert z\rvert^2}$, $z\neq0$ |
+| **Eulero** | $e^{i\theta}=\cos\theta+i\sin\theta$ | $z=re^{i\theta}=r(\cos\theta+i\sin\theta)$ | $r=\lvert z\rvert,\ x=r\cos\theta,\ y=r\sin\theta$ |
+| **Operazioni** | $z_1\pm z_2=(x_1\pm x_2)+i(y_1\pm y_2)$ | $z_1z_2=r_1r_2e^{i(\theta_1+\theta_2)}$ | $\frac{z_1}{z_2}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}$, $z_2\neq0$ |
+| **Potenze — De Moivre** | $z^n=r^ne^{in\theta}=r^n[\cos(n\theta)+i\sin(n\theta)]$ | $n\in\mathbb Z$ | $n<0\Rightarrow z\neq0$ |
+| **Radici di $z^n=w$** | $z_k=\rho^{1/n}e^{i(\varphi+2k\pi)/n}$ | $w=\rho e^{i\varphi},\ \rho=\lvert w\rvert>0$ | $n\in\mathbb N,\ n\ge1;\ k=0,\ldots,n-1$ |
 
-$$
-z=x+iy,\quad i^2=-1,\quad\mathrm{Re}\,z=x,\quad\mathrm{Im}\,z=y
-$$
-
-**Coniugato e modulo:**
-
-$$
-\bar z=x-iy,\quad\lvert z\rvert=\sqrt{x^2+y^2}
-$$
-
-$$
-z\bar z=\lvert z\rvert^2,\qquad
-\frac1z=\frac{\bar z}{\lvert z\rvert^2}\quad(z\neq0)
-$$
-
-**Eulero:**
-
-$$
-e^{i\theta}=\cos\theta+i\sin\theta
-$$
-
-$$
-z=re^{i\theta}=r(\cos\theta+i\sin\theta),\qquad r=\lvert z\rvert
-$$
-
-$$
-x=r\cos\theta,\qquad y=r\sin\theta
-$$
-
-**Operazioni:**
-
-$$
-z_1\pm z_2=(x_1\pm x_2)+i(y_1\pm y_2)
-$$
-
-$$
-z_1z_2=r_1r_2e^{i(\theta_1+\theta_2)}
-$$
-
-$$
-\frac{z_1}{z_2}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)},\qquad z_2\neq0
-$$
-
-**Potenze e formula di De Moivre (z noto):**
-
-$$
-z^n=r^ne^{in\theta}=r^n[\cos(n\theta)+i\sin(n\theta)],\qquad n\in\mathbb Z
-$$
-
-Per $n<0$ occorre $z\neq0$.
-
-**Radici di $z^n=w$**, con $w=\rho e^{i\varphi}$, $\rho=\lvert w\rvert>0$, $n\in\mathbb N$, $n\ge1$:
-
-$$
-z_k=\rho^{1/n}e^{i(\varphi+2k\pi)/n},\qquad k=0,\ldots,n-1
-$$
-
-Per scegliere $\theta$ (con $z\neq0$), usare il quadrante: sezione 7. Se $w=0$, l'unica soluzione è $z=0$.
+**Argomenti:** scegli $\theta$ dal quadrante (sezione 7, $z\neq0$); se $w=0$, l'unica soluzione è $z=0$.
 
 ## 7 · Circonferenza goniometrica e arctan
 
