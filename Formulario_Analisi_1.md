@@ -164,6 +164,10 @@ $$
 
 **Per $x\to1$:** $\boxed{\ln x\sim x-1}$ (poiché $\ln(1+u)\sim u$ con $u=x-1$).
 
+| $x\to1$ | $x\to-1$ |
+| :--- | :--- |
+| $\ln(x^2)\sim2(x-1)$ | $\ln(x^2)\sim-2(x+1)$ |
+
 **Limiti notevoli** (angoli in radianti):
 
 | | | |
