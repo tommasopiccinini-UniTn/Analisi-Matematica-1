@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 470" role="img" aria-labelledby="tit desc">
+<title id="tit">Rapporto incrementale e passaggio dalla secante alla tangente</title>
+<desc id="desc">Una curva blu contiene P a x zero e Q a x zero più h. La linea verde secante attraversa P e Q; la rossa è tangente in P. Sono indicate la variazione orizzontale h e quella verticale f di x zero più h meno f di x zero.</desc>
+<rect width="850" height="470" fill="#fff"/>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#475569" stroke-width="1.3"/></marker></defs>
+<line x1="80" y1="410" x2="815" y2="410" stroke="#475569" stroke-width="1.7" marker-end="url(#arrow)"/>
+<line x1="95" y1="429" x2="95" y2="25" stroke="#475569" stroke-width="1.7" marker-end="url(#arrow)"/>
+<text x="812" y="433" font-family="Arial,sans-serif" font-size="17" fill="#334155">x</text><text x="73" y="25" font-family="Arial,sans-serif" font-size="17" fill="#334155">y</text>
+<polyline points="150,372.61 155,368.70 160,364.84 165,361.02 170,357.25 175,353.52 180,349.84 185,346.20 190,342.61 195,339.06 200,335.56 205,332.10 210,328.69 215,325.32 220,322.00 225,318.72 230,315.49 235,312.30 240,309.16 245,306.06 250,303.01 255,300.00 260,297.04 265,294.12 270,291.25 275,288.42 280,285.64 285,282.90 290,280.21 295,277.56 300,274.96 305,272.40 310,269.89 315,267.42 320,265.00 325,262.62 330,260.29 335,258.00 340,255.76 345,253.56 350,251.41 355,249.30 360,247.24 365,245.22 370,243.25 375,241.32 380,239.44 385,237.60 390,235.81 395,234.06 400,232.36 405,230.70 410,229.09 415,227.52 420,226.00 425,224.52 430,223.09 435,221.70 440,220.36 445,219.06 450,217.81 455,216.60 460,215.44 465,214.32 470,213.25 475,212.22 480,211.24 485,210.30 490,209.41 495,208.56 500,207.76 505,207.00 510,206.29 515,205.62 520,205.00 525,204.42 530,203.89 535,203.40 540,202.96 545,202.56 550,202.21 555,201.90 560,201.64 565,201.42 570,201.25 575,201.12 580,201.04 585,201.00 590,201.01 595,201.06 600,201.16 605,201.30 610,201.49 615,201.72 620,202.00 625,202.32 630,202.69 635,203.10 640,203.56 645,204.06 650,204.61 655,205.20 660,205.84 665,206.52 670,207.25 675,208.02 680,208.84 685,209.70 690,210.61 695,211.56 700,212.56" fill="none" stroke="#2563eb" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="180" y1="332.20" x2="684" y2="90.28" stroke="#dc2626" stroke-width="3.3"/>
+<line x1="170" y1="301.90" x2="716" y2="167.58" stroke="#16a34a" stroke-width="3.3"/>
+<line x1="320" y1="265" x2="320" y2="409" stroke="#94a3b8" stroke-dasharray="6 5"/>
+<line x1="580" y1="201.04" x2="580" y2="410" stroke="#94a3b8" stroke-dasharray="6 5"/>
+<line x1="320" y1="265" x2="580" y2="265" stroke="#94a3b8" stroke-dasharray="5 5"/>
+<line x1="580" y1="265" x2="580" y2="201.04" stroke="#a16207" stroke-width="2.3"/>
+<circle cx="320" cy="265" r="6" fill="#dc2626" stroke="#fff" stroke-width="2"/>
+<circle cx="580" cy="201.04" r="6" fill="#16a34a" stroke="#fff" stroke-width="2"/>
+<text x="296" y="251" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">P</text>
+<text x="593" y="194" font-family="Arial,sans-serif" font-size="17" font-weight="600" fill="#334155">Q</text>
+<text x="303" y="437" font-family="Arial,sans-serif" font-size="16" fill="#334155">x₀</text>
+<text x="548" y="438" font-family="Arial,sans-serif" font-size="16" fill="#334155">x₀+h</text>
+<line x1="323" y1="385" x2="576" y2="385" stroke="#334155" stroke-width="1.6"/>
+<line x1="323" y1="380" x2="323" y2="390" stroke="#334155"/><line x1="576" y1="380" x2="576" y2="390" stroke="#334155"/>
+<text x="449" y="376" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#334155">h</text>
+<text x="610" y="241" font-family="Arial,sans-serif" font-size="15" fill="#a16207">Δf</text>
+<text x="178" y="67" font-family="Arial,sans-serif" font-size="18" fill="#16a34a">secante (P,Q)</text>
+<text x="460" y="94" font-family="Arial,sans-serif" font-size="18" fill="#dc2626">tangente in P</text>
+<text x="655" y="328" font-family="Arial,sans-serif" font-size="18" fill="#2563eb">f(x)</text>
+<text x="118" y="455" font-family="Arial,sans-serif" font-size="13" fill="#64748b">Schema illustrativo (non in scala)</text>
+</svg>
