@@ -117,10 +117,6 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 
 **Continuità e potenze (slide 35–36)**
 
-| Funzioni elementari | Potenze intere, $n\in\mathbb N$ | $x\to-\infty$ |
-| :--- | :--- | :--- |
-| Continue nei punti del dominio: $\lim_{x\to x_0}f(x)=f(x_0)$ | $\displaystyle\lim_{x\to+\infty}x^n=+\infty$ | $\lim x^n=+\infty$ se $n$ pari; $-\infty$ se $n$ dispari |
-
 | $x>0$ | $x\to0^+$ | $x\to+\infty$ |
 | :--- | :--- | :--- |
 | $\alpha>0$ | $x^\alpha\to0$ | $x^\alpha\to+\infty$ |
