@@ -107,6 +107,7 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | $\lim(f\pm g)=\lim f\pm\lim g$ | $\lim(fg)=(\lim f)(\lim g)$ |
 | $\displaystyle\lim(f/g)=\frac{\lim f}{\lim g}$, $\lim g\neq0$ | $\lim[f(x)]^\alpha=(\lim f)^\alpha$ (se definita) |
 | **Parte intera:** $\lfloor x\rfloor=\max\{n\in\mathbb Z:n\le x\}$ | **Proprietà:** $\lfloor x\rfloor\le x<\lfloor x\rfloor+1$ |
+| **Complessi:** $z=a+ib\neq0$, $\lvert z\rvert=\sqrt{a^2+b^2}$ | **Argomento:** $\cos\theta=\frac{a}{\lvert z\rvert}$, $\sin\theta=\frac{b}{\lvert z\rvert}$ |
 
 **Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
 
