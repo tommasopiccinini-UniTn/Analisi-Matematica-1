@@ -106,6 +106,7 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | :--- | :--- |
 | $\lim(f\pm g)=\lim f\pm\lim g$ | $\lim(fg)=(\lim f)(\lim g)$ |
 | $\displaystyle\lim(f/g)=\frac{\lim f}{\lim g}$, $\lim g\neq0$ | $\lim[f(x)]^\alpha=(\lim f)^\alpha$ (se definita) |
+| **Parte intera:** $\lfloor x\rfloor=\max\{n\in\mathbb Z:n\le x\}$ | **Proprietà:** $\lfloor x\rfloor\le x<\lfloor x\rfloor+1$ |
 
 **Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
 
