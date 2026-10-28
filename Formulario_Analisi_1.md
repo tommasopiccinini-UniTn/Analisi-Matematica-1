@@ -98,7 +98,7 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | :--- | :--- | :--- |
 | $\arctan u\sim\frac{\pi}{2}$ | $\ln(1+u)\sim\ln u$ | $\arctan u\sim-\frac{\pi}{2}$ |
 | $e^u-1\sim e^u$ | $u+a\sim u$ ($a$ costante) | $\sqrt{u^2+1}\sim-u$ |
-| $\sqrt{u^2+1}\sim u$ | | |
+| $\sqrt{u^2+1}\sim u$ | $\log(1+a^x)\sim x\log a$ ($x\to+\infty,\ a>1$) | |
 
 **Nel tuo esempio:** $x\to0^+\Rightarrow u=1/x\to+\infty\Rightarrow\arctan(1/x)\sim\frac{\pi}{2}$.
 
