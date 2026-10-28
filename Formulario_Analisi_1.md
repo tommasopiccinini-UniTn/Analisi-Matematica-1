@@ -88,6 +88,7 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | :--- | :--- | :--- |
 | $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ |
 | $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ ($x\to0$) |
+| $\displaystyle\lim_{n\to+\infty}\left(1+\frac{a}{n}\right)^n=e^a$, $a\in\mathbb R$ costante | | |
 
 **Definizione:** $f\sim g\iff f/g\to1$. **Cambio:** per $x\to a$, poni $u=x-a\to0$, quindi $x=a+u$.
 
