@@ -109,6 +109,8 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | **Parte intera:** $\lfloor x\rfloor=\max\{n\in\mathbb Z:n\le x\}$ | **Proprietà:** $\lfloor x\rfloor\le x<\lfloor x\rfloor+1$ |
 | **Complessi:** $z=a+ib\neq0$, $\lvert z\rvert=\sqrt{a^2+b^2}$ | **Argomento:** $\cos\theta=\frac{a}{\lvert z\rvert}$, $\sin\theta=\frac{b}{\lvert z\rvert}$ |
 
+**Definizione per $x\to+\infty$:** $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x>M\Rightarrow|f(x)-L|<\varepsilon$ (per $x$ nel dominio).
+
 **Sottosuccessioni:** se due sottosuccessioni hanno limiti diversi, il limite della successione non esiste.
 
 ## 5E · Calcolo dei limiti di funzioni — slide 34–44
