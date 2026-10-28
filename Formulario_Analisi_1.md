@@ -90,6 +90,8 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | **Esempio:** $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ ($x\to0$) |
 
 **Definizione:** $f\sim g\iff f/g\to1$. **Regola:** sostituzione sicura in **prodotti/quozienti**; in **somme/differenze** attenzione alle cancellazioni (usa più termini dello sviluppo). **Cambio:** per $x\to a$, poni $u=x-a\to0$, quindi $x=a+u$.
+**Cosa NON fare:** non usare un'equivalenza valida per $u\to0$ quando l'argomento non tende a $0$. **Esempio:** se $x\to+\infty$ e $a>1$, $u=a^x\to+\infty$: **NON** scrivere $\log(1+a^x)\sim a^x$ usando $\log(1+u)\sim u$ (vale solo per $u\to0$). Non sostituire equivalenti in somme/differenze senza controllare eventuali cancellazioni.
+
 ## 5C-bis · Equivalenze asintotiche — u → ±∞
 
 | $u\to+\infty$ | $u\to+\infty$ | $u\to-\infty$ |
