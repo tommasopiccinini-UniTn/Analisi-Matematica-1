@@ -34,29 +34,7 @@ Le caratterizzazioni con $\varepsilon$ valgono per estremi finiti. Se $\sup A\in
 
 **Attenzione:** $\sqrt{x^2}=\lvert x\rvert$.
 
-## 3A · Disequazioni e scomposizioni
-
-**Disequazioni con modulo** ($F$ e $G$ sono espressioni reali)
-
-| Forma | Condizioni equivalenti |
-| :--- | :--- |
-| $\lvert F\rvert\le G$ | $G\ge0$ e $-G\le F\le G$. |
-| $\lvert F\rvert<G$ | $G>0$ e $-G<F<G$. |
-| $\lvert F\rvert\ge G$ | Sempre vera se $G\le0$; se $G>0$, $F\le-G$ oppure $F\ge G$. |
-| $\lvert F\rvert>G$ | Sempre vera se $G<0$; se $G\ge0$, $F<-G$ oppure $F>G$. |
-| $\lvert F\rvert=\lvert G\rvert$ | $F=G$ oppure $F=-G$. Per confrontare due moduli si possono confrontare $F^2$ e $G^2$ con lo stesso verso. |
-| Più moduli | Dividi il dominio in intervalli in cui le espressioni dentro i moduli hanno segno costante; usa $\lvert F\rvert=F$ se $F\ge0$, $\lvert F\rvert=-F$ se $F<0$. |
-
-**Radici e disequazioni irrazionali**
-
-| Forma | Condizioni equivalenti |
-| :--- | :--- |
-| Indice dispari $m$ | Confronta $A$ con $B^m$ al posto di $\sqrt[m]{A}$ con $B$: il verso resta lo stesso. |
-| $\sqrt[m]{A}\le B$, $m$ pari | $A\ge0$, $B\ge0$ e $A\le B^m$. |
-| $\sqrt[m]{A}<B$, $m$ pari | $A\ge0$, $B>0$ e $A<B^m$. |
-| $\sqrt[m]{A}\ge B$, $m$ pari | $A\ge0$ e, in aggiunta, $B<0$ oppure $B\ge0$ con $A\ge B^m$. |
-| $\sqrt[m]{A}>B$, $m$ pari | $A\ge0$ e, in aggiunta, $B<0$ oppure $B\ge0$ con $A>B^m$. |
-| Due radici dello stesso indice | $\sqrt[m]{A}\le\sqrt[m]{B}\iff A\le B$ sul dominio comune (per $m$ pari: $A,B\ge0$). Lo stesso vale per $<,\ge,>$. |
+## 3A · Algebra
 
 **Prodotti notevoli e scomposizioni**
 
@@ -96,7 +74,7 @@ Le caratterizzazioni con $\varepsilon$ valgono per estremi finiti. Se $\sup A\in
 | **Retta:** $y-y_0=m(x-x_0)$ | **Esponenziale:** $a^x$, $a>0,\ a\neq1$ | **Logaritmo:** $\log_a x$, inversa di $a^x$ |
 | **Esponenziale:** dominio $\mathbb R$, immagine $(0,+\infty)$, $a^0=1$ | $a>1$: crescente; $0<a<1$: decrescente | **Logaritmo:** dominio $(0,+\infty)$, immagine $\mathbb R$, $\log_a1=0$, $\log_a a=1$ |
 | $\log_a(xy)=\log_a x+\log_a y$ | $\log_a(x/y)=\log_a x-\log_a y$ | $\log_a(x^r)=r\log_a x$ |
-| **Cambio di base:** $\log_a x=\frac{\log_b x}{\log_b a}=\frac{\ln x}{\ln a}$ | $\displaystyle\lim_{x\to0^+}\ln x=-\infty$ | |
+| **Cambio di base:** $\log_a x=\frac{\log_b x}{\log_b a}=\frac{\ln x}{\ln a}$ | | |
 | **Iperboliche:** $\sinh x=\frac{e^x-e^{-x}}2$ | $\cosh x=\frac{e^x+e^{-x}}2$ | $\cosh^2x-\sinh^2x=1$ |
 ## 5 Limiti · Forme indeterminate e procedure
 
@@ -136,10 +114,19 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 | $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ | $\arcsin u\sim u$ |
 | $1-\cos^n(a u^m)\sim\frac{na^2}{2}u^{2m}$, $a\ne0$ e $n,m\ge1$ interi | | | |
 
-| x → 1 | x → 1 | x → -1 |
+| $x\to1$ | $x\to1$ | $x\to1$ | $x\to-1$ |
+| :--- | :--- | :--- | :--- |
+| $\ln x\sim x-1$ | $\ln(x^2)\sim2(x-1)$ | $x^2-1\sim2(x-1)$ | $\ln(x^2)\sim-2(x+1)$ |
+
+| u → $\infty$ | u → $\infty$ | u → $-\infty$ |
 | :--- | :--- | :--- |
-| $\ln x\sim x-1$ | $\ln(x^2)\sim2(x-1)$ | $\ln(x^2)\sim-2(x+1)$ |
-| $x^2-1\sim2(x-1)$ | | |
+| $\arctan u\sim\frac{\pi}{2}$ | $\ln(1+u)\sim\ln u$ | $\arctan u\sim-\frac{\pi}{2}$ |
+| $e^u-1\sim e^u$ | $u+a\sim u$ ($a$ costante) | $\sqrt{u^2+1}\sim-u$ |
+| $\sqrt{u^2+1}\sim u$ | $\log(1+a^x)\sim x\log a$ ($x\to+\infty,\ a>1$) | |
+
+Per $x\to+\infty$ oppure $x\to-\infty$: $(1+1/x)^a-1\sim a/x$ se $a\ne0$, e $a^{1/x}\to1$ se $a>0$.
+
+Con $u=1/x$, si ha $\arctan(1/x)\to\pi/2$ per $x\to0^+$ e $\arctan(1/x)\to-\pi/2$ per $x\to0^-$.
 
 **Limiti notevoli per $u\to0$**:
 
@@ -150,6 +137,7 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 | $\displaystyle\lim_{u\to0}\frac{\ln(1+u)}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\log_a(1+u)}{u}=\frac1{\ln a}$ | $\displaystyle\lim_{u\to0}\frac{u}{\log_a(1+u)}=\ln a$ |
 | $\displaystyle\lim_{u\to0}\frac{e^u-1}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{a^u-1}{u}=\ln a$ ($a>0$) | $\displaystyle\lim_{u\to0}\frac{(1+u)^\alpha-1}{u}=\alpha$ ($\alpha\in\mathbb R$) |
 | $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ | $\displaystyle\lim_{u\to0}\frac{\sin(au)}{bu}=\frac ab$ ($b\ne0$) | $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ ($x\to0$) |
+| $\displaystyle\lim_{u\to0^+}\ln u=-\infty$ | | |
 
 Per $\log_a$ si assume $a>0,\ a\ne1$.
 
@@ -168,18 +156,6 @@ Per $\log_a$ si assume $a>0,\ a\ne1$.
 | $x\to+\infty,\ a>1$ | $\log(1+a^x)\sim a^x$ | $\log(1+a^x)\sim x\log a$ |
 | $u\to0$ | $\sin u-u=u-u=0$ | $\sin u-u\sim-\frac{u^3}{6}$ |
 
-## 5C-bis · Equivalenze asintotiche — u → ±∞
-
-| u → $\infty$ | u → $\infty$ | u → $-\infty$ |
-| :--- | :--- | :--- |
-| $\arctan u\sim\frac{\pi}{2}$ | $\ln(1+u)\sim\ln u$ | $\arctan u\sim-\frac{\pi}{2}$ |
-| $e^u-1\sim e^u$ | $u+a\sim u$ ($a$ costante) | $\sqrt{u^2+1}\sim-u$ |
-| $\sqrt{u^2+1}\sim u$ | $\log(1+a^x)\sim x\log a$ ($x\to+\infty,\ a>1$) | |
-
-Per $x\to+\infty$ oppure $x\to-\infty$: $(1+1/x)^a-1\sim a/x$ se $a\ne0$, e $a^{1/x}\to1$ se $a>0$.
-
-Con $u=1/x$, si ha $\arctan(1/x)\to\pi/2$ per $x\to0^+$ e $\arctan(1/x)\to-\pi/2$ per $x\to0^-$.
-
 ## 5D · Regole dei limiti
 
 | | |
@@ -192,21 +168,21 @@ Con $u=1/x$, si ha $\arctan(1/x)\to\pi/2$ per $x\to0^+$ e $\arctan(1/x)\to-\pi/2
 
 ## 5E · Calcolo dei limiti di funzioni
 
-**Continuità e potenze (slide 35–36)**
+**Continuità e potenze**
 
 | $x>0$ | $x\to0^+$ | $x\to+\infty$ |
 | :--- | :--- | :--- |
 | $\alpha>0$ | $x^\alpha\to0$ | $x^\alpha\to+\infty$ |
 | $\alpha<0$ | $x^\alpha\to+\infty$ | $x^\alpha\to0$ |
 
-**Esponenziali e logaritmi (slide 37)**
+**Esponenziali e logaritmi**
 
 | Base | $a^x$, $x\to+\infty$ | $a^x$, $x\to-\infty$ | $\log_a x$, $x\to0^+$ | $\log_a x$, $x\to+\infty$ |
 | :--- | :---: | :---: | :---: | :---: |
 | $a>1$ | $+\infty$ | $0$ | $-\infty$ | $+\infty$ |
 | $0<a<1$ | $0$ | $+\infty$ | $+\infty$ | $-\infty$ |
 
-**Trigonometria, polinomi e rapporti (slide 38–40)**
+**Trigonometria, polinomi e rapporti**
 
 | Trigonometria | Polinomi | Rapporti $P/Q$ |
 | :--- | :--- | :--- |
@@ -274,7 +250,12 @@ Se $f(x)\to y_0$ e $g$ è continua in $y_0$ (finito), O $g$ ammette lim per $y\t
 
 ## 6 · Trigonometria
 
-**Conversioni:** $\pi$ $\to $ grad : $\theta_{^\circ}=\theta_{\mathrm{rad}}\frac{180}{\pi}$; grad $\to \pi$ : $\theta_{\mathrm{rad}}=\theta_{^\circ}\frac{\pi}{180}$.
+**Conversioni tra gradi e radianti**
+
+| Conversione | Formula |
+| :--- | :--- |
+| Radianti → gradi | $\theta_{\mathrm{gradi}}=\theta_{\mathrm{rad}}\cdot\frac{180}{\pi}$ |
+| Gradi → radianti | $\theta_{\mathrm{rad}}=\theta_{\mathrm{gradi}}\cdot\frac{\pi}{180}$ |
 
 **Proprietà e domini**
 
@@ -342,7 +323,7 @@ Se $w=0$, l'unica soluzione è $z=0$.
 
 ## 7 · Circonferenza goniometrica e arctan
 
-![Circonferenza goniometrica con angoli notevoli](grafici/circonferenza-formulario.svg)
+<a href="grafici/circonferenza-formulario.svg"><img src="grafici/circonferenza-formulario.svg" alt="Circonferenza goniometrica con angoli notevoli" width="400"></a>
 
 **Arctan notevoli**:
 
