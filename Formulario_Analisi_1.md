@@ -2,7 +2,7 @@
 
 *Preliminari · Trigonometria · Limiti*
 
-Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La numerazione delle sezioni è quella del PDF originale.
+Formulario in Markdown basato su **Formulario_Analisi_1.pdf**, con integrazioni dalle lezioni e dagli altri formulari.
 
 ## 1 · Logica
 
@@ -18,9 +18,66 @@ Trascrizione in Markdown delle due pagine di **Formulario_Analisi_1.pdf**. La nu
 | **Estremo superiore:** $\sup A=\min\{M\in\mathbb R:M\text{ maggiorante di }A\}$ | **Estremo inferiore:** $\inf A=\max\{m\in\mathbb R:m\text{ minorante di }A\}$ |
 | **Archimede:** $\forall x\in\mathbb R\ \exists n\in\mathbb N:n>x$ | **Conseguenza:** $\forall\varepsilon>0\ \exists n\in\mathbb N:1/n<\varepsilon$ |
 | **Densità di $\mathbb Q$ in $\mathbb R$:** $a,b\in\mathbb R,\ a<b\Rightarrow\exists q\in\mathbb Q:a<q<b$ | |
+
+Per $A\subseteq\mathbb R$ non vuoto:
+
+| Estremo | Caratterizzazione |
+| :--- | :--- |
+| **Minimo** | $m=\min A$ se e solo se $m\in A$ e $\forall x\in A:\ m\le x$. |
+| **Massimo** | $M=\max A$ se e solo se $M\in A$ e $\forall x\in A:\ x\le M$. |
+| **Superiore con $\varepsilon$** | $s=\sup A$ se e solo se $\forall x\in A:\ x\le s$ e $\forall\varepsilon>0\ \exists x\in A:\ s-\varepsilon<x$. |
+| **Inferiore con $\varepsilon$** | $i=\inf A$ se e solo se $\forall x\in A:\ i\le x$ e $\forall\varepsilon>0\ \exists x\in A:\ x<i+\varepsilon$. |
+
+Le caratterizzazioni con $\varepsilon$ valgono per estremi finiti. Se $\sup A\in A$, allora $\max A=\sup A$; se $\inf A\in A$, allora $\min A=\inf A$.
+
 ## 3 · Valore assoluto
 
 **Attenzione:** $\sqrt{x^2}=\lvert x\rvert$.
+
+## 3A · Disequazioni e scomposizioni
+
+**Disequazioni con modulo** ($F$ e $G$ sono espressioni reali)
+
+| Forma | Condizioni equivalenti |
+| :--- | :--- |
+| $\lvert F\rvert\le G$ | $G\ge0$ e $-G\le F\le G$. |
+| $\lvert F\rvert<G$ | $G>0$ e $-G<F<G$. |
+| $\lvert F\rvert\ge G$ | Sempre vera se $G\le0$; se $G>0$, $F\le-G$ oppure $F\ge G$. |
+| $\lvert F\rvert>G$ | Sempre vera se $G<0$; se $G\ge0$, $F<-G$ oppure $F>G$. |
+| $\lvert F\rvert=\lvert G\rvert$ | $F=G$ oppure $F=-G$. Per confrontare due moduli si possono confrontare $F^2$ e $G^2$ con lo stesso verso. |
+| Più moduli | Dividi il dominio in intervalli in cui le espressioni dentro i moduli hanno segno costante; usa $\lvert F\rvert=F$ se $F\ge0$, $\lvert F\rvert=-F$ se $F<0$. |
+
+**Radici e disequazioni irrazionali**
+
+| Forma | Condizioni equivalenti |
+| :--- | :--- |
+| Indice dispari $m$ | Confronta $A$ con $B^m$ al posto di $\sqrt[m]{A}$ con $B$: il verso resta lo stesso. |
+| $\sqrt[m]{A}\le B$, $m$ pari | $A\ge0$, $B\ge0$ e $A\le B^m$. |
+| $\sqrt[m]{A}<B$, $m$ pari | $A\ge0$, $B>0$ e $A<B^m$. |
+| $\sqrt[m]{A}\ge B$, $m$ pari | $A\ge0$ e, in aggiunta, $B<0$ oppure $B\ge0$ con $A\ge B^m$. |
+| $\sqrt[m]{A}>B$, $m$ pari | $A\ge0$ e, in aggiunta, $B<0$ oppure $B\ge0$ con $A>B^m$. |
+| Due radici dello stesso indice | $\sqrt[m]{A}\le\sqrt[m]{B}\iff A\le B$ sul dominio comune (per $m$ pari: $A,B\ge0$). Lo stesso vale per $<,\ge,>$. |
+
+**Prodotti notevoli e scomposizioni**
+
+| Prodotto o metodo | Formula |
+| :--- | :--- |
+| Differenza di quadrati | $a^2-b^2=(a-b)(a+b)$. |
+| Quadrato di un binomio | $(a\pm b)^2=a^2\pm2ab+b^2$. |
+| Cubo di un binomio | $(a\pm b)^3=a^3\pm3a^2b+3ab^2\pm b^3$. |
+| Somma e differenza di cubi | $a^3\pm b^3=(a\pm b)(a^2\mp ab+b^2)$. |
+| Quadrato di un trinomio | $(a+b+c)^2=a^2+b^2+c^2+2ab+2ac+2bc$. |
+| Differenza di potenze | $a^n-b^n=(a-b)\sum_{k=0}^{n-1}a^{n-1-k}b^k$, $n\ge1$ intero. Per $n$ dispari si ottiene la somma $a^n+b^n$ sostituendo $b$ con $-b$. |
+| Raccoglimento totale / parziale | $ab+ac=a(b+c)$; $ax+ay+bx+by=(a+b)(x+y)$. |
+| Trinomio di secondo grado | $x^2+(a+b)x+ab=(x+a)(x+b)$. In generale, se $P(r)=0$, allora $P(x)=(x-r)Q(x)$ per un polinomio $Q$. |
+
+**Binomio di Newton** ($n\ge0$ intero)
+
+| | |
+| :--- | :--- |
+| **Coefficiente binomiale:** $\displaystyle\binom nk=\frac{n!}{k!(n-k)!}$, $0\le k\le n$ | **Sviluppo:** $\displaystyle(a+b)^n=\sum_{k=0}^{n}\binom nk a^{n-k}b^k$ |
+| **Simmetria:** $\binom nk=\binom n{n-k}$ | **Regola di Pascal:** $\binom nk=\binom{n-1}{k-1}+\binom{n-1}{k}$, $1\le k<n$ |
+
 ## 4 · Funzioni
 
 | | |
@@ -76,20 +133,33 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 | $\sin u\sim u$ | $\sinh u\sim u$ | $\tan u\sim u$ | $\arctan u\sim u$ |
 | $1-\cos u\sim\frac{u^2}{2}$ | $\cos u-1\sim-\frac{u^2}{2}$ | $\ln(1+u)\sim u$ | $\ln(1-u)\sim-u$ |
 | $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ | $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
-| $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ |$x\to0^+\Rightarrow u=1/x\to+\infty\Rightarrow\arctan(1/x)\sim\frac{\pi}{2}$.|
-|$\log(1+a^x)\sim x\log a$| | | |
+| $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ | $\arcsin u\sim u$ |
+| $1-\cos^n(a u^m)\sim\frac{na^2}{2}u^{2m}$, $a\ne0$ e $n,m\ge1$ interi | | | |
 
 | x → 1 | x → 1 | x → -1 |
 | :--- | :--- | :--- |
 | $\ln x\sim x-1$ | $\ln(x^2)\sim2(x-1)$ | $\ln(x^2)\sim-2(x+1)$ |
+| $x^2-1\sim2(x-1)$ | | |
 
-**Limiti notevoli**:
+**Limiti notevoli per $u\to0$**:
 
 | | | |
 | :--- | :--- | :--- |
-| $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ |
-| $\displaystyle\lim_{u\to0}(1+u)^{1/u}=e$ | $\displaystyle\lim_{n\to+\infty}\left(1+\frac1n\right)^n=e$ | $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ ($x\to0$) |
-| $\displaystyle\lim_{n\to+\infty}\left(1+\frac{a}{n}\right)^n=e^a$, $a\in\mathbb R$ costante | | |
+| $\displaystyle\lim_{u\to0}\frac{\sin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\tan u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{1-\cos u}{u^2}=\frac12$ |
+| $\displaystyle\lim_{u\to0}\frac{\arcsin u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\arctan u}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\sinh u}{u}=1$ |
+| $\displaystyle\lim_{u\to0}\frac{\ln(1+u)}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{\log_a(1+u)}{u}=\frac1{\ln a}$ | $\displaystyle\lim_{u\to0}\frac{u}{\log_a(1+u)}=\ln a$ |
+| $\displaystyle\lim_{u\to0}\frac{e^u-1}{u}=1$ | $\displaystyle\lim_{u\to0}\frac{a^u-1}{u}=\ln a$ ($a>0$) | $\displaystyle\lim_{u\to0}\frac{(1+u)^\alpha-1}{u}=\alpha$ ($\alpha\in\mathbb R$) |
+| $\displaystyle\lim_{u\to0}\frac{\sqrt{1+u}-1}{u}=\frac12$ | $\displaystyle\lim_{u\to0}\frac{\sin(au)}{bu}=\frac ab$ ($b\ne0$) | $\displaystyle\frac{\sin(3x)}x=3\frac{\sin(3x)}{3x}\to3$ ($x\to0$) |
+
+Per $\log_a$ si assume $a>0,\ a\ne1$.
+
+**Limite di Nepero e varianti** (i parametri $a,b$ sono costanti reali)
+
+| Avvicinamento | Limiti |
+| :--- | :--- |
+| $u\to0$ | $(1+u)^{1/u}\to e$; $\displaystyle(1+au)^{b/u}\to e^{ab}$ (in particolare $(1+au)^{1/u}\to e^a$). |
+| $x\to+\infty$ oppure $x\to-\infty$ | $\displaystyle\left(1+\frac1x\right)^x\to e$; $\displaystyle\left(1+\frac ax\right)^{bx}\to e^{ab}$; $\displaystyle\left(\frac{x}{x+1}\right)^{bx}\to e^{-b}$. |
+| $n\to+\infty$ | $\displaystyle\left(1+\frac1n\right)^n\to e$; $\displaystyle\left(1+\frac an\right)^n\to e^a$. |
 
 **Definizione:** $f\sim g\iff f/g\to1$. **Cambio:** per $x\to a$, poni $u=x-a\to0$, quindi $x=a+u$.
 
@@ -105,6 +175,10 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 | $\arctan u\sim\frac{\pi}{2}$ | $\ln(1+u)\sim\ln u$ | $\arctan u\sim-\frac{\pi}{2}$ |
 | $e^u-1\sim e^u$ | $u+a\sim u$ ($a$ costante) | $\sqrt{u^2+1}\sim-u$ |
 | $\sqrt{u^2+1}\sim u$ | $\log(1+a^x)\sim x\log a$ ($x\to+\infty,\ a>1$) | |
+
+Per $x\to+\infty$ oppure $x\to-\infty$: $(1+1/x)^a-1\sim a/x$ se $a\ne0$, e $a^{1/x}\to1$ se $a>0$.
+
+Con $u=1/x$, si ha $\arctan(1/x)\to\pi/2$ per $x\to0^+$ e $\arctan(1/x)\to-\pi/2$ per $x\to0^-$.
 
 ## 5D · Regole dei limiti
 
@@ -168,6 +242,36 @@ Se $f(x)\to y_0$ e $g$ è continua in $y_0$ (finito), O $g$ ammette lim per $y\t
 | :--- | :--- |
 | $x^\alpha\log x=-\frac{\log t}{t^\alpha}\to0$ per $t=1/x\to+\infty$ | $\displaystyle\lim_{x\to0^+}x^x=\lim_{x\to0^+}e^{x\ln x}=e^0=1$ |
 
+## 5G · Successioni
+
+| Teorema o formula | Ipotesi e conclusione |
+| :--- | :--- |
+| **Confronto** | Se $a_n\le b_n$ da un certo indice in poi e i limiti esistono, allora $\lim a_n\le\lim b_n$. Inoltre $a_n\to+\infty\Rightarrow b_n\to+\infty$ e $b_n\to-\infty\Rightarrow a_n\to-\infty$. |
+| **Due carabinieri** | Se $a_n\le c_n\le b_n$ da un certo indice in poi e $a_n,b_n\to L$, allora $c_n\to L$. |
+| **Criterio del rapporto** | Se $a_n>0$ da un certo indice in poi e $\dfrac{a_{n+1}}{a_n}\to L$, allora $a_n\to0$ per $L<1$ e $a_n\to+\infty$ per $L>1$. Per $L=1$ il criterio non conclude. |
+| **Successioni monotone** | Se $(a_n)$ è crescente, $\lim a_n=\sup_n a_n$ (finito se è limitata superiormente, altrimenti $+\infty$). Se è decrescente, $\lim a_n=\inf_n a_n$ (finito se è limitata inferiormente, altrimenti $-\infty$). |
+| **Somma geometrica finita** | $\displaystyle\sum_{k=0}^{n}q^k=\frac{1-q^{n+1}}{1-q}$ per $q\neq1$; per $q=1$ la somma vale $n+1$. |
+
+## 5H · Continuità e asintoti
+
+**Discontinuità** (quando $x_0$ è raggiungibile da entrambi i lati del dominio)
+
+| Tipo | Come riconoscerlo |
+| :--- | :--- |
+| **Eliminabile** | Esiste $L=\lim_{x\to x_0}f(x)\in\mathbb R$, ma $f(x_0)\ne L$ oppure $f(x_0)$ non è definita. Si ottiene la continuità ponendo $f(x_0)=L$. |
+| **A salto** | I limiti $\lim_{x\to x_0^-}f(x)$ e $\lim_{x\to x_0^+}f(x)$ sono entrambi finiti e diversi. |
+| **Essenziale** | Almeno uno dei due limiti laterali è infinito oppure non esiste. |
+
+| Asintoto | Condizione |
+| :--- | :--- |
+| **Verticale** $x=x_0$ | Almeno uno tra $\lim_{x\to x_0^-}f(x)$ e $\lim_{x\to x_0^+}f(x)$ vale $+\infty$ o $-\infty$. |
+| **Orizzontale** $y=L$ | $\lim_{x\to+\infty}f(x)=L$ oppure $\lim_{x\to-\infty}f(x)=L$, con $L\in\mathbb R$. I due versi possono dare rette diverse. |
+
+| Teorema | Ipotesi e conclusione |
+| :--- | :--- |
+| **Valori intermedi** | Se $f$ è continua su $[a,b]$, per ogni $y$ compreso tra $f(a)$ e $f(b)$ esiste $c\in[a,b]$ con $f(c)=y$. Più in generale, l'immagine di un intervallo per una funzione continua è un intervallo. |
+| **Weierstrass** | Se $f$ è continua su un intervallo chiuso e limitato $[a,b]$, esistono $x_m,x_M\in[a,b]$ tali che $f(x_m)=\min_{[a,b]}f$ e $f(x_M)=\max_{[a,b]}f$. |
+
 ## 6 · Trigonometria
 
 **Conversioni:** $\pi$ $\to $ grad : $\theta_{^\circ}=\theta_{\mathrm{rad}}\frac{180}{\pi}$; grad $\to \pi$ : $\theta_{\mathrm{rad}}=\theta_{^\circ}\frac{\pi}{180}$.
@@ -187,8 +291,10 @@ Se $f(x)\to y_0$ e $g$ è continua in $y_0$ (finito), O $g$ ammette lim per $y\t
 | $1-\cos x=\frac{\sin^2x}{1+\cos x}=2\sin^2\left(\frac x2\right)$ | $\sin(x\pm y)=\sin x\cos y\pm\cos x\sin y$ | $\cos(x\pm y)=\cos x\cos y\mp\sin x\sin y$ |
 | $\tan(x\pm y)=\frac{\tan x\pm\tan y}{1\mp\tan x\tan y}$ | $\sin2x=2\sin x\cos x$ | $\cos2x=\cos^2x-\sin^2x=2\cos^2x-1=1-2\sin^2x$ |
 | $\tan2x=\frac{2\tan x}{1-\tan^2x}$ | $\sin^2(x/2)=\frac{1-\cos x}{2}$ | $\cos^2(x/2)=\frac{1+\cos x}{2}$ |
+| $\sin x\cos x=\frac12\sin2x$ | $\sin^2 x=\frac{1-\cos2x}{2}$ | $\cos^2 x=\frac{1+\cos2x}{2}$ |
+| $\sin^2 x\cos^2 x=\frac14\sin^2(2x)$ | | |
 
-La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
+La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$. Le formule con la tangente valgono dove tutti i termini sono definiti.
 
 **Funzioni trigonometriche inverse**
 
@@ -196,6 +302,15 @@ La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
 | :--- | :--- | :--- |
 | $\arcsin:[-1,1]\to[-\pi/2,\pi/2]$ | $\arccos:[-1,1]\to[0,\pi]$ | $\arctan(\tan x)=x$ per $x\in(-\pi/2,\pi/2)$ |
 | $\arcsin(\sin x)=x$ per $x\in[-\pi/2,\pi/2]$ | $\arccos(\cos x)=x$ per $x\in[0,\pi]$ | |
+
+**Equazioni trigonometriche** ($k\in\mathbb Z$)
+
+| Equazione | Soluzioni e condizioni |
+| :--- | :--- |
+| $\sin x=a$ | $x=\arcsin a+2k\pi$ oppure $x=\pi-\arcsin a+2k\pi$, se $\lvert a\rvert\le1$. |
+| $\cos x=a$ | $x=\pm\arccos a+2k\pi$, se $\lvert a\rvert\le1$. |
+| $\tan x=a$ | $x=\arctan a+k\pi$, per ogni $a\in\mathbb R$. |
+| $a\sin^2 x+b\sin x\cos x+c\cos^2 x=0$ | Se $\cos x\ne0$, dividi per $\cos^2 x$ e poni $t=\tan x$: $at^2+bt+c=0$. Controlla separatamente i punti con $\cos x=0$. |
 
 ## 6A · Numeri complessi — formule
 
@@ -206,8 +321,24 @@ La forma $\frac{\sin^2x}{1+\cos x}$ richiede $\cos x\neq-1$.
 | **Eulero** | $e^{i\theta}=\cos\theta+i\sin\theta$ | $z=re^{i\theta}=r(\cos\theta+i\sin\theta)$ | $r=\lvert z\rvert,\ x=r\cos\theta,\ y=r\sin\theta$ |
 | **Operazioni** | $z_1\pm z_2=(x_1\pm x_2)+i(y_1\pm y_2)$ | $z_1z_2=r_1r_2e^{i(\theta_1+\theta_2)}$ | $\frac{z_1}{z_2}=\frac{r_1}{r_2}e^{i(\theta_1-\theta_2)}$, $z_2\neq0$ |
 | **Potenze — De Moivre** | $z^n=r^ne^{in\theta}=r^n[\cos(n\theta)+i\sin(n\theta)]$ | $n\in\mathbb Z$ | $n<0\Rightarrow z\neq0$ |
-| **Radici di $z^n=w$** | $z_k=\rho^{1/n}e^{i(\varphi+2k\pi)/n}$ | $w=\rho e^{i\varphi},\ \rho=\lvert w\rvert>0$ | $n\in\mathbb N,\ n\ge1;\ k=0,\ldots,n-1$ |
-| **Argomento:** | $\cos\theta=\frac{a}{\lvert z\rvert}$, $\sin\theta=\frac{b}{\lvert z\rvert}$ |$x\neq0$ => $\alpha=\arctan(\lvert y/x\rvert)$ e scegli quadrante. <br> **I:** $\theta=\alpha$; **II:** $\theta=\pi-\alpha$; **III:** $\theta=\pi+\alpha$; **IV:** $\theta=2\pi-\alpha$ | |
+| **Argomento** ($z\ne0$) | $\cos\theta=\frac{x}{\lvert z\rvert}$, $\sin\theta=\frac{y}{\lvert z\rvert}$ | Se $x,y\ne0$, $\alpha=\arctan(\lvert y/x\rvert)$: **I** $\theta=\alpha$; **II** $\theta=\pi-\alpha$; **III** $\theta=\pi+\alpha$; **IV** $\theta=2\pi-\alpha$. | Sugli assi usa la circonferenza della sezione 7. |
+
+**Proprietà del coniugato, del modulo e dell'argomento**
+
+| | |
+| :--- | :--- |
+| $\overline{z\pm w}=\bar z\pm\bar w$; $\overline{zw}=\bar z\,\bar w$ | $\overline{z/w}=\bar z/\bar w$ se $w\ne0$ |
+| $\lvert\bar z\rvert=\lvert z\rvert$; $\lvert zw\rvert=\lvert z\rvert\lvert w\rvert$ | $\lvert z/w\rvert=\lvert z\rvert/\lvert w\rvert$ se $w\ne0$ |
+| $\lvert z+w\rvert\le\lvert z\rvert+\lvert w\rvert$ | $\bigl\lvert\lvert z\rvert-\lvert w\rvert\bigr\rvert\le\lvert z-w\rvert$ |
+| $\arg(zw)\equiv\arg z+\arg w\pmod{2\pi}$ | $\arg(z/w)\equiv\arg z-\arg w\pmod{2\pi}$ (in entrambe: $z,w\ne0$) |
+
+**Radici di $z^n=w$**: se $w=\rho e^{i\varphi}$ con $\rho=\lvert w\rvert>0$ e $n\ge1$ è intero, poni $\beta_k=(\varphi+2k\pi)/n$, con $k=0,\ldots,n-1$.
+
+| Forma esponenziale | Forma trigonometrica |
+| :--- | :--- |
+| $z_k=\rho^{1/n}e^{i\beta_k}$ | $z_k=\rho^{1/n}\bigl(\cos\beta_k+i\sin\beta_k\bigr)$ |
+
+Se $w=0$, l'unica soluzione è $z=0$.
 
 ## 7 · Circonferenza goniometrica e arctan
 
