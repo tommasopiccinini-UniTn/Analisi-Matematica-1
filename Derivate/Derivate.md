@@ -17,7 +17,7 @@ Appunti di **Analisi Matematica 1** — lezione del **21/10/2026**, sezione **5.
 
 **Slide 2/71, pagina 33.** Il calcolo differenziale nasce nel XVII secolo (Newton e Leibniz) anche per affrontare un problema geometrico: **determinare la retta tangente a una curva in un punto**.
 
-![Curva blu e retta tangente rossa](grafici/derivata-tangente.svg)
+![Curva blu e retta tangente rossa](../grafici/derivata-tangente.svg)
 
 - **Curva blu:** grafico della funzione $f(x)$.
 - **Punto P:** punto in cui cerchiamo la tangente.
@@ -73,7 +73,7 @@ $$
 m_h=\frac{f(x_0+h)-f(x_0)}{h}.
 $$
 
-![Secante verde, tangente rossa, variazione h e variazione della funzione](grafici/derivata-secante-tangente.svg)
+![Secante verde, tangente rossa, variazione h e variazione della funzione](../grafici/derivata-secante-tangente.svg)
 
 - **Blu:** grafico di $f(x)$.
 - **Verde:** secante per i due punti P e Q.
