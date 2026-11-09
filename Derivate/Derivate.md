@@ -18,6 +18,7 @@ Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/202
 10. [Valore assoluto: continua ma non derivabile](#10-valore-assoluto-continua-ma-non-derivabile)
 11. [Cuspidi e tangenti verticali](#11-cuspidi-e-tangenti-verticali)
 12. [Funzione di Weierstrass: continua ovunque ma mai derivabile](#12-funzione-di-weierstrass-continua-ovunque-ma-mai-derivabile)
+13. [Regole di derivazione — tabella sintetica](#13-regole-di-derivazione--tabella-sintetica)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -311,4 +312,23 @@ La slide presenta questo esempio per mostrare che **la continuità non garantisc
 
 ---
 
-**Per proseguire:** slide 13/75 della lezione del 27 ottobre.
+## 13. Regole di derivazione — tabella sintetica
+
+**Lezione del 27/10/2026, slide 14–18/75.** Formule viste fino alla regola di linearità; non sono ancora incluse le regole del prodotto e della catena.
+
+| Regola | Funzione | Derivata | Condizioni |
+| :--- | :--- | :--- | :--- |
+| Costante | $f(x)=c$ | $\boxed{f'(x)=0}$ | $c\in\mathbb R$ |
+| Potenza | $f(x)=x^n$ | $\boxed{f'(x)=nx^{n-1}}$ | $n\in\mathbb N^+$ |
+| Reciproco | $f(x)=\dfrac{1}{x}=x^{-1}$ | $\boxed{f'(x)=-\dfrac{1}{x^2}}$ | $x\ne0$ |
+| Esponenziale | $f(x)=e^x$ | $\boxed{f'(x)=e^x}$ | $x\in\mathbb R$ |
+| Logaritmo naturale | $f(x)=\log x=\ln x$ | $\boxed{f'(x)=\dfrac{1}{x}}$ | $x>0$ |
+| Seno | $f(x)=\sin x$ | $\boxed{f'(x)=\cos x}$ | $x$ in radianti |
+| Coseno | $f(x)=\cos x$ | $\boxed{f'(x)=-\sin x}$ | $x$ in radianti |
+| Linearità | $a f(x)+b g(x)$ | $\boxed{(af+bg)'=a f'+b g'}$ | $a,b$ costanti; $f,g$ derivabili |
+
+**Notazione equivalente:** $f'(x)=D[f(x)]=\dfrac{d}{dx}f(x)$.
+
+---
+
+**Per proseguire:** slide 19/75 della lezione del 27 ottobre (regola del prodotto).
