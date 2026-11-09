@@ -1,8 +1,8 @@
 # Derivate
 
-Appunti di **Analisi Matematica 1** — lezione del **21/10/2026**, sezione **5.1: La derivata, definizione, prime proprietà ed esempi**.
+Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/2026**, sezione **5.1: La derivata, definizione, prime proprietà ed esempi**.
 
-> Sono raccolti **solo gli argomenti studiati finora** nella chat (slide 2–8 della sezione, pagine 33–40 del PDF `Lezione_20261021.pdf`). I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
+> Sono raccolti **solo gli argomenti studiati finora** nella chat (slide 2–10 in `Lezione_20261021.pdf` e slide 11–12 in `Lezione_202621027.pdf`). I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
 
 ## Indice
 
@@ -14,6 +14,10 @@ Appunti di **Analisi Matematica 1** — lezione del **21/10/2026**, sezione **5.
 6. [Riepilogo delle formule](#6-riepilogo-delle-formule)
 7. [Retta tangente come migliore approssimante affine](#7-retta-tangente-come-migliore-approssimante-affine)
 8. [Primi esempi: derivata di x² e retta tangente](#8-primi-esempi-derivata-di-x²-e-retta-tangente)
+9. [Derivabilità e continuità](#9-derivabilità-e-continuità)
+10. [Valore assoluto: continua ma non derivabile](#10-valore-assoluto-continua-ma-non-derivabile)
+11. [Cuspidi e tangenti verticali](#11-cuspidi-e-tangenti-verticali)
+12. [Funzione di Weierstrass: continua ovunque ma mai derivabile](#12-funzione-di-weierstrass-continua-ovunque-ma-mai-derivabile)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -206,4 +210,105 @@ $
 
 ---
 
-**Per proseguire:** slide 9/71 — il teorema «derivabilità implica continuità».
+## 9. Derivabilità e continuità
+
+**Slide 9, lezione 21 ottobre; ripresa nella slide 9/75 della lezione del 27 ottobre.**
+
+**Teorema:** se una funzione è derivabile in un punto $x_0$, allora è continua in quel punto:
+
+$
+\boxed{f\text{ derivabile in }x_0\implies f\text{ continua in }x_0.}
+$
+
+**Idea della dimostrazione:** se $f$ è derivabile, il rapporto incrementale ha un limite finito $l=f'(x_0)$:
+
+$
+\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=l.
+$
+
+Per $x\neq x_0$, possiamo scrivere:
+
+$
+f(x)-f(x_0)=\underbrace{\frac{f(x)-f(x_0)}{x-x_0}}_{\to l}\cdot
+\underbrace{(x-x_0)}_{\to 0}.
+$
+
+Il primo fattore **è tutta la frazione**, non il denominatore da solo. Il secondo fattore tende a zero. Quindi
+
+$
+\lim_{x\to x_0}\big(f(x)-f(x_0)\big)=l\cdot 0=0,
+$
+
+ovvero $\lim_{x\to x_0}f(x)=f(x_0)$: è la definizione di continuità.
+
+**Il contrario non è sempre vero:** una funzione può essere continua senza essere derivabile.
+
+## 10. Valore assoluto: continua ma non derivabile
+
+**Slide 10, ripresa nella slide 10/75 della lezione del 27 ottobre.**
+
+La funzione $f(x)=|x|$ è continua in $0$:
+
+$
+\lim_{x\to0}|x|=0=f(0).
+$
+
+Ma nel punto $0$ ha uno **spigolo**. Il rapporto incrementale da sinistra e da destra dà risultati diversi:
+
+$
+f'_-(0)=\lim_{x\to0^-}\frac{|x|}{x}=-1,\qquad
+f'_+(0)=\lim_{x\to0^+}\frac{|x|}{x}=+1.
+$
+
+Poiché i due limiti non coincidono, **non è derivabile in $0$**. Continuità significa assenza di salti; derivabilità richiede che la pendenza sia ben definita.
+
+## 11. Cuspidi e tangenti verticali
+
+**Slide 11/75, lezione del 27 ottobre (pagina 3 del PDF).** Mostra due ulteriori situazioni in cui una funzione può essere continua ma non derivabile.
+
+- **Cuspide:** i rapporti incrementali da sinistra e destra tendono a infiniti di **segno opposto**. Un esempio è $f(x)=\sqrt{|x|}$ nel punto $0$:
+
+$
+\lim_{x\to0^-}\frac{\sqrt{|x|}}{x}=-\infty,\qquad
+\lim_{x\to0^+}\frac{\sqrt{|x|}}{x}=+\infty.
+$
+
+- **Tangente verticale:** i rapporti incrementali tendono allo **stesso infinito**. Un esempio è $f(x)=\sqrt[3]{x}$ nel punto $0$:
+
+$
+\lim_{x\to0^-}\frac{\sqrt[3]{x}}{x}
+=
+\lim_{x\to0^+}\frac{\sqrt[3]{x}}{x}
+=+\infty.
+$
+
+In entrambi i casi la **derivata ordinaria non esiste in $0$**, perché il limite del rapporto incrementale non è finito. Attenzione: anche nella cuspide i due rami hanno direzione verticale, ma le pendenze divergono con segni opposti.
+
+**Distinzione importante:** può capitare che $f(x)\to0$ mentre il **rapporto incrementale** tende a $\pm\infty$. Il primo riguarda l'altezza del grafico, il secondo la sua inclinazione.
+
+## 12. Funzione di Weierstrass: continua ovunque ma mai derivabile
+
+**Slide 12/75, lezione del 27 ottobre (pagina 4 del PDF).**
+
+Un caso particolarmente sorprendente è la **funzione di Weierstrass**, presentata nelle slide come
+
+$
+\boxed{f(x)=\sum_{n=0}^{+\infty}a^n\cos(b^n\pi x)}
+$
+
+con i parametri scelti in modo che
+
+$
+a\in(0,1),\qquad b\in\mathbb N\text{ dispari},\qquad
+ab>1+\frac{3\pi}{2}.
+$
+
+**Proprietà:** la funzione è **continua in ogni punto**, ma **non è derivabile in alcun punto**.
+
+**Intuizione:** i coseni introducono oscillazioni sempre più rapide (frequenze $b^n$), mentre le loro ampiezze diminuiscono (fattori $a^n$). Il grafico resta continuo, ma presenta irregolarità a ogni scala, senza una pendenza ben definita.
+
+La slide presenta questo esempio per mostrare che **la continuità non garantisce la derivabilità, neppure in un singolo punto**. Non abbiamo affrontato la dimostrazione formale di questa proprietà.
+
+---
+
+**Per proseguire:** slide 13/75 della lezione del 27 ottobre.
