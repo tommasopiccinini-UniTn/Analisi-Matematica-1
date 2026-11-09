@@ -2,7 +2,7 @@
 
 Appunti di **Analisi Matematica 1** — lezione del **21/10/2026**, sezione **5.1: La derivata, definizione, prime proprietà ed esempi**.
 
-> Sono raccolti **solo gli argomenti studiati finora** nella chat (slide 2–6 della sezione, pagine 33–38 del PDF `Lezione_20261021.pdf`). I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
+> Sono raccolti **solo gli argomenti studiati finora** nella chat (slide 2–8 della sezione, pagine 33–40 del PDF `Lezione_20261021.pdf`). I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
 
 ## Indice
 
@@ -12,6 +12,8 @@ Appunti di **Analisi Matematica 1** — lezione del **21/10/2026**, sezione **5.
 4. [Significato geometrico: dalla secante alla tangente](#4-significato-geometrico-dalla-secante-alla-tangente)
 5. [Equazione della retta tangente](#5-equazione-della-retta-tangente)
 6. [Riepilogo delle formule](#6-riepilogo-delle-formule)
+7. [Retta tangente come migliore approssimante affine](#7-retta-tangente-come-migliore-approssimante-affine)
+8. [Primi esempi: derivata di x² e retta tangente](#8-primi-esempi-derivata-di-x²-e-retta-tangente)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -115,4 +117,93 @@ Questa è **l'equazione della retta tangente al grafico** di $f$ nel punto di as
 | Pendenza della tangente | $m=f'(x_0)$ |
 | Retta tangente | $y=f(x_0)+f'(x_0)(x-x_0)$ |
 
-**Per proseguire:** continuare dalla slide successiva alla 6/71, senza anticipare altri argomenti.
+## 7. Retta tangente come migliore approssimante affine
+
+**Slide 7/71 (pagina 39 del PDF).**
+
+Una funzione **affine** è una funzione della forma
+
+$
+y=mx+q.
+$
+
+Fra tutte le rette che passano per $P_0=(x_0,f(x_0))$, se $f$ è derivabile in $x_0$, **la retta tangente è la migliore approssimante affine della funzione vicino a $x_0$**:
+
+$
+T(x)=f(x_0)+f'(x_0)(x-x_0).
+$
+
+Partiamo dalla definizione di derivata:
+
+$
+\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0).
+$
+
+Sottrarre il limite $f'(x_0)$ equivale a scrivere
+
+$
+\lim_{x\to x_0}\left[\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)\right]=0.
+$
+
+Mettendo tutto sotto lo stesso denominatore:
+
+$
+\boxed{\lim_{x\to x_0}\frac{f(x)-[f(x_0)+f'(x_0)(x-x_0)]}{x-x_0}=0}.
+$
+
+Nel numeratore c'è l'**errore di approssimazione** $f(x)-T(x)$; al denominatore c'è $x-x_0$. Significa che l'errore tende a zero **più rapidamente** di $x-x_0$.
+
+In forma compatta: $f(x)=T(x)+o(x-x_0)$ per $x\to x_0$.
+
+## 8. Primi esempi: derivata di x² e retta tangente
+
+**Slide 8/71 (pagina 40 del PDF).** La slide propone due esercizi sulla funzione $f(x)=x^2$.
+
+### Esercizio 1 — derivata in $x_0=1$
+
+Per definizione:
+
+$
+f'(1)=\lim_{x\to1}\frac{f(x)-f(1)}{x-1}
+=\lim_{x\to1}\frac{x^2-1}{x-1}.
+$
+
+La sostituzione diretta dà la forma indeterminata $0/0$. Si usa la **differenza di quadrati**, non il raccoglimento di $x$:
+
+$
+x^2-1=(x-1)(x+1).
+$
+
+Quindi
+
+$
+f'(1)=\lim_{x\to1}\frac{(x-1)(x+1)}{x-1}
+=\lim_{x\to1}(x+1)=\boxed{2}.
+$
+
+Dunque la tangente in $x_0=1$ ha **coefficiente angolare $m=f'(1)=2$**.
+
+### Esercizio 2 — equazione della tangente nel punto $(1,1)$
+
+La formula generale è
+
+$
+y=f(x_0)+f'(x_0)(x-x_0).
+$
+
+Per $f(x)=x^2$ e $x_0=1$:
+
+- $f(1)=1^2=1$ si trova **sostituendo $x=1$ nella funzione**, senza calcolare alcuna derivata;
+- $f'(1)=2$ è la **derivata**, trovata con il limite del rapporto incrementale.
+
+L'equazione richiesta è
+
+$
+\boxed{y=1+2(x-1)}.
+$
+
+**Distinzione essenziale:** $f(1)$ è il valore della funzione nel punto, mentre $f'(1)$ è il coefficiente angolare della tangente in quel punto.
+
+---
+
+**Per proseguire:** slide 9/71 — il teorema «derivabilità implica continuità».
