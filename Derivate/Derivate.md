@@ -320,18 +320,19 @@ Questo esempio mostra che **la continuità non garantisce la derivabilità, nepp
 
 ### Derivate delle funzioni elementari
 
-| Funzione | Formula della derivata | Condizioni |
-| :--- | :--- | :--- |
-| Costante | $\displaystyle \frac{d}{dx}(c)=0$ | $c\in\mathbb R$ |
-| Potenza (esponente naturale) | $\displaystyle \frac{d}{dx}(x^n)=nx^{n-1}$ | $n\in\mathbb N^+$ |
-| Potenza (esponente reale) | $\displaystyle \frac{d}{dx}(x^\alpha)=\alpha x^{\alpha-1}$ | $\alpha\in\mathbb R,\ x>0$ |
-| Reciproco | $\displaystyle \frac{d}{dx}\left(\frac1x\right)=-\frac1{x^2}$ | $x\ne0$ |
-| Esponenziale (base $e$) | $\displaystyle \frac{d}{dx}(e^x)=e^x$ | $x\in\mathbb R$ |
-| Esponenziale (base $a$) | $\displaystyle \frac{d}{dx}(a^x)=a^x\ln a$ | $a>0,\ x\in\mathbb R$ |
-| Logaritmo naturale | $\displaystyle \frac{d}{dx}(\ln x)=\frac1x$ | $x>0$ |
-| Logaritmo (base $a$) | $\displaystyle \frac{d}{dx}(\log_a x)=\frac1{x\ln a}$ | $a>0,\ a\ne1,\ x>0$ |
-| Seno | $\displaystyle \frac{d}{dx}(\sin x)=\cos x$ | Angoli in radianti |
-| Coseno | $\displaystyle \frac{d}{dx}(\cos x)=-\sin x$ | Angoli in radianti |
+Le condizioni si riferiscono all'esistenza della derivata. Gli angoli sono espressi in radianti.
+
+| Funzione $f(x)$ | Derivata $f'(x)$ | Condizioni | Funzione $f(x)$ | Derivata $f'(x)$ | Condizioni |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| $\alpha$ | $0$ | $\alpha\in\mathbb R,\ x\in\mathbb R$ | $x^\alpha$ | $\alpha x^{\alpha-1}$ | $\alpha\in\mathbb R,\ x>0$ |
+| $\sin x$ | $\cos x$ | $x\in\mathbb R$ | $\cos x$ | $-\sin x$ | $x\in\mathbb R$ |
+| $e^x$ | $e^x$ | $x\in\mathbb R$ | $\ln\lvert x\rvert$ | $\displaystyle\frac1x$ | $x\ne0$ |
+| $a^x$ | $a^x\ln a$ | $a>0,\ x\in\mathbb R$ | $\log_a\lvert x\rvert$ | $\displaystyle\frac1{x\ln a}$ | $a>0,\ a\ne1,\ x\ne0$ |
+| $\tan x$ | $1+\tan^2x$ | $\displaystyle x\ne\frac{\pi}{2}+k\pi,\ k\in\mathbb Z$ | $\arctan x$ | $\displaystyle\frac1{1+x^2}$ | $x\in\mathbb R$ |
+| $\arcsin x$ | $\displaystyle\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ | $\arccos x$ | $\displaystyle-\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ |
+| $\sinh x$ | $\cosh x$ | $x\in\mathbb R$ | $\cosh x$ | $\sinh x$ | $x\in\mathbb R$ |
+
+Per $x^\alpha$ è indicata la condizione generale per un esponente reale. Se $\alpha$ è un intero positivo, la formula vale per ogni $x\in\mathbb R$.
 
 ### Regole operative di derivazione
 Nelle formule $f$ e $g$ sono funzioni derivabili e $a,b$ sono costanti reali.
