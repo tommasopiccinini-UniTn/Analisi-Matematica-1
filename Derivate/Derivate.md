@@ -2,7 +2,7 @@
 
 Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni essenziali, esempi e formulario delle derivate.
 
-> Materiale organizzato per lo **studio e il ripasso**. I grafici sono schemi esplicativi; la sezione finale raccoglie le formule di derivazione in una tabella sintetica.
+> Materiale organizzato per lo **studio e il ripasso**. I grafici sono schemi esplicativi; la sezione 13 raccoglie le formule di derivazione in una tabella sintetica.
 
 ## Indice
 
@@ -19,6 +19,8 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 11. [Cuspidi e tangenti verticali](#11-cuspidi-e-tangenti-verticali)
 12. [Funzione di Weierstrass: continua ovunque ma mai derivabile](#12-funzione-di-weierstrass-continua-ovunque-ma-mai-derivabile)
 13. [Derivate elementari e regole di derivazione — griglia sintetica](#13-derivate-elementari-e-regole-di-derivazione--griglia-sintetica)
+14. [Regola del prodotto (Leibniz)](#14-regola-del-prodotto-leibniz)
+15. [Regola della catena](#15-regola-della-catena)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -341,3 +343,43 @@ Nelle formule $f$ e $g$ sono funzioni derivabili e $a,b$ sono costanti reali.
 
 **Notazione:** $\displaystyle f'(x)=D[f(x)]=\frac{d}{dx}f(x)$.
 
+## 14. Regola del prodotto (Leibniz)
+
+Se $f(x)$ e $g(x)$ sono derivabili, anche il loro prodotto è derivabile e vale:
+
+```math
+\boxed{\big(f(x)g(x)\big)'=f'(x)g(x)+f(x)g'(x)}
+```
+
+**Come si applica:** si sommano due termini: la derivata della prima funzione per la seconda invariata, e la prima invariata per la derivata della seconda.
+
+**Errore da evitare:** in generale $\big(fg\big)'\ne f'g'$.
+
+**Esempio di riconoscimento:** nel prodotto $x^2\sin x$, le due funzioni sono
+
+```math
+f(x)=x^2,\qquad g(x)=\sin x.
+```
+
+Le derivate da utilizzare sono $(x^2)'=2x$ e $(\sin x)'=\cos x$.
+
+## 15. Regola della catena
+
+Serve per le **funzioni composte**: una funzione $f$ applicata al risultato di un'altra funzione $g$.
+
+Se $g$ è derivabile in $x$ e $f$ è derivabile in $g(x)$, allora:
+
+```math
+\boxed{\big(f(g(x))\big)'=f'(g(x))\cdot g'(x)}
+```
+
+**Come si applica:** si deriva la funzione esterna, lasciando invariata l'espressione interna, e poi si moltiplica per la derivata della funzione interna.
+
+**Esempio di riconoscimento:** in $\sin(x^2)$,
+
+- la **funzione esterna** è $f(y)=\sin y$;
+- la **funzione interna** è $g(x)=x^2$.
+
+Le derivate da utilizzare sono $(\sin y)'=\cos y$ e $(x^2)'=2x$.
+
+**Attenzione ai segni:** $(\sin x)'=\cos x$, mentre $(\cos x)'=-\sin x$.
