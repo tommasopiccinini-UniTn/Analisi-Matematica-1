@@ -1,8 +1,8 @@
 # Derivate
 
-Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/2026**, sezione **5.1: La derivata, definizione, prime proprietà ed esempi**.
+Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni essenziali, esempi e formulario delle derivate.
 
-> Sono raccolti gli argomenti studiati finora (slide 2–10 in `Lezione_20261021.pdf` e slide 11–18 in `Lezione_202621027.pdf`), insieme a una tabella di consultazione che anticipa alcune formule operative. I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
+> Materiale organizzato per lo **studio e il ripasso**. I grafici sono schemi esplicativi; la sezione finale raccoglie le formule di derivazione in una tabella sintetica.
 
 ## Indice
 
@@ -22,7 +22,7 @@ Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/202
 
 ## 1. Perché nasce la derivata — la retta tangente
 
-**Slide 2/71, pagina 33.** Il calcolo differenziale nasce nel XVII secolo (Newton e Leibniz) anche per affrontare un problema geometrico: **determinare la retta tangente a una curva in un punto**.
+Il calcolo differenziale nasce nel XVII secolo (Newton e Leibniz) anche per affrontare un problema geometrico: **determinare la retta tangente a una curva in un punto**.
 
 ![Curva blu e retta tangente rossa](../grafici/derivata-tangente.svg)
 
@@ -31,11 +31,9 @@ Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/202
 - **Retta rossa:** tangente alla curva nel punto P, con la stessa **inclinazione locale**.
 - La tangente **può anche attraversare** la curva: non deve necessariamente limitarsi a toccarla.
 
-**Slide 3/71, pagina 34:** sommario della sezione; **slide 4/71, pagina 35:** titolo *La derivata: definizione, prime proprietà ed esempi*. Non introducono formule da memorizzare.
-
 ## 2. Definizione di derivata
 
-**Slide 5/71, pagina 36.** Una funzione è **derivabile nel punto $x_0$** se esiste ed è **finito** il limite del rapporto incrementale:
+Una funzione è **derivabile nel punto $x_0$** se esiste ed è **finito** il limite del rapporto incrementale:
 
 ```math
 \boxed{f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}}
@@ -68,7 +66,7 @@ Qui $h$ misura di quanto cambia l'ascissa rispetto a $x_0$.
 
 ## 4. Significato geometrico: dalla secante alla tangente
 
-**Slide 6/71, pagina 38.** Consideriamo due punti del grafico:
+Consideriamo due punti del grafico:
 
 ```math
 P=(x_0,f(x_0)),\qquad Q=(x_0+h,f(x_0+h)).
@@ -124,8 +122,6 @@ Questa è **l'equazione della retta tangente al grafico** di $f$ nel punto di as
 
 ## 7. Retta tangente come migliore approssimante affine
 
-**Slide 7/71 (pagina 39 del PDF).**
-
 Una funzione **affine** è una funzione della forma
 
 ```math
@@ -162,7 +158,7 @@ In forma compatta: $f(x)=T(x)+o(x-x_0)$ per $x\to x_0$.
 
 ## 8. Primi esempi: derivata di x² e retta tangente
 
-**Slide 8/71 (pagina 40 del PDF).** La slide propone due esercizi sulla funzione $f(x)=x^2$.
+Consideriamo due esercizi sulla funzione $f(x)=x^2$.
 
 ### Esercizio 1 — derivata in $x_0=1$
 
@@ -217,8 +213,6 @@ L'equazione richiesta è
 
 ## 9. Derivabilità e continuità
 
-**Slide 9, lezione 21 ottobre; ripresa nella slide 9/75 della lezione del 27 ottobre.**
-
 **Teorema:** se una funzione è derivabile in un punto $x_0$, allora è continua in quel punto:
 
 ```math
@@ -249,8 +243,6 @@ ovvero $\lim_{x\to x_0}f(x)=f(x_0)$: è la definizione di continuità.
 
 ## 10. Valore assoluto: continua ma non derivabile
 
-**Slide 10, ripresa nella slide 10/75 della lezione del 27 ottobre.**
-
 La funzione $f(x)=|x|$ è continua in $0$:
 
 ```math
@@ -270,7 +262,7 @@ Poiché i due limiti non coincidono, **non è derivabile in $0$**. Continuità s
 
 ## 11. Cuspidi e tangenti verticali
 
-**Slide 11/75, lezione del 27 ottobre (pagina 3 del PDF).** Mostra due ulteriori situazioni in cui una funzione può essere continua ma non derivabile.
+Esistono altre due situazioni in cui una funzione può essere continua ma non derivabile:
 
 - **Cuspide:** i rapporti incrementali da sinistra e destra tendono a infiniti di **segno opposto**. Un esempio è $f(x)=\sqrt{|x|}$ nel punto $0$:
 
@@ -297,9 +289,7 @@ In entrambi i casi la **derivata ordinaria non esiste in $0$**, perché il limit
 
 ## 12. Funzione di Weierstrass: continua ovunque ma mai derivabile
 
-**Slide 12/75, lezione del 27 ottobre (pagina 4 del PDF).**
-
-Un caso particolarmente sorprendente è la **funzione di Weierstrass**, presentata nelle slide come
+Un caso particolarmente sorprendente è la **funzione di Weierstrass**, definita da
 
 ```math
 \boxed{f(x)=\sum_{n=0}^{+\infty}a^n\cos(b^n\pi x)}
@@ -318,15 +308,13 @@ con i parametri scelti in modo che
 
 **Intuizione:** i coseni introducono oscillazioni sempre più rapide (frequenze $b^n$), mentre le loro ampiezze diminuiscono (fattori $a^n$). Il grafico resta continuo, ma presenta irregolarità a ogni scala, senza una pendenza ben definita.
 
-La slide presenta questo esempio per mostrare che **la continuità non garantisce la derivabilità, neppure in un singolo punto**. Non abbiamo affrontato la dimostrazione formale di questa proprietà.
+Questo esempio mostra che **la continuità non garantisce la derivabilità, neppure in un singolo punto**.
 
 ---
 
 ## 13. Derivate elementari e regole di derivazione — griglia sintetica
 
 ### Derivate delle funzioni elementari
-
-**Lezione del 27/10/2026, slide 14–17/75.**
 
 | Funzione | Formula della derivata | Condizioni |
 | :--- | :--- | :--- |
@@ -351,10 +339,5 @@ Nelle formule $f$ e $g$ sono funzioni derivabili e $a,b$ sono costanti reali.
 | Quoziente | $\displaystyle \left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$ |
 | Funzione composta (catena) | $\displaystyle (f(g(x)))'=f'(g(x))\,g'(x)$ |
 
-**Avanzamento rispetto alle slide:** costante, somma, differenza e linearità sono già state studiate (slide 18/75). La formula del **prodotto** è nella slide 19/75 e quella della **funzione composta** nella slide 20/75: sono riportate qui per avere una griglia completa, ma non sono ancora state spiegate. La formula del **quoziente** è un'aggiunta di riferimento, non ancora affrontata nelle slide studiate.
-
 **Notazione:** $\displaystyle f'(x)=D[f(x)]=\frac{d}{dx}f(x)$.
 
----
-
-**Per proseguire nello studio:** slide 19/75 della lezione del 27 ottobre (regola del prodotto).
