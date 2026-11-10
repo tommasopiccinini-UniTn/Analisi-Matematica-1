@@ -22,6 +22,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 14. [Regola del prodotto (Leibniz)](#14-regola-del-prodotto-leibniz)
 15. [Regola della catena](#15-regola-della-catena)
 16. [Derivate delle funzioni inverse](#16-derivate-delle-funzioni-inverse)
+17. [Regola del quoziente](#17-regola-del-quoziente)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -404,3 +405,48 @@ L'arcoseno è l'inversa del seno ristretto all'intervallo $[-\pi/2,\pi/2]$.
 | $\arcsin x$ | $\displaystyle \boxed{(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}}$ | $-1<x<1$ |
 
 La radice deriva dall'identità trigonometrica $\sin^2 y+\cos^2 y=1$: nell'intervallo scelto, $\cos y\ge 0$, quindi $\cos y=\sqrt{1-\sin^2 y}$.
+
+## 17. Regola del quoziente
+
+Siano $f$ e $g$ derivabili nel punto $x$, con $g(x)\ne0$. Allora anche il loro quoziente è derivabile in quel punto e vale:
+
+```math
+\boxed{\left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}}
+```
+
+**Come si applica:** al numeratore si scrive la derivata del numeratore per il denominatore, meno il numeratore per la derivata del denominatore. Al denominatore si mette il quadrato del denominatore originale.
+
+### Dimostrazione
+
+Riscriviamo il quoziente come prodotto:
+
+```math
+\frac{f(x)}{g(x)}=f(x)\cdot\frac1{g(x)}.
+```
+
+Per derivare il reciproco usiamo la regola della catena. Ponendo $u(t)=1/t$, si ha $u'(t)=-1/t^2$, quindi:
+
+```math
+\left(\frac1{g(x)}\right)'=u'(g(x))\,g'(x)=-\frac{g'(x)}{[g(x)]^2}.
+```
+
+Applichiamo ora la regola del prodotto:
+
+```math
+\begin{aligned}
+\left(\frac{f(x)}{g(x)}\right)'
+&=\left(f(x)\cdot\frac1{g(x)}\right)'\\[4pt]
+&=f'(x)\frac1{g(x)}+f(x)\left(-\frac{g'(x)}{[g(x)]^2}\right)\\[4pt]
+&=\frac{f'(x)}{g(x)}-\frac{f(x)g'(x)}{[g(x)]^2}\\[4pt]
+&=\frac{f'(x)g(x)}{[g(x)]^2}-\frac{f(x)g'(x)}{[g(x)]^2}\\[4pt]
+&=\boxed{\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}}.
+\end{aligned}
+```
+
+Il passaggio al **denominatore comune** si ottiene moltiplicando numeratore e denominatore della prima frazione per $g(x)$:
+
+```math
+\frac{f'(x)}{g(x)}=\frac{f'(x)g(x)}{[g(x)]^2}.
+```
+
+**Il segno meno nella formula nasce dalla derivata del reciproco.**
