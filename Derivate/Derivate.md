@@ -23,6 +23,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 15. [Regola della catena](#15-regola-della-catena)
 16. [Derivate delle funzioni inverse](#16-derivate-delle-funzioni-inverse)
 17. [Regola del quoziente](#17-regola-del-quoziente)
+18. [Esempio: prodotto con il valore assoluto](#18-esempio-prodotto-con-il-valore-assoluto)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -419,3 +420,83 @@ Siano $f$ e $g$ derivabili nel punto $x$, con $g(x)\ne0$. Allora anche il loro q
 ```
 
 **Come si applica:** al numeratore si scrive la derivata del numeratore per il denominatore, meno il numeratore per la derivata del denominatore. Al denominatore si mette il quadrato del denominatore originale.
+
+## 18. Esempio: prodotto con il valore assoluto
+
+Studiamo continuità e derivabilità della funzione
+
+```math
+f(x)=x|x|,\qquad x\in\mathbb R.
+```
+
+### Continuità e derivabilità fuori dall'origine
+
+Le funzioni $x$ e $|x|$ sono entrambe continue su $\mathbb R$, quindi anche il loro prodotto è continuo su $\mathbb R$.
+
+Per $x\ne0$, entrambi i fattori sono derivabili, quindi anche $f$ è derivabile. In $0$, invece, $|x|$ non è derivabile: **non possiamo applicare la regola del prodotto**, ma questo non basta per concludere che $x|x|$ non sia derivabile. Studiamo direttamente il rapporto incrementale.
+
+### Derivabilità nell'origine
+
+Separando i casi secondo il segno di $x$, otteniamo:
+
+```math
+f(x)=
+\begin{cases}
+x^2,&x\ge0,\\
+-x^2,&x<0,
+\end{cases}
+\qquad f(0)=0.
+```
+
+Da destra, $h>0$, quindi $f(h)=h^2$:
+
+```math
+f'_+(0)=\lim_{h\to0^+}\frac{f(h)-f(0)}h
+=\lim_{h\to0^+}\frac{h^2}{h}
+=\lim_{h\to0^+}h=0.
+```
+
+Da sinistra, $h<0$, quindi $f(h)=-h^2$:
+
+```math
+f'_-(0)=\lim_{h\to0^-}\frac{f(h)-f(0)}h
+=\lim_{h\to0^-}\frac{-h^2}{h}
+=\lim_{h\to0^-}(-h)=0.
+```
+
+**I due limiti laterali coincidono e sono finiti**, dunque il limite complessivo del rapporto incrementale esiste ed è finito. Per definizione, questo significa che $f$ è derivabile in $0$ e
+
+```math
+\boxed{f'(0)=0}.
+```
+
+La funzione $x|x|$ è quindi derivabile su tutto $\mathbb R$, anche se il singolo fattore $|x|$ non è derivabile in $0$.
+
+### Il collegamento con la definizione di derivata
+
+La derivata in $0$ è definita come
+
+```math
+f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}h,
+```
+
+purché il limite esista e sia finito. Per avere un unico limite finito $L$, il rapporto incrementale deve tendere allo stesso numero $L$ sia da sinistra sia da destra. Ecco perché l'uguaglianza dei due limiti laterali finiti permette di concludere che la derivata esiste.
+
+### Distinzione fra le due funzioni e i loro rapporti incrementali
+
+| Funzione | Rapporto incrementale in $0$, per $h\ne0$ | Comportamento per $h\to0$ |
+| :--- | :--- | :--- |
+| $f(x)=x\lvert x\rvert$ | $\displaystyle\frac{h\lvert h\rvert-0}{h}=\lvert h\rvert$ | Tende a $0$ da entrambi i lati |
+| $u(x)=\lvert x\rvert$ | $\displaystyle\frac{\lvert h\rvert-0}{h}=\frac{\lvert h\rvert}{h}$ | Vale $1$ a destra e $-1$ a sinistra: il limite non esiste |
+
+Infatti, per il solo valore assoluto:
+
+```math
+\frac{|h|}{h}=
+\begin{cases}
+\frac{h}{h}=1,&h>0,\\[4pt]
+\frac{-h}{h}=-1,&h<0.
+\end{cases}
+```
+
+Il limite della funzione $|x|$ in $0$ vale $0$, quindi $|x|$ è continua in $0$. Il limite del suo rapporto incrementale, invece, non esiste: **continuità e derivabilità riguardano due limiti diversi**.
