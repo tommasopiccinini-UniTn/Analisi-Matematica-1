@@ -2,7 +2,7 @@
 
 Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/2026**, sezione **5.1: La derivata, definizione, prime proprietà ed esempi**.
 
-> Sono raccolti **solo gli argomenti studiati finora** nella chat (slide 2–10 in `Lezione_20261021.pdf` e slide 11–12 in `Lezione_202621027.pdf`). I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
+> Sono raccolti gli argomenti studiati finora (slide 2–10 in `Lezione_20261021.pdf` e slide 11–18 in `Lezione_202621027.pdf`), insieme a una tabella di consultazione che anticipa alcune formule operative. I grafici qui sotto sono **schemi ricostruiti**, non scansioni delle slide originali.
 
 ## Indice
 
@@ -128,33 +128,33 @@ Questa è **l'equazione della retta tangente al grafico** di $f$ nel punto di as
 
 Una funzione **affine** è una funzione della forma
 
-$
+$$
 y=mx+q.
-$
+$$
 
 Fra tutte le rette che passano per $P_0=(x_0,f(x_0))$, se $f$ è derivabile in $x_0$, **la retta tangente è la migliore approssimante affine della funzione vicino a $x_0$**:
 
-$
+$$
 T(x)=f(x_0)+f'(x_0)(x-x_0).
-$
+$$
 
 Partiamo dalla definizione di derivata:
 
-$
+$$
 \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0).
-$
+$$
 
 Sottrarre il limite $f'(x_0)$ equivale a scrivere
 
-$
+$$
 \lim_{x\to x_0}\left[\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)\right]=0.
-$
+$$
 
 Mettendo tutto sotto lo stesso denominatore:
 
-$
+$$
 \boxed{\lim_{x\to x_0}\frac{f(x)-[f(x_0)+f'(x_0)(x-x_0)]}{x-x_0}=0}.
-$
+$$
 
 Nel numeratore c'è l'**errore di approssimazione** $f(x)-T(x)$; al denominatore c'è $x-x_0$. Significa che l'errore tende a zero **più rapidamente** di $x-x_0$.
 
@@ -168,23 +168,23 @@ In forma compatta: $f(x)=T(x)+o(x-x_0)$ per $x\to x_0$.
 
 Per definizione:
 
-$
+$$
 f'(1)=\lim_{x\to1}\frac{f(x)-f(1)}{x-1}
 =\lim_{x\to1}\frac{x^2-1}{x-1}.
-$
+$$
 
 La sostituzione diretta dà la forma indeterminata $0/0$. Si usa la **differenza di quadrati**, non il raccoglimento di $x$:
 
-$
+$$
 x^2-1=(x-1)(x+1).
-$
+$$
 
 Quindi
 
-$
+$$
 f'(1)=\lim_{x\to1}\frac{(x-1)(x+1)}{x-1}
 =\lim_{x\to1}(x+1)=\boxed{2}.
-$
+$$
 
 Dunque la tangente in $x_0=1$ ha **coefficiente angolare $m=f'(1)=2$**.
 
@@ -192,9 +192,9 @@ Dunque la tangente in $x_0=1$ ha **coefficiente angolare $m=f'(1)=2$**.
 
 La formula generale è
 
-$
+$$
 y=f(x_0)+f'(x_0)(x-x_0).
-$
+$$
 
 Per $f(x)=x^2$ e $x_0=1$:
 
@@ -203,9 +203,9 @@ Per $f(x)=x^2$ e $x_0=1$:
 
 L'equazione richiesta è
 
-$
+$$
 \boxed{y=1+2(x-1)}.
-$
+$$
 
 **Distinzione essenziale:** $f(1)$ è il valore della funzione nel punto, mentre $f'(1)$ è il coefficiente angolare della tangente in quel punto.
 
@@ -217,28 +217,28 @@ $
 
 **Teorema:** se una funzione è derivabile in un punto $x_0$, allora è continua in quel punto:
 
-$
+$$
 \boxed{f\text{ derivabile in }x_0\implies f\text{ continua in }x_0.}
-$
+$$
 
 **Idea della dimostrazione:** se $f$ è derivabile, il rapporto incrementale ha un limite finito $l=f'(x_0)$:
 
-$
+$$
 \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=l.
-$
+$$
 
 Per $x\neq x_0$, possiamo scrivere:
 
-$
+$$
 f(x)-f(x_0)=\underbrace{\frac{f(x)-f(x_0)}{x-x_0}}_{\to l}\cdot
 \underbrace{(x-x_0)}_{\to 0}.
-$
+$$
 
 Il primo fattore **è tutta la frazione**, non il denominatore da solo. Il secondo fattore tende a zero. Quindi
 
-$
+$$
 \lim_{x\to x_0}\big(f(x)-f(x_0)\big)=l\cdot 0=0,
-$
+$$
 
 ovvero $\lim_{x\to x_0}f(x)=f(x_0)$: è la definizione di continuità.
 
@@ -250,16 +250,16 @@ ovvero $\lim_{x\to x_0}f(x)=f(x_0)$: è la definizione di continuità.
 
 La funzione $f(x)=|x|$ è continua in $0$:
 
-$
+$$
 \lim_{x\to0}|x|=0=f(0).
-$
+$$
 
 Ma nel punto $0$ ha uno **spigolo**. Il rapporto incrementale da sinistra e da destra dà risultati diversi:
 
-$
+$$
 f'_-(0)=\lim_{x\to0^-}\frac{|x|}{x}=-1,\qquad
 f'_+(0)=\lim_{x\to0^+}\frac{|x|}{x}=+1.
-$
+$$
 
 Poiché i due limiti non coincidono, **non è derivabile in $0$**. Continuità significa assenza di salti; derivabilità richiede che la pendenza sia ben definita.
 
@@ -269,19 +269,19 @@ Poiché i due limiti non coincidono, **non è derivabile in $0$**. Continuità s
 
 - **Cuspide:** i rapporti incrementali da sinistra e destra tendono a infiniti di **segno opposto**. Un esempio è $f(x)=\sqrt{|x|}$ nel punto $0$:
 
-$
+$$
 \lim_{x\to0^-}\frac{\sqrt{|x|}}{x}=-\infty,\qquad
 \lim_{x\to0^+}\frac{\sqrt{|x|}}{x}=+\infty.
-$
+$$
 
 - **Tangente verticale:** i rapporti incrementali tendono allo **stesso infinito**. Un esempio è $f(x)=\sqrt[3]{x}$ nel punto $0$:
 
-$
+$$
 \lim_{x\to0^-}\frac{\sqrt[3]{x}}{x}
 =
 \lim_{x\to0^+}\frac{\sqrt[3]{x}}{x}
 =+\infty.
-$
+$$
 
 In entrambi i casi la **derivata ordinaria non esiste in $0$**, perché il limite del rapporto incrementale non è finito. Attenzione: anche nella cuspide i due rami hanno direzione verticale, ma le pendenze divergono con segni opposti.
 
@@ -293,16 +293,16 @@ In entrambi i casi la **derivata ordinaria non esiste in $0$**, perché il limit
 
 Un caso particolarmente sorprendente è la **funzione di Weierstrass**, presentata nelle slide come
 
-$
+$$
 \boxed{f(x)=\sum_{n=0}^{+\infty}a^n\cos(b^n\pi x)}
-$
+$$
 
 con i parametri scelti in modo che
 
-$
+$$
 a\in(0,1),\qquad b\in\mathbb N\text{ dispari},\qquad
 ab>1+\frac{3\pi}{2}.
-$
+$$
 
 **Proprietà:** la funzione è **continua in ogni punto**, ma **non è derivabile in alcun punto**.
 
@@ -315,6 +315,7 @@ La slide presenta questo esempio per mostrare che **la continuità non garantisc
 ## 13. Derivate elementari e regole di derivazione — griglia sintetica
 
 ### Derivate delle funzioni elementari
+
 **Lezione del 27/10/2026, slide 14–17/75.**
 
 | Funzione | Formula della derivata | Condizioni |
