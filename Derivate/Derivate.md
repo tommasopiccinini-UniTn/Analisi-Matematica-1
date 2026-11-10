@@ -323,10 +323,13 @@ Questo esempio mostra che **la continuità non garantisce la derivabilità, nepp
 | Funzione | Formula della derivata | Condizioni |
 | :--- | :--- | :--- |
 | Costante | $\displaystyle \frac{d}{dx}(c)=0$ | $c\in\mathbb R$ |
-| Potenza | $\displaystyle \frac{d}{dx}(x^n)=nx^{n-1}$ | $n\in\mathbb N^+$ |
+| Potenza (esponente naturale) | $\displaystyle \frac{d}{dx}(x^n)=nx^{n-1}$ | $n\in\mathbb N^+$ |
+| Potenza (esponente reale) | $\displaystyle \frac{d}{dx}(x^\alpha)=\alpha x^{\alpha-1}$ | $\alpha\in\mathbb R,\ x>0$ |
 | Reciproco | $\displaystyle \frac{d}{dx}\left(\frac1x\right)=-\frac1{x^2}$ | $x\ne0$ |
-| Esponenziale | $\displaystyle \frac{d}{dx}(e^x)=e^x$ | $x\in\mathbb R$ |
+| Esponenziale (base $e$) | $\displaystyle \frac{d}{dx}(e^x)=e^x$ | $x\in\mathbb R$ |
+| Esponenziale (base $a$) | $\displaystyle \frac{d}{dx}(a^x)=a^x\ln a$ | $a>0,\ x\in\mathbb R$ |
 | Logaritmo naturale | $\displaystyle \frac{d}{dx}(\ln x)=\frac1x$ | $x>0$ |
+| Logaritmo (base $a$) | $\displaystyle \frac{d}{dx}(\log_a x)=\frac1{x\ln a}$ | $a>0,\ a\ne1,\ x>0$ |
 | Seno | $\displaystyle \frac{d}{dx}(\sin x)=\cos x$ | Angoli in radianti |
 | Coseno | $\displaystyle \frac{d}{dx}(\cos x)=-\sin x$ | Angoli in radianti |
 
