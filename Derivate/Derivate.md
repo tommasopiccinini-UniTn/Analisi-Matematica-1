@@ -18,7 +18,7 @@ Appunti di **Analisi Matematica 1** — lezioni del **21/10/2026** e **27/10/202
 10. [Valore assoluto: continua ma non derivabile](#10-valore-assoluto-continua-ma-non-derivabile)
 11. [Cuspidi e tangenti verticali](#11-cuspidi-e-tangenti-verticali)
 12. [Funzione di Weierstrass: continua ovunque ma mai derivabile](#12-funzione-di-weierstrass-continua-ovunque-ma-mai-derivabile)
-13. [Regole di derivazione — tabella sintetica](#13-regole-di-derivazione--tabella-sintetica)
+13. [Derivate elementari e regole di derivazione — griglia sintetica](#13-derivate-elementari-e-regole-di-derivazione--griglia-sintetica)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -312,23 +312,38 @@ La slide presenta questo esempio per mostrare che **la continuità non garantisc
 
 ---
 
-## 13. Regole di derivazione — tabella sintetica
+## 13. Derivate elementari e regole di derivazione — griglia sintetica
 
-**Lezione del 27/10/2026, slide 14–18/75.** Formule viste fino alla regola di linearità; non sono ancora incluse le regole del prodotto e della catena.
+### Derivate delle funzioni elementari
+**Lezione del 27/10/2026, slide 14–17/75.**
 
-| Regola | Funzione | Derivata | Condizioni |
-| :--- | :--- | :--- | :--- |
-| Costante | $f(x)=c$ | $\boxed{f'(x)=0}$ | $c\in\mathbb R$ |
-| Potenza | $f(x)=x^n$ | $\boxed{f'(x)=nx^{n-1}}$ | $n\in\mathbb N^+$ |
-| Reciproco | $f(x)=\dfrac{1}{x}=x^{-1}$ | $\boxed{f'(x)=-\dfrac{1}{x^2}}$ | $x\ne0$ |
-| Esponenziale | $f(x)=e^x$ | $\boxed{f'(x)=e^x}$ | $x\in\mathbb R$ |
-| Logaritmo naturale | $f(x)=\log x=\ln x$ | $\boxed{f'(x)=\dfrac{1}{x}}$ | $x>0$ |
-| Seno | $f(x)=\sin x$ | $\boxed{f'(x)=\cos x}$ | $x$ in radianti |
-| Coseno | $f(x)=\cos x$ | $\boxed{f'(x)=-\sin x}$ | $x$ in radianti |
-| Linearità | $a f(x)+b g(x)$ | $\boxed{(af+bg)'=a f'+b g'}$ | $a,b$ costanti; $f,g$ derivabili |
+| Funzione | Formula della derivata | Condizioni |
+| :--- | :--- | :--- |
+| Costante | $\displaystyle \frac{d}{dx}(c)=0$ | $c\in\mathbb R$ |
+| Potenza | $\displaystyle \frac{d}{dx}(x^n)=nx^{n-1}$ | $n\in\mathbb N^+$ |
+| Reciproco | $\displaystyle \frac{d}{dx}\left(\frac1x\right)=-\frac1{x^2}$ | $x\ne0$ |
+| Esponenziale | $\displaystyle \frac{d}{dx}(e^x)=e^x$ | $x\in\mathbb R$ |
+| Logaritmo naturale | $\displaystyle \frac{d}{dx}(\ln x)=\frac1x$ | $x>0$ |
+| Seno | $\displaystyle \frac{d}{dx}(\sin x)=\cos x$ | Angoli in radianti |
+| Coseno | $\displaystyle \frac{d}{dx}(\cos x)=-\sin x$ | Angoli in radianti |
 
-**Notazione equivalente:** $f'(x)=D[f(x)]=\dfrac{d}{dx}f(x)$.
+### Regole operative di derivazione
+Nelle formule $f$ e $g$ sono funzioni derivabili e $a,b$ sono costanti reali.
+
+| Regola | Formula |
+| :--- | :--- |
+| Moltiplicazione per una costante | $\displaystyle (a f(x))'=a f'(x)$ |
+| Somma | $\displaystyle (f(x)+g(x))'=f'(x)+g'(x)$ |
+| Differenza | $\displaystyle (f(x)-g(x))'=f'(x)-g'(x)$ |
+| Linearità (forma generale) | $\displaystyle (a f(x)+b g(x))'=a f'(x)+b g'(x)$ |
+| Prodotto (Leibniz) | $\displaystyle (f(x)g(x))'=f'(x)g(x)+f(x)g'(x)$ |
+| Quoziente | $\displaystyle \left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$ |
+| Funzione composta (catena) | $\displaystyle (f(g(x)))'=f'(g(x))\,g'(x)$ |
+
+**Avanzamento rispetto alle slide:** costante, somma, differenza e linearità sono già state studiate (slide 18/75). La formula del **prodotto** è nella slide 19/75 e quella della **funzione composta** nella slide 20/75: sono riportate qui per avere una griglia completa, ma non sono ancora state spiegate. La formula del **quoziente** è un'aggiunta di riferimento, non ancora affrontata nelle slide studiate.
+
+**Notazione:** $\displaystyle f'(x)=D[f(x)]=\frac{d}{dx}f(x)$.
 
 ---
 
-**Per proseguire:** slide 19/75 della lezione del 27 ottobre (regola del prodotto).
+**Per proseguire nello studio:** slide 19/75 della lezione del 27 ottobre (regola del prodotto).
