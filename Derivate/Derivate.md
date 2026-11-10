@@ -21,6 +21,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 13. [Derivate elementari e regole di derivazione — griglia sintetica](#13-derivate-elementari-e-regole-di-derivazione--griglia-sintetica)
 14. [Regola del prodotto (Leibniz)](#14-regola-del-prodotto-leibniz)
 15. [Regola della catena](#15-regola-della-catena)
+16. [Derivate delle funzioni inverse](#16-derivate-delle-funzioni-inverse)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -383,3 +384,23 @@ Se $g$ è derivabile in $x$ e $f$ è derivabile in $g(x)$, allora:
 Le derivate da utilizzare sono $(\sin y)'=\cos y$ e $(x^2)'=2x$.
 
 **Attenzione ai segni:** $(\sin x)'=\cos x$, mentre $(\cos x)'=-\sin x$.
+
+## 16. Derivate delle funzioni inverse
+
+Se $f$ è invertibile, derivabile in $x_0$ e $f'(x_0)\ne 0$, la derivata della sua inversa nel punto $y_0=f(x_0)$ è:
+
+```math
+\boxed{(f^{-1})'(y_0)=\frac{1}{f'(x_0)}}
+```
+
+**Attenzione:** $f^{-1}$ indica la funzione inversa, non il reciproco $1/f$.
+
+### Derivata dell'arcoseno
+
+L'arcoseno è l'inversa del seno ristretto all'intervallo $[-\pi/2,\pi/2]$.
+
+| Funzione inversa | Derivata | Validità |
+| :--- | :--- | :--- |
+| $\arcsin x$ | $\displaystyle \boxed{(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}}$ | $-1<x<1$ |
+
+La radice deriva dall'identità trigonometrica $\sin^2 y+\cos^2 y=1$: nell'intervallo scelto, $\cos y\ge 0$, quindi $\cos y=\sqrt{1-\sin^2 y}$.
