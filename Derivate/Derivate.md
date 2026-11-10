@@ -24,6 +24,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 16. [Derivate delle funzioni inverse](#16-derivate-delle-funzioni-inverse)
 17. [Regola del quoziente](#17-regola-del-quoziente)
 18. [Esempio: prodotto con il valore assoluto](#18-esempio-prodotto-con-il-valore-assoluto)
+19. [Teorema di Fermat](#19-teorema-di-fermat)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -500,3 +501,34 @@ Infatti, per il solo valore assoluto:
 ```
 
 Il limite della funzione $|x|$ in $0$ vale $0$, quindi $|x|$ è continua in $0$. Il limite del suo rapporto incrementale, invece, non esiste: **continuità e derivabilità riguardano due limiti diversi**.
+
+## 19. Teorema di Fermat
+
+Sia $f:(a,b)\to\mathbb R$ e sia $x_0\in(a,b)$. Supponiamo che:
+
+- $x_0$ sia un punto di **massimo o minimo relativo** per $f$;
+- $f$ sia **derivabile in $x_0$**.
+
+Allora:
+
+```math
+\boxed{f'(x_0)=0}.
+```
+
+Il punto $x_0$ deve essere **interno**: deve essere possibile avvicinarsi a esso sia da sinistra sia da destra restando nel dominio. La derivabilità richiede che i due limiti del rapporto incrementale coincidano e siano finiti.
+
+**Significato geometrico:** in un estremo relativo interno in cui $f$ è derivabile, la retta tangente è orizzontale. La sua equazione è:
+
+```math
+y=f(x_0).
+```
+
+**Come si usa:** se $f$ è derivabile su un intervallo, per cercare i suoi massimi e minimi relativi interni si risolve:
+
+```math
+f'(x)=0.
+```
+
+Le soluzioni sono **candidati**: la condizione $f'(x_0)=0$ è necessaria nelle ipotesi del teorema, ma **non è sufficiente** per concludere che $x_0$ sia un massimo o un minimo relativo. Occorre verificarlo separatamente.
+
+Il teorema non si applica ai punti estremi del dominio né ai punti in cui $f$ non è derivabile.
