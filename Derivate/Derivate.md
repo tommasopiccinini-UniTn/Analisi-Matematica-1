@@ -415,38 +415,3 @@ Siano $f$ e $g$ derivabili nel punto $x$, con $g(x)\ne0$. Allora anche il loro q
 ```
 
 **Come si applica:** al numeratore si scrive la derivata del numeratore per il denominatore, meno il numeratore per la derivata del denominatore. Al denominatore si mette il quadrato del denominatore originale.
-
-### Dimostrazione
-
-Riscriviamo il quoziente come prodotto:
-
-```math
-\frac{f(x)}{g(x)}=f(x)\cdot\frac1{g(x)}.
-```
-
-Per derivare il reciproco usiamo la regola della catena. Ponendo $u(t)=1/t$, si ha $u'(t)=-1/t^2$, quindi:
-
-```math
-\left(\frac1{g(x)}\right)'=u'(g(x))\,g'(x)=-\frac{g'(x)}{[g(x)]^2}.
-```
-
-Applichiamo ora la regola del prodotto:
-
-```math
-\begin{aligned}
-\left(\frac{f(x)}{g(x)}\right)'
-&=\left(f(x)\cdot\frac1{g(x)}\right)'\\[4pt]
-&=f'(x)\frac1{g(x)}+f(x)\left(-\frac{g'(x)}{[g(x)]^2}\right)\\[4pt]
-&=\frac{f'(x)}{g(x)}-\frac{f(x)g'(x)}{[g(x)]^2}\\[4pt]
-&=\frac{f'(x)g(x)}{[g(x)]^2}-\frac{f(x)g'(x)}{[g(x)]^2}\\[4pt]
-&=\boxed{\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}}.
-\end{aligned}
-```
-
-Il passaggio al **denominatore comune** si ottiene moltiplicando numeratore e denominatore della prima frazione per $g(x)$:
-
-```math
-\frac{f'(x)}{g(x)}=\frac{f'(x)g(x)}{[g(x)]^2}.
-```
-
-**Il segno meno nella formula nasce dalla derivata del reciproco.**
