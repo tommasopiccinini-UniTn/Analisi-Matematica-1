@@ -669,3 +669,29 @@ f'(c)=m=\frac{f(b)-f(a)}{b-a}.
 ```
 
 Nel grafico in alto la tangente arancione e la secante verde sono quindi parallele. Se $f(a)=f(b)$, si ha $m=0$ e si ritrova la conclusione di Rolle.
+
+### Esempio del Tutor
+
+Nel grafico, $t$ è il tempo e $s(t)$ è la posizione dell'auto lungo il percorso. I due rilevamenti sono $(t_0,s_0)$ e $(t_1,s_1)$.
+
+![Posizione dell'auto nel tempo, secante della velocità media e tangente della velocità istantanea](../grafici/grafico_tutor_lagrange.png)
+
+La pendenza della secante nera è la velocità media sull'intero tratto.
+
+```math
+v_{\mathrm{media}}=\frac{s_1-s_0}{t_1-t_0}.
+```
+
+La pendenza della tangente rossa in $c$ è la velocità istantanea. Si ottiene dalla velocità media fra $c$ e $c+Delta t$, facendo tendere a zero il passo temporale $Delta t$.
+
+```math
+v(c)=s'(c)=\lim_{\Delta t\to0}\frac{s(c+\Delta t)-s(c)}{\Delta t}.
+```
+
+Se $s$ è continua su $[t_0,t_1]$ e derivabile su $(t_0,t_1)$, Lagrange garantisce un istante $c\in(t_0,t_1)$ in cui le due pendenze coincidono.
+
+```math
+v(c)=v_{\mathrm{media}}.
+```
+
+Per esempio, con una media di $120\,\mathrm{km/h}$ esiste un istante in cui la velocità è $120\,\mathrm{km/h}$. Se il limite è costante lungo il tratto e la media lo supera, la velocità in quell'istante supera lo stesso limite.
