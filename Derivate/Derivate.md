@@ -33,6 +33,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 25. [Studio di una funzione razionale](#25-studio-di-una-funzione-razionale)
 26. [Conteggio degli zeri con la monotonia](#26-conteggio-degli-zeri-con-la-monotonia)
 27. [Teorema di Cauchy](#27-teorema-di-cauchy)
+28. [Regola di de l’Hôpital](#28-regola-di-de-lhôpital)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -1034,4 +1035,64 @@ Da $0<c<x$ segue $c\to0$ quando $x\to0^+$. Il denominatore a destra tende a $2$,
 ```math
 \boxed{\lim_{x\to0^+}\frac{\sin x}{e^{2x}-1}
 =\frac{\cos0}{2e^0}=\frac12}.
+```
+
+## 28. Regola di de l’Hôpital
+
+Siano $f$ e $g$ derivabili su $(a,b)$, con $g'(x)\ne0$ per ogni $x\in(a,b)$. Gli estremi dell'intervallo possono essere infiniti. Se per $x\to a^+$ i due termini tendono entrambi a $0$ oppure hanno entrambi limite infinito, e se $f'/g'$ tende a un valore $L$ finito o infinito, allora
+
+```math
+\boxed{\lim_{x\to a^+}\frac{f(x)}{g(x)}
+=\lim_{x\to a^+}\frac{f'(x)}{g'(x)}=L}.
+```
+
+Lo stesso vale per $x\to b^-$. Per applicare la regola si controllano la forma indeterminata e la derivata del denominatore, poi si derivano separatamente numeratore e denominatore.
+
+### Dimostrazione per il caso 0/0 con estremo finito
+
+Supponiamo che $a$ sia finito e che $f(x)$ e $g(x)$ tendano a $0$ per $x\to a^+$. Estendiamo le due funzioni ponendo $f(a)=g(a)=0$. Le estensioni sono continue in $a$ proprio perché i limiti destri valgono $0$.
+
+Per ogni $x\in(a,b)$ possiamo applicare Cauchy su $[a,x]$. Si ottiene un punto $c_x\in(a,x)$ tale che
+
+```math
+\frac{f(x)}{g(x)}
+=\frac{f(x)-f(a)}{g(x)-g(a)}
+=\frac{f'(c_x)}{g'(c_x)}.
+```
+
+Poiché $0<c_x-a<x-a$, quando $x\to a^+$ si ha anche $c_x\to a^+$. Il rapporto delle derivate tende quindi a $L$ anche se valutato in $c_x$, e l'uguaglianza dà lo stesso limite per $f(x)/g(x)$.
+
+### Esempio con tre applicazioni
+
+Nel limite di $(x-\sin x)/x^3$ per $x\to0$, sia il rapporto iniziale sia i primi due rapporti derivati hanno la forma $0/0$. Le derivate dei denominatori sono rispettivamente $3x^2$, $6x$ e $6$, tutte diverse da zero per $x\ne0$. Possiamo applicare la regola su ciascun lato di $0$.
+
+```math
+\begin{aligned}
+\lim_{x\to0}\frac{x-\sin x}{x^3}
+&=\lim_{x\to0}\frac{1-\cos x}{3x^2}\\
+&=\lim_{x\to0}\frac{\sin x}{6x}\\
+&=\lim_{x\to0}\frac{\cos x}{6}
+=\frac16.
+\end{aligned}
+```
+
+### Esempio con un prodotto da trasformare
+
+Per $x\to+\infty$, il prodotto $x(\arctan x-\pi/2)$ ha forma $\infty\cdot0$. Lo riscriviamo come rapporto.
+
+```math
+x\left(\arctan x-\frac{\pi}{2}\right)
+=\frac{\arctan x-\pi/2}{1/x}.
+```
+
+Poiché $\arctan x\to\pi/2$ e $1/x\to0$, il rapporto ha forma $0/0$. La derivata del numeratore è $1/(1+x^2)$. Quella del denominatore è $-1/x^2$, diversa da zero per $x>0$.
+
+```math
+\begin{aligned}
+\lim_{x\to+\infty}x\left(\arctan x-\frac{\pi}{2}\right)
+&=\lim_{x\to+\infty}\frac{1/(1+x^2)}{-1/x^2}\\
+&=\lim_{x\to+\infty}\left(-\frac{x^2}{1+x^2}\right)\\
+&=\lim_{x\to+\infty}\left(-\frac{1}{1+1/x^2}\right)
+=-1.
+\end{aligned}
 ```
