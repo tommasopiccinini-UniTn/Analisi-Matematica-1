@@ -31,6 +31,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 23. [Monotonia e segno della derivata](#23-monotonia-e-segno-della-derivata)
 24. [Funzioni costanti su intervalli](#24-funzioni-costanti-su-intervalli)
 25. [Studio di una funzione razionale](#25-studio-di-una-funzione-razionale)
+26. [Conteggio degli zeri con la monotonia](#26-conteggio-degli-zeri-con-la-monotonia)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -910,3 +911,45 @@ f(c_+)&=\frac{\sqrt2}{4+2\sqrt2}
 ```
 
 ![Grafico della funzione razionale con asintoto, intervalli di monotonia e punti di minimo e massimo](../grafici/grafico_studio_funzione_razionale.png)
+
+## 26. Conteggio degli zeri con la monotonia
+
+Per contare le soluzioni reali di $x^3=12x-1$, portiamo tutti i termini a sinistra e cerchiamo gli zeri di $f(x)=x^3-12x+1$.
+
+Il polinomio è continuo e derivabile su $\mathbb R$. Raccogliendo $x^3$ si vede che la parentesi tende a $1$ a entrambi gli infiniti.
+
+```math
+f(x)=x^3\left(1-\frac{12}{x^2}+\frac{1}{x^3}\right)
+\qquad(x\ne0).
+```
+
+Quindi $f(x)\to-\infty$ per $x\to-\infty$ e $f(x)\to+\infty$ per $x\to+\infty$. La continuità garantisce almeno uno zero.
+
+Per contare gli zeri, studiamo il segno della derivata.
+
+```math
+f'(x)=3x^2-12=3(x^2-4)=3(x-2)(x+2).
+```
+
+La derivata è nulla in $x=-2$ e $x=2$. È positiva all'esterno di questi punti e negativa fra i due. Calcoliamo alcuni valori della funzione.
+
+```math
+\begin{aligned}
+f(-4)&=-64+48+1=-15,\\
+f(-2)&=-8+24+1=17,\\
+f(2)&=8-24+1=-15,\\
+f(4)&=64-48+1=17.
+\end{aligned}
+```
+
+Il teorema degli zeri garantisce almeno uno zero fra due punti con valori di segno opposto. La monotonia stretta garantisce al massimo uno zero nell'intervallo, perché due ascisse distinte danno valori distinti.
+
+| Intervallo di monotonia | Andamento di $f$ | Valori di segno opposto | Dove cade lo zero |
+| :--- | :--- | :--- | :--- |
+| $(-\infty,-2)$ | Crescente | $f(-4)<0<f(-2)$ | $(-4,-2)$ |
+| $(-2,2)$ | Decrescente | $f(-2)>0>f(2)$ | $(-2,2)$ |
+| $(2,+\infty)$ | Crescente | $f(2)<0<f(4)$ | $(2,4)$ |
+
+Poiché $f(-2)=17$ e $f(2)=-15$, i due punti critici sono esclusi dal conteggio. L'equazione ha **esattamente tre soluzioni reali**, una per ciascun intervallo di monotonia.
+
+![Grafico di x cubo meno 12 x più 1 con i tre zeri e gli intervalli di monotonia](../grafici/grafico_conteggio_zeri_cubica.png)
