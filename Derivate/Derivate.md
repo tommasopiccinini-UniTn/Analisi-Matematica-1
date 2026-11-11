@@ -25,6 +25,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 17. [Regola del quoziente](#17-regola-del-quoziente)
 18. [Esempio: prodotto con il valore assoluto](#18-esempio-prodotto-con-il-valore-assoluto)
 19. [Teorema di Fermat](#19-teorema-di-fermat)
+20. [Esempio di ricerca degli estremi](#20-esempio-di-ricerca-degli-estremi)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -532,3 +533,23 @@ f'(x)=0.
 Le soluzioni sono **candidati**: la condizione $f'(x_0)=0$ è necessaria nelle ipotesi del teorema, ma **non è sufficiente** per concludere che $x_0$ sia un massimo o un minimo relativo. Occorre verificarlo separatamente.
 
 Il teorema non si applica ai punti estremi del dominio né ai punti in cui $f$ non è derivabile.
+
+## 20. Esempio di ricerca degli estremi
+
+Per $f(x)=x\sqrt{x^2+1}$, il radicando soddisfa $x^2+1\ge1$, quindi $f$ è derivabile su $\mathbb R$. Le regole del prodotto e della catena danno
+
+```math
+f'(x)=\sqrt{x^2+1}+\frac{x^2}{\sqrt{x^2+1}}
+=\frac{2x^2+1}{\sqrt{x^2+1}}>0.
+```
+
+**Su $\mathbb R$**, il teorema di Fermat esclude massimi e minimi relativi, perché $f'$ è sempre positiva. Questo esclude anche gli estremi assoluti, che sarebbero anche relativi.
+
+**Su $[1,2]$**, entrambi i fattori $x$ e $\sqrt{x^2+1}$ sono positivi e strettamente crescenti. Il prodotto è quindi strettamente crescente e vale $f(1)\le f(x)\le f(2)$ per ogni $x\in[1,2]$.
+
+| Estremo assoluto su $[1,2]$ | Punto | Valore |
+| :--- | :--- | :--- |
+| Minimo | $x=1$ | $f(1)=\sqrt{2}$ |
+| Massimo | $x=2$ | $f(2)=2\sqrt{5}$ |
+
+I due punti sono ai bordi del dominio ristretto. Il teorema di Fermat richiede un punto interno.
