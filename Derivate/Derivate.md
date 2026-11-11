@@ -32,6 +32,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 24. [Funzioni costanti su intervalli](#24-funzioni-costanti-su-intervalli)
 25. [Studio di una funzione razionale](#25-studio-di-una-funzione-razionale)
 26. [Conteggio degli zeri con la monotonia](#26-conteggio-degli-zeri-con-la-monotonia)
+27. [Teorema di Cauchy](#27-teorema-di-cauchy)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -953,3 +954,84 @@ Il teorema degli zeri garantisce almeno uno zero fra due punti con valori di seg
 Poiché $f(-2)=17$ e $f(2)=-15$, i due punti critici sono esclusi dal conteggio. L'equazione ha **esattamente tre soluzioni reali**, una per ciascun intervallo di monotonia.
 
 ![Grafico di x cubo meno 12 x più 1 con i tre zeri e gli intervalli di monotonia](../grafici/grafico_conteggio_zeri_cubica.png)
+
+## 27. Teorema di Cauchy
+
+Siano $a<b$ e $f,g:[a,b]\to\mathbb R$ continue su $[a,b]$ e derivabili su $(a,b)$. Esiste almeno un $c\in(a,b)$ per cui
+
+```math
+\boxed{[f(b)-f(a)]\,g'(c)=[g(b)-g(a)]\,f'(c)}.
+```
+
+### Dimostrazione
+
+Poniamo $A=f(b)-f(a)$ e $B=g(b)-g(a)$. Consideriamo la funzione $h(t)=A\,g(t)-B\,f(t)$, che è continua su $[a,b]$ e derivabile su $(a,b)$.
+
+```math
+\begin{aligned}
+h(b)-h(a)
+&=A[g(b)-g(a)]-B[f(b)-f(a)]\\
+&=AB-BA=0.
+\end{aligned}
+```
+
+Quindi $h(a)=h(b)$. Per Rolle esiste $c\in(a,b)$ tale che
+
+```math
+0=h'(c)=A\,g'(c)-B\,f'(c).
+```
+
+Portando $B\,f'(c)$ a destra e sostituendo $A$ e $B$ si ottiene la formula di Cauchy.
+
+### Forma in frazioni e significato geometrico
+
+Se $g'(t)\ne0$ per ogni $t\in(a,b)$, allora $g(b)-g(a)\ne0$. Infatti, l'uguaglianza $g(a)=g(b)$ permetterebbe di applicare Rolle a $g$ e darebbe un punto interno con derivata nulla. Possiamo quindi dividere per $[g(b)-g(a)]g'(c)$.
+
+```math
+\boxed{\frac{f(b)-f(a)}{g(b)-g(a)}
+=\frac{f'(c)}{g'(c)}}.
+```
+
+Nel disegno ogni valore del parametro $t$ individua il punto $(g(t),f(t))$. L'ascissa è $g(t)$ e l'ordinata è $f(t)$. Il rapporto a sinistra è la pendenza della secante verde tra i due estremi.
+
+Per la tangente, consideriamo lo stesso piccolo passo $\Delta t$ nelle due coordinate. Dividendo sia la variazione verticale sia quella orizzontale per $\Delta t$, si vede da dove viene il rapporto a destra.
+
+```math
+\frac{f(c+\Delta t)-f(c)}{g(c+\Delta t)-g(c)}
+=
+\frac{[f(c+\Delta t)-f(c)]/\Delta t}{[g(c+\Delta t)-g(c)]/\Delta t}
+\longrightarrow\frac{f'(c)}{g'(c)}
+\qquad(\Delta t\to0).
+```
+
+Le tangenti rosse illustrano il parallelismo con la secante.
+
+![Disegno della lezione con curva parametrica, secante verde e tangenti rosse parallele](../grafici/grafico_teorema_cauchy.png)
+
+Con $g(t)=t$ si ha $g(b)-g(a)=b-a$ e $g'(c)=1$. La formula restituisce il teorema di Lagrange.
+
+### Applicazione a un limite nella forma 0/0
+
+Se $f(a)=g(a)=0$ e valgono le ipotesi della forma in frazioni su $[a,x]$, Cauchy dà $f(x)/g(x)=f'(c)/g'(c)$ per un $c$ tra $a$ e $x$. Quando $x\to a^+$ anche $c\to a$. Questo passaggio è alla base della regola di de l'Hôpital.
+
+Per esempio, consideriamo $\displaystyle\lim_{x\to0^+}\frac{\sin x}{e^{2x}-1}$. La sostituzione in $0$ dà la forma $0/0$. Poniamo $f(t)=\sin t$ e $g(t)=e^{2t}-1$. Entrambe sono continue e derivabili su $\mathbb R$ e valgono $0$ in $t=0$.
+
+```math
+f'(t)=\cos t,\qquad
+g'(t)=e^{2t}\cdot 2=2e^{2t}>0.
+```
+
+Per ogni $x>0$, Cauchy su $[0,x]$ dà un $c\in(0,x)$ tale che
+
+```math
+\frac{\sin x}{e^{2x}-1}
+=\frac{f(x)-f(0)}{g(x)-g(0)}
+=\frac{\cos c}{2e^{2c}}.
+```
+
+Da $0<c<x$ segue $c\to0$ quando $x\to0^+$. Il denominatore a destra tende a $2$, quindi
+
+```math
+\boxed{\lim_{x\to0^+}\frac{\sin x}{e^{2x}-1}
+=\frac{\cos0}{2e^0}=\frac12}.
+```
