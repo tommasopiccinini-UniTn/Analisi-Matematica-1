@@ -28,6 +28,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 20. [Esempio di ricerca degli estremi](#20-esempio-di-ricerca-degli-estremi)
 21. [Teorema di Rolle](#21-teorema-di-rolle)
 22. [Teorema di Lagrange](#22-teorema-di-lagrange)
+23. [Monotonia e segno della derivata](#23-monotonia-e-segno-della-derivata)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -695,3 +696,52 @@ v(c)=v_{\mathrm{media}}.
 ```
 
 Per esempio, con una media di $120\,\mathrm{km/h}$ esiste un istante in cui la velocità è $120\,\mathrm{km/h}$. Se il limite è costante lungo il tratto e la media lo supera, la velocità in quell'istante supera lo stesso limite.
+
+## 23. Monotonia e segno della derivata
+
+Sia $f:(a,b)\to\mathbb R$ derivabile. Le due condizioni di ogni riga sono equivalenti. Qui crescente e decrescente sono intesi in senso non stretto.
+
+| Segno della derivata su $(a,b)$ | Monotonia su $(a,b)$ |
+| :--- | :--- |
+| $f'(x)\ge0$ per ogni $x$ | Crescente. Per ogni $x_1<x_2$ vale $f(x_1)\le f(x_2)$. |
+| $f'(x)\le0$ per ogni $x$ | Decrescente. Per ogni $x_1<x_2$ vale $f(x_1)\ge f(x_2)$. |
+
+### Dal segno della derivata alla monotonia
+
+Scegliamo $a<x_1<x_2<b$. La derivabilità di $f$ garantisce la continuità su $[x_1,x_2]$. Per Lagrange esiste $c\in(x_1,x_2)$ tale che
+
+```math
+f'(c)=\frac{f(x_2)-f(x_1)}{x_2-x_1}
+\quad\Longrightarrow\quad
+f(x_2)-f(x_1)=f'(c)(x_2-x_1).
+```
+
+Poiché $x_2-x_1>0$, la variazione $f(x_2)-f(x_1)$ ha lo stesso segno di $f'(c)$. Se $f'\ge0$ in tutto l'intervallo, otteniamo $f(x_2)\ge f(x_1)$. Se $f'\le0$, otteniamo $f(x_2)\le f(x_1)$.
+
+### Dalla monotonia al segno della derivata
+
+Fissiamo $x\in(a,b)$ e prendiamo un passo verso destra $\Delta x>0$ con $x+\Delta x\in(a,b)$. Se $f$ è crescente, $f(x+\Delta x)-f(x)\ge0$, quindi
+
+```math
+\frac{f(x+\Delta x)-f(x)}{\Delta x}\ge0.
+```
+
+Facendo tendere $\Delta x$ a zero da destra, il rapporto tende a $f'(x)$ perché $f$ è derivabile in $x$. Si ottiene $f'(x)\ge0$. Per una funzione decrescente il numeratore è $\le0$, quindi il limite dà $f'(x)\le0$.
+
+### Monotonia stretta e tangente orizzontale
+
+Nella formula di Lagrange, $f'(x)>0$ in ogni punto dell'intervallo implica $f(x_2)>f(x_1)$ per ogni $x_2>x_1$. La funzione è strettamente crescente. Analogamente, $f'(x)<0$ in ogni punto implica decrescenza stretta.
+
+La cubica $f(x)=x^3$ è strettamente crescente su $\mathbb R$ e ha $f'(0)=0$. Infatti $f'(x)=3x^2>0$ sui due intervalli $(-\infty,0)$ e $(0,+\infty)$. I valori a sinistra di $0$ sono negativi e quelli a destra sono positivi, con $f(0)=0$.
+
+Partendo da $0$, ogni passo $\Delta x>0$ porta a un'altezza maggiore di $f(0)$. La pendenza sul passo è positiva e tende a zero quando il passo si accorcia.
+
+```math
+\begin{aligned}
+f(\Delta x)-f(0)&=(\Delta x)^3>0,\\
+\frac{f(\Delta x)-f(0)}{\Delta x}&=(\Delta x)^2\longrightarrow0
+\qquad(\Delta x\to0^+).
+\end{aligned}
+```
+
+![Grafico della cubica strettamente crescente con tangente orizzontale nell'origine](../grafici/grafico_cubica_monotonia.png)
