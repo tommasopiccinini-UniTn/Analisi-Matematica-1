@@ -27,6 +27,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 19. [Teorema di Fermat](#19-teorema-di-fermat)
 20. [Esempio di ricerca degli estremi](#20-esempio-di-ricerca-degli-estremi)
 21. [Teorema di Rolle](#21-teorema-di-rolle)
+22. [Teorema di Lagrange](#22-teorema-di-lagrange)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -587,3 +588,84 @@ M=f(x_M)=\max_{x\in[a,b]}f(x).
 2. **Se $f(a)=M$ e $m=M$**, per ogni $x\in[a,b]$ vale $M=m\le f(x)\le M$. Dunque $f(x)=M$ su tutto l'intervallo. La funzione è costante e $f'(c)=0$ in ogni punto $c\in(a,b)$.
 
 3. **Se $f(a)=M$ e $m<M$**, si ha $f(a)=f(b)=M>m$. Il punto $x_m$ in cui $f(x_m)=m$ è quindi interno. Poiché è un minimo relativo e $f$ è derivabile in $x_m$, per Fermat $f'(x_m)=0$. Si può scegliere $c=x_m$.
+
+## 22. Teorema di Lagrange
+
+Sia $f:[a,b]\to\mathbb R$ continua su $[a,b]$ e derivabile su $(a,b)$, con $a<b$. Esiste almeno un $c\in(a,b)$ tale che
+
+```math
+\boxed{f'(c)=\frac{f(b)-f(a)}{b-a}}.
+```
+
+La tangente alla curva in $(c,f(c))$ ha la stessa pendenza della secante che unisce $(a,f(a))$ e $(b,f(b))$.
+
+![Grafici allineati della curva con la secante e del dislivello tra le due](../grafici/lagrange_due_grafici.png)
+
+Nel grafico in alto la freccia viola misura il dislivello fra la curva rossa e la secante verde **alla stessa ascissa**. Il grafico in basso riporta quel dislivello per ogni $x$.
+
+### La secante e il dislivello
+
+Indichiamo con $m$ la pendenza della secante e con $g(x)$ la sua altezza all'ascissa $x$.
+
+```math
+m=\frac{f(b)-f(a)}{b-a},
+\qquad
+g(x)=f(a)+m(x-a).
+```
+
+All'ascissa $a$ lo spostamento $x-a$ vale zero. All'ascissa $b$ il prodotto $m(b-a)$ è il dislivello $f(b)-f(a)$.
+
+```math
+\begin{aligned}
+g(a)&=f(a)+m(a-a)=f(a),\\
+g(b)&=f(a)+m(b-a)=f(a)+f(b)-f(a)=f(b).
+\end{aligned}
+```
+
+La curva e la retta hanno quindi la stessa altezza agli estremi. La funzione dislivello $h$ vale zero in entrambi.
+
+```math
+h(x)=f(x)-g(x),\qquad
+h(a)=f(a)-g(a)=0,\qquad
+h(b)=f(b)-g(b)=0.
+```
+
+### Dalle altezze alle pendenze
+
+Spostiamo la freccia da $x_1$ a $x_2$, con passo orizzontale $\Delta x=x_2-x_1>0$. Le due punte si spostano orizzontalmente dello stesso passo. Se la punta sulla curva sale di $3$ e quella sulla secante di $2$, la freccia si allunga di $3-2=1$.
+
+```math
+\begin{aligned}
+\Delta h
+&=h(x_2)-h(x_1)\\
+&=[f(x_2)-f(x_1)]-[g(x_2)-g(x_1)]\\
+&=\Delta f-\Delta g.
+\end{aligned}
+```
+
+Per ottenere le pendenze sul tratto, dividiamo tutte le variazioni in altezza per lo stesso passo.
+
+```math
+\frac{\Delta h}{\Delta x}
+=\frac{\Delta f}{\Delta x}-\frac{\Delta g}{\Delta x}.
+```
+
+Facendo tendere il passo a zero in un punto interno, si ottiene la relazione tra le pendenze delle tangenti.
+
+```math
+h'(x)=f'(x)-g'(x).
+```
+
+### Applicazione di Rolle
+
+La secante $g$ è una funzione affine. In base alle ipotesi su $f$, la differenza $h=f-g$ è continua su $[a,b]$ e derivabile su $(a,b)$. Poiché $h(a)=h(b)=0$, per Rolle esiste un punto $c\in(a,b)$ con $h'(c)=0$. Nel grafico in basso la tangente al dislivello in $c$ è orizzontale.
+
+La secante ha pendenza costante $g'(x)=m$. Nel punto $c$ si ha
+
+```math
+0=h'(c)=f'(c)-g'(c)=f'(c)-m
+\quad\Longrightarrow\quad
+f'(c)=m=\frac{f(b)-f(a)}{b-a}.
+```
+
+Nel grafico in alto la tangente arancione e la secante verde sono quindi parallele. Se $f(a)=f(b)$, si ha $m=0$ e si ritrova la conclusione di Rolle.
