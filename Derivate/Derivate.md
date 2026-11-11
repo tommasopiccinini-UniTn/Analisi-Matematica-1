@@ -29,6 +29,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 21. [Teorema di Rolle](#21-teorema-di-rolle)
 22. [Teorema di Lagrange](#22-teorema-di-lagrange)
 23. [Monotonia e segno della derivata](#23-monotonia-e-segno-della-derivata)
+24. [Funzioni costanti su intervalli](#24-funzioni-costanti-su-intervalli)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -745,3 +746,104 @@ f(\Delta x)-f(0)&=(\Delta x)^3>0,\\
 ```
 
 ![Grafico della cubica strettamente crescente con tangente orizzontale nell'origine](../grafici/grafico_cubica_monotonia.png)
+
+## 24. Funzioni costanti su intervalli
+
+Sia $f$ derivabile su un intervallo $I=(a,b)$. Il criterio è
+
+```math
+\boxed{f\text{ costante su }I
+\quad\Longleftrightarrow\quad
+f'(x)=0\ \text{per ogni }x\in I.}
+```
+
+Se $f(x)=k$ su $I$, il rapporto incrementale è $(k-k)/\Delta x=0$ per ogni passo ammesso. Il suo limite dà $f'(x)=0$.
+
+Se $f'(x)=0$ su $I$, valgono sia $f'\ge0$ sia $f'\le0$. Per il criterio di monotonia, per ogni $x_1<x_2$ in $I$ si ottengono entrambe le disuguaglianze
+
+```math
+f(x_1)\le f(x_2),\qquad f(x_1)\ge f(x_2)
+\quad\Longrightarrow\quad f(x_1)=f(x_2).
+```
+
+Per trovare il valore costante si sceglie un punto comodo $x_0\in I$ e si calcola $f(x_0)$. Allora $f(x)=f(x_0)$ per ogni $x\in I$.
+
+### Differenza di due logaritmi
+
+Per $f(x)=\ln(2x)-\ln x$ con $x>0$, la catena dà
+
+```math
+f'(x)=\frac{1}{2x}\cdot 2-\frac1x
+=\frac1x-\frac1x=0.
+```
+
+Calcoliamo il valore in $x=1$.
+
+```math
+f(1)=\ln(2\cdot1)-\ln1=\ln2-0=\ln2,
+\qquad f(x)=\ln2\quad(x>0).
+```
+
+In alto la freccia mostra la differenza di altezza dei logaritmi alla stessa ascissa. In basso è riportata quella differenza per ogni $x$.
+
+![I grafici dei due logaritmi e della loro differenza costante](../grafici/funzione_costante_logaritmi.png)
+
+### Somma di arcoseno e arcocoseno
+
+Per $f(x)=\arcsin x+\arccos x$ su $(-1,1)$, le due derivate si cancellano.
+
+```math
+f'(x)=\frac{1}{\sqrt{1-x^2}}-\frac{1}{\sqrt{1-x^2}}=0.
+```
+
+Poiché $\sin 0=0$ e $\cos(\pi/2)=0$, la valutazione in $x=0$ dà il valore comune.
+
+```math
+f(x)=f(0)=\arcsin0+\arccos0
+=0+\frac{\pi}{2}=\frac{\pi}{2}
+\qquad(-1<x<1).
+```
+
+Per esempio, il risultato permette di calcolare $\arcsin(0{,}4)+\arccos(0{,}4)=\pi/2$ usando il valore in $0$.
+
+### Somma di arcotangenti su due intervalli
+
+La funzione $f(x)=\arctan x+\arctan(1/x)$ è definita per $x\ne0$. Con la regola della catena e $(1/x)'=-1/x^2$ otteniamo
+
+```math
+\begin{aligned}
+f'(x)&=\frac1{1+x^2}
++\frac1{1+1/x^2}\left(-\frac1{x^2}\right)\\
+&=\frac1{1+x^2}
++\frac{x^2}{x^2+1}\left(-\frac1{x^2}\right)\\
+&=\frac1{1+x^2}-\frac1{1+x^2}=0.
+\end{aligned}
+```
+
+Il criterio si applica separatamente a $(-\infty,0)$ e $(0,+\infty)$. Per ciascun intervallo scegliamo un punto in cui $\arctan(\pm1)=\pm\pi/4$.
+
+```math
+\begin{aligned}
+f(-1)&=-\frac{\pi}{4}-\frac{\pi}{4}=-\frac{\pi}{2},\\
+f(1)&=\frac{\pi}{4}+\frac{\pi}{4}=\frac{\pi}{2}.
+\end{aligned}
+\qquad
+f(x)=\begin{cases}
+-\dfrac{\pi}{2},&x<0,\\[4pt]
+\dfrac{\pi}{2},&x>0.
+\end{cases}
+```
+
+Nel pannello in alto la viola è la somma delle ordinate rossa e verde alla stessa $x$. In basso è rappresentata la somma delle arcotangenti, con un'altezza costante per ciascuno dei due intervalli.
+
+![Somma di arcoseno e arcocoseno e somma di arcotangenti su due intervalli separati](../grafici/funzioni_costanti_trigonometriche.png)
+
+### Applicazione al distacco tra due auto
+
+Siano $s_1(t)$ e $s_2(t)$ le posizioni di due auto lungo lo stesso percorso orientato. Se le loro velocità coincidono a ogni istante di un intervallo, il distacco $d(t)=s_2(t)-s_1(t)$ ha derivata
+
+```math
+d'(t)=s_2'(t)-s_1'(t)=v_2(t)-v_1(t)=0.
+```
+
+Il distacco è quindi costante. Se inizialmente vale $30\,\mathrm{m}$, vale $30\,\mathrm{m}$ per tutto l'intervallo, anche se la velocità comune cambia nel tempo.
