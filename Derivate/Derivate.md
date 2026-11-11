@@ -26,6 +26,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 18. [Esempio: prodotto con il valore assoluto](#18-esempio-prodotto-con-il-valore-assoluto)
 19. [Teorema di Fermat](#19-teorema-di-fermat)
 20. [Esempio di ricerca degli estremi](#20-esempio-di-ricerca-degli-estremi)
+21. [Teorema di Rolle](#21-teorema-di-rolle)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -553,3 +554,36 @@ f'(x)=\sqrt{x^2+1}+\frac{x^2}{\sqrt{x^2+1}}
 | Massimo | $x=2$ | $f(2)=2\sqrt{5}$ |
 
 I due punti sono ai bordi del dominio ristretto. Il teorema di Fermat richiede un punto interno.
+
+## 21. Teorema di Rolle
+
+Sia $f:[a,b]\to\mathbb R$ continua su $[a,b]$ e derivabile su $(a,b)$, con $a<b$. Se $f(a)=f(b)$, allora
+
+```math
+\boxed{\exists\,c\in(a,b)\quad\text{tale che}\quad f'(c)=0}.
+```
+
+La condizione $f'(c)=0$ corrisponde a una tangente orizzontale nel punto $(c,f(c))$.
+
+### Dimostrazione
+
+**Annotazione sul teorema di Weierstrass.** Una funzione continua su un intervallo chiuso e limitato $[a,b]$ raggiunge il minimo e il massimo assoluti.
+
+```math
+\exists\,x_m,x_M\in[a,b]\quad\text{tali che}\quad
+f(x_m)\le f(x)\le f(x_M)\qquad\forall x\in[a,b].
+```
+
+I valori raggiunti in questi punti sono
+
+```math
+m=f(x_m)=\min_{x\in[a,b]}f(x),
+\qquad
+M=f(x_M)=\max_{x\in[a,b]}f(x).
+```
+
+1. **Se $f(a)<M$**, anche $f(b)=f(a)<M$. Il punto $x_M$ in cui $f(x_M)=M$ è quindi interno. Poiché è un massimo relativo e $f$ è derivabile in $x_M$, per Fermat $f'(x_M)=0$. Si può scegliere $c=x_M$.
+
+2. **Se $f(a)=M$ e $m=M$**, per ogni $x\in[a,b]$ vale $M=m\le f(x)\le M$. Dunque $f(x)=M$ su tutto l'intervallo. La funzione è costante e $f'(c)=0$ in ogni punto $c\in(a,b)$.
+
+3. **Se $f(a)=M$ e $m<M$**, si ha $f(a)=f(b)=M>m$. Il punto $x_m$ in cui $f(x_m)=m$ è quindi interno. Poiché è un minimo relativo e $f$ è derivabile in $x_m$, per Fermat $f'(x_m)=0$. Si può scegliere $c=x_m$.
