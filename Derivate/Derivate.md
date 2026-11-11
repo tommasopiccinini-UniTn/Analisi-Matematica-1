@@ -30,6 +30,7 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 22. [Teorema di Lagrange](#22-teorema-di-lagrange)
 23. [Monotonia e segno della derivata](#23-monotonia-e-segno-della-derivata)
 24. [Funzioni costanti su intervalli](#24-funzioni-costanti-su-intervalli)
+25. [Studio di una funzione razionale](#25-studio-di-una-funzione-razionale)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -847,3 +848,65 @@ d'(t)=s_2'(t)-s_1'(t)=v_2(t)-v_1(t)=0.
 ```
 
 Il distacco è quindi costante. Se inizialmente vale $30\,\mathrm{m}$, vale $30\,\mathrm{m}$ per tutto l'intervallo, anche se la velocità comune cambia nel tempo.
+
+## 25. Studio di una funzione razionale
+
+```math
+f(x)=\frac{x-1}{x^2+1}.
+```
+
+Il denominatore è sempre positivo perché $x^2+1\ge1$. La funzione è definita e derivabile su tutto $\mathbb R$.
+
+### Limiti e intersezioni con gli assi
+
+Dividendo numeratore e denominatore per $x^2$ si ottiene
+
+```math
+\frac{x-1}{x^2+1}
+=\frac{1/x-1/x^2}{1+1/x^2}
+\longrightarrow 0
+\qquad(x\to\pm\infty).
+```
+
+I limiti indicano come disegnare i rami lontani del grafico. In questo caso entrambi si avvicinano all'asintoto orizzontale $y=0$. Il segno di $f$ coincide con quello di $x-1$, quindi il ramo sinistro si avvicina da sotto e quello destro da sopra.
+
+Le intersezioni con gli assi sono $(0,-1)$ e $(1,0)$, perché $f(0)=-1$ e $f(x)=0$ equivale a $x-1=0$.
+
+### Monotonia ed estremi relativi
+
+Con la regola del quoziente, usando $(x-1)'=1$ e $(x^2+1)'=2x$, si ottiene
+
+```math
+\begin{aligned}
+f'(x)
+&=\frac{1\cdot(x^2+1)-(x-1)\cdot2x}{(x^2+1)^2}\\
+&=\frac{x^2+1-2x^2+2x}{(x^2+1)^2}\\
+&=\frac{-x^2+2x+1}{(x^2+1)^2}
+=\frac{2-(x-1)^2}{(x^2+1)^2}.
+\end{aligned}
+```
+
+Il denominatore è positivo. Il numeratore è nullo per $(x-1)^2=2$, quindi i punti critici sono $c_-=1-\sqrt2$ e $c_+=1+\sqrt2$. Per $-\sqrt2<x-1<\sqrt2$, il quadrato $(x-1)^2$ è minore di $2$ e $f'$ è positiva. Fuori dai due punti critici e dall'intervallo fra loro è negativa.
+
+| Intervallo | Segno di $f'$ | Andamento di $f$ |
+| :--- | :---: | :--- |
+| $(-\infty,c_-)$ | $-$ | Decrescente |
+| $(c_-,c_+)$ | $+$ | Crescente |
+| $(c_+,+\infty)$ | $-$ | Decrescente |
+
+In $c_-$ la funzione passa da decrescente a crescente, quindi ha un minimo relativo. In $c_+$ passa da crescente a decrescente, quindi ha un massimo relativo.
+
+Le ordinate si calcolano nella funzione $f$. I denominatori valgono $(1\pm\sqrt2)^2+1=4\pm2\sqrt2$. Razionalizzando con i coniugati si ricava
+
+```math
+\begin{aligned}
+f(c_-)&=\frac{-\sqrt2}{4-2\sqrt2}
+=\frac{-\sqrt2(2+\sqrt2)}{2(4-2)}
+=-\frac{1+\sqrt2}{2},\\[4pt]
+f(c_+)&=\frac{\sqrt2}{4+2\sqrt2}
+=\frac{\sqrt2(2-\sqrt2)}{2(4-2)}
+=\frac{\sqrt2-1}{2}.
+\end{aligned}
+```
+
+![Grafico della funzione razionale con asintoto, intervalli di monotonia e punti di minimo e massimo](../grafici/grafico_studio_funzione_razionale.png)
