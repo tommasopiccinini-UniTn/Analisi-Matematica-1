@@ -1236,3 +1236,38 @@ Per la derivata seconda in $0$ si studia
 Il primo termine tende a $0$ perché $|3x\sin(1/x)|\le 3|x|$. Il coseno oscilla, quindi il rapporto incrementale di $f'$ è privo di limite e manca la derivata seconda in $0$.
 
 [Lezione del 10 novembre, slide 59–60 e annotazioni](../Lezioni/Lezione_20261110.pdf)
+
+## 31. Convessità e concavità
+
+Su un intervallo $I$, una funzione è **convessa** se il segmento tra due punti qualsiasi del grafico sta sopra il grafico o coincide con esso. È **concava** se il segmento sta sotto o coincide con il grafico.
+
+Per $x_1,x_2\in I$ e $t\in[0,1]$, l'ascissa è $x=(1-t)x_1+tx_2=x_1+t(x_2-x_1)$. Il parametro $t$ indica la frazione della distanza da $x_1$ a $x_2$. Con $t=0$ si è in $x_1$, con $t=1/2$ a metà e con $t=1$ in $x_2$.
+
+```math
+\underbrace{f((1-t)x_1+tx_2)}_{\text{altezza del grafico}}
+\le
+\underbrace{(1-t)f(x_1)+tf(x_2)}_{\text{altezza del segmento}}.
+```
+
+La disuguaglianza deve valere per ogni coppia $x_1,x_2$ e ogni $t$. Per la concavità si inverte il verso. Per esempio, la convessità di $f(x)=|x|$ segue dalla disuguaglianza triangolare $|(1-t)x_1+tx_2|\le(1-t)|x_1|+t|x_2|$.
+
+### Criteri con le derivate
+
+Se $f$ è derivabile su $I$, è convessa se e solo se $f'$ è non decrescente. In tal caso il grafico sta sopra ogni tangente, cioè $f(x)\ge f(a)+f'(a)(x-a)$ per $x,a\in I$. Per una funzione concava $f'$ è non crescente e il grafico sta sotto le tangenti.
+
+Se $f$ è derivabile due volte su $I$, si può controllare il segno della derivata seconda.
+
+```math
+\begin{aligned}
+f''(x)\ge0\quad\forall x\in I &\iff f\text{ convessa su }I,\\
+f''(x)\le0\quad\forall x\in I &\iff f\text{ concava su }I.
+\end{aligned}
+```
+
+### Esempio con due parabole
+
+Per $f(x)=x^2$, scegliamo $x_1=0$, $x_2=2$ e $t=1/2$. L'ascissa è $x=1$, il grafico ha altezza $f(1)=1$ e il segmento ha altezza $(f(0)+f(2))/2=2$. Il criterio conferma la convessità su $\mathbb R$ perché $f''(x)=2$.
+
+Per $g(x)=-x^2$ le altezze a $x=1$ sono $-1$ sul grafico e $-2$ sul segmento. Il criterio dà la concavità su $\mathbb R$ perché $g''(x)=-2$.
+
+[Lezione del 10 novembre, slide 61–65](../Lezioni/Lezione_20261110.pdf)
