@@ -34,6 +34,11 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 26. [Conteggio degli zeri con la monotonia](#26-conteggio-degli-zeri-con-la-monotonia)
 27. [Teorema di Cauchy](#27-teorema-di-cauchy)
 28. [Regola di de l’Hôpital](#28-regola-di-de-lhôpital)
+29. [Criterio di derivabilità](#29-criterio-di-derivabilità)
+30. [Derivate successive](#30-derivate-successive)
+31. [Convessità e concavità](#31-convessità-e-concavità)
+32. [Punti di flesso](#32-punti-di-flesso)
+33. [Riepilogo finale](#33-riepilogo-finale)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -1294,3 +1299,118 @@ Il punto $(0,0)$ è un flesso. La tangente è orizzontale perché $f'(0)=0$.
 Per $f(x)=x^4$, la derivata $f''(x)=12x^2$ si annulla in $0$ ed è positiva su entrambi i lati. Il grafico resta convesso. Per $f(x)=e^x$, la derivata $f''(x)=e^x$ è positiva per ogni $x$ e l'equazione $f''(x)=0$ è priva di soluzioni.
 
 [Appunti di Analisi Matematica, § 8.1](https://poisson.phc.dm.unipi.it/~dserra/teaching/amB1516/altro/esercitazioni.pdf)
+
+## 33. Riepilogo finale
+
+### Derivata e retta tangente
+
+La derivata in $a$ esiste quando i limiti laterali del rapporto incrementale coincidono e sono finiti. La derivabilità implica $\lim_{x\to a}f(x)=f(a)$. Se $f'(a)=0$, la tangente è orizzontale.
+
+```math
+f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h},
+\qquad T(x)=f(a)+f'(a)(x-a).
+```
+
+Vicino ad $a$ la tangente dà l'approssimazione $f(x)=T(x)+o(x-a)$.
+
+### Derivate delle funzioni elementari
+
+| Funzione | Derivata | Dove vale |
+| --- | --- | --- |
+| Costante $c$ | $0$ | $\mathbb R$ |
+| Potenza $x^\alpha$ | $\alpha x^{\alpha-1}$ | $x>0$ per $\alpha\in\mathbb R$. Su $\mathbb R$ se $\alpha$ è un intero positivo |
+| $\sin x$ | $\cos x$ | $\mathbb R$ |
+| $\cos x$ | $-\sin x$ | $\mathbb R$ |
+| $\tan x$ | $1+\tan^2 x$ | $\cos x\ne0$ |
+| $\arcsin x$ | $\frac{1}{\sqrt{1-x^2}}$ | $-1<x<1$ |
+| $\arccos x$ | $-\frac{1}{\sqrt{1-x^2}}$ | $-1<x<1$ |
+| $\arctan x$ | $\frac{1}{1+x^2}$ | $\mathbb R$ |
+| $e^x$ | $e^x$ | $\mathbb R$ |
+| $a^x$ | $a^x\ln a$ | $a>0$, $x\in\mathbb R$ |
+| $\ln\lvert x\rvert$ | $\frac1x$ | $x\ne0$ |
+| $\log_a\lvert x\rvert$ | $\frac1{x\ln a}$ | $a>0$, $a\ne1$, $x\ne0$ |
+| $\sinh x$ | $\cosh x$ | $\mathbb R$ |
+| $\cosh x$ | $\sinh x$ | $\mathbb R$ |
+
+Gli angoli sono in radianti. Per $\ln x$ e $\log_a x$ si usano le stesse derivate su $x>0$.
+
+### Regole di derivazione
+
+| Regola | Formula |
+| --- | --- |
+| Linearità | $(af+bg)'=af'+bg'$ per $a,b$ costanti |
+| Prodotto di Leibniz | $(fg)'=f'g+fg'$ |
+| Quoziente | $\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ dove $g\ne0$ |
+| Catena | $(f\circ g)'(x)=f'(g(x))\,g'(x)$ |
+| Inversa | $(f^{-1})'(y_0)=\frac{1}{f'(a)}$ per $y_0=f(a)$, con $f$ derivabile in $a$, $f'(a)\ne0$ e inversa continua in $y_0$ |
+
+$f$ è invertibile se ogni $y$ del codominio corrisponde a un unico $x$, cioè $f(x)=y\iff f^{-1}(y)=x$. Una funzione strettamente monotona è invertibile sulla propria immagine.
+
+### Teoremi principali
+
+| Teorema | Ipotesi | Conclusione |
+| --- | --- | --- |
+| [Weierstrass](#21-teorema-di-rolle) | $f$ continua su $[a,b]$ chiuso e limitato | Esistono $x_m,x_M\in[a,b]$ con $f(x_m)\le f(x)\le f(x_M)$ per ogni $x\in[a,b]$. Il minimo e il massimo assoluti sono raggiunti. |
+| [Bolzano, teorema degli zeri](#26-conteggio-degli-zeri-con-la-monotonia) | $f$ continua su $[a,b]$, $f(a)f(b)<0$ | Esiste $c\in(a,b)$ con $f(c)=0$. Se $f$ è strettamente monotona, lo zero è unico. |
+| [Fermat](#19-teorema-di-fermat) | $a$ è un estremo relativo interno e $f$ è derivabile in $a$ | $f'(a)=0$. Gli zeri di $f'$ sono candidati da verificare. |
+| [Rolle](#21-teorema-di-rolle) | $f$ continua su $[a,b]$, derivabile su $(a,b)$ e $f(a)=f(b)$ | Esiste $c\in(a,b)$ con $f'(c)=0$. |
+| [Lagrange](#22-teorema-di-lagrange) | $f$ continua su $[a,b]$ e derivabile su $(a,b)$ | Esiste $c\in(a,b)$ con $f'(c)=\frac{f(b)-f(a)}{b-a}$. La tangente in $c$ è parallela alla secante tra gli estremi. |
+| [Cauchy](#27-teorema-di-cauchy) | $f,g$ continue su $[a,b]$ e derivabili su $(a,b)$ | Esiste $c\in(a,b)$ con $[f(b)-f(a)]g'(c)=[g(b)-g(a)]f'(c)$. |
+| [De l’Hôpital](#28-regola-di-de-lhôpital) | $f,g$ derivabili vicino al punto sul lato considerato, $g'\ne0$, forma $0/0$ o $\infty/\infty$ e $\lim f'/g'=L$ finito o infinito | $\displaystyle\lim\frac fg=\lim\frac{f'}{g'}=L$. Per ripetere la regola si verificano le ipotesi sul nuovo quoziente. |
+
+Con $g(x)=x$, Cauchy dà Lagrange. Con $f(a)=f(b)$, Lagrange dà Rolle.
+
+### Criteri per lo studio di funzione
+
+| Obiettivo | Controllo |
+| --- | --- |
+| Continuità in $a$ | $\lim_{x\to a}f(x)=f(a)$. Per la continuità di una derivata si confrontano il limite e il valore della stessa derivata. |
+| Derivabilità in $a$ | Il rapporto incrementale deve avere un limite finito. Se $f$ è continua in $a$ e derivabile vicino ad $a$ sul lato considerato, un limite finito di $f'(x)$ dà la derivata laterale $f'_{\pm}(a)=\lim_{x\to a^\pm}f'(x)$. Se manca il limite di $f'$, si studia il rapporto incrementale. |
+| Monotonia su un intervallo | Per $f$ derivabile, $f'\ge0$ equivale a $f$ non decrescente e $f'\le0$ a $f$ non crescente. $f'>0$ o $f'<0$ su tutto l'intervallo danno monotonia stretta. |
+| Estremi | Per un punto interno in cui $f$ è continua, un cambio del segno di $f'$ da $-$ a $+$ dà un minimo e da $+$ a $-$ un massimo. Su $[a,b]$ si confrontano anche i valori agli estremi e nei punti di non derivabilità. |
+| Funzione costante | Su un intervallo $I$, $f$ è costante se e solo se $f'(x)=0$ per ogni $x\in I$. Si calcola la costante valutando $f$ in un punto di $I$. |
+| Classe $C^k$ | $f$ è derivabile $k$ volte e $f^{(k)}$ è continua. Per esempio $f''=(f')'$. |
+| Convessità e concavità | Per la convessità il grafico sta sotto il segmento tra due suoi punti. Se $f$ è derivabile, equivale a $f'$ non decrescente. Se $f$ è derivabile due volte, equivale a $f''\ge0$ su tutto l'intervallo. Per la concavità si invertono i versi. |
+| Flesso in $(a,f(a))$ | Il grafico ha una tangente e cambia concavità ai lati di $a$. Quando si usa $f''$, si controllano i suoi segni ai due lati degli zeri e dei punti in cui manca. |
+
+Nella definizione di convessità si confrontano le altezze alla stessa ascissa $x=(1-t)x_1+tx_2$, con $0\le t\le1$. Il parametro $t$ indica la frazione del tratto percorsa da $x_1$ a $x_2$.
+
+```math
+f((1-t)x_1+tx_2)\le (1-t)f(x_1)+tf(x_2).
+```
+
+Per i limiti, il **teorema del confronto** permette di concludere $u(x)\to0$ se $\lvert u(x)\rvert\le v(x)$ e $v(x)\to0$.
+
+### Funzioni degli esempi
+
+| Funzione | Che cosa mostra |
+| --- | --- |
+| $x^2$ e $-x^2$ | La prima ha tangente $y=2x-1$ in $x=1$ ed è convessa perché $f''=2$. La seconda è concava perché $f''=-2$. |
+| $\lvert x\rvert$ | È convessa e continua. In $0$ ha uno spigolo con derivate laterali $-1$ e $1$. |
+| $\sqrt{\lvert x\rvert}$ e $\sqrt[3]{x}$ | In $0$ la prima ha una cuspide con pendenze laterali $-\infty$ e $+\infty$. La seconda ha tangente verticale con entrambe le pendenze che tendono a $+\infty$. |
+| $x\lvert x\rvert$ | In $0$ il rapporto incrementale è $\lvert h\rvert\to0$, quindi $f'(0)=0$. |
+| Funzione di Weierstrass $W(x)=\sum_{n=0}^{\infty}a^n\cos(b^n\pi x)$ | È continua ovunque e priva di derivata in ogni punto con $0<a<1$, $b\in\mathbb N$ dispari e $ab>1+\frac{3\pi}{2}$. |
+| $x^2\sin x$ e $\sin(x^2)$ | Esempi per riconoscere un prodotto e una funzione composta. |
+| $x\sqrt{x^2+1}$ | $f'(x)=\frac{2x^2+1}{\sqrt{x^2+1}}>0$. Su $[1,2]$ il minimo è $\sqrt2$ in $1$ e il massimo è $2\sqrt5$ in $2$. |
+| $s(t)$, posizione | La velocità istantanea è $s'(t)$. Lagrange garantisce un istante in cui vale la velocità media. Per due auto, se $s_2'-s_1'=0$, il distacco $s_2-s_1$ è costante. |
+| $\ln(2x)-\ln x$ | Vale $\ln2$ per $x>0$. |
+| $\arcsin x+\arccos x$ | Vale $\pi/2$ su $(-1,1)$. |
+| $\arctan x+\arctan(1/x)$ | Vale $-\pi/2$ per $x<0$ e $\pi/2$ per $x>0$. |
+| $\frac{x-1}{x^2+1}$ | Asintoto orizzontale $y=0$, minimo relativo in $1-\sqrt2$ e massimo relativo in $1+\sqrt2$. |
+| $x^3-12x+1$ | Ha tre zeri reali. Il teorema degli zeri dà l'esistenza e la monotonia stretta dà l'unicità su ciascuno dei tre intervalli. |
+| $x\lvert\log x\rvert$ | In $1$ è continua e ha uno spigolo con derivate laterali $-1$ e $1$. |
+| $x^2\sin(1/x)$, con $f(0)=0$ | $f'(0)=0$ dal rapporto incrementale. Il limite di $f'(x)$ in $0$ manca. |
+| $x^3\sin(1/x)$, con $f(0)=0$ | $f'(0)=0$ e $f'$ è continua. La funzione è di classe $C^1$ e in $0$ manca la derivata seconda. |
+| $x^3$, $x^4$ ed $e^x$ | $x^3$ è strettamente crescente, con flesso a tangente orizzontale in $0$. Per $x^4$ la derivata seconda è nulla in $0$ e positiva ai due lati. Per $e^x$ la derivata seconda è positiva ovunque. |
+
+### Limiti degli esempi
+
+| Espressione | Per | Limite e idea |
+| --- | --- | --- |
+| $\frac{\sin x}{e^{2x}-1}$ | $x\to0^+$ | $\frac12$, applicazione di Cauchy al rapporto $0/0$. |
+| $\frac{x-\sin x}{x^3}$ | $x\to0$ | $\frac16$, tre applicazioni di de l’Hôpital. |
+| $x(\arctan x-\pi/2)$ | $x\to+\infty$ | $-1$, riscrivendo il prodotto come quoziente $0/0$. |
+| $\frac{e^x+1}{x}$ | $x\to0^+$ | $+\infty$, con numeratore che tende a $2$. |
+| $\frac{x+\sin x}{x}$ | $x\to+\infty$ | $1$, perché $\lvert\sin x/x\rvert\le1/x$. |
+| $\frac{x^{5/2}}{e^x}$ | $x\to+\infty$ | $0$, con de l’Hôpital fino a ottenere $\frac{15}{8\sqrt{x}\,e^x}$. |
+| $\frac{\sin x}{x}$ | $x\to0$ e $x\to+\infty$ | Rispettivamente $1$ per il limite notevole in radianti e $0$ per confronto. |
