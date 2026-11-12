@@ -38,7 +38,8 @@ Appunti di **Analisi Matematica 1** — definizioni, proprietà, dimostrazioni e
 30. [Derivate successive](#30-derivate-successive)
 31. [Convessità e concavità](#31-convessità-e-concavità)
 32. [Punti di flesso](#32-punti-di-flesso)
-33. [Riepilogo finale](#33-riepilogo-finale)
+33. [Il lancio verticale e i teoremi](#33-il-lancio-verticale-e-i-teoremi)
+34. [Riepilogo finale](#34-riepilogo-finale)
 
 ## 1. Perché nasce la derivata — la retta tangente
 
@@ -1300,7 +1301,69 @@ Per $f(x)=x^4$, la derivata $f''(x)=12x^2$ si annulla in $0$ ed è positiva su e
 
 [Appunti di Analisi Matematica, § 8.1](https://poisson.phc.dm.unipi.it/~dserra/teaching/amB1516/altro/esercitazioni.pdf)
 
-## 33. Riepilogo finale
+## 33. Il lancio verticale e i teoremi
+
+Una pallina viene lanciata verso l'alto a $20\,\mathrm{m/s}$. Trascuriamo la resistenza dell'aria e arrotondiamo l'accelerazione di gravità a $10\,\mathrm{m/s^2}$. Se $t$ è il tempo in secondi, l'altezza in metri rispetto al punto di lancio è
+
+```math
+h(t)=20t-5t^2=5t(4-t),\qquad 0\le t\le4.
+```
+
+![Altezza della pallina nel tempo. La cima è a 20 metri dopo 2 secondi, la quota di 15 metri è raggiunta a 1 e 3 secondi e la secante tra 0 e 2 secondi è parallela alla tangente a 1 secondo.](../grafici/lancio-verticale.png)
+
+La pendenza del grafico è la velocità. Applicando la regola del prodotto di Leibniz a $5t(4-t)$ si ottiene
+
+```math
+h'(t)=5(4-t)+5t(-1)=20-10t,\qquad h''(t)=-10.
+```
+
+La velocità è positiva durante la salita e negativa durante la discesa. L'accelerazione negativa rende il grafico concavo.
+
+### Weierstrass, Fermat e Rolle
+
+Per **Weierstrass**, $h$ è continua sul chiuso e limitato $[0,4]$ e raggiunge minimo e massimo assoluti. Il minimo è $0$ agli estremi, perché $h(t)=5t(4-t)\ge0$. Il massimo è interno, dato che $h(0)=h(4)=0$ e $h(1)=15>0$. Per **Fermat**, in quel punto $h'(t)=0$. Risolvendo $20-10t=0$ otteniamo $t=2$, dove $h(2)=20$ e la tangente è orizzontale.
+
+Questo è il collegamento con **Rolle**. Poiché $h(0)=h(4)$, Rolle garantisce un istante interno con velocità nulla. In questo caso Weierstrass e Fermat lo individuano alla cima.
+
+### Lagrange e Cauchy
+
+La secante arancione va dal lancio alla cima. La sua pendenza è la velocità media nei primi due secondi. **Lagrange** garantisce che una tangente in un punto interno abbia la stessa pendenza. Qui è la tangente viola a $t=1$.
+
+```math
+\frac{h(2)-h(0)}{2-0}=10\,\mathrm{m/s}=h'(1).
+```
+
+**Cauchy** confronta le variazioni di due funzioni. Per $h$ e una funzione $g$, entrambe continue su $[a,b]$ e derivabili su $(a,b)$, esiste $c\in(a,b)$ tale che
+
+```math
+[h(b)-h(a)]g'(c)=[g(b)-g(a)]h'(c).
+```
+
+Con $g(t)=t$, abbiamo $g'(c)=1$ e $g(b)-g(a)=b-a$. Si ottiene la formula di Lagrange $h'(c)=[h(b)-h(a)]/(b-a)$. Sul volo intero $[0,4]$, la pendenza della secante è zero, quindi si ritrova Rolle.
+
+### Da Cauchy a de l’Hôpital
+
+Se consideriamo l'intervallo $[0,t]$ con $t>0$, Cauchy con $g(t)=t$ dà
+
+```math
+\frac{h(t)-h(0)}{t}=h'(c_t),\qquad 0<c_t<t.
+```
+
+Facendo tendere $t$ a $0^+$, anche $c_t\to0^+$. La velocità media sul tratto tende alla velocità iniziale. La regola di **de l’Hôpital** calcola lo stesso limite, perché il quoziente ha forma $0/0$ e la derivata del denominatore è $1$.
+
+```math
+\lim_{t\to0^+}\frac{h(t)-h(0)}{t}
+=\lim_{t\to0^+}\frac{20-10t}{1}
+=20\,\mathrm{m/s}.
+```
+
+### Bolzano e i due passaggi a 15 metri
+
+La retta grigia rappresenta la quota di $15$ metri. Ponendo $u(t)=h(t)-15$, otteniamo $u(0)=-15$, $u(2)=5$ e $u(4)=-15$. **Bolzano** garantisce uno zero in $(0,2)$ e uno in $(2,4)$.
+
+In ciascuno dei due tratti lo zero è unico. Due zeri nello stesso tratto darebbero, per Rolle, un punto intermedio con $u'(t)=h'(t)=0$. Invece $h'>0$ in $(0,2)$ e $h'<0$ in $(2,4)$. Calcolando $u(1)=u(3)=0$ si individuano i passaggi a $1$ e $3$ secondi.
+
+## 34. Riepilogo finale
 
 ### Derivata e retta tangente
 
