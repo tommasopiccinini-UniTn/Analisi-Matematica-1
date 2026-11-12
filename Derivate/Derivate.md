@@ -1271,3 +1271,26 @@ Per $f(x)=x^2$, scegliamo $x_1=0$, $x_2=2$ e $t=1/2$. L'ascissa è $x=1$, il gra
 Per $g(x)=-x^2$ le altezze a $x=1$ sono $-1$ sul grafico e $-2$ sul segmento. Il criterio dà la concavità su $\mathbb R$ perché $g''(x)=-2$.
 
 [Lezione del 10 novembre, slide 61–65](../Lezioni/Lezione_20261110.pdf)
+
+## 32. Punti di flesso
+
+Un punto $(a,f(a))$ è un **flesso** se il grafico ha una tangente in quel punto e passa da concavo a convesso, o da convesso a concavo, ai due lati di $a$.
+
+Se $f$ è derivabile due volte su un intervallo, i candidati a flesso sono gli zeri di $f''$. Si studia il segno di $f''$ a sinistra e a destra di ciascun candidato. Segni opposti sui due lati indicano un cambio di concavità. Se $f''(a)$ manca, si può verificare direttamente la concavità sui due lati e l'esistenza della tangente in $a$.
+
+### Esempi
+
+Per $f(x)=x^3$ abbiamo $f''(x)=6x$. Quindi
+
+```math
+\begin{aligned}
+x<0 &\implies f''(x)<0 &&\text{grafico concavo},\\
+x>0 &\implies f''(x)>0 &&\text{grafico convesso}.
+\end{aligned}
+```
+
+Il punto $(0,0)$ è un flesso. La tangente è orizzontale perché $f'(0)=0$.
+
+Per $f(x)=x^4$, la derivata $f''(x)=12x^2$ si annulla in $0$ ed è positiva su entrambi i lati. Il grafico resta convesso. Per $f(x)=e^x$, la derivata $f''(x)=e^x$ è positiva per ogni $x$ e l'equazione $f''(x)=0$ è priva di soluzioni.
+
+[Appunti di Analisi Matematica, § 8.1](https://poisson.phc.dm.unipi.it/~dserra/teaching/amB1516/altro/esercitazioni.pdf)
