@@ -1200,3 +1200,39 @@ Il primo termine tende a $0$ perché $|2x\sin(1/x)|\le2|x|$. Il coseno continua 
 Quando $x\to0^+$, $u\to+\infty$. Quando $x\to0^-$, $u\to-\infty$. In entrambi i casi $|\sin u/u|\le 1/|u|\to0$, quindi $f'(0)=0$.
 
 [Lezione del 10 novembre, slide 57](../Lezioni/Lezione_20261110.pdf)
+
+## 30. Derivate successive
+
+La derivata seconda è la derivata di $f'$. Nel punto $a$ si calcola con il rapporto incrementale di $f'$.
+
+```math
+f''(a)=\lim_{x\to a}\frac{f'(x)-f'(a)}{x-a}.
+```
+
+Ripetendo il procedimento si ottiene la derivata di ordine $k$, indicata con $f^{(k)}$. Se $f$ è derivabile $k$ volte su un intervallo $I$ e $f^{(k)}$ è continua su $I$, si dice che $f$ è di classe $C^k(I)$. Nel punto $a$ la continuità di una derivata già definita si verifica con $\lim_{x\to a} f^{(k)}(x)=f^{(k)}(a)$. Conta la coincidenza tra limite e valore nel punto.
+
+### Esempio con il seno di 1/x
+
+Sia $f(x)=x^3\sin(1/x)$ per $x\ne0$ e $f(0)=0$. Per $x\ne0$ la formula è derivabile a ogni ordine. In $0$ la continuità segue da $|f(x)|\le |x|^3\to0$.
+
+Per $x\ne0$, applicando le regole del prodotto e della catena, si ottiene
+
+```math
+\begin{aligned}
+f'(x)&=3x^2\sin(1/x)-x\cos(1/x),\\
+|f'(x)|&\le 3x^2|\sin(1/x)|+|x|\,|\cos(1/x)|
+\le 3x^2+|x|.
+\end{aligned}
+```
+
+Il limite di $f'(x)$ per $x\to0$ è $0$. Per il criterio di derivabilità, $f'(0)=0$. Il limite coincide con il valore nel punto, quindi $f'$ è continua in $0$ e $f\in C^1(\mathbb R)$.
+
+Per la derivata seconda in $0$ si studia
+
+```math
+\frac{f'(x)-f'(0)}{x}=3x\sin(1/x)-\cos(1/x).
+```
+
+Il primo termine tende a $0$ perché $|3x\sin(1/x)|\le 3|x|$. Il coseno oscilla, quindi il rapporto incrementale di $f'$ è privo di limite e manca la derivata seconda in $0$.
+
+[Lezione del 10 novembre, slide 59–60 e annotazioni](../Lezioni/Lezione_20261110.pdf)
