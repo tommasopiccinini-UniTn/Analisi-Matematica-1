@@ -1096,3 +1096,32 @@ Poiché $\arctan x\to\pi/2$ e $1/x\to0$, il rapporto ha forma $0/0$. La derivata
 =-1.
 \end{aligned}
 ```
+
+### Due casi da riconoscere
+
+**1. Numeratore che tende a $2$ e denominatore che tende a $0^+$.** Per $x\to0^+$, abbiamo $e^x+1\to2$ e $x\to0^+$. Quindi
+
+```math
+\lim_{x\to0^+}\frac{e^x+1}{x}=+\infty.
+```
+
+Il rapporto delle derivate $e^x/1$ tende a $1$. La regola richiede una forma iniziale $0/0$ oppure $\infty/\infty$, condizione che qui manca.
+
+**2. Rapporto delle derivate oscillante.** Per il quoziente $(x+\sin x)/x$, il rapporto delle derivate $1+\cos x$ vale $2$ su $x=2n\pi$ e $0$ su $x=(2n+1)\pi$. Entrambe le successioni tendono a $+\infty$, quindi il rapporto delle derivate non ha limite. Calcoliamo il limite riscrivendo il quoziente originale.
+
+```math
+\frac{x+\sin x}{x}=\frac{x}{x}+\frac{\sin x}{x}
+=1+\frac{\sin x}{x}.
+```
+
+Da $-1\le\sin x\le1$, dividendo per $x>0$, otteniamo
+
+```math
+-\frac1x\le\frac{\sin x}{x}\le\frac1x.
+```
+
+I due estremi tendono a $0$ per $x\to+\infty$. Per il teorema del confronto anche $\sin x/x\to0$, quindi $\displaystyle\lim_{x\to+\infty}\frac{x+\sin x}{x}=1$.
+
+Il limite notevole $\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$ riguarda $x\to0$, con $x$ in radianti.
+
+[Lezione del 10 novembre, slide 53](../Lezioni/Lezione_20261110.pdf)
