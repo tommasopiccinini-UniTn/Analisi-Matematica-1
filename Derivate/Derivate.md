@@ -1125,3 +1125,22 @@ I due estremi tendono a $0$ per $x\to+\infty$. Per il teorema del confronto anch
 Il limite notevole $\displaystyle\lim_{x\to0}\frac{\sin x}{x}=1$ riguarda $x\to0$, con $x$ in radianti.
 
 [Lezione del 10 novembre, slide 53](../Lezioni/Lezione_20261110.pdf)
+
+### Esempio con una potenza e un esponenziale
+
+Calcoliamo $\displaystyle\lim_{x\to+\infty}\frac{x^{5/2}}{e^x}$. All'inizio e dopo le prime due derivazioni abbiamo la forma $\infty/\infty$, perché al numeratore compaiono le potenze $x^{5/2}$, $x^{3/2}$ e $x^{1/2}$. A ogni passaggio la derivata del denominatore è $e^x>0$.
+
+```math
+\begin{aligned}
+\lim_{x\to+\infty}\frac{x^{5/2}}{e^x}
+&=\lim_{x\to+\infty}\frac{\frac52 x^{3/2}}{e^x}\\
+&=\lim_{x\to+\infty}\frac{\frac52\cdot\frac32 x^{1/2}}{e^x}\\
+&=\lim_{x\to+\infty}\frac{\frac{15}{4}\cdot\frac12 x^{-1/2}}{e^x}\\
+&=\lim_{x\to+\infty}\frac{15}{8\sqrt{x}\,e^x}
+=0.
+\end{aligned}
+```
+
+Al terzo passaggio l'esponente diventa $-\frac12$. Il fattore $x^{-1/2}=1/\sqrt{x}$ al numeratore si riscrive come $\sqrt{x}$ al denominatore. Sia $\sqrt{x}$ sia $e^x$ tendono a $+\infty$, quindi il denominatore tende a $+\infty$ e il quoziente tende a $0$.
+
+[Lezione del 10 novembre, slide 54](../Lezioni/Lezione_20261110.pdf)
