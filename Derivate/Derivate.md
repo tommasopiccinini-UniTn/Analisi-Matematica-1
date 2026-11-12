@@ -1178,3 +1178,25 @@ f'_+(1)=\lim_{x\to1^+}(\log x+1)=1.
 Le pendenze laterali sono diverse, quindi $f$ ha uno spigolo in $1$ e la derivata in $1$ non esiste.
 
 [Lezione del 10 novembre, slide 55–56](../Lezioni/Lezione_20261110.pdf)
+
+### Esempio con una derivata oscillante
+
+Sia $f(x)=x^2\sin(1/x)$ per $x\ne0$ e $f(0)=0$. Da $|f(x)|\le x^2$ segue che $f$ è continua in $0$. Per $x\ne0$,
+
+```math
+f'(x)=2x\sin(1/x)-\cos(1/x).
+```
+
+Il primo termine tende a $0$ perché $|2x\sin(1/x)|\le2|x|$. Il coseno continua a oscillare, quindi il limite di $f'(x)$ manca e il criterio è inconcludente. Usiamo il rapporto incrementale.
+
+```math
+\frac{f(x)-f(0)}{x}
+=\frac{x^2\sin(1/x)}{x}
+=x\sin(1/x)
+=\frac{\sin u}{u},
+\qquad u=\frac1x.
+```
+
+Quando $x\to0^+$, $u\to+\infty$. Quando $x\to0^-$, $u\to-\infty$. In entrambi i casi $|\sin u/u|\le 1/|u|\to0$, quindi $f'(0)=0$.
+
+[Lezione del 10 novembre, slide 57](../Lezioni/Lezione_20261110.pdf)
