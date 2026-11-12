@@ -1144,3 +1144,37 @@ Calcoliamo $\displaystyle\lim_{x\to+\infty}\frac{x^{5/2}}{e^x}$. All'inizio e do
 Al terzo passaggio l'esponente diventa $-\frac12$. Il fattore $x^{-1/2}=1/\sqrt{x}$ al numeratore si riscrive come $\sqrt{x}$ al denominatore. Sia $\sqrt{x}$ sia $e^x$ tendono a $+\infty$, quindi il denominatore tende a $+\infty$ e il quoziente tende a $0$.
 
 [Lezione del 10 novembre, slide 54](../Lezioni/Lezione_20261110.pdf)
+
+## 29. Criterio di derivabilità
+
+Se $f$ è continua in $a$ e derivabile vicino ad $a$ sul lato considerato, un limite laterale finito di $f'$ dà la derivata laterale di $f$ in $a$.
+
+```math
+f'_-(a)=\lim_{x\to a^-}f'(x),\qquad
+f'_+(a)=\lim_{x\to a^+}f'(x).
+```
+
+### Esempio con il modulo del logaritmo
+
+Sia $f(x)=x|\log x|$ per $x>0$. In $x=1$ abbiamo $f(1)=0$ e $\lim_{x\to1}x|\log x|=1\cdot 0=0$, quindi $f$ è continua in $1$.
+
+Per $0<x<1$ vale $\log x<0$, quindi $f(x)=-x\log x$. Per $x>1$ vale $\log x>0$, quindi $f(x)=x\log x$. Con la regola del prodotto si ottiene
+
+```math
+f'(x)=
+\begin{cases}
+-\bigl(\log x+x\cdot \frac{1}{x}\bigr)=-\log x-1 & \text{se }0<x<1,\\[4pt]
+\log x+x\cdot \frac{1}{x}=\log x+1 & \text{se }x>1.
+\end{cases}
+```
+
+I due limiti laterali sono finiti. Per il criterio,
+
+```math
+f'_-(1)=\lim_{x\to1^-}(-\log x-1)=-1,\qquad
+f'_+(1)=\lim_{x\to1^+}(\log x+1)=1.
+```
+
+Le pendenze laterali sono diverse, quindi $f$ ha uno spigolo in $1$ e la derivata in $1$ non esiste.
+
+[Lezione del 10 novembre, slide 55–56](../Lezioni/Lezione_20261110.pdf)
