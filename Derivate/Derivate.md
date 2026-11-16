@@ -1017,6 +1017,20 @@ Le tangenti rosse illustrano il parallelismo con la secante.
 
 Con $g(t)=t$ si ha $g(b)-g(a)=b-a$ e $g'(c)=1$. La formula restituisce il teorema di Lagrange.
 
+### Esempio con due auto
+
+Due auto percorrono rispettivamente $120$ m e $80$ m nello stesso intervallo di tempo $[a,b]$. Indichiamo con $f(t)$ e $g(t)$ le posizioni delle due auto lungo il percorso. Supponiamo che siano continue su $[a,b]$, derivabili su $(a,b)$ e che la seconda auto abbia velocità $g'(t)>0$ per tutto l'intervallo aperto.
+
+Cauchy garantisce almeno un istante $c\in(a,b)$ in cui il rapporto tra le due velocità istantanee coincide con il rapporto tra le distanze percorse.
+
+```math
+\underbrace{\frac{f(b)-f(a)}{g(b)-g(a)}}_{\text{rapporto tra le distanze}}
+=\frac{120}{80}=\frac32
+=\underbrace{\frac{f'(c)}{g'(c)}}_{\text{rapporto tra le velocità}}.
+```
+
+In quell'istante la prima auto ha una velocità pari a una volta e mezza quella della seconda.
+
 ### Applicazione a un limite nella forma 0/0
 
 Se $f(a)=g(a)=0$ e valgono le ipotesi della forma in frazioni su $[a,x]$, Cauchy dà $f(x)/g(x)=f'(c)/g'(c)$ per un $c$ tra $a$ e $x$. Quando $x\to a^+$ anche $c\to a$. Questo passaggio è alla base della regola di de l'Hôpital.
