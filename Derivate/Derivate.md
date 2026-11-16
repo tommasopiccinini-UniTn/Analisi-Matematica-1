@@ -54,12 +54,10 @@ Il calcolo differenziale nasce nel XVII secolo (Newton e Leibniz) anche per affr
 
 ## 2. Definizione di derivata
 
-Indichiamo la derivata prima con $Df$, la seconda con $D^2 f$ e la derivata di ordine $k$ con $D^k f$. La scrittura $Df(x_0)$ indica il valore della derivata nel punto $x_0$. Per le derivate laterali usiamo $D_{-} f$ e $D_{+} f$.
-
 Una funzione è **derivabile nel punto $x_0$** se esiste ed è **finito** il limite del rapporto incrementale:
 
 ```math
-\boxed{Df(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}}
+\boxed{f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}}
 ```
 
 Nel rapporto:
@@ -76,7 +74,7 @@ Quando ci si avvicina a $x_0$ da entrambi i lati, i **limiti destro e sinistro d
 Ponendo $h=x-x_0$, quindi $x=x_0+h$, la stessa definizione si scrive:
 
 ```math
-\boxed{Df(x_0)=\lim_{h\to 0}\frac{f(x_0+h)-f(x_0)}{h}}
+\boxed{f'(x_0)=\lim_{h\to 0}\frac{f(x_0+h)-f(x_0)}{h}}
 ```
 
 Il rapporto incrementale, **prima di calcolare il limite**, è:
@@ -112,7 +110,7 @@ m_h=\frac{f(x_0+h)-f(x_0)}{h}.
 Quando $h\to0$, Q si avvicina a P. **Se il limite del rapporto incrementale esiste ed è finito**, la pendenza della secante tende a quella della tangente:
 
 ```math
-\boxed{m_{\mathrm{tangente}}=\lim_{h\to0}m_h=Df(x_0)}.
+\boxed{m_{\mathrm{tangente}}=\lim_{h\to0}m_h=f'(x_0)}.
 ```
 
 **Idea da ricordare:** la derivata è il **coefficiente angolare della retta tangente**.
@@ -125,10 +123,10 @@ L'equazione di una retta che passa per $(x_0,y_0)$ con coefficiente angolare $m$
 y-y_0=m(x-x_0).
 ```
 
-Nel nostro caso $y_0=f(x_0)$ e $m=Df(x_0)$, quindi:
+Nel nostro caso $y_0=f(x_0)$ e $m=f'(x_0)$, quindi:
 
 ```math
-\boxed{y=f(x_0)+Df(x_0)(x-x_0)}.
+\boxed{y=f(x_0)+f'(x_0)(x-x_0)}.
 ```
 
 Questa è **l'equazione della retta tangente al grafico** di $f$ nel punto di ascissa $x_0$.
@@ -138,10 +136,10 @@ Questa è **l'equazione della retta tangente al grafico** di $f$ nel punto di as
 | Oggetto | Formula |
 | --- | --- |
 | Rapporto incrementale | $\displaystyle m_h=\frac{f(x_0+h)-f(x_0)}{h}$ |
-| Derivata nel punto $x_0$ | $\displaystyle Df(x_0)=\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}$ |
-| Derivata, forma con $x$ | $\displaystyle Df(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$ |
-| Pendenza della tangente | $m=Df(x_0)$ |
-| Retta tangente | $y=f(x_0)+Df(x_0)(x-x_0)$ |
+| Derivata nel punto $x_0$ | $\displaystyle f'(x_0)=\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}$ |
+| Derivata, forma con $x$ | $\displaystyle f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$ |
+| Pendenza della tangente | $m=f'(x_0)$ |
+| Retta tangente | $y=f(x_0)+f'(x_0)(x-x_0)$ |
 
 ## 7. Retta tangente come migliore approssimante affine
 
@@ -154,25 +152,25 @@ y=mx+q.
 Fra tutte le rette che passano per $P_0=(x_0,f(x_0))$, se $f$ è derivabile in $x_0$, **la retta tangente è la migliore approssimante affine della funzione vicino a $x_0$**:
 
 ```math
-T(x)=f(x_0)+Df(x_0)(x-x_0).
+T(x)=f(x_0)+f'(x_0)(x-x_0).
 ```
 
 Partiamo dalla definizione di derivata:
 
 ```math
-\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=Df(x_0).
+\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=f'(x_0).
 ```
 
-Sottrarre il limite $Df(x_0)$ equivale a scrivere
+Sottrarre il limite $f'(x_0)$ equivale a scrivere
 
 ```math
-\lim_{x\to x_0}\left[\frac{f(x)-f(x_0)}{x-x_0}-Df(x_0)\right]=0.
+\lim_{x\to x_0}\left[\frac{f(x)-f(x_0)}{x-x_0}-f'(x_0)\right]=0.
 ```
 
 Mettendo tutto sotto lo stesso denominatore:
 
 ```math
-\boxed{\lim_{x\to x_0}\frac{f(x)-[f(x_0)+Df(x_0)(x-x_0)]}{x-x_0}=0}.
+\boxed{\lim_{x\to x_0}\frac{f(x)-[f(x_0)+f'(x_0)(x-x_0)]}{x-x_0}=0}.
 ```
 
 Nel numeratore c'è l'**errore di approssimazione** $f(x)-T(x)$; al denominatore c'è $x-x_0$. Significa che l'errore tende a zero **più rapidamente** di $x-x_0$.
@@ -189,7 +187,7 @@ Per definizione:
 
 ```math
 \begin{aligned}
-Df(1)&=\lim_{x\to1}\frac{f(x)-f(1)}{x-1}\\
+f'(1)&=\lim_{x\to1}\frac{f(x)-f(1)}{x-1}\\
 &=\lim_{x\to1}\frac{x^2-1}{x-1}.
 \end{aligned}
 ```
@@ -204,25 +202,25 @@ Quindi
 
 ```math
 \begin{aligned}
-Df(1)&=\lim_{x\to1}\frac{(x-1)(x+1)}{x-1}\\
+f'(1)&=\lim_{x\to1}\frac{(x-1)(x+1)}{x-1}\\
 &=\lim_{x\to1}(x+1)=\boxed{2}.
 \end{aligned}
 ```
 
-Dunque la tangente in $x_0=1$ ha **coefficiente angolare $m=Df(1)=2$**.
+Dunque la tangente in $x_0=1$ ha **coefficiente angolare $m=f'(1)=2$**.
 
 ### Esercizio 2 — equazione della tangente nel punto $(1,1)$
 
 La formula generale è
 
 ```math
-y=f(x_0)+Df(x_0)(x-x_0).
+y=f(x_0)+f'(x_0)(x-x_0).
 ```
 
 Per $f(x)=x^2$ e $x_0=1$:
 
 - $f(1)=1^2=1$ si trova **sostituendo $x=1$ nella funzione**, senza calcolare alcuna derivata;
-- $Df(1)=2$ è la **derivata**, trovata con il limite del rapporto incrementale.
+- $f'(1)=2$ è la **derivata**, trovata con il limite del rapporto incrementale.
 
 L'equazione richiesta è
 
@@ -230,7 +228,7 @@ L'equazione richiesta è
 \boxed{y=1+2(x-1)}.
 ```
 
-**Distinzione essenziale:** $f(1)$ è il valore della funzione nel punto, mentre $Df(1)$ è il coefficiente angolare della tangente in quel punto.
+**Distinzione essenziale:** $f(1)$ è il valore della funzione nel punto, mentre $f'(1)$ è il coefficiente angolare della tangente in quel punto.
 
 ---
 
@@ -242,7 +240,7 @@ L'equazione richiesta è
 \boxed{f\text{ derivabile in }x_0\implies f\text{ continua in }x_0.}
 ```
 
-**Idea della dimostrazione:** se $f$ è derivabile, il rapporto incrementale ha un limite finito $l=Df(x_0)$:
+**Idea della dimostrazione:** se $f$ è derivabile, il rapporto incrementale ha un limite finito $l=f'(x_0)$:
 
 ```math
 \lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}=l.
@@ -276,8 +274,8 @@ Ma nel punto $0$ ha uno **spigolo**. Il rapporto incrementale da sinistra e da d
 
 ```math
 \begin{aligned}
-D_{-} f(0)&=\lim_{x\to0^-}\frac{|x|}{x}=-1,\\
-D_{+} f(0)&=\lim_{x\to0^+}\frac{|x|}{x}=+1.
+f'_-(0)&=\lim_{x\to0^-}\frac{|x|}{x}=-1,\\
+f'_+(0)&=\lim_{x\to0^+}\frac{|x|}{x}=+1.
 \end{aligned}
 ```
 
@@ -341,7 +339,7 @@ Questo esempio mostra che **la continuità non garantisce la derivabilità, nepp
 
 Le condizioni si riferiscono all'esistenza della derivata. Gli angoli sono espressi in radianti.
 
-| Funzione $f(x)$ | Derivata $Df(x)$ | Condizioni | Funzione $f(x)$ | Derivata $Df(x)$ | Condizioni |
+| Funzione $f(x)$ | Derivata $f'(x)$ | Condizioni | Funzione $f(x)$ | Derivata $f'(x)$ | Condizioni |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | $\alpha$ | $0$ | $\alpha\in\mathbb R,\ x\in\mathbb R$ | $x^\alpha$ | $\alpha x^{\alpha-1}$ | $\alpha\in\mathbb R,\ x>0$ |
 | $\sin x$ | $\cos x$ | $x\in\mathbb R$ | $\cos x$ | $-\sin x$ | $x\in\mathbb R$ |
@@ -358,27 +356,27 @@ Nelle formule $f$ e $g$ sono funzioni derivabili e $a,b$ sono costanti reali.
 
 | Regola | Formula |
 | :--- | :--- |
-| Moltiplicazione per una costante | $\displaystyle D(a f(x))=a Df(x)$ |
-| Somma | $\displaystyle D(f(x)+g(x))=Df(x)+Dg(x)$ |
-| Differenza | $\displaystyle D(f(x)-g(x))=Df(x)-Dg(x)$ |
-| Linearità (forma generale) | $\displaystyle D(a f(x)+b g(x))=a Df(x)+b Dg(x)$ |
-| Prodotto (Leibniz) | $\displaystyle D(f(x)g(x))=Df(x)g(x)+f(x)Dg(x)$ |
-| Quoziente | $\displaystyle D\left(\frac{f(x)}{g(x)}\right)=\frac{Df(x)g(x)-f(x)Dg(x)}{[g(x)]^2}$ |
-| Funzione composta (catena) | $\displaystyle D(f(g(x)))=Df(g(x))\,Dg(x)$ |
+| Moltiplicazione per una costante | $\displaystyle (a f(x))'=a f'(x)$ |
+| Somma | $\displaystyle (f(x)+g(x))'=f'(x)+g'(x)$ |
+| Differenza | $\displaystyle (f(x)-g(x))'=f'(x)-g'(x)$ |
+| Linearità (forma generale) | $\displaystyle (a f(x)+b g(x))'=a f'(x)+b g'(x)$ |
+| Prodotto (Leibniz) | $\displaystyle (f(x)g(x))'=f'(x)g(x)+f(x)g'(x)$ |
+| Quoziente | $\displaystyle \left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$ |
+| Funzione composta (catena) | $\displaystyle (f(g(x)))'=f'(g(x))\,g'(x)$ |
 
-**Notazione:** $\displaystyle Df(x)=\frac{d}{dx}f(x)$.
+**Notazione:** $\displaystyle f'(x)=D[f(x)]=\frac{d}{dx}f(x)$.
 
 ## 14. Regola del prodotto (Leibniz)
 
 Se $f(x)$ e $g(x)$ sono derivabili, anche il loro prodotto è derivabile e vale:
 
 ```math
-\boxed{D\big(f(x)g(x)\big)=Df(x)g(x)+f(x)Dg(x)}
+\boxed{\big(f(x)g(x)\big)'=f'(x)g(x)+f(x)g'(x)}
 ```
 
 **Come si applica:** si sommano due termini: la derivata della prima funzione per la seconda invariata, e la prima invariata per la derivata della seconda.
 
-**Errore da evitare:** in generale $D\big(fg\big)\ne (Df)(Dg)$.
+**Errore da evitare:** in generale $\big(fg\big)'\ne f'g'$.
 
 **Esempio di riconoscimento:** nel prodotto $x^2\sin x$, le due funzioni sono
 
@@ -386,7 +384,7 @@ Se $f(x)$ e $g(x)$ sono derivabili, anche il loro prodotto è derivabile e vale:
 f(x)=x^2,\qquad g(x)=\sin x.
 ```
 
-Le derivate da utilizzare sono $D(x^2)=2x$ e $D(\sin x)=\cos x$.
+Le derivate da utilizzare sono $(x^2)'=2x$ e $(\sin x)'=\cos x$.
 
 ## 15. Regola della catena
 
@@ -395,7 +393,7 @@ Serve per le **funzioni composte**: una funzione $f$ applicata al risultato di u
 Se $g$ è derivabile in $x$ e $f$ è derivabile in $g(x)$, allora:
 
 ```math
-\boxed{D\big(f(g(x))\big)=Df(g(x))\cdot Dg(x)}
+\boxed{\big(f(g(x))\big)'=f'(g(x))\cdot g'(x)}
 ```
 
 **Come si applica:** si deriva la funzione esterna, lasciando invariata l'espressione interna, e poi si moltiplica per la derivata della funzione interna.
@@ -405,16 +403,16 @@ Se $g$ è derivabile in $x$ e $f$ è derivabile in $g(x)$, allora:
 - la **funzione esterna** è $f(y)=\sin y$;
 - la **funzione interna** è $g(x)=x^2$.
 
-Le derivate da utilizzare sono $D(\sin y)=\cos y$ e $D(x^2)=2x$.
+Le derivate da utilizzare sono $(\sin y)'=\cos y$ e $(x^2)'=2x$.
 
-**Attenzione ai segni:** $D(\sin x)=\cos x$, mentre $D(\cos x)=-\sin x$.
+**Attenzione ai segni:** $(\sin x)'=\cos x$, mentre $(\cos x)'=-\sin x$.
 
 ## 16. Derivate delle funzioni inverse
 
-Se $f$ è invertibile, derivabile in $x_0$ e $Df(x_0)\ne 0$, la derivata della sua inversa nel punto $y_0=f(x_0)$ è:
+Se $f$ è invertibile, derivabile in $x_0$ e $f'(x_0)\ne 0$, la derivata della sua inversa nel punto $y_0=f(x_0)$ è:
 
 ```math
-\boxed{D(f^{-1})(y_0)=\frac{1}{Df(x_0)}}
+\boxed{(f^{-1})'(y_0)=\frac{1}{f'(x_0)}}
 ```
 
 **Attenzione:** $f^{-1}$ indica la funzione inversa, non il reciproco $1/f$.
@@ -425,7 +423,7 @@ L'arcoseno è l'inversa del seno ristretto all'intervallo $[-\pi/2,\pi/2]$.
 
 | Funzione inversa | Derivata | Validità |
 | :--- | :--- | :--- |
-| $\arcsin x$ | $\displaystyle \boxed{D(\arcsin x)=\frac{1}{\sqrt{1-x^2}}}$ | $-1<x<1$ |
+| $\arcsin x$ | $\displaystyle \boxed{(\arcsin x)'=\frac{1}{\sqrt{1-x^2}}}$ | $-1<x<1$ |
 
 La radice deriva dall'identità trigonometrica $\sin^2 y+\cos^2 y=1$: nell'intervallo scelto, $\cos y\ge 0$, quindi $\cos y=\sqrt{1-\sin^2 y}$.
 
@@ -434,7 +432,7 @@ La radice deriva dall'identità trigonometrica $\sin^2 y+\cos^2 y=1$: nell'inter
 Siano $f$ e $g$ derivabili nel punto $x$, con $g(x)\ne0$. Allora anche il loro quoziente è derivabile in quel punto e vale:
 
 ```math
-\boxed{D\left(\frac{f(x)}{g(x)}\right)=\frac{Df(x)g(x)-f(x)Dg(x)}{[g(x)]^2}}
+\boxed{\left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}}
 ```
 
 **Come si applica:** al numeratore si scrive la derivata del numeratore per il denominatore, meno il numeratore per la derivata del denominatore. Al denominatore si mette il quadrato del denominatore originale.
@@ -469,7 +467,7 @@ x^2,&x\ge0,\\
 Da destra, $h>0$, quindi $f(h)=h^2$:
 
 ```math
-D_{+} f(0)=\lim_{h\to0^+}\frac{f(h)-f(0)}h
+f'_+(0)=\lim_{h\to0^+}\frac{f(h)-f(0)}h
 =\lim_{h\to0^+}\frac{h^2}{h}
 =\lim_{h\to0^+}h=0.
 ```
@@ -477,7 +475,7 @@ D_{+} f(0)=\lim_{h\to0^+}\frac{f(h)-f(0)}h
 Da sinistra, $h<0$, quindi $f(h)=-h^2$:
 
 ```math
-D_{-} f(0)=\lim_{h\to0^-}\frac{f(h)-f(0)}h
+f'_-(0)=\lim_{h\to0^-}\frac{f(h)-f(0)}h
 =\lim_{h\to0^-}\frac{-h^2}{h}
 =\lim_{h\to0^-}(-h)=0.
 ```
@@ -485,7 +483,7 @@ D_{-} f(0)=\lim_{h\to0^-}\frac{f(h)-f(0)}h
 **I due limiti laterali coincidono e sono finiti**, dunque il limite complessivo del rapporto incrementale esiste ed è finito. Per definizione, questo significa che $f$ è derivabile in $0$ e
 
 ```math
-\boxed{Df(0)=0}.
+\boxed{f'(0)=0}.
 ```
 
 La funzione $x|x|$ è quindi derivabile su tutto $\mathbb R$, anche se il singolo fattore $|x|$ non è derivabile in $0$.
@@ -495,7 +493,7 @@ La funzione $x|x|$ è quindi derivabile su tutto $\mathbb R$, anche se il singol
 La derivata in $0$ è definita come
 
 ```math
-Df(0)=\lim_{h\to0}\frac{f(h)-f(0)}h,
+f'(0)=\lim_{h\to0}\frac{f(h)-f(0)}h,
 ```
 
 purché il limite esista e sia finito. Per avere un unico limite finito $L$, il rapporto incrementale deve tendere allo stesso numero $L$ sia da sinistra sia da destra. Ecco perché l'uguaglianza dei due limiti laterali finiti permette di concludere che la derivata esiste.
@@ -529,7 +527,7 @@ Sia $f:(a,b)\to\mathbb R$ e sia $x_0\in(a,b)$. Supponiamo che:
 Allora:
 
 ```math
-\boxed{Df(x_0)=0}.
+\boxed{f'(x_0)=0}.
 ```
 
 Il punto $x_0$ deve essere **interno**: deve essere possibile avvicinarsi a esso sia da sinistra sia da destra restando nel dominio. La derivabilità richiede che i due limiti del rapporto incrementale coincidano e siano finiti.
@@ -543,10 +541,10 @@ y=f(x_0).
 **Come si usa:** se $f$ è derivabile su un intervallo, per cercare i suoi massimi e minimi relativi interni si risolve:
 
 ```math
-Df(x)=0.
+f'(x)=0.
 ```
 
-Le soluzioni sono **candidati**: la condizione $Df(x_0)=0$ è necessaria nelle ipotesi del teorema, ma **non è sufficiente** per concludere che $x_0$ sia un massimo o un minimo relativo. Occorre verificarlo separatamente.
+Le soluzioni sono **candidati**: la condizione $f'(x_0)=0$ è necessaria nelle ipotesi del teorema, ma **non è sufficiente** per concludere che $x_0$ sia un massimo o un minimo relativo. Occorre verificarlo separatamente.
 
 Il teorema non si applica ai punti estremi del dominio né ai punti in cui $f$ non è derivabile.
 
@@ -555,11 +553,11 @@ Il teorema non si applica ai punti estremi del dominio né ai punti in cui $f$ n
 Per $f(x)=x\sqrt{x^2+1}$, il radicando soddisfa $x^2+1\ge1$, quindi $f$ è derivabile su $\mathbb R$. Le regole del prodotto e della catena danno
 
 ```math
-Df(x)=\sqrt{x^2+1}+\frac{x^2}{\sqrt{x^2+1}}
+f'(x)=\sqrt{x^2+1}+\frac{x^2}{\sqrt{x^2+1}}
 =\frac{2x^2+1}{\sqrt{x^2+1}}>0.
 ```
 
-**Su $\mathbb R$**, il teorema di Fermat esclude massimi e minimi relativi, perché $Df$ è sempre positiva. Questo esclude anche gli estremi assoluti, che sarebbero anche relativi.
+**Su $\mathbb R$**, il teorema di Fermat esclude massimi e minimi relativi, perché $f'$ è sempre positiva. Questo esclude anche gli estremi assoluti, che sarebbero anche relativi.
 
 **Su $[1,2]$**, entrambi i fattori $x$ e $\sqrt{x^2+1}$ sono positivi e strettamente crescenti. Il prodotto è quindi strettamente crescente e vale $f(1)\le f(x)\le f(2)$ per ogni $x\in[1,2]$.
 
@@ -575,10 +573,10 @@ I due punti sono ai bordi del dominio ristretto. Il teorema di Fermat richiede u
 Sia $f:[a,b]\to\mathbb R$ continua su $[a,b]$ e derivabile su $(a,b)$, con $a<b$. Se $f(a)=f(b)$, allora
 
 ```math
-\boxed{\exists\,c\in(a,b)\quad\text{tale che}\quad Df(c)=0}.
+\boxed{\exists\,c\in(a,b)\quad\text{tale che}\quad f'(c)=0}.
 ```
 
-La condizione $Df(c)=0$ corrisponde a una tangente orizzontale nel punto $(c,f(c))$.
+La condizione $f'(c)=0$ corrisponde a una tangente orizzontale nel punto $(c,f(c))$.
 
 ### Dimostrazione
 
@@ -597,18 +595,18 @@ m=f(x_m)=\min_{x\in[a,b]}f(x),
 M=f(x_M)=\max_{x\in[a,b]}f(x).
 ```
 
-1. **Se $f(a)<M$**, anche $f(b)=f(a)<M$. Il punto $x_M$ in cui $f(x_M)=M$ è quindi interno. Poiché è un massimo relativo e $f$ è derivabile in $x_M$, per Fermat $Df(x_M)=0$. Si può scegliere $c=x_M$.
+1. **Se $f(a)<M$**, anche $f(b)=f(a)<M$. Il punto $x_M$ in cui $f(x_M)=M$ è quindi interno. Poiché è un massimo relativo e $f$ è derivabile in $x_M$, per Fermat $f'(x_M)=0$. Si può scegliere $c=x_M$.
 
-2. **Se $f(a)=M$ e $m=M$**, per ogni $x\in[a,b]$ vale $M=m\le f(x)\le M$. Dunque $f(x)=M$ su tutto l'intervallo. La funzione è costante e $Df(c)=0$ in ogni punto $c\in(a,b)$.
+2. **Se $f(a)=M$ e $m=M$**, per ogni $x\in[a,b]$ vale $M=m\le f(x)\le M$. Dunque $f(x)=M$ su tutto l'intervallo. La funzione è costante e $f'(c)=0$ in ogni punto $c\in(a,b)$.
 
-3. **Se $f(a)=M$ e $m<M$**, si ha $f(a)=f(b)=M>m$. Il punto $x_m$ in cui $f(x_m)=m$ è quindi interno. Poiché è un minimo relativo e $f$ è derivabile in $x_m$, per Fermat $Df(x_m)=0$. Si può scegliere $c=x_m$.
+3. **Se $f(a)=M$ e $m<M$**, si ha $f(a)=f(b)=M>m$. Il punto $x_m$ in cui $f(x_m)=m$ è quindi interno. Poiché è un minimo relativo e $f$ è derivabile in $x_m$, per Fermat $f'(x_m)=0$. Si può scegliere $c=x_m$.
 
 ## 22. Teorema di Lagrange
 
 Sia $f:[a,b]\to\mathbb R$ continua su $[a,b]$ e derivabile su $(a,b)$, con $a<b$. Esiste almeno un $c\in(a,b)$ tale che
 
 ```math
-\boxed{Df(c)=\frac{f(b)-f(a)}{b-a}}.
+\boxed{f'(c)=\frac{f(b)-f(a)}{b-a}}.
 ```
 
 La tangente alla curva in $(c,f(c))$ ha la stessa pendenza della secante che unisce $(a,f(a))$ e $(b,f(b))$.
@@ -667,19 +665,19 @@ Per ottenere le pendenze sul tratto, dividiamo tutte le variazioni in altezza pe
 Facendo tendere il passo a zero in un punto interno, si ottiene la relazione tra le pendenze delle tangenti.
 
 ```math
-Dh(x)=Df(x)-Dg(x).
+h'(x)=f'(x)-g'(x).
 ```
 
 ### Applicazione di Rolle
 
-La secante $g$ è una funzione affine. In base alle ipotesi su $f$, la differenza $h=f-g$ è continua su $[a,b]$ e derivabile su $(a,b)$. Poiché $h(a)=h(b)=0$, per Rolle esiste un punto $c\in(a,b)$ con $Dh(c)=0$. Nel grafico in basso la tangente al dislivello in $c$ è orizzontale.
+La secante $g$ è una funzione affine. In base alle ipotesi su $f$, la differenza $h=f-g$ è continua su $[a,b]$ e derivabile su $(a,b)$. Poiché $h(a)=h(b)=0$, per Rolle esiste un punto $c\in(a,b)$ con $h'(c)=0$. Nel grafico in basso la tangente al dislivello in $c$ è orizzontale.
 
-La secante ha pendenza costante $Dg(x)=m$. Nel punto $c$ si ha
+La secante ha pendenza costante $g'(x)=m$. Nel punto $c$ si ha
 
 ```math
-0=Dh(c)=Df(c)-Dg(c)=Df(c)-m
+0=h'(c)=f'(c)-g'(c)=f'(c)-m
 \quad\Longrightarrow\quad
-Df(c)=m=\frac{f(b)-f(a)}{b-a}.
+f'(c)=m=\frac{f(b)-f(a)}{b-a}.
 ```
 
 Nel grafico in alto la tangente arancione e la secante verde sono quindi parallele. Se $f(a)=f(b)$, si ha $m=0$ e si ritrova la conclusione di Rolle.
@@ -699,7 +697,7 @@ v_{\mathrm{media}}=\frac{s_1-s_0}{t_1-t_0}.
 La pendenza della tangente rossa in $c$ è la velocità istantanea. Si ottiene dalla velocità media fra $c$ e $c+Delta t$, facendo tendere a zero il passo temporale $Delta t$.
 
 ```math
-v(c)=Ds(c)=\lim_{\Delta t\to0}\frac{s(c+\Delta t)-s(c)}{\Delta t}.
+v(c)=s'(c)=\lim_{\Delta t\to0}\frac{s(c+\Delta t)-s(c)}{\Delta t}.
 ```
 
 Se $s$ è continua su $[t_0,t_1]$ e derivabile su $(t_0,t_1)$, Lagrange garantisce un istante $c\in(t_0,t_1)$ in cui le due pendenze coincidono.
@@ -716,20 +714,20 @@ Sia $f:(a,b)\to\mathbb R$ derivabile. Le due condizioni di ogni riga sono equiva
 
 | Segno della derivata su $(a,b)$ | Monotonia su $(a,b)$ |
 | :--- | :--- |
-| $Df(x)\ge0$ per ogni $x$ | Crescente. Per ogni $x_1<x_2$ vale $f(x_1)\le f(x_2)$. |
-| $Df(x)\le0$ per ogni $x$ | Decrescente. Per ogni $x_1<x_2$ vale $f(x_1)\ge f(x_2)$. |
+| $f'(x)\ge0$ per ogni $x$ | Crescente. Per ogni $x_1<x_2$ vale $f(x_1)\le f(x_2)$. |
+| $f'(x)\le0$ per ogni $x$ | Decrescente. Per ogni $x_1<x_2$ vale $f(x_1)\ge f(x_2)$. |
 
 ### Dal segno della derivata alla monotonia
 
 Scegliamo $a<x_1<x_2<b$. La derivabilità di $f$ garantisce la continuità su $[x_1,x_2]$. Per Lagrange esiste $c\in(x_1,x_2)$ tale che
 
 ```math
-Df(c)=\frac{f(x_2)-f(x_1)}{x_2-x_1}
+f'(c)=\frac{f(x_2)-f(x_1)}{x_2-x_1}
 \quad\Longrightarrow\quad
-f(x_2)-f(x_1)=Df(c)(x_2-x_1).
+f(x_2)-f(x_1)=f'(c)(x_2-x_1).
 ```
 
-Poiché $x_2-x_1>0$, la variazione $f(x_2)-f(x_1)$ ha lo stesso segno di $Df(c)$. Se $Df\ge0$ in tutto l'intervallo, otteniamo $f(x_2)\ge f(x_1)$. Se $Df\le0$, otteniamo $f(x_2)\le f(x_1)$.
+Poiché $x_2-x_1>0$, la variazione $f(x_2)-f(x_1)$ ha lo stesso segno di $f'(c)$. Se $f'\ge0$ in tutto l'intervallo, otteniamo $f(x_2)\ge f(x_1)$. Se $f'\le0$, otteniamo $f(x_2)\le f(x_1)$.
 
 ### Dalla monotonia al segno della derivata
 
@@ -739,13 +737,13 @@ Fissiamo $x\in(a,b)$ e prendiamo un passo verso destra $\Delta x>0$ con $x+\Delt
 \frac{f(x+\Delta x)-f(x)}{\Delta x}\ge0.
 ```
 
-Facendo tendere $\Delta x$ a zero da destra, il rapporto tende a $Df(x)$ perché $f$ è derivabile in $x$. Si ottiene $Df(x)\ge0$. Per una funzione decrescente il numeratore è $\le0$, quindi il limite dà $Df(x)\le0$.
+Facendo tendere $\Delta x$ a zero da destra, il rapporto tende a $f'(x)$ perché $f$ è derivabile in $x$. Si ottiene $f'(x)\ge0$. Per una funzione decrescente il numeratore è $\le0$, quindi il limite dà $f'(x)\le0$.
 
 ### Monotonia stretta e tangente orizzontale
 
-Nella formula di Lagrange, $Df(x)>0$ in ogni punto dell'intervallo implica $f(x_2)>f(x_1)$ per ogni $x_2>x_1$. La funzione è strettamente crescente. Analogamente, $Df(x)<0$ in ogni punto implica decrescenza stretta.
+Nella formula di Lagrange, $f'(x)>0$ in ogni punto dell'intervallo implica $f(x_2)>f(x_1)$ per ogni $x_2>x_1$. La funzione è strettamente crescente. Analogamente, $f'(x)<0$ in ogni punto implica decrescenza stretta.
 
-La cubica $f(x)=x^3$ è strettamente crescente su $\mathbb R$ e ha $Df(0)=0$. Infatti $Df(x)=3x^2>0$ sui due intervalli $(-\infty,0)$ e $(0,+\infty)$. I valori a sinistra di $0$ sono negativi e quelli a destra sono positivi, con $f(0)=0$.
+La cubica $f(x)=x^3$ è strettamente crescente su $\mathbb R$ e ha $f'(0)=0$. Infatti $f'(x)=3x^2>0$ sui due intervalli $(-\infty,0)$ e $(0,+\infty)$. I valori a sinistra di $0$ sono negativi e quelli a destra sono positivi, con $f(0)=0$.
 
 Partendo da $0$, ogni passo $\Delta x>0$ porta a un'altezza maggiore di $f(0)$. La pendenza sul passo è positiva e tende a zero quando il passo si accorcia.
 
@@ -766,12 +764,12 @@ Sia $f$ derivabile su un intervallo $I=(a,b)$. Il criterio è
 ```math
 \boxed{f\text{ costante su }I
 \quad\Longleftrightarrow\quad
-Df(x)=0\ \text{per ogni }x\in I.}
+f'(x)=0\ \text{per ogni }x\in I.}
 ```
 
-Se $f(x)=k$ su $I$, il rapporto incrementale è $(k-k)/\Delta x=0$ per ogni passo ammesso. Il suo limite dà $Df(x)=0$.
+Se $f(x)=k$ su $I$, il rapporto incrementale è $(k-k)/\Delta x=0$ per ogni passo ammesso. Il suo limite dà $f'(x)=0$.
 
-Se $Df(x)=0$ su $I$, valgono sia $Df\ge0$ sia $Df\le0$. Per il criterio di monotonia, per ogni $x_1<x_2$ in $I$ si ottengono entrambe le disuguaglianze
+Se $f'(x)=0$ su $I$, valgono sia $f'\ge0$ sia $f'\le0$. Per il criterio di monotonia, per ogni $x_1<x_2$ in $I$ si ottengono entrambe le disuguaglianze
 
 ```math
 f(x_1)\le f(x_2),\qquad f(x_1)\ge f(x_2)
@@ -785,7 +783,7 @@ Per trovare il valore costante si sceglie un punto comodo $x_0\in I$ e si calcol
 Per $f(x)=\ln(2x)-\ln x$ con $x>0$, la catena dà
 
 ```math
-Df(x)=\frac{1}{2x}\cdot 2-\frac1x
+f'(x)=\frac{1}{2x}\cdot 2-\frac1x
 =\frac1x-\frac1x=0.
 ```
 
@@ -805,7 +803,7 @@ In alto la freccia mostra la differenza di altezza dei logaritmi alla stessa asc
 Per $f(x)=\arcsin x+\arccos x$ su $(-1,1)$, le due derivate si cancellano.
 
 ```math
-Df(x)=\frac{1}{\sqrt{1-x^2}}-\frac{1}{\sqrt{1-x^2}}=0.
+f'(x)=\frac{1}{\sqrt{1-x^2}}-\frac{1}{\sqrt{1-x^2}}=0.
 ```
 
 Poiché $\sin 0=0$ e $\cos(\pi/2)=0$, la valutazione in $x=0$ dà il valore comune.
@@ -820,11 +818,11 @@ Per esempio, il risultato permette di calcolare $\arcsin(0{,}4)+\arccos(0{,}4)=\
 
 ### Somma di arcotangenti su due intervalli
 
-La funzione $f(x)=\arctan x+\arctan(1/x)$ è definita per $x\ne0$. Con la regola della catena e $D(1/x)=-1/x^2$ otteniamo
+La funzione $f(x)=\arctan x+\arctan(1/x)$ è definita per $x\ne0$. Con la regola della catena e $(1/x)'=-1/x^2$ otteniamo
 
 ```math
 \begin{aligned}
-Df(x)&=\frac1{1+x^2}
+f'(x)&=\frac1{1+x^2}
 +\frac1{1+1/x^2}\left(-\frac1{x^2}\right)\\
 &=\frac1{1+x^2}
 +\frac{x^2}{x^2+1}\left(-\frac1{x^2}\right)\\
@@ -855,7 +853,7 @@ Nel pannello in alto la viola è la somma delle ordinate rossa e verde alla stes
 Siano $s_1(t)$ e $s_2(t)$ le posizioni di due auto lungo lo stesso percorso orientato. Se le loro velocità coincidono a ogni istante di un intervallo, il distacco $d(t)=s_2(t)-s_1(t)$ ha derivata
 
 ```math
-Dd(t)=Ds_2(t)-Ds_1(t)=v_2(t)-v_1(t)=0.
+d'(t)=s_2'(t)-s_1'(t)=v_2(t)-v_1(t)=0.
 ```
 
 Il distacco è quindi costante. Se inizialmente vale $30\,\mathrm{m}$, vale $30\,\mathrm{m}$ per tutto l'intervallo, anche se la velocità comune cambia nel tempo.
@@ -885,11 +883,11 @@ Le intersezioni con gli assi sono $(0,-1)$ e $(1,0)$, perché $f(0)=-1$ e $f(x)=
 
 ### Monotonia ed estremi relativi
 
-Con la regola del quoziente, usando $D(x-1)=1$ e $D(x^2+1)=2x$, si ottiene
+Con la regola del quoziente, usando $(x-1)'=1$ e $(x^2+1)'=2x$, si ottiene
 
 ```math
 \begin{aligned}
-Df(x)
+f'(x)
 &=\frac{1\cdot(x^2+1)-(x-1)\cdot2x}{(x^2+1)^2}\\
 &=\frac{x^2+1-2x^2+2x}{(x^2+1)^2}\\
 &=\frac{-x^2+2x+1}{(x^2+1)^2}
@@ -897,9 +895,9 @@ Df(x)
 \end{aligned}
 ```
 
-Il denominatore è positivo. Il numeratore è nullo per $(x-1)^2=2$, quindi i punti critici sono $c_-=1-\sqrt2$ e $c_+=1+\sqrt2$. Per $-\sqrt2<x-1<\sqrt2$, il quadrato $(x-1)^2$ è minore di $2$ e $Df$ è positiva. Fuori dai due punti critici e dall'intervallo fra loro è negativa.
+Il denominatore è positivo. Il numeratore è nullo per $(x-1)^2=2$, quindi i punti critici sono $c_-=1-\sqrt2$ e $c_+=1+\sqrt2$. Per $-\sqrt2<x-1<\sqrt2$, il quadrato $(x-1)^2$ è minore di $2$ e $f'$ è positiva. Fuori dai due punti critici e dall'intervallo fra loro è negativa.
 
-| Intervallo | Segno di $Df$ | Andamento di $f$ |
+| Intervallo | Segno di $f'$ | Andamento di $f$ |
 | :--- | :---: | :--- |
 | $(-\infty,c_-)$ | $-$ | Decrescente |
 | $(c_-,c_+)$ | $+$ | Crescente |
@@ -938,7 +936,7 @@ Quindi $f(x)\to-\infty$ per $x\to-\infty$ e $f(x)\to+\infty$ per $x\to+\infty$. 
 Per contare gli zeri, studiamo il segno della derivata.
 
 ```math
-Df(x)=3x^2-12=3(x^2-4)=3(x-2)(x+2).
+f'(x)=3x^2-12=3(x^2-4)=3(x-2)(x+2).
 ```
 
 La derivata è nulla in $x=-2$ e $x=2$. È positiva all'esterno di questi punti e negativa fra i due. Calcoliamo alcuni valori della funzione.
@@ -969,7 +967,7 @@ Poiché $f(-2)=17$ e $f(2)=-15$, i due punti critici sono esclusi dal conteggio.
 Siano $a<b$ e $f,g:[a,b]\to\mathbb R$ continue su $[a,b]$ e derivabili su $(a,b)$. Esiste almeno un $c\in(a,b)$ per cui
 
 ```math
-\boxed{[f(b)-f(a)]\,Dg(c)=[g(b)-g(a)]\,Df(c)}.
+\boxed{[f(b)-f(a)]\,g'(c)=[g(b)-g(a)]\,f'(c)}.
 ```
 
 ### Dimostrazione
@@ -987,18 +985,18 @@ h(b)-h(a)
 Quindi $h(a)=h(b)$. Per Rolle esiste $c\in(a,b)$ tale che
 
 ```math
-0=Dh(c)=A\,Dg(c)-B\,Df(c).
+0=h'(c)=A\,g'(c)-B\,f'(c).
 ```
 
-Portando $B\,Df(c)$ a destra e sostituendo $A$ e $B$ si ottiene la formula di Cauchy.
+Portando $B\,f'(c)$ a destra e sostituendo $A$ e $B$ si ottiene la formula di Cauchy.
 
 ### Forma in frazioni e significato geometrico
 
-Se $Dg(t)\ne0$ per ogni $t\in(a,b)$, allora $g(b)-g(a)\ne0$. Infatti, l'uguaglianza $g(a)=g(b)$ permetterebbe di applicare Rolle a $g$ e darebbe un punto interno con derivata nulla. Possiamo quindi dividere per $[g(b)-g(a)]Dg(c)$.
+Se $g'(t)\ne0$ per ogni $t\in(a,b)$, allora $g(b)-g(a)\ne0$. Infatti, l'uguaglianza $g(a)=g(b)$ permetterebbe di applicare Rolle a $g$ e darebbe un punto interno con derivata nulla. Possiamo quindi dividere per $[g(b)-g(a)]g'(c)$.
 
 ```math
 \boxed{\frac{f(b)-f(a)}{g(b)-g(a)}
-=\frac{Df(c)}{Dg(c)}}.
+=\frac{f'(c)}{g'(c)}}.
 ```
 
 Nel disegno ogni valore del parametro $t$ individua il punto $(g(t),f(t))$. L'ascissa è $g(t)$ e l'ordinata è $f(t)$. Il rapporto a sinistra è la pendenza della secante verde tra i due estremi.
@@ -1009,7 +1007,7 @@ Per la tangente, consideriamo lo stesso piccolo passo $\Delta t$ nelle due coord
 \frac{f(c+\Delta t)-f(c)}{g(c+\Delta t)-g(c)}
 =
 \frac{[f(c+\Delta t)-f(c)]/\Delta t}{[g(c+\Delta t)-g(c)]/\Delta t}
-\longrightarrow\frac{Df(c)}{Dg(c)}
+\longrightarrow\frac{f'(c)}{g'(c)}
 \qquad(\Delta t\to0).
 ```
 
@@ -1017,17 +1015,17 @@ Le tangenti rosse illustrano il parallelismo con la secante.
 
 ![Disegno della lezione con curva parametrica, secante verde e tangenti rosse parallele](../grafici/grafico_teorema_cauchy.png)
 
-Con $g(t)=t$ si ha $g(b)-g(a)=b-a$ e $Dg(c)=1$. La formula restituisce il teorema di Lagrange.
+Con $g(t)=t$ si ha $g(b)-g(a)=b-a$ e $g'(c)=1$. La formula restituisce il teorema di Lagrange.
 
 ### Applicazione a un limite nella forma 0/0
 
-Se $f(a)=g(a)=0$ e valgono le ipotesi della forma in frazioni su $[a,x]$, Cauchy dà $f(x)/g(x)=Df(c)/Dg(c)$ per un $c$ tra $a$ e $x$. Quando $x\to a^+$ anche $c\to a$. Questo passaggio è alla base della regola di de l'Hôpital.
+Se $f(a)=g(a)=0$ e valgono le ipotesi della forma in frazioni su $[a,x]$, Cauchy dà $f(x)/g(x)=f'(c)/g'(c)$ per un $c$ tra $a$ e $x$. Quando $x\to a^+$ anche $c\to a$. Questo passaggio è alla base della regola di de l'Hôpital.
 
 Per esempio, consideriamo $\displaystyle\lim_{x\to0^+}\frac{\sin x}{e^{2x}-1}$. La sostituzione in $0$ dà la forma $0/0$. Poniamo $f(t)=\sin t$ e $g(t)=e^{2t}-1$. Entrambe sono continue e derivabili su $\mathbb R$ e valgono $0$ in $t=0$.
 
 ```math
-Df(t)=\cos t,\qquad
-Dg(t)=e^{2t}\cdot 2=2e^{2t}>0.
+f'(t)=\cos t,\qquad
+g'(t)=e^{2t}\cdot 2=2e^{2t}>0.
 ```
 
 Per ogni $x>0$, Cauchy su $[0,x]$ dà un $c\in(0,x)$ tale che
@@ -1047,11 +1045,11 @@ Da $0<c<x$ segue $c\to0$ quando $x\to0^+$. Il denominatore a destra tende a $2$,
 
 ## 28. Regola di de l’Hôpital
 
-Siano $f$ e $g$ derivabili su $(a,b)$, con $Dg(x)\ne0$ per ogni $x\in(a,b)$. Gli estremi dell'intervallo possono essere infiniti. Se per $x\to a^+$ i due termini tendono entrambi a $0$ oppure hanno entrambi limite infinito, e se $Df/Dg$ tende a un valore $L$ finito o infinito, allora
+Siano $f$ e $g$ derivabili su $(a,b)$, con $g'(x)\ne0$ per ogni $x\in(a,b)$. Gli estremi dell'intervallo possono essere infiniti. Se per $x\to a^+$ i due termini tendono entrambi a $0$ oppure hanno entrambi limite infinito, e se $f'/g'$ tende a un valore $L$ finito o infinito, allora
 
 ```math
 \boxed{\lim_{x\to a^+}\frac{f(x)}{g(x)}
-=\lim_{x\to a^+}\frac{Df(x)}{Dg(x)}=L}.
+=\lim_{x\to a^+}\frac{f'(x)}{g'(x)}=L}.
 ```
 
 Lo stesso vale per $x\to b^-$. Per applicare la regola si controllano la forma indeterminata e la derivata del denominatore, poi si derivano separatamente numeratore e denominatore.
@@ -1065,7 +1063,7 @@ Per ogni $x\in(a,b)$ possiamo applicare Cauchy su $[a,x]$. Si ottiene un punto $
 ```math
 \frac{f(x)}{g(x)}
 =\frac{f(x)-f(a)}{g(x)-g(a)}
-=\frac{Df(c_x)}{Dg(c_x)}.
+=\frac{f'(c_x)}{g'(c_x)}.
 ```
 
 Poiché $0<c_x-a<x-a$, quando $x\to a^+$ si ha anche $c_x\to a^+$. Il rapporto delle derivate tende quindi a $L$ anche se valutato in $c_x$, e l'uguaglianza dà lo stesso limite per $f(x)/g(x)$.
@@ -1155,11 +1153,11 @@ Al terzo passaggio l'esponente diventa $-\frac12$. Il fattore $x^{-1/2}=1/\sqrt{
 
 ## 29. Criterio di derivabilità
 
-Se $f$ è continua in $a$ e derivabile vicino ad $a$ sul lato considerato, un limite laterale finito di $Df$ dà la derivata laterale di $f$ in $a$.
+Se $f$ è continua in $a$ e derivabile vicino ad $a$ sul lato considerato, un limite laterale finito di $f'$ dà la derivata laterale di $f$ in $a$.
 
 ```math
-D_{-} f(a)=\lim_{x\to a^-}Df(x),\qquad
-D_{+} f(a)=\lim_{x\to a^+}Df(x).
+f'_-(a)=\lim_{x\to a^-}f'(x),\qquad
+f'_+(a)=\lim_{x\to a^+}f'(x).
 ```
 
 ### Esempio con il modulo del logaritmo
@@ -1169,7 +1167,7 @@ Sia $f(x)=x|\log x|$ per $x>0$. In $x=1$ abbiamo $f(1)=0$ e $\lim_{x\to1}x|\log 
 Per $0<x<1$ vale $\log x<0$, quindi $f(x)=-x\log x$. Per $x>1$ vale $\log x>0$, quindi $f(x)=x\log x$. Con la regola del prodotto si ottiene
 
 ```math
-Df(x)=
+f'(x)=
 \begin{cases}
 -\bigl(\log x+x\cdot \frac{1}{x}\bigr)=-\log x-1 & \text{se }0<x<1,\\[4pt]
 \log x+x\cdot \frac{1}{x}=\log x+1 & \text{se }x>1.
@@ -1179,8 +1177,8 @@ Df(x)=
 I due limiti laterali sono finiti. Per il criterio,
 
 ```math
-D_{-} f(1)=\lim_{x\to1^-}(-\log x-1)=-1,\qquad
-D_{+} f(1)=\lim_{x\to1^+}(\log x+1)=1.
+f'_-(1)=\lim_{x\to1^-}(-\log x-1)=-1,\qquad
+f'_+(1)=\lim_{x\to1^+}(\log x+1)=1.
 ```
 
 Le pendenze laterali sono diverse, quindi $f$ ha uno spigolo in $1$ e la derivata in $1$ non esiste.
@@ -1192,10 +1190,10 @@ Le pendenze laterali sono diverse, quindi $f$ ha uno spigolo in $1$ e la derivat
 Sia $f(x)=x^2\sin(1/x)$ per $x\ne0$ e $f(0)=0$. Da $|f(x)|\le x^2$ segue che $f$ è continua in $0$. Per $x\ne0$,
 
 ```math
-Df(x)=2x\sin(1/x)-\cos(1/x).
+f'(x)=2x\sin(1/x)-\cos(1/x).
 ```
 
-Il primo termine tende a $0$ perché $|2x\sin(1/x)|\le2|x|$. Il coseno continua a oscillare, quindi il limite di $Df(x)$ manca e il criterio è inconcludente. Usiamo il rapporto incrementale.
+Il primo termine tende a $0$ perché $|2x\sin(1/x)|\le2|x|$. Il coseno continua a oscillare, quindi il limite di $f'(x)$ manca e il criterio è inconcludente. Usiamo il rapporto incrementale.
 
 ```math
 \frac{f(x)-f(0)}{x}
@@ -1205,19 +1203,19 @@ Il primo termine tende a $0$ perché $|2x\sin(1/x)|\le2|x|$. Il coseno continua 
 \qquad u=\frac1x.
 ```
 
-Quando $x\to0^+$, $u\to+\infty$. Quando $x\to0^-$, $u\to-\infty$. In entrambi i casi $|\sin u/u|\le 1/|u|\to0$, quindi $Df(0)=0$.
+Quando $x\to0^+$, $u\to+\infty$. Quando $x\to0^-$, $u\to-\infty$. In entrambi i casi $|\sin u/u|\le 1/|u|\to0$, quindi $f'(0)=0$.
 
 [Lezione del 10 novembre, slide 57](../Lezioni/Lezione_20261110.pdf)
 
 ## 30. Derivate successive
 
-La derivata seconda è la derivata di $Df$. Nel punto $a$ si calcola con il rapporto incrementale di $Df$.
+La derivata seconda è la derivata di $f'$. Nel punto $a$ si calcola con il rapporto incrementale di $f'$.
 
 ```math
-D^2 f(a)=\lim_{x\to a}\frac{Df(x)-Df(a)}{x-a}.
+f''(a)=\lim_{x\to a}\frac{f'(x)-f'(a)}{x-a}.
 ```
 
-Ripetendo il procedimento si ottiene la derivata di ordine $k$, indicata con $D^{k} f$. Se $f$ è derivabile $k$ volte su un intervallo $I$ e $D^{k} f$ è continua su $I$, si dice che $f$ è di classe $C^k(I)$. Nel punto $a$ la continuità di una derivata già definita si verifica con $\lim_{x\to a} D^{k} f(x)=D^{k} f(a)$. Conta la coincidenza tra limite e valore nel punto.
+Ripetendo il procedimento si ottiene la derivata di ordine $k$, indicata con $f^{(k)}$. Se $f$ è derivabile $k$ volte su un intervallo $I$ e $f^{(k)}$ è continua su $I$, si dice che $f$ è di classe $C^k(I)$. Nel punto $a$ la continuità di una derivata già definita si verifica con $\lim_{x\to a} f^{(k)}(x)=f^{(k)}(a)$. Conta la coincidenza tra limite e valore nel punto.
 
 ### Esempio con il seno di 1/x
 
@@ -1227,21 +1225,21 @@ Per $x\ne0$, applicando le regole del prodotto e della catena, si ottiene
 
 ```math
 \begin{aligned}
-Df(x)&=3x^2\sin(1/x)-x\cos(1/x),\\
-|Df(x)|&\le 3x^2|\sin(1/x)|+|x|\,|\cos(1/x)|
+f'(x)&=3x^2\sin(1/x)-x\cos(1/x),\\
+|f'(x)|&\le 3x^2|\sin(1/x)|+|x|\,|\cos(1/x)|
 \le 3x^2+|x|.
 \end{aligned}
 ```
 
-Il limite di $Df(x)$ per $x\to0$ è $0$. Per il criterio di derivabilità, $Df(0)=0$. Il limite coincide con il valore nel punto, quindi $Df$ è continua in $0$ e $f\in C^1(\mathbb R)$.
+Il limite di $f'(x)$ per $x\to0$ è $0$. Per il criterio di derivabilità, $f'(0)=0$. Il limite coincide con il valore nel punto, quindi $f'$ è continua in $0$ e $f\in C^1(\mathbb R)$.
 
 Per la derivata seconda in $0$ si studia
 
 ```math
-\frac{Df(x)-Df(0)}{x}=3x\sin(1/x)-\cos(1/x).
+\frac{f'(x)-f'(0)}{x}=3x\sin(1/x)-\cos(1/x).
 ```
 
-Il primo termine tende a $0$ perché $|3x\sin(1/x)|\le 3|x|$. Il coseno oscilla, quindi il rapporto incrementale di $Df$ è privo di limite e manca la derivata seconda in $0$.
+Il primo termine tende a $0$ perché $|3x\sin(1/x)|\le 3|x|$. Il coseno oscilla, quindi il rapporto incrementale di $f'$ è privo di limite e manca la derivata seconda in $0$.
 
 [Lezione del 10 novembre, slide 59–60 e annotazioni](../Lezioni/Lezione_20261110.pdf)
 
@@ -1261,45 +1259,45 @@ La disuguaglianza deve valere per ogni coppia $x_1,x_2$ e ogni $t$. Per la conca
 
 ### Criteri con le derivate
 
-Se $f$ è derivabile su $I$, in ogni punto $x$ la pendenza della tangente è $Df(x)$. Il segno di $Df$ descrive la crescita o la decrescita di $f$. Per esempio, se $Df(x)>0$ per ogni $x\in I$, il grafico sale su tutto $I$.
+Se $f$ è derivabile su $I$, in ogni punto $x$ la pendenza della tangente è $f'(x)$. Il segno di $f'$ descrive la crescita o la decrescita di $f$. Per esempio, se $f'(x)>0$ per ogni $x\in I$, il grafico sale su tutto $I$.
 
 Per la convessità si confrontano le **pendenze in punti diversi**. Per ogni coppia $x_1<x_2$ in $I$ valgono i criteri seguenti.
 
-| Andamento di $Df$ su $I$ | Confronto tra pendenze | Forma di $f$ su $I$ |
+| Andamento di $f'$ su $I$ | Confronto tra pendenze | Forma di $f$ su $I$ |
 | --- | --- | --- |
-| Non decrescente | $Df(x_1)\le Df(x_2)$ | Convessa |
-| Non crescente | $Df(x_1)\ge Df(x_2)$ | Concava |
+| Non decrescente | $f'(x_1)\le f'(x_2)$ | Convessa |
+| Non crescente | $f'(x_1)\ge f'(x_2)$ | Concava |
 
-Una salita può quindi essere convessa quando diventa più ripida, oppure concava quando si appiattisce. In entrambi i casi $Df>0$. Lo stesso criterio vale in discesa, quando le pendenze sono negative.
+Una salita può quindi essere convessa quando diventa più ripida, oppure concava quando si appiattisce. In entrambi i casi $f'>0$. Lo stesso criterio vale in discesa, quando le pendenze sono negative.
 
-Per una funzione convessa il grafico sta sopra ogni tangente. Per $x,a\in I$ vale $f(x)\ge f(a)+Df(a)(x-a)$. Per una funzione concava il verso si inverte e il grafico sta sotto le tangenti.
+Per una funzione convessa il grafico sta sopra ogni tangente. Per $x,a\in I$ vale $f(x)\ge f(a)+f'(a)(x-a)$. Per una funzione concava il verso si inverte e il grafico sta sotto le tangenti.
 
-Quando $f$ è derivabile due volte, il segno di $D^2 f$ permette di stabilire l'andamento di $Df$. Infatti $D^2 f=D(Df)$ misura come varia la pendenza mentre si sposta il punto di tangenza.
+Quando $f$ è derivabile due volte, il segno di $f''$ permette di stabilire l'andamento di $f'$. Infatti $f''=(f')'$ misura come varia la pendenza mentre si sposta il punto di tangenza.
 
 ```math
 \begin{aligned}
-D^2 f(x)\ge0\quad\forall x\in I
-&\iff Df\text{ non decrescente su }I
+f''(x)\ge0\quad\forall x\in I
+&\iff f'\text{ non decrescente su }I
 \iff f\text{ convessa su }I,\\
-D^2 f(x)\le0\quad\forall x\in I
-&\iff Df\text{ non crescente su }I
+f''(x)\le0\quad\forall x\in I
+&\iff f'\text{ non crescente su }I
 \iff f\text{ concava su }I.
 \end{aligned}
 ```
 
 ### Esempio con le tangenti alla cubica
 
-Per $g(x)=x^3-3x^2$ si ottiene $Dg(x)=3x(x-2)$ e $D^2 g(x)=6(x-1)$. Il grafico sale sia per $x<0$ sia per $x>2$, dove $Dg>0$. Nel primo tratto $D^2 g<0$, quindi la salita si appiattisce e $g$ è concava. Nel secondo $D^2 g>0$, quindi la salita diventa più ripida e $g$ è convessa.
+Per $g(x)=x^3-3x^2$ si ottiene $g'(x)=3x(x-2)$ e $g''(x)=6(x-1)$. Il grafico sale sia per $x<0$ sia per $x>2$, dove $g'>0$. Nel primo tratto $g''<0$, quindi la salita si appiattisce e $g$ è concava. Nel secondo $g''>0$, quindi la salita diventa più ripida e $g$ è convessa.
 
 ![Grafico della cubica con tre tangenti in x uguale a 0,25, 1 e 1,75. Tutte scendono, con pendenze circa −1,31, −3 e −1,31.](../grafici/tangenti-al-flesso.png)
 
-Nel grafico, tra $0$ e $1$ la pendenza diminuisce e la discesa diventa più ripida. In $x=1$ la pendenza raggiunge il suo valore minimo, $Dg(1)=-3$. Tra $1$ e $2$ la curva continua a scendere, mentre la pendenza aumenta fino a $Dg(2)=0$ e la discesa si appiattisce. Il cambio di concavità avviene in $x=1$, dove $D^2 g$ passa da negativa a positiva.
+Nel grafico, tra $0$ e $1$ la pendenza diminuisce e la discesa diventa più ripida. In $x=1$ la pendenza raggiunge il suo valore minimo, $g'(1)=-3$. Tra $1$ e $2$ la curva continua a scendere, mentre la pendenza aumenta fino a $g'(2)=0$ e la discesa si appiattisce. Il cambio di concavità avviene in $x=1$, dove $g''$ passa da negativa a positiva.
 
 ### Esempio con due parabole
 
-Per $f(x)=x^2$, scegliamo $x_1=0$, $x_2=2$ e $t=1/2$. L'ascissa è $x=1$, il grafico ha altezza $f(1)=1$ e il segmento ha altezza $(f(0)+f(2))/2=2$. Il criterio conferma la convessità su $\mathbb R$ perché $D^2 f(x)=2$.
+Per $f(x)=x^2$, scegliamo $x_1=0$, $x_2=2$ e $t=1/2$. L'ascissa è $x=1$, il grafico ha altezza $f(1)=1$ e il segmento ha altezza $(f(0)+f(2))/2=2$. Il criterio conferma la convessità su $\mathbb R$ perché $f''(x)=2$.
 
-Per $g(x)=-x^2$ le altezze a $x=1$ sono $-1$ sul grafico e $-2$ sul segmento. Il criterio dà la concavità su $\mathbb R$ perché $D^2 g(x)=-2$.
+Per $g(x)=-x^2$ le altezze a $x=1$ sono $-1$ sul grafico e $-2$ sul segmento. Il criterio dà la concavità su $\mathbb R$ perché $g''(x)=-2$.
 
 [Lezione del 10 novembre, slide 61–65](../Lezioni/Lezione_20261110.pdf)
 
@@ -1307,22 +1305,22 @@ Per $g(x)=-x^2$ le altezze a $x=1$ sono $-1$ sul grafico e $-2$ sul segmento. Il
 
 Un punto $(a,f(a))$ è un **flesso** se il grafico ha una tangente in quel punto e passa da concavo a convesso, o da convesso a concavo, ai due lati di $a$.
 
-Se $f$ è derivabile due volte su un intervallo, i candidati a flesso sono gli zeri di $D^2 f$. Si studia il segno di $D^2 f$ a sinistra e a destra di ciascun candidato. Segni opposti sui due lati indicano un cambio di concavità. Se $D^2 f(a)$ manca, si può verificare direttamente la concavità sui due lati e l'esistenza della tangente in $a$.
+Se $f$ è derivabile due volte su un intervallo, i candidati a flesso sono gli zeri di $f''$. Si studia il segno di $f''$ a sinistra e a destra di ciascun candidato. Segni opposti sui due lati indicano un cambio di concavità. Se $f''(a)$ manca, si può verificare direttamente la concavità sui due lati e l'esistenza della tangente in $a$.
 
 ### Esempi
 
-Per $f(x)=x^3$ abbiamo $D^2 f(x)=6x$. Quindi
+Per $f(x)=x^3$ abbiamo $f''(x)=6x$. Quindi
 
 ```math
 \begin{aligned}
-x<0 &\implies D^2 f(x)<0 &&\text{grafico concavo},\\
-x>0 &\implies D^2 f(x)>0 &&\text{grafico convesso}.
+x<0 &\implies f''(x)<0 &&\text{grafico concavo},\\
+x>0 &\implies f''(x)>0 &&\text{grafico convesso}.
 \end{aligned}
 ```
 
-Il punto $(0,0)$ è un flesso. La tangente è orizzontale perché $Df(0)=0$.
+Il punto $(0,0)$ è un flesso. La tangente è orizzontale perché $f'(0)=0$.
 
-Per $f(x)=x^4$, la derivata $D^2 f(x)=12x^2$ si annulla in $0$ ed è positiva su entrambi i lati. Il grafico resta convesso. Per $f(x)=e^x$, la derivata $D^2 f(x)=e^x$ è positiva per ogni $x$ e l'equazione $D^2 f(x)=0$ è priva di soluzioni.
+Per $f(x)=x^4$, la derivata $f''(x)=12x^2$ si annulla in $0$ ed è positiva su entrambi i lati. Il grafico resta convesso. Per $f(x)=e^x$, la derivata $f''(x)=e^x$ è positiva per ogni $x$ e l'equazione $f''(x)=0$ è priva di soluzioni.
 
 [Appunti di Analisi Matematica, § 8.1](https://poisson.phc.dm.unipi.it/~dserra/teaching/amB1516/altro/esercitazioni.pdf)
 
@@ -1339,14 +1337,14 @@ h(t)=20t-5t^2=5t(4-t),\qquad 0\le t\le4.
 La pendenza del grafico è la velocità. Applicando la regola del prodotto di Leibniz a $5t(4-t)$ si ottiene
 
 ```math
-Dh(t)=5(4-t)+5t(-1)=20-10t,\qquad D^2 h(t)=-10.
+h'(t)=5(4-t)+5t(-1)=20-10t,\qquad h''(t)=-10.
 ```
 
 La velocità è positiva durante la salita e negativa durante la discesa. L'accelerazione negativa rende il grafico concavo.
 
 ### Weierstrass, Fermat e Rolle
 
-Per **Weierstrass**, $h$ è continua sul chiuso e limitato $[0,4]$ e raggiunge minimo e massimo assoluti. Il minimo è $0$ agli estremi, perché $h(t)=5t(4-t)\ge0$. Il massimo è interno, dato che $h(0)=h(4)=0$ e $h(1)=15>0$. Per **Fermat**, in quel punto $Dh(t)=0$. Risolvendo $20-10t=0$ otteniamo $t=2$, dove $h(2)=20$ e la tangente è orizzontale.
+Per **Weierstrass**, $h$ è continua sul chiuso e limitato $[0,4]$ e raggiunge minimo e massimo assoluti. Il minimo è $0$ agli estremi, perché $h(t)=5t(4-t)\ge0$. Il massimo è interno, dato che $h(0)=h(4)=0$ e $h(1)=15>0$. Per **Fermat**, in quel punto $h'(t)=0$. Risolvendo $20-10t=0$ otteniamo $t=2$, dove $h(2)=20$ e la tangente è orizzontale.
 
 Questo è il collegamento con **Rolle**. Poiché $h(0)=h(4)$, Rolle garantisce un istante interno con velocità nulla. In questo caso Weierstrass e Fermat lo individuano alla cima.
 
@@ -1355,23 +1353,23 @@ Questo è il collegamento con **Rolle**. Poiché $h(0)=h(4)$, Rolle garantisce u
 La secante arancione va dal lancio alla cima. La sua pendenza è la velocità media nei primi due secondi. **Lagrange** garantisce che una tangente in un punto interno abbia la stessa pendenza. Qui è la tangente viola a $t=1$.
 
 ```math
-\frac{h(2)-h(0)}{2-0}=10\,\mathrm{m/s}=Dh(1).
+\frac{h(2)-h(0)}{2-0}=10\,\mathrm{m/s}=h'(1).
 ```
 
 **Cauchy** confronta le variazioni di due funzioni. Per $h$ e una funzione $g$, entrambe continue su $[a,b]$ e derivabili su $(a,b)$, esiste $c\in(a,b)$ tale che
 
 ```math
-[h(b)-h(a)]Dg(c)=[g(b)-g(a)]Dh(c).
+[h(b)-h(a)]g'(c)=[g(b)-g(a)]h'(c).
 ```
 
-Con $g(t)=t$, abbiamo $Dg(c)=1$ e $g(b)-g(a)=b-a$. Si ottiene la formula di Lagrange $Dh(c)=[h(b)-h(a)]/(b-a)$. Sul volo intero $[0,4]$, la pendenza della secante è zero, quindi si ritrova Rolle.
+Con $g(t)=t$, abbiamo $g'(c)=1$ e $g(b)-g(a)=b-a$. Si ottiene la formula di Lagrange $h'(c)=[h(b)-h(a)]/(b-a)$. Sul volo intero $[0,4]$, la pendenza della secante è zero, quindi si ritrova Rolle.
 
 ### Da Cauchy a de l’Hôpital
 
 Se consideriamo l'intervallo $[0,t]$ con $t>0$, Cauchy con $g(t)=t$ dà
 
 ```math
-\frac{h(t)-h(0)}{t}=Dh(c_t),\qquad 0<c_t<t.
+\frac{h(t)-h(0)}{t}=h'(c_t),\qquad 0<c_t<t.
 ```
 
 Facendo tendere $t$ a $0^+$, anche $c_t\to0^+$. La velocità media sul tratto tende alla velocità iniziale. La regola di **de l’Hôpital** calcola lo stesso limite, perché il quoziente ha forma $0/0$ e la derivata del denominatore è $1$.
@@ -1386,17 +1384,17 @@ Facendo tendere $t$ a $0^+$, anche $c_t\to0^+$. La velocità media sul tratto te
 
 La retta grigia rappresenta la quota di $15$ metri. Ponendo $u(t)=h(t)-15$, otteniamo $u(0)=-15$, $u(2)=5$ e $u(4)=-15$. **Bolzano** garantisce uno zero in $(0,2)$ e uno in $(2,4)$.
 
-In ciascuno dei due tratti lo zero è unico. Due zeri nello stesso tratto darebbero, per Rolle, un punto intermedio con $Du(t)=Dh(t)=0$. Invece $Dh>0$ in $(0,2)$ e $Dh<0$ in $(2,4)$. Calcolando $u(1)=u(3)=0$ si individuano i passaggi a $1$ e $3$ secondi.
+In ciascuno dei due tratti lo zero è unico. Due zeri nello stesso tratto darebbero, per Rolle, un punto intermedio con $u'(t)=h'(t)=0$. Invece $h'>0$ in $(0,2)$ e $h'<0$ in $(2,4)$. Calcolando $u(1)=u(3)=0$ si individuano i passaggi a $1$ e $3$ secondi.
 
 ## 34. Riepilogo finale
 
 ### Derivata e retta tangente
 
-La derivata in $a$ esiste quando i limiti laterali del rapporto incrementale coincidono e sono finiti. La derivabilità implica $\lim_{x\to a}f(x)=f(a)$. Se $Df(a)=0$, la tangente è orizzontale.
+La derivata in $a$ esiste quando i limiti laterali del rapporto incrementale coincidono e sono finiti. La derivabilità implica $\lim_{x\to a}f(x)=f(a)$. Se $f'(a)=0$, la tangente è orizzontale.
 
 ```math
-Df(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h},
-\qquad T(x)=f(a)+Df(a)(x-a).
+f'(a)=\lim_{h\to0}\frac{f(a+h)-f(a)}{h},
+\qquad T(x)=f(a)+f'(a)(x-a).
 ```
 
 Vicino ad $a$ la tangente dà l'approssimazione $f(x)=T(x)+o(x-a)$.
@@ -1426,11 +1424,11 @@ Gli angoli sono in radianti. Per $\ln x$ e $\log_a x$ si usano le stesse derivat
 
 | Regola | Formula |
 | --- | --- |
-| Linearità | $D(af+bg)=a\,Df+b\,Dg$ per $a,b$ costanti |
-| Prodotto di Leibniz | $D(fg)=(Df)g+f(Dg)$ |
-| Quoziente | $D\left(\frac fg\right)=\frac{(Df)g-f(Dg)}{g^2}$ dove $g\ne0$ |
-| Catena | $D(f\circ g)(x)=Df(g(x))\,Dg(x)$ |
-| Inversa | $D(f^{-1})(y_0)=\frac{1}{Df(a)}$ per $y_0=f(a)$, con $f$ derivabile in $a$, $Df(a)\ne0$ e inversa continua in $y_0$ |
+| Linearità | $(af+bg)'=af'+bg'$ per $a,b$ costanti |
+| Prodotto di Leibniz | $(fg)'=f'g+fg'$ |
+| Quoziente | $\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ dove $g\ne0$ |
+| Catena | $(f\circ g)'(x)=f'(g(x))\,g'(x)$ |
+| Inversa | $(f^{-1})'(y_0)=\frac{1}{f'(a)}$ per $y_0=f(a)$, con $f$ derivabile in $a$, $f'(a)\ne0$ e inversa continua in $y_0$ |
 
 $f$ è invertibile se ogni $y$ del codominio corrisponde a un unico $x$, cioè $f(x)=y\iff f^{-1}(y)=x$. Una funzione strettamente monotona è invertibile sulla propria immagine.
 
@@ -1440,11 +1438,11 @@ $f$ è invertibile se ogni $y$ del codominio corrisponde a un unico $x$, cioè $
 | --- | --- | --- |
 | [Weierstrass](#21-teorema-di-rolle) | $f$ continua su $[a,b]$ chiuso e limitato | Esistono $x_m,x_M\in[a,b]$ con $f(x_m)\le f(x)\le f(x_M)$ per ogni $x\in[a,b]$. Il minimo e il massimo assoluti sono raggiunti. |
 | [Bolzano, teorema degli zeri](#26-conteggio-degli-zeri-con-la-monotonia) | $f$ continua su $[a,b]$, $f(a)f(b)<0$ | Esiste $c\in(a,b)$ con $f(c)=0$. Se $f$ è strettamente monotona, lo zero è unico. |
-| [Fermat](#19-teorema-di-fermat) | $a$ è un estremo relativo interno e $f$ è derivabile in $a$ | $Df(a)=0$. Gli zeri di $Df$ sono candidati da verificare. |
-| [Rolle](#21-teorema-di-rolle) | $f$ continua su $[a,b]$, derivabile su $(a,b)$ e $f(a)=f(b)$ | Esiste $c\in(a,b)$ con $Df(c)=0$. |
-| [Lagrange](#22-teorema-di-lagrange) | $f$ continua su $[a,b]$ e derivabile su $(a,b)$ | Esiste $c\in(a,b)$ con $Df(c)=\frac{f(b)-f(a)}{b-a}$. La tangente in $c$ è parallela alla secante tra gli estremi. |
-| [Cauchy](#27-teorema-di-cauchy) | $f,g$ continue su $[a,b]$ e derivabili su $(a,b)$ | Esiste $c\in(a,b)$ con $[f(b)-f(a)]Dg(c)=[g(b)-g(a)]Df(c)$. |
-| [De l’Hôpital](#28-regola-di-de-lhôpital) | $f,g$ derivabili vicino al punto sul lato considerato, $Dg\ne0$, forma $0/0$ o $\infty/\infty$ e $\lim Df/Dg=L$ finito o infinito | $\displaystyle\lim\frac fg=\lim\frac{Df}{Dg}=L$. Per ripetere la regola si verificano le ipotesi sul nuovo quoziente. |
+| [Fermat](#19-teorema-di-fermat) | $a$ è un estremo relativo interno e $f$ è derivabile in $a$ | $f'(a)=0$. Gli zeri di $f'$ sono candidati da verificare. |
+| [Rolle](#21-teorema-di-rolle) | $f$ continua su $[a,b]$, derivabile su $(a,b)$ e $f(a)=f(b)$ | Esiste $c\in(a,b)$ con $f'(c)=0$. |
+| [Lagrange](#22-teorema-di-lagrange) | $f$ continua su $[a,b]$ e derivabile su $(a,b)$ | Esiste $c\in(a,b)$ con $f'(c)=\frac{f(b)-f(a)}{b-a}$. La tangente in $c$ è parallela alla secante tra gli estremi. |
+| [Cauchy](#27-teorema-di-cauchy) | $f,g$ continue su $[a,b]$ e derivabili su $(a,b)$ | Esiste $c\in(a,b)$ con $[f(b)-f(a)]g'(c)=[g(b)-g(a)]f'(c)$. |
+| [De l’Hôpital](#28-regola-di-de-lhôpital) | $f,g$ derivabili vicino al punto sul lato considerato, $g'\ne0$, forma $0/0$ o $\infty/\infty$ e $\lim f'/g'=L$ finito o infinito | $\displaystyle\lim\frac fg=\lim\frac{f'}{g'}=L$. Per ripetere la regola si verificano le ipotesi sul nuovo quoziente. |
 
 Con $g(x)=x$, Cauchy dà Lagrange. Con $f(a)=f(b)$, Lagrange dà Rolle.
 
@@ -1453,13 +1451,13 @@ Con $g(x)=x$, Cauchy dà Lagrange. Con $f(a)=f(b)$, Lagrange dà Rolle.
 | Obiettivo | Controllo |
 | --- | --- |
 | Continuità in $a$ | $\lim_{x\to a}f(x)=f(a)$. Per la continuità di una derivata si confrontano il limite e il valore della stessa derivata. |
-| Derivabilità in $a$ | Il rapporto incrementale deve avere un limite finito. Se $f$ è continua in $a$ e derivabile vicino ad $a$ sul lato considerato, un limite finito di $Df(x)$ dà la derivata laterale $D_{\pm} f(a)=\lim_{x\to a^\pm}Df(x)$. Se manca il limite di $Df$, si studia il rapporto incrementale. |
-| Monotonia su un intervallo | Per $f$ derivabile, $Df\ge0$ equivale a $f$ non decrescente e $Df\le0$ a $f$ non crescente. $Df>0$ o $Df<0$ su tutto l'intervallo danno monotonia stretta. |
-| Estremi | Per un punto interno in cui $f$ è continua, un cambio del segno di $Df$ da $-$ a $+$ dà un minimo e da $+$ a $-$ un massimo. Su $[a,b]$ si confrontano anche i valori agli estremi e nei punti di non derivabilità. |
-| Funzione costante | Su un intervallo $I$, $f$ è costante se e solo se $Df(x)=0$ per ogni $x\in I$. Si calcola la costante valutando $f$ in un punto di $I$. |
-| Classe $C^k$ | $f$ è derivabile $k$ volte e $D^{k} f$ è continua. Per esempio $D^2 f=D(Df)$. |
-| Convessità e concavità | Per la convessità il grafico sta sotto il segmento tra due suoi punti. Se $f$ è derivabile, equivale a $Df$ non decrescente. Se $f$ è derivabile due volte, equivale a $D^2 f\ge0$ su tutto l'intervallo. Per la concavità si invertono i versi. |
-| Flesso in $(a,f(a))$ | Il grafico ha una tangente e cambia concavità ai lati di $a$. Quando si usa $D^2 f$, si controllano i suoi segni ai due lati degli zeri e dei punti in cui manca. |
+| Derivabilità in $a$ | Il rapporto incrementale deve avere un limite finito. Se $f$ è continua in $a$ e derivabile vicino ad $a$ sul lato considerato, un limite finito di $f'(x)$ dà la derivata laterale $f'_{\pm}(a)=\lim_{x\to a^\pm}f'(x)$. Se manca il limite di $f'$, si studia il rapporto incrementale. |
+| Monotonia su un intervallo | Per $f$ derivabile, $f'\ge0$ equivale a $f$ non decrescente e $f'\le0$ a $f$ non crescente. $f'>0$ o $f'<0$ su tutto l'intervallo danno monotonia stretta. |
+| Estremi | Per un punto interno in cui $f$ è continua, un cambio del segno di $f'$ da $-$ a $+$ dà un minimo e da $+$ a $-$ un massimo. Su $[a,b]$ si confrontano anche i valori agli estremi e nei punti di non derivabilità. |
+| Funzione costante | Su un intervallo $I$, $f$ è costante se e solo se $f'(x)=0$ per ogni $x\in I$. Si calcola la costante valutando $f$ in un punto di $I$. |
+| Classe $C^k$ | $f$ è derivabile $k$ volte e $f^{(k)}$ è continua. Per esempio $f''=(f')'$. |
+| Convessità e concavità | Per la convessità il grafico sta sotto il segmento tra due suoi punti. Se $f$ è derivabile, equivale a $f'$ non decrescente. Se $f$ è derivabile due volte, equivale a $f''\ge0$ su tutto l'intervallo. Per la concavità si invertono i versi. |
+| Flesso in $(a,f(a))$ | Il grafico ha una tangente e cambia concavità ai lati di $a$. Quando si usa $f''$, si controllano i suoi segni ai due lati degli zeri e dei punti in cui manca. |
 
 Nella definizione di convessità si confrontano le altezze alla stessa ascissa $x=(1-t)x_1+tx_2$, con $0\le t\le1$. Il parametro $t$ indica la frazione del tratto percorsa da $x_1$ a $x_2$.
 
@@ -1473,22 +1471,22 @@ Per i limiti, il **teorema del confronto** permette di concludere $u(x)\to0$ se 
 
 | Funzione | Che cosa mostra |
 | --- | --- |
-| $x^2$ e $-x^2$ | La prima ha tangente $y=2x-1$ in $x=1$ ed è convessa perché $D^2 f=2$. La seconda è concava perché $D^2 f=-2$. |
+| $x^2$ e $-x^2$ | La prima ha tangente $y=2x-1$ in $x=1$ ed è convessa perché $f''=2$. La seconda è concava perché $f''=-2$. |
 | $\lvert x\rvert$ | È convessa e continua. In $0$ ha uno spigolo con derivate laterali $-1$ e $1$. |
 | $\sqrt{\lvert x\rvert}$ e $\sqrt[3]{x}$ | In $0$ la prima ha una cuspide con pendenze laterali $-\infty$ e $+\infty$. La seconda ha tangente verticale con entrambe le pendenze che tendono a $+\infty$. |
-| $x\lvert x\rvert$ | In $0$ il rapporto incrementale è $\lvert h\rvert\to0$, quindi $Df(0)=0$. |
+| $x\lvert x\rvert$ | In $0$ il rapporto incrementale è $\lvert h\rvert\to0$, quindi $f'(0)=0$. |
 | Funzione di Weierstrass $W(x)=\sum_{n=0}^{\infty}a^n\cos(b^n\pi x)$ | È continua ovunque e priva di derivata in ogni punto con $0<a<1$, $b\in\mathbb N$ dispari e $ab>1+\frac{3\pi}{2}$. |
 | $x^2\sin x$ e $\sin(x^2)$ | Esempi per riconoscere un prodotto e una funzione composta. |
-| $x\sqrt{x^2+1}$ | $Df(x)=\frac{2x^2+1}{\sqrt{x^2+1}}>0$. Su $[1,2]$ il minimo è $\sqrt2$ in $1$ e il massimo è $2\sqrt5$ in $2$. |
-| $s(t)$, posizione | La velocità istantanea è $Ds(t)$. Lagrange garantisce un istante in cui vale la velocità media. Per due auto, se $Ds_2-Ds_1=0$, il distacco $s_2-s_1$ è costante. |
+| $x\sqrt{x^2+1}$ | $f'(x)=\frac{2x^2+1}{\sqrt{x^2+1}}>0$. Su $[1,2]$ il minimo è $\sqrt2$ in $1$ e il massimo è $2\sqrt5$ in $2$. |
+| $s(t)$, posizione | La velocità istantanea è $s'(t)$. Lagrange garantisce un istante in cui vale la velocità media. Per due auto, se $s_2'-s_1'=0$, il distacco $s_2-s_1$ è costante. |
 | $\ln(2x)-\ln x$ | Vale $\ln2$ per $x>0$. |
 | $\arcsin x+\arccos x$ | Vale $\pi/2$ su $(-1,1)$. |
 | $\arctan x+\arctan(1/x)$ | Vale $-\pi/2$ per $x<0$ e $\pi/2$ per $x>0$. |
 | $\frac{x-1}{x^2+1}$ | Asintoto orizzontale $y=0$, minimo relativo in $1-\sqrt2$ e massimo relativo in $1+\sqrt2$. |
 | $x^3-12x+1$ | Ha tre zeri reali. Il teorema degli zeri dà l'esistenza e la monotonia stretta dà l'unicità su ciascuno dei tre intervalli. |
 | $x\lvert\log x\rvert$ | In $1$ è continua e ha uno spigolo con derivate laterali $-1$ e $1$. |
-| $x^2\sin(1/x)$, con $f(0)=0$ | $Df(0)=0$ dal rapporto incrementale. Il limite di $Df(x)$ in $0$ manca. |
-| $x^3\sin(1/x)$, con $f(0)=0$ | $Df(0)=0$ e $Df$ è continua. La funzione è di classe $C^1$ e in $0$ manca la derivata seconda. |
+| $x^2\sin(1/x)$, con $f(0)=0$ | $f'(0)=0$ dal rapporto incrementale. Il limite di $f'(x)$ in $0$ manca. |
+| $x^3\sin(1/x)$, con $f(0)=0$ | $f'(0)=0$ e $f'$ è continua. La funzione è di classe $C^1$ e in $0$ manca la derivata seconda. |
 | $x^3$, $x^4$ ed $e^x$ | $x^3$ è strettamente crescente, con flesso a tangente orizzontale in $0$. Per $x^4$ la derivata seconda è nulla in $0$ e positiva ai due lati. Per $e^x$ la derivata seconda è positiva ovunque. |
 
 ### Limiti degli esempi
