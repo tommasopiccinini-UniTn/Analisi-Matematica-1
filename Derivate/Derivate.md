@@ -1259,16 +1259,39 @@ La disuguaglianza deve valere per ogni coppia $x_1,x_2$ e ogni $t$. Per la conca
 
 ### Criteri con le derivate
 
-Se $f$ è derivabile su $I$, è convessa se e solo se $f'$ è non decrescente. In tal caso il grafico sta sopra ogni tangente, cioè $f(x)\ge f(a)+f'(a)(x-a)$ per $x,a\in I$. Per una funzione concava $f'$ è non crescente e il grafico sta sotto le tangenti.
+Se $f$ è derivabile su $I$, in ogni punto $x$ la pendenza della tangente è $f'(x)$. Il segno di $f'$ descrive la crescita o la decrescita di $f$. Per esempio, se $f'(x)>0$ per ogni $x\in I$, il grafico sale su tutto $I$.
 
-Se $f$ è derivabile due volte su $I$, si può controllare il segno della derivata seconda.
+Per la convessità si confrontano le **pendenze in punti diversi**. Per ogni coppia $x_1<x_2$ in $I$ valgono i criteri seguenti.
+
+| Andamento di $f'$ su $I$ | Confronto tra pendenze | Forma di $f$ su $I$ |
+| --- | --- | --- |
+| Non decrescente | $f'(x_1)\le f'(x_2)$ | Convessa |
+| Non crescente | $f'(x_1)\ge f'(x_2)$ | Concava |
+
+Una salita può quindi essere convessa quando diventa più ripida, oppure concava quando si appiattisce. In entrambi i casi $f'>0$. Lo stesso criterio vale in discesa, quando le pendenze sono negative.
+
+Per una funzione convessa il grafico sta sopra ogni tangente. Per $x,a\in I$ vale $f(x)\ge f(a)+f'(a)(x-a)$. Per una funzione concava il verso si inverte e il grafico sta sotto le tangenti.
+
+Quando $f$ è derivabile due volte, il segno di $f''$ permette di stabilire l'andamento di $f'$. Infatti $f''=(f')'$ misura come varia la pendenza mentre si sposta il punto di tangenza.
 
 ```math
 \begin{aligned}
-f''(x)\ge0\quad\forall x\in I &\iff f\text{ convessa su }I,\\
-f''(x)\le0\quad\forall x\in I &\iff f\text{ concava su }I.
+f''(x)\ge0\quad\forall x\in I
+&\iff f'\text{ non decrescente su }I
+\iff f\text{ convessa su }I,\\
+f''(x)\le0\quad\forall x\in I
+&\iff f'\text{ non crescente su }I
+\iff f\text{ concava su }I.
 \end{aligned}
 ```
+
+### Esempio con le tangenti alla cubica
+
+Per $g(x)=x^3-3x^2$ si ottiene $g'(x)=3x(x-2)$ e $g''(x)=6(x-1)$. Il grafico sale sia per $x<0$ sia per $x>2$, dove $g'>0$. Nel primo tratto $g''<0$, quindi la salita si appiattisce e $g$ è concava. Nel secondo $g''>0$, quindi la salita diventa più ripida e $g$ è convessa.
+
+![Grafico della cubica con tre tangenti in x uguale a 0,25, 1 e 1,75. Tutte scendono, con pendenze circa −1,31, −3 e −1,31.](../grafici/tangenti-al-flesso.png)
+
+Nel grafico, tra $0$ e $1$ la pendenza diminuisce e la discesa diventa più ripida. In $x=1$ la pendenza raggiunge il suo valore minimo, $g'(1)=-3$. Tra $1$ e $2$ la curva continua a scendere, mentre la pendenza aumenta fino a $g'(2)=0$ e la discesa si appiattisce. Il cambio di concavità avviene in $x=1$, dove $g''$ passa da negativa a positiva.
 
 ### Esempio con due parabole
 
