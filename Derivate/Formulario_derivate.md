@@ -15,26 +15,17 @@ Formulario sintetico di definizioni, derivate note, regole operative e teoremi p
 
 ## Derivate note
 
-| Funzione $f(x)$ | Derivata $f'(x)$ | Condizioni |
-| --- | --- | --- |
-| $c$ | $0$ | $c\in\mathbb R$ |
-| $x$ | $1$ | $x\in\mathbb R$ |
-| $x^\alpha$ | $\alpha x^{\alpha-1}$ | In generale $x>0$ per $\alpha\in\mathbb R$ |
-| $\sqrt{x}$ | $\displaystyle\frac1{2\sqrt{x}}$ | $x>0$ |
-| $\displaystyle\frac1x$ | $\displaystyle-\frac1{x^2}$ | $x\neq0$ |
-| $e^x$ | $e^x$ | $x\in\mathbb R$ |
-| $a^x$ | $a^x\ln a$ | $a>0$ |
-| $\ln x$ | $\displaystyle\frac1x$ | $x>0$ |
-| $\ln\lvert x\rvert$ | $\displaystyle\frac1x$ | $x\neq0$ |
-| $\log_a x$ | $\displaystyle\frac1{x\ln a}$ | $x>0,\ a>0,\ a\neq1$ |
-| $\sin x$ | $\cos x$ | $x\in\mathbb R$ |
-| $\cos x$ | $-\sin x$ | $x\in\mathbb R$ |
-| $\tan x$ | $\displaystyle\frac1{\cos^2x}=1+\tan^2x$ | $\cos x\neq0$ |
-| $\arcsin x$ | $\displaystyle\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ |
-| $\arccos x$ | $\displaystyle-\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ |
-| $\arctan x$ | $\displaystyle\frac1{1+x^2}$ | $x\in\mathbb R$ |
-| $\sinh x$ | $\cosh x$ | $x\in\mathbb R$ |
-| $\cosh x$ | $\sinh x$ | $x\in\mathbb R$ |
+| Funzione | Derivata | Condizioni | Funzione | Derivata | Condizioni |
+| --- | --- | --- | --- | --- | --- |
+| $c$ | $0$ | $c\in\mathbb R$ | $x$ | $1$ | $x\in\mathbb R$ |
+| $x^\alpha$ | $\alpha x^{\alpha-1}$ | In generale $x>0$ | $\sqrt{x}$ | $\displaystyle\frac1{2\sqrt{x}}$ | $x>0$ |
+| $\displaystyle\frac1x$ | $\displaystyle-\frac1{x^2}$ | $x\neq0$ | $\ln\lvert x\rvert$ | $\displaystyle\frac1x$ | $x\neq0$ |
+| $e^x$ | $e^x$ | $x\in\mathbb R$ | $a^x$ | $a^x\ln a$ | $a>0$ |
+| $\ln x$ | $\displaystyle\frac1x$ | $x>0$ | $\log_a x$ | $\displaystyle\frac1{x\ln a}$ | $x>0,\ a>0,\ a\neq1$ |
+| $\sin x$ | $\cos x$ | $x\in\mathbb R$ | $\cos x$ | $-\sin x$ | $x\in\mathbb R$ |
+| $\tan x$ | $\displaystyle\frac1{\cos^2x}$ | $\cos x\neq0$ | $\arctan x$ | $\displaystyle\frac1{1+x^2}$ | $x\in\mathbb R$ |
+| $\arcsin x$ | $\displaystyle\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ | $\arccos x$ | $\displaystyle-\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ |
+| $\sinh x$ | $\cosh x$ | $x\in\mathbb R$ | $\cosh x$ | $\sinh x$ | $x\in\mathbb R$ |
 
 ## Regole di derivazione
 
