@@ -362,7 +362,7 @@ Nelle formule $f$ e $g$ sono funzioni derivabili e $a,b$ sono costanti reali.
 | Linearità (forma generale) | $\displaystyle (a f(x)+b g(x))'=a f'(x)+b g'(x)$ |
 | Prodotto (Leibniz) | $\displaystyle (f(x)g(x))'=f'(x)g(x)+f(x)g'(x)$ |
 | Quoziente | $\displaystyle \left(\frac{f(x)}{g(x)}\right)'=\frac{f'(x)g(x)-f(x)g'(x)}{[g(x)]^2}$ |
-| Funzione composta (catena) | $\displaystyle (f(g(x)))'=f'(g(x))\,g'(x)$ |
+| Funzione composta (catena) | $\displaystyle (f(g(x)))'=f'(g(x))\cdot g'(x)$ |
 
 **Notazione:** $\displaystyle f'(x)=D[f(x)]=\frac{d}{dx}f(x)$.
 
@@ -1441,7 +1441,7 @@ Gli angoli sono in radianti. Per $\ln x$ e $\log_a x$ si usano le stesse derivat
 | Linearità | $(af+bg)'=af'+bg'$ per $a,b$ costanti |
 | Prodotto di Leibniz | $(fg)'=f'g+fg'$ |
 | Quoziente | $\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ dove $g\ne0$ |
-| Catena | $(f\circ g)'(x)=f'(g(x))\,g'(x)$ |
+| Catena | $(f\circ g)'(x)=f'(g(x))\cdot g'(x)$ |
 | Inversa | $(f^{-1})'(y_0)=\frac{1}{f'(a)}$ per $y_0=f(a)$, con $f$ derivabile in $a$, $f'(a)\ne0$ e inversa continua in $y_0$ |
 
 $f$ è invertibile se ogni $y$ del codominio corrisponde a un unico $x$, cioè $f(x)=y\iff f^{-1}(y)=x$. Una funzione strettamente monotona è invertibile sulla propria immagine.
