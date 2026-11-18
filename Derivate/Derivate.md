@@ -1442,6 +1442,7 @@ Gli angoli sono in radianti. Per $\ln x$ e $\log_a x$ si usano le stesse derivat
 | Prodotto di Leibniz | $(fg)'=f'g+fg'$ |
 | Quoziente | $\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ dove $g\ne0$ |
 | Catena | $(f\circ g)'(x)=f'(g(x))\cdot g'(x)$ |
+| Radice composta | $\displaystyle(\sqrt{g(x)})'=\frac{g'(x)}{2\sqrt{g(x)}}$ per $g(x)>0$; se $g(x)=0$ la derivabilità va studiata separatamente |
 | Inversa | $(f^{-1})'(y_0)=\frac{1}{f'(a)}$ per $y_0=f(a)$, con $f$ derivabile in $a$, $f'(a)\ne0$ e inversa continua in $y_0$ |
 
 $f$ è invertibile se ogni $y$ del codominio corrisponde a un unico $x$, cioè $f(x)=y\iff f^{-1}(y)=x$. Una funzione strettamente monotona è invertibile sulla propria immagine.
