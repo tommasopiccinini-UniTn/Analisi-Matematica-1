@@ -1438,6 +1438,7 @@ Gli angoli sono in radianti. Per $\ln x$ e $\log_a x$ si usano le stesse derivat
 
 | Regola | Formula |
 | --- | --- |
+| Moltiplicazione per una costante | $(cf(x))'=c\cdot f'(x)$, con $c$ costante e $c'=0$ |
 | Linearità | $(af+bg)'=af'+bg'$ per $a,b$ costanti |
 | Prodotto di Leibniz | $(fg)'=f'g+fg'$ |
 | Quoziente | $\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ dove $g\ne0$ |
