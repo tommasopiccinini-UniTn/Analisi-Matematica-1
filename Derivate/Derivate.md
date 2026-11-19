@@ -1443,6 +1443,7 @@ Gli angoli sono in radianti. Per $\ln x$ e $\log_a x$ si usano le stesse derivat
 | Prodotto di Leibniz | $(fg)'=f'g+fg'$ |
 | Quoziente | $\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ dove $g\ne0$ |
 | Catena | $(f\circ g)'(x)=f'(g(x))\cdot g'(x)$ |
+| Base ed esponente variabili | $f(x)^{g(x)}=e^{g(x)\ln f(x)}$; prima si trasforma in esponenziale, poi si deriva con la catena; richiede $f(x)>0$ |
 | Radice composta | $\displaystyle(\sqrt{g(x)})'=\frac{g'(x)}{2\sqrt{g(x)}}$ per $g(x)>0$; se $g(x)=0$ la derivabilità va studiata separatamente |
 | Inversa | $(f^{-1})'(y_0)=\frac{1}{f'(a)}$ per $y_0=f(a)$, con $f$ derivabile in $a$, $f'(a)\ne0$ e inversa continua in $y_0$ |
 
