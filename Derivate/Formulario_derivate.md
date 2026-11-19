@@ -31,6 +31,7 @@ Formulario sintetico di definizioni, derivate note, regole operative e teoremi p
 
 | Regola | Formula | Nota |
 | --- | --- | --- |
+| Moltiplicazione per una costante | $(cf(x))'=c\cdot f'(x)$ | $c$ è costante e $c'=0$ |
 | Linearità | $(af+bg)'=af'+bg'$ | $a,b$ costanti |
 | Prodotto | $(fg)'=f'g+fg'$ | Entrambi i fattori devono essere derivabili nel punto |
 | Quoziente | $\displaystyle\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ | $g(x)\neq0$ |
