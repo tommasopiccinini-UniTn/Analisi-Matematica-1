@@ -26,6 +26,7 @@ Formulario sintetico di definizioni, derivate note, regole operative e teoremi p
 | $\tan x$ | $\displaystyle\frac1{\cos^2x}$ | $\cos x\neq0$ | $\arctan x$ | $\displaystyle\frac1{1+x^2}$ | $x\in\mathbb R$ |
 | $\arcsin x$ | $\displaystyle\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ | $\arccos x$ | $\displaystyle-\frac1{\sqrt{1-x^2}}$ | $-1<x<1$ |
 | $\sinh x$ | $\cosh x$ | $x\in\mathbb R$ | $\cosh x$ | $\sinh x$ | $x\in\mathbb R$ |
+| $f(x)^{g(x)}$ | Prima $e^{g(x)\ln f(x)}$ | $f(x)>0$ |  |  |  |
 
 ## Regole di derivazione
 
@@ -37,7 +38,6 @@ Formulario sintetico di definizioni, derivate note, regole operative e teoremi p
 | Quoziente | $\displaystyle\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ | $g(x)\neq0$ |
 | Catena | $(f\circ g)'(x)=f'(g(x))\cdot g'(x)$ | La funzione esterna deve essere derivabile in $g(x)$ |
 | Inversa | $\displaystyle(f^{-1})'(y_0)=\frac1{f'(x_0)}$ | $y_0=f(x_0)$ e $f'(x_0)\neq0$ |
-| Base ed esponente variabili | $f(x)^{g(x)}=e^{g(x)\ln f(x)}$; poi si deriva l’esponenziale composto | $f(x)>0$; non usare direttamente la regola della potenza |
 | Potenza composta | $\bigl(g(x)^\alpha\bigr)'=\alpha g(x)^{\alpha-1}g'(x)$ | Dove la potenza è definita |
 | Radice composta | $\displaystyle(\sqrt{g(x)})'=\frac{g'(x)}{2\sqrt{g(x)}}$ | $g(x)>0$; se $g(x)=0$ va studiata separatamente |
 | Esponenziale composta | $(e^{g(x)})'=e^{g(x)}g'(x)$ | Regola della catena |
