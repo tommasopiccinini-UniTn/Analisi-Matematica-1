@@ -37,6 +37,7 @@ Formulario sintetico di definizioni, derivate note, regole operative e teoremi p
 | Quoziente | $\displaystyle\left(\frac fg\right)'=\frac{f'g-fg'}{g^2}$ | $g(x)\neq0$ |
 | Catena | $(f\circ g)'(x)=f'(g(x))\cdot g'(x)$ | La funzione esterna deve essere derivabile in $g(x)$ |
 | Inversa | $\displaystyle(f^{-1})'(y_0)=\frac1{f'(x_0)}$ | $y_0=f(x_0)$ e $f'(x_0)\neq0$ |
+| Base ed esponente variabili | $f(x)^{g(x)}=e^{g(x)\ln f(x)}$; poi si deriva l’esponenziale composto | $f(x)>0$; non usare direttamente la regola della potenza |
 | Potenza composta | $\bigl(g(x)^\alpha\bigr)'=\alpha g(x)^{\alpha-1}g'(x)$ | Dove la potenza è definita |
 | Radice composta | $\displaystyle(\sqrt{g(x)})'=\frac{g'(x)}{2\sqrt{g(x)}}$ | $g(x)>0$; se $g(x)=0$ va studiata separatamente |
 | Esponenziale composta | $(e^{g(x)})'=e^{g(x)}g'(x)$ | Regola della catena |
