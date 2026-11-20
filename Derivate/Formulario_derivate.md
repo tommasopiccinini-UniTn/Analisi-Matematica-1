@@ -8,7 +8,8 @@ Formulario sintetico di definizioni, derivate note, regole operative e teoremi p
 | --- | --- | --- |
 | Derivata in $x_0$ | $\displaystyle f'(x_0)=\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}$ | Il limite deve esistere ed essere finito |
 | Derivata con incremento $h$ | $\displaystyle f'(x_0)=\lim_{h\to0}\frac{f(x_0+h)-f(x_0)}{h}$ | $h\neq0$ prima del limite |
-| Derivate laterali | $\displaystyle f'_+(x_0)=\lim_{h\to 0^+}\frac{f(x_0+h)-f(x_0)}{h},\qquad f'_-(x_0)=\lim_{h\to 0^-}\frac{f(x_0+h)-f(x_0)}{h}$ | $f'(x_0)$ esiste se coincidono e sono finite |
+| Derivata laterale destra | $f_{+}'(x_0)=\lim_{h\to0^{+}}\frac{f(x_0+h)-f(x_0)}{h}$ | Deve esistere ed essere finita |
+| Derivata laterale sinistra | $f_{-}'(x_0)=\lim_{h\to0^{-}}\frac{f(x_0+h)-f(x_0)}{h}$ | $f'(x_0)$ esiste se le due derivate laterali coincidono e sono finite |
 | Retta tangente | $\displaystyle y=f(x_0)+f'(x_0)(x-x_0)$ | $f'(x_0)$ è la pendenza |
 | Approssimazione lineare | $\displaystyle f(x)=f(x_0)+f'(x_0)(x-x_0)+o(x-x_0)$ | Per $x\to x_0$ |
 | Derivabilità e continuità | $f\text{ derivabile in }x_0\Rightarrow f\text{ continua in }x_0$ | Il contrario non vale sempre |
