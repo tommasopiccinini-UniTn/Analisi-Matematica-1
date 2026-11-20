@@ -1517,3 +1517,31 @@ Per i limiti, il **teorema del confronto** permette di concludere $u(x)\to0$ se 
 | $\frac{x+\sin x}{x}$ | $x\to+\infty$ | $1$, perché $\lvert\sin x/x\rvert\le1/x$. |
 | $\frac{x^{5/2}}{e^x}$ | $x\to+\infty$ | $0$, con de l’Hôpital fino a ottenere $\frac{15}{8\sqrt{x}\,e^x}$. |
 | $\frac{\sin x}{x}$ | $x\to0$ e $x\to+\infty$ | Rispettivamente $1$ per il limite notevole in radianti e $0$ per confronto. |
+
+## Funzione inversa: punto e retta tangente
+
+Se
+
+$$
+y_0=f(x_0),
+$$
+
+allora
+
+$$
+f^{-1}(y_0)=x_0.
+$$
+
+Il punto sul grafico di $f^{-1}$ è quindi $(y_0,x_0)$. Se $f$ è invertibile vicino a $x_0$ e $f'(x_0)\neq0$, allora
+
+$$
+(f^{-1})'(y_0)=\frac{1}{f'(x_0)}.
+$$
+
+La retta tangente al grafico di $f^{-1}$ nel punto $(y_0,x_0)$ è
+
+$$
+y=x_0+\frac{1}{f'(x_0)}(x-y_0).
+$$
+
+**Attenzione:** nella parentesi compare $x-y_0$, non $x-x_0$, perché l'ascissa del punto sul grafico dell'inversa è $y_0$.
