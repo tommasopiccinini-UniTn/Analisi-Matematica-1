@@ -95,3 +95,31 @@ $\lfloor y\rfloor$ è il più grande intero minore o uguale a $y$.
 | $\lfloor2.7\rfloor$ | $2$ |
 | $\lfloor2\rfloor$ | $2$ |
 | $\lfloor-0.2\rfloor$ | $-1$ |
+
+## Funzione inversa: punto e retta tangente
+
+Se
+
+$$
+y_0=f(x_0),
+$$
+
+allora
+
+$$
+f^{-1}(y_0)=x_0.
+$$
+
+Il punto sul grafico di $f^{-1}$ è quindi $(y_0,x_0)$. Se $f$ è invertibile vicino a $x_0$ e $f'(x_0)\neq0$, allora
+
+$$
+(f^{-1})'(y_0)=\frac{1}{f'(x_0)}.
+$$
+
+La retta tangente al grafico di $f^{-1}$ nel punto $(y_0,x_0)$ è
+
+$$
+y=x_0+\frac{1}{f'(x_0)}(x-y_0).
+$$
+
+**Attenzione:** nella parentesi compare $x-y_0$, non $x-x_0$, perché l'ascissa del punto sul grafico dell'inversa è $y_0$.
