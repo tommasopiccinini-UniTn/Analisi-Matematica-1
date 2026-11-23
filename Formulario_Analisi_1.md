@@ -95,19 +95,19 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 **Promemoria $1^\infty$:** scrivi la base come $1+u$ ($u\to0$); poi $\ln(1+u)\sim u$. **Quozienti per $x\to\pm\infty$:** conviene dividere sopra e sotto per il termine dominante del denominatore; verifica prima le cancellazioni.
 ## 5B · Sviluppi notevoli — u → 0
 
-| Funzione | Sviluppo per $u\to0$ | Denominatori in ordine |
-| :--- | :--- | :--- |
-| $e^u$ | $\displaystyle 1+u+\frac{u^2}{2!}+\frac{u^3}{3!}+\frac{u^4}{4!}+o(u^4)$ | $1!,\,2!,\,3!,\,4!,\ldots$ |
-| $a^u$, con $a>0$ | $\displaystyle 1+u\ln a+\frac{(u\ln a)^2}{2!}+\frac{(u\ln a)^3}{3!}+o(u^3)$ | $1!,\,2!,\,3!,\,4!,\ldots$ |
-| $2^u$ | $\displaystyle 1+u\ln 2+\frac{(u\ln 2)^2}{2!}+\frac{(u\ln 2)^3}{3!}+o(u^3)$ | $1!,\,2!,\,3!,\,4!,\ldots$ |
-| $\ln(1+u)$ | $\displaystyle u-\frac{u^2}{2}+\frac{u^3}{3}-\frac{u^4}{4}+o(u^4)$ | $1,\,2,\,3,\,4,\ldots$ |
-| $\sin u$ | $\displaystyle u-\frac{u^3}{3!}+\frac{u^5}{5!}+o(u^5)$ | $1!,\,3!,\,5!,\,7!,\ldots$ |
-| $\cos u$ | $\displaystyle 1-\frac{u^2}{2!}+\frac{u^4}{4!}-\frac{u^6}{6!}+o(u^6)$ | $0!,\,2!,\,4!,\,6!,\ldots$ |
-| $\sinh u$ | $\displaystyle u+\frac{u^3}{3!}+\frac{u^5}{5!}+o(u^5)$ | $1!,\,3!,\,5!,\,7!,\ldots$ |
-| $\tan u$ | $\displaystyle \frac{u}{1!}+\frac{2u^3}{3!}+\frac{16u^5}{5!}+o(u^5)$ | $1!,\,3!,\,5!,\,7!,\ldots$; al numeratore i coefficienti sono $1,2,16,272,\ldots$ (si ricavano dividendo $\sin u$ per $\cos u$). |
-| $\arccos u$ | $\displaystyle \frac{\pi}{2}-u-\frac{u^3}{2\cdot3}-\frac{1\cdot3\,u^5}{(2\cdot4)\cdot5}+o(u^5)$ | $1,\;2\cdot3,\;(2\cdot4)\cdot5,\;(2\cdot4\cdot6)\cdot7,\ldots$ |
-| $(1+u)^\alpha$ | $\displaystyle 1+\alpha u+\frac{\alpha(\alpha-1)}{2!}u^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}u^3+o(u^3)$ | $1!,\,2!,\,3!,\,4!,\ldots$ |
-| $\sqrt{1+u}$, caso $\alpha=\frac12$ | $\displaystyle 1+\frac{u}{2^1\,1!}-\frac{u^2}{2^2\,2!}+\frac{1\cdot3\,u^3}{2^3\,3!}+o(u^3)$ | $2^1\,1!,\;2^2\,2!,\;2^3\,3!,\;2^4\,4!,\ldots$ |
+| Funzione | Sviluppo per $u\to0$ |
+| :--- | :--- |
+| $e^u$ | $\displaystyle 1+u+\frac{u^2}{2!}+\frac{u^3}{3!}+\frac{u^4}{4!}+o(u^4)$ |
+| $a^u$, con $a>0$ | $\displaystyle 1+u\ln a+\frac{(u\ln a)^2}{2!}+\frac{(u\ln a)^3}{3!}+o(u^3)$ |
+| $2^u$ | $\displaystyle 1+u\ln 2+\frac{(u\ln 2)^2}{2!}+\frac{(u\ln 2)^3}{3!}+o(u^3)$ |
+| $\ln(1+u)$ | $\displaystyle u-\frac{u^2}{2}+\frac{u^3}{3}-\frac{u^4}{4}+o(u^4)$ |
+| $\sin u$ | $\displaystyle u-\frac{u^3}{3!}+\frac{u^5}{5!}+o(u^5)$ |
+| $\cos u$ | $\displaystyle 1-\frac{u^2}{2!}+\frac{u^4}{4!}-\frac{u^6}{6!}+o(u^6)$ |
+| $\sinh u$ | $\displaystyle u+\frac{u^3}{3!}+\frac{u^5}{5!}+o(u^5)$ |
+| $\tan u$ | $\displaystyle \frac{u}{1!}+\frac{2u^3}{3!}+\frac{16u^5}{5!}+o(u^5)$ |
+| $\arccos u$ | $\displaystyle \frac{\pi}{2}-u-\frac{u^3}{2\cdot3}-\frac{1\cdot3\,u^5}{(2\cdot4)\cdot5}+o(u^5)$ |
+| $(1+u)^\alpha$ | $\displaystyle 1+\alpha u+\frac{\alpha(\alpha-1)}{2!}u^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}u^3+o(u^3)$ |
+| $\sqrt{1+u}$, caso $\alpha=\frac12$ | $\displaystyle 1+\frac{u}{2^1\,1!}-\frac{u^2}{2^2\,2!}+\frac{1\cdot3\,u^3}{2^3\,3!}+o(u^3)$ |
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
 
