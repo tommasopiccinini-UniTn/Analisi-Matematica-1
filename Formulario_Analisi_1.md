@@ -95,12 +95,19 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 **Promemoria $1^\infty$:** scrivi la base come $1+u$ ($u\to0$); poi $\ln(1+u)\sim u$. **Quozienti per $x\to\pm\infty$:** conviene dividere sopra e sotto per il termine dominante del denominatore; verifica prima le cancellazioni.
 ## 5B · Sviluppi notevoli — u → 0
 
-| | | |
-| :--- | :--- | :--- |
-| $e^u=1+u+\frac{u^2}{2}+o(u^2)$ | $a^u=1+u\ln a+o(u)$, $a>0$ | $2^u=1+u\ln2+o(u)$ |
-| $\ln(1+u)=u-\frac{u^2}{2}+\frac{u^3}{3}+o(u^3)$ | $\sin u=u-\frac{u^3}{6}+o(u^3)$ | $\sinh u=u+\frac{u^3}{6}+o(u^3)$ |
-| $\cos u=1-\frac{u^2}{2!}+\frac{u^4}{4!}-\frac{u^6}{6!}+o(u^6)$ | $\tan u=u+\frac{u^3}{3}+o(u^3)$ | $\sqrt{1+u}=1+\frac u2+o(u)$ |
-| $\arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)$ | $(1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)$ | |
+| Funzione | Sviluppo per $u\to0$ |
+| :--- | :--- |
+| $e^u$ | $\displaystyle 1+u+\frac{u^2}{2!}+\frac{u^3}{3!}+\frac{u^4}{4!}+o(u^4)$ |
+| $a^u$, con $a>0$ | $\displaystyle 1+u\ln a+\frac{(u\ln a)^2}{2!}+\frac{(u\ln a)^3}{3!}+o(u^3)$ |
+| $2^u$ | $\displaystyle 1+u\ln 2+\frac{(u\ln 2)^2}{2!}+\frac{(u\ln 2)^3}{3!}+o(u^3)$ |
+| $\ln(1+u)$ | $\displaystyle u-\frac{u^2}{2}+\frac{u^3}{3}-\frac{u^4}{4}+o(u^4)$ |
+| $\sin u$ | $\displaystyle u-\frac{u^3}{3!}+\frac{u^5}{5!}+o(u^5)$ |
+| $\cos u$ | $\displaystyle 1-\frac{u^2}{2!}+\frac{u^4}{4!}-\frac{u^6}{6!}+o(u^6)$ |
+| $\sinh u$ | $\displaystyle u+\frac{u^3}{3!}+\frac{u^5}{5!}+o(u^5)$ |
+| $\tan u$ | $\displaystyle u+\frac{u^3}{3}+\frac{2u^5}{15}+o(u^5)$ |
+| $\arccos u$ | $\displaystyle \frac{\pi}{2}-u-\frac{u^3}{6}-\frac{3u^5}{40}+o(u^5)$ |
+| $(1+u)^\alpha$ | $\displaystyle 1+\alpha u+\frac{\alpha(\alpha-1)}{2!}u^2+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}u^3+o(u^3)$ |
+| $\sqrt{1+u}$, caso $\alpha=\frac12$ | $\displaystyle 1+\frac{u}{2}-\frac{u^2}{8}+\frac{u^3}{16}+o(u^3)$ |
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
 
