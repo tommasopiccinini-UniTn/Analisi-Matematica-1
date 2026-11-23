@@ -99,7 +99,7 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 | :--- | :--- | :--- |
 | $e^u=1$ ${}+u$ ${}+\frac{u^2}{2!}$ ${}+\frac{u^3}{3!}$ ${}+\frac{u^4}{4!}$ ${}+o(u^4)$ | $a^u=1$ ${}+u\ln a$ ${}+\frac{(u\ln a)^2}{2!}$ ${}+\frac{(u\ln a)^3}{3!}$ ${}+o(u^3)$, con $a>0$ | $2^u=1$ ${}+u\ln 2$ ${}+\frac{(u\ln 2)^2}{2!}$ ${}+\frac{(u\ln 2)^3}{3!}$ ${}+o(u^3)$ |
 | $\ln(1+u)=u$ ${}-\frac{u^2}{2}$ ${}+\frac{u^3}{3}$ ${}-\frac{u^4}{4}$ ${}+o(u^4)$ | $\sin u=u$ ${}-\frac{u^3}{3!}$ ${}+\frac{u^5}{5!}$ ${}+o(u^5)$ | $\sinh u=u$ ${}+\frac{u^3}{3!}$ ${}+\frac{u^5}{5!}$ ${}+o(u^5)$ |
-| $\cos u=1$ ${}-\frac{u^2}{2!}$ ${}+\frac{u^4}{4!}$ ${}-\frac{u^6}{6!}$ ${}+o(u^6)$ | $\tan u=\frac{u}{1!}$ ${}+\frac{2u^3}{3!}$ ${}+\frac{16u^5}{5!}$ ${}+o(u^5)$ | $\sqrt{1+u}=1$ ${}+\frac{u}{2^1\cdot 1!}$ ${}-\frac{u^2}{2^2\cdot 2!}$ ${}+\frac{1\cdot3\cdot u^3}{2^3\cdot 3!}$ ${}+o(u^3)$, caso $\alpha=\frac12$ |
+| $\cos u=1$ ${}-\frac{u^2}{2!}$ ${}+\frac{u^4}{4!}$ ${}-\frac{u^6}{6!}$ ${}+o(u^6)$ | $\tan u=\frac{u}{1!}$ ${}+\frac{2u^3}{3!}$ ${}+\frac{16u^5}{5!}$ ${}+o(u^5)$ | $\sqrt{1+u}=1$ ${}+\frac{u}{2^1\cdot 1!}$ ${}-\frac{1\cdot u^2}{2^2\cdot 2!}$ ${}+\frac{1\cdot3\cdot u^3}{2^3\cdot 3!}$ ${}+o(u^3)$, caso $\alpha=\frac12$ |
 | $\arccos u=\frac{\pi}{2}$ ${}-u$ ${}-\frac{u^3}{2\cdot3}$ ${}-\frac{1\cdot3\,u^5}{(2\cdot4)\cdot5}$ ${}+o(u^5)$ | $(1+u)^\alpha=1$ ${}+\alpha u$ ${}+\frac{\alpha(\alpha-1)}{2!}u^2$ ${}+\frac{\alpha(\alpha-1)(\alpha-2)}{3!}u^3$ ${}+o(u^3)$ |  |
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
