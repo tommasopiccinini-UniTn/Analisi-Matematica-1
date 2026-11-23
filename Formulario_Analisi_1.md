@@ -98,11 +98,19 @@ $\displaystyle\lim_{x\to+\infty}f(x)=L\iff\forall\varepsilon>0,\ \exists M>0:\ x
 | | | |
 | :--- | :--- | :--- |
 | $e^u=1+u+\frac{u^2}{2}+o(u^2)$ | $a^u=1+u\ln a+o(u)$, $a>0$ | $2^u=1+u\ln2+o(u)$ |
-| $\ln(1+u)=u-\frac{u^2}{2}+o(u^2)$ | $\sin u=u-\frac{u^3}{6}+o(u^3)$ | $\sinh u=u+\frac{u^3}{6}+o(u^3)$ |
-| $\cos u=1-\frac{u^2}{2}+o(u^2)$ | $\tan u=u+\frac{u^3}{3}+o(u^3)$ | $\sqrt{1+u}=1+\frac u2+o(u)$ |
+| $\ln(1+u)=u-\frac{u^2}{2}+\frac{u^3}{3}+o(u^3)$ | $\sin u=u-\frac{u^3}{6}+o(u^3)$ | $\sinh u=u+\frac{u^3}{6}+o(u^3)$ |
+| $\cos u=1-\frac{u^2}{2}+\frac{u^4}{24}+o(u^5)$ | $\tan u=u+\frac{u^3}{3}+o(u^3)$ | $\sqrt{1+u}=1+\frac u2+o(u)$ |
 | $\arccos u=\frac{\pi}{2}-u-\frac{u^3}{6}+o(u^3)$ | $(1+u)^\alpha=1+\alpha u+\frac{\alpha(\alpha-1)}2u^2+o(u^2)$ | |
 
 **Conta che l'argomento $u$ tenda a $0$.** Esempi: per $x\to a$ usa $u=x-a\to0$; per $x\to\infty$ usa $u=1/x\to0$.
+
+### Come scrivere il polinomio di Taylor centrato in zero
+
+1. **Scegli la formula della funzione.** Per $\ln(1+u)$ le potenze sono $u,u^2,u^3,\ldots$, i denominatori sono $1,2,3,\ldots$ e i segni si alternano a partire da $+$. Per $\cos u$ parti da $1$, poi sottrai il termine in $u^2$, aggiungi quello in $u^4$ e prosegui alternando i segni. I denominatori sono $2!=2$, $4!=24$, $6!=720$, cioè il fattoriale dell’esponente di $u$.
+2. **Sostituisci tutto l’argomento a $u$.** Se $u=3x$, il termine $u^3/3$ diventa $(3x)^3/3$. Se $u=x^2$, il termine $u^4/24$ diventa $(x^2)^4/24=x^8/24$.
+3. **Fermati all’ordine richiesto $n$.** Guarda l’esponente di $x$ dopo la sostituzione. Con $u=x^2$ e $n=10$, $u^4=x^8$ rientra perché $8\leq10$. La potenza successiva del coseno, $u^6=x^{12}$, si scarta perché $12>10$.
+
+I termini conservati formano il polinomio $T_n(x)$. Se la consegna chiede lo sviluppo con resto di Peano, scrivi $f(x)=T_n(x)+o(x^n)$ per $x\to0$.
 
 ## 5C · Equivalenze asintotiche
 
