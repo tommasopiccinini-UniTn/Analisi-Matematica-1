@@ -120,7 +120,7 @@ I termini conservati formano il polinomio $T_n(x)$. Se la consegna chiede lo svi
 | $1-\cos u\sim\frac{u^2}{2}$ | $\cos u-1\sim-\frac{u^2}{2}$ | $\ln(1+u)\sim u$ | $\ln(1-u)\sim-u$ |
 | $\ln(\cos u)\sim-\frac{u^2}{2}$ | $\arccos u-\frac{\pi}{2}\sim-u$ | $e^u-1\sim u$ | $a^u-1\sim u\ln a$, $a>0,\ a\neq1$ |
 | $(1+u)^\alpha-1\sim\alpha u$, $\alpha\neq0$ | $\sqrt{1+u}-1\sim\frac u2$ | $\sqrt{1-u}-1\sim-\frac u2$ | $\arcsin u\sim u$ |
-| $1-\cos^n(a u^m)\sim\frac{na^2}{2}u^{2m}$, $a\ne0$ e $n,m\ge1$ interi | | | |
+| $1-\cos^n(a u^m)\sim\frac{na^2}{2}u^{2m}$, $a\ne0$ e $n,m\ge1$ interi | $\cot x\sim\frac{1}{x}$ ($x\to0$) | | |
 
 | $x\to1$ | $x\to1$ | $x\to1$ | $x\to-1$ |
 | :--- | :--- | :--- | :--- |
